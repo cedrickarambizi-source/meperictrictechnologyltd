@@ -75,6 +75,20 @@ export default {
           DEFAULT: "hsl(var(--mep-gray))",
           light: "hsl(var(--mep-gray-light))",
         },
+        // Team Page Colors
+        "team-bg": "hsl(var(--team-bg))",
+        "team-card": "hsl(var(--team-card))",
+        "team-card-accent": "hsl(var(--team-card-accent))",
+        "team-accent": "hsl(var(--team-accent))",
+        "team-accent-secondary": "hsl(var(--team-accent-secondary))",
+        "team-text-muted": "hsl(var(--team-text-muted))",
+        "team-role": "hsl(var(--team-role))",
+        "team-role-bg": "hsl(var(--team-role-bg))",
+        "team-social": "hsl(var(--team-social))",
+      },
+      boxShadow: {
+        "team": "0 4px 20px -4px rgba(0, 0, 0, 0.3)",
+        "team-hover": "0 20px 40px -8px rgba(0, 0, 0, 0.4), 0 0 30px -5px hsl(40 85% 55% / 0.2)",
       },
       borderRadius: {
         lg: "var(--radius)",
