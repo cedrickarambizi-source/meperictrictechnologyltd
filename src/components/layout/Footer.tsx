@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Facebook, Linkedin, Twitter, Instagram } from "lucide-react";
 import logo from "@/assets/logo.jpeg";
-
 const Footer = () => {
-  return (
-    <footer className="bg-primary text-primary-foreground">
-      <div className="container mx-auto px-4 py-16">
+  return <footer className="bg-primary text-primary-foreground">
+      <div className="container mx-auto px-4 py-16 bg-[#414248]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="space-y-4">
@@ -34,16 +32,11 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-bold text-lg mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              {["Home", "About Us", "Services", "Projects", "Contact"].map((item) => (
-                <li key={item}>
-                  <Link 
-                    to={`/${item === "Home" ? "" : item.toLowerCase().replace(" ", "-")}`}
-                    className="text-sm opacity-90 hover:opacity-100 hover:underline transition-all"
-                  >
+              {["Home", "About Us", "Services", "Projects", "Contact"].map(item => <li key={item}>
+                  <Link to={`/${item === "Home" ? "" : item.toLowerCase().replace(" ", "-")}`} className="text-sm opacity-90 hover:opacity-100 hover:underline transition-all">
                     {item}
                   </Link>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -51,22 +44,11 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-bold text-lg mb-6">Our Services</h4>
             <ul className="space-y-3">
-              {[
-                "Elevator Installation",
-                "Electrical Engineering",
-                "Mechanical Systems",
-                "Plumbing Solutions",
-                "Maintenance Contracts",
-              ].map((item) => (
-                <li key={item}>
-                  <Link 
-                    to="/services"
-                    className="text-sm opacity-90 hover:opacity-100 hover:underline transition-all"
-                  >
+              {["Elevator Installation", "Electrical Engineering", "Mechanical Systems", "Plumbing Solutions", "Maintenance Contracts"].map(item => <li key={item}>
+                  <Link to="/services" className="text-sm opacity-90 hover:opacity-100 hover:underline transition-all">
                     {item}
                   </Link>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -109,8 +91,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
