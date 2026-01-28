@@ -2,54 +2,64 @@ import Layout from "@/components/layout/Layout";
 import { Linkedin, Mail } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
+// Team member photos
+import nzabonimamaEric from "@/assets/team/nzabonimana-eric.jpg";
+import jeanPaulTuyambaze from "@/assets/team/jean-paul-tuyambaze.jpg";
+import rwilizaGerald from "@/assets/team/rwiliza-gerald.jpg";
+import callixteNdayisenga from "@/assets/team/callixte-ndayisenga.jpg";
+import jimmyBimenyimana from "@/assets/team/jimmy-bimenyimana.jpg";
+import umutoniwaseDivine from "@/assets/team/umutoniwase-divine.jpg";
+import cedricKarambizi from "@/assets/team/cedric-karambizi.jpg";
+import izereyesuFabrice from "@/assets/team/izereyesu-fabrice.jpg";
+
 const teamMembers = [
   {
     name: "Nzabonimana Eric",
     role: "Founder & CEO",
     description: "Visionary leader with 15+ years in MEP engineering",
-    initials: "NE",
+    photo: nzabonimamaEric,
   },
   {
     name: "Jean Paul Tuyambaze",
     role: "Operations Manager",
     description: "Expert in project delivery and operations excellence",
-    initials: "JPT",
+    photo: jeanPaulTuyambaze,
   },
   {
     name: "Rwiliza Gerald",
     role: "Senior Mechanical Engineer",
     description: "Specialist in HVAC and mechanical systems",
-    initials: "RG",
+    photo: rwilizaGerald,
   },
   {
     name: "Callixte Ndayisenga",
     role: "Senior Electrical Engineer",
     description: "Expert in electrical systems and power distribution",
-    initials: "CN",
+    photo: callixteNdayisenga,
   },
   {
     name: "Jimmy Bimenyimana",
     role: "Senior Transmission Line Engineer",
     description: "Specialist in high voltage transmission infrastructure",
-    initials: "JB",
+    photo: jimmyBimenyimana,
   },
   {
     name: "Umutoniwase Divine",
     role: "Finance Manager",
     description: "Expert in financial planning and management",
-    initials: "UD",
+    photo: umutoniwaseDivine,
   },
   {
     name: "Cedric Karambizi",
     role: "Marketing Director",
     description: "Strategic marketing and business development leader",
-    initials: "CK",
+    photo: cedricKarambizi,
   },
   {
     name: "Izereyesu Fabrice",
     role: "Tender Manager",
     description: "Expert in tender preparation and contract management",
-    initials: "IF",
+    photo: izereyesuFabrice,
   },
 ];
 
@@ -89,19 +99,16 @@ const TeamCard = ({ member, index, isVisible }: TeamCardProps) => {
           {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-team-card via-transparent to-transparent z-10" />
           
-          {/* Avatar Circle */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div 
-              className={`
-                w-32 h-32 rounded-full bg-gradient-to-br from-team-accent to-team-accent-secondary
-                flex items-center justify-center text-3xl font-heading font-bold text-white
-                shadow-lg transition-transform duration-500
-                ${isHovered ? 'scale-110' : 'scale-100'}
-              `}
-            >
-              {member.initials}
-            </div>
-          </div>
+          {/* Member Photo */}
+          <img
+            src={member.photo}
+            alt={member.name}
+            className={`
+              w-full h-full object-cover object-top
+              transition-transform duration-500
+              ${isHovered ? 'scale-110' : 'scale-100'}
+            `}
+          />
 
           {/* Decorative Elements */}
           <div className="absolute top-4 right-4 w-20 h-20 rounded-full bg-team-accent/10 blur-xl" />
