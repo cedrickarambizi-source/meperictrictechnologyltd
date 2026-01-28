@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import { Linkedin, Mail } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const teamMembers = [
   {
@@ -56,15 +56,23 @@ const teamMembers = [
 interface TeamCardProps {
   member: typeof teamMembers[0];
   index: number;
+  isVisible: boolean;
 }
 
-const TeamCard = ({ member, index }: TeamCardProps) => {
+const TeamCard = ({ member, index, isVisible }: TeamCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div
-      className="group relative cursor-pointer"
-      style={{ animationDelay: `${index * 100}ms` }}
+      className={`
+        group relative cursor-pointer
+        transition-all duration-700 ease-out
+        ${isVisible 
+          ? 'opacity-100 translate-y-0' 
+          : 'opacity-0 translate-y-12'
+        }
+      `}
+      style={{ transitionDelay: `${index * 100}ms` }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -153,13 +161,48 @@ const TeamCard = ({ member, index }: TeamCardProps) => {
 };
 
 const Team = () => {
+  const gridRef = useRef<HTMLDivElement>(null);
+  const [isGridVisible, setIsGridVisible] = useState(false);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(false);
+
+  useEffect(() => {
+    const gridElement = gridRef.current;
+    const headerElement = headerRef.current;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.target === gridElement && entry.isIntersecting) {
+            setIsGridVisible(true);
+          }
+          if (entry.target === headerElement && entry.isIntersecting) {
+            setIsHeaderVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+    );
+
+    if (gridElement) observer.observe(gridElement);
+    if (headerElement) observer.observe(headerElement);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <Layout>
       {/* Hero Section */}
       <section className="bg-team-bg py-20 lg:py-28">
         <div className="container mx-auto px-4">
           {/* Section Header */}
-          <div className="text-center mb-16 animate-fade-in">
+          <div 
+            ref={headerRef}
+            className={`
+              text-center mb-16 transition-all duration-700 ease-out
+              ${isHeaderVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
+            `}
+          >
             <span className="inline-block px-4 py-2 text-sm font-semibold uppercase tracking-widest text-team-accent bg-team-accent/10 rounded-full mb-4">
               Our Leadership
             </span>
@@ -173,9 +216,12 @@ const Team = () => {
           </div>
 
           {/* Team Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <div 
+            ref={gridRef}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+          >
             {teamMembers.map((member, index) => (
-              <TeamCard key={member.name} member={member} index={index} />
+              <TeamCard key={member.name} member={member} index={index} isVisible={isGridVisible} />
             ))}
           </div>
 
