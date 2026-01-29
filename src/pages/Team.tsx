@@ -4,25 +4,20 @@ import { useState, useEffect, useRef } from "react";
 
 // Team member photos
 import nzabonimamaEric from "@/assets/team/nzabonimana-eric.jpg";
-import jeanPaulTuyambaze from "@/assets/team/jean-paul-tuyambaze.jpg";
 import rwilizaGerald from "@/assets/team/rwiliza-gerald.jpg";
 import callixteNdayisenga from "@/assets/team/callixte-ndayisenga.jpg";
 import jimmyBimenyimana from "@/assets/team/jimmy-bimenyimana.jpg";
 import umutoniwaseDivine from "@/assets/team/umutoniwase-divine.jpg";
-import cedricKarambizi from "@/assets/team/cedric-karambizi.jpg";
-import izereyesuFabrice from "@/assets/team/izereyesu-fabrice.jpg";
+import fabriceTuyizere from "@/assets/team/fabrice-tuyizere.jpg";
+import ngabonzizaBenjamin from "@/assets/team/ngabonziza-benjamin.jpg";
+
 const teamMembers = [{
   name: "Nzabonimana Eric",
   role: "Founder & CEO",
   description: "Visionary leader with 15+ years in MEP engineering",
   photo: nzabonimamaEric
 }, {
-  name: "Jean Paul Tuyambaze",
-  role: "Operations Manager",
-  description: "Expert in project delivery and operations excellence",
-  photo: jeanPaulTuyambaze
-}, {
-  name: "Rwiliza Gerald",
+  name: "Gerald Rwililiza",
   role: "Senior Mechanical Engineer",
   description: "Specialist in HVAC and mechanical systems",
   photo: rwilizaGerald
@@ -37,20 +32,20 @@ const teamMembers = [{
   description: "Specialist in high voltage transmission infrastructure",
   photo: jimmyBimenyimana
 }, {
+  name: "NGABONZIZA Benjamin",
+  role: "Operations Manager",
+  description: "Expert in project delivery and operations excellence",
+  photo: ngabonzizaBenjamin
+}, {
+  name: "Fabrice Tuyizere",
+  role: "Tender Manager",
+  description: "Expert in tender preparation and contract management",
+  photo: fabriceTuyizere
+}, {
   name: "Umutoniwase Divine",
   role: "Finance Manager",
   description: "Expert in financial planning and management",
   photo: umutoniwaseDivine
-}, {
-  name: "Cedric Karambizi",
-  role: "Marketing Director",
-  description: "Strategic marketing and business development leader",
-  photo: cedricKarambizi
-}, {
-  name: "Izereyesu Fabrice",
-  role: "Tender Manager",
-  description: "Expert in tender preparation and contract management",
-  photo: izereyesuFabrice
 }];
 interface TeamCardProps {
   member: typeof teamMembers[0];
