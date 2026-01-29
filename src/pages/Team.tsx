@@ -91,16 +91,16 @@ const TeamCard = ({
           shadow-team hover:shadow-team-hover
           ${isHovered ? '-translate-y-2' : 'translate-y-0'}
         `}>
-        {/* Image Container - Taller portrait orientation */}
-        <div className="relative h-80 overflow-hidden bg-team-card-accent">
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-team-card via-transparent to-transparent z-10" />
+        {/* Image Container - Full portrait showing attire */}
+        <div className="relative h-96 overflow-hidden bg-team-card-accent">
+          {/* Subtle bottom gradient for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-t from-team-card via-team-card/20 to-transparent z-10" />
           
-          {/* Member Photo */}
+          {/* Member Photo - Natural, no filters */}
           <img src={member.photo} alt={member.name} className={`
-              w-full h-full object-cover object-[center_15%]
+              w-full h-full object-cover object-[center_20%]
               transition-transform duration-500
-              ${isHovered ? 'scale-105' : 'scale-100'}
+              ${isHovered ? 'scale-102' : 'scale-100'}
             `} />
 
           {/* Decorative Elements */}
