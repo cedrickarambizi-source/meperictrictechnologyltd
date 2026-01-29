@@ -4,18 +4,26 @@ import { useState, useEffect, useRef } from "react";
 
 // Team member photos
 import nzabonimamaEric from "@/assets/team/nzabonimana-eric.jpg";
+import jeanPaulTuyambaze from "@/assets/team/jean-paul-tuyambaze.jpg";
 import rwilizaGerald from "@/assets/team/rwiliza-gerald.jpg";
 import callixteNdayisenga from "@/assets/team/callixte-ndayisenga.jpg";
 import jimmyBimenyimana from "@/assets/team/jimmy-bimenyimana.jpg";
 import umutoniwaseDivine from "@/assets/team/umutoniwase-divine.jpg";
 import fabriceTuyizere from "@/assets/team/fabrice-tuyizere.jpg";
-import ngabonzizaBenjamin from "@/assets/team/ngabonziza-benjamin.jpg";
+import ngabonzizaBenjamin from "@/assets/team/ngabonziza-benjamin-plumbing.jpg";
+import cedricKarambizi from "@/assets/team/cedric-karambizi.jpg";
+import isaacMuhoza from "@/assets/team/isaac-muhoza.jpg";
 
 const teamMembers = [{
   name: "Nzabonimana Eric",
   role: "Founder & CEO",
   description: "Visionary leader with 15+ years in MEP engineering",
   photo: nzabonimamaEric
+}, {
+  name: "Jean Paul Tuyambaze",
+  role: "Operations Manager",
+  description: "Expert in project delivery and operations excellence",
+  photo: jeanPaulTuyambaze
 }, {
   name: "Gerald Rwililiza",
   role: "Senior Mechanical Engineer",
@@ -33,9 +41,14 @@ const teamMembers = [{
   photo: jimmyBimenyimana
 }, {
   name: "NGABONZIZA Benjamin",
-  role: "Operations Manager",
-  description: "Expert in project delivery and operations excellence",
+  role: "Senior Plumbing Engineer",
+  description: "Expert in plumbing systems and water infrastructure",
   photo: ngabonzizaBenjamin
+}, {
+  name: "Isaac Muhoza",
+  role: "MEP Design Engineer",
+  description: "Specialist in MEP systems design and coordination",
+  photo: isaacMuhoza
 }, {
   name: "Fabrice Tuyizere",
   role: "Tender Manager",
@@ -46,12 +59,19 @@ const teamMembers = [{
   role: "Finance Manager",
   description: "Expert in financial planning and management",
   photo: umutoniwaseDivine
+}, {
+  name: "Cedric Karambizi",
+  role: "Marketing Director",
+  description: "Strategic marketing and business development leader",
+  photo: cedricKarambizi
 }];
+
 interface TeamCardProps {
   member: typeof teamMembers[0];
   index: number;
   isVisible: boolean;
 }
+
 const TeamCard = ({
   member,
   index,
@@ -126,6 +146,7 @@ const TeamCard = ({
       </div>
     </div>;
 };
+
 const Team = () => {
   const gridRef = useRef<HTMLDivElement>(null);
   const [isGridVisible, setIsGridVisible] = useState(false);
@@ -190,4 +211,5 @@ const Team = () => {
       </section>
     </Layout>;
 };
+
 export default Team;
