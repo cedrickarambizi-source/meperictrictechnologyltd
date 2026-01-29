@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroElectrical from "@/assets/hero-electrical.jpg";
 import heroElevator from "@/assets/hero-elevator.jpg";
@@ -81,6 +81,15 @@ const HeroSlider = () => {
               <Link to="/projects" className="btn-secondary inline-flex items-center">
                 View Our Projects
               </Link>
+              <a
+                href="https://drive.google.com/file/d/1rSXmarbXMECfryBugomxR1DQU3jkHUec/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-white/70 text-white hover:bg-white hover:text-primary font-semibold px-8 py-4 rounded-md transition-all duration-300 inline-flex items-center gap-2"
+              >
+                <FileText className="h-5 w-5" />
+                View Our Company Profile
+              </a>
             </div>
           </div>
         </div>
