@@ -1,114 +1,90 @@
 import Layout from "@/components/layout/Layout";
-import { Building, Zap, Activity, MapPin, Filter } from "lucide-react";
-import { useState } from "react";
+import { MapPin, CheckCircle } from "lucide-react";
 
-const allProjects = [
+// Import project images
+import landmarkProject from "@/assets/projects/landmark-project.png";
+import omicaBuilding from "@/assets/projects/omica-building.png";
+import oassParkApartment from "@/assets/projects/oass-park-apartment.png";
+import kimironkoCommercial from "@/assets/projects/kimironko-commercial.png";
+import wintanaApartment from "@/assets/projects/wintana-apartment.png";
+import worldvisionHQ from "@/assets/projects/worldvision-hq.png";
+
+const featuredProjects = [
   {
-    title: "MINAFFET Procurement Office",
-    category: "Elevators",
-    description: "Elevator Installation for government procurement office",
+    title: "Landmark Project",
+    image: landmarkProject,
     location: "Kigali, Rwanda",
+    activities: [
+      "Supply and Installation of Electrical Activities",
+      "Two Elevators (Lifts)",
+      "Fire Alarm System",
+      "CCTV Cameras",
+      "IP Telephone",
+      "Internet Network",
+      "Generator Installation",
+      "Firefighting System",
+    ],
   },
   {
-    title: "OMICA Apartment",
-    category: "Electrical",
-    description: "Electrical & Elevator systems (Ongoing project)",
+    title: "Omica Building",
+    image: omicaBuilding,
     location: "Kigali, Rwanda",
-    ongoing: true,
+    activities: [
+      "Supply and Installation of Electrical Activities",
+      "Elevator (Lift)",
+      "Fire Alarm System",
+      "Generator Installation",
+      "Firefighting System",
+      "Switchgear",
+      "Transformer",
+      "MV Line Cables",
+    ],
   },
   {
-    title: "MINAFFET Project",
-    category: "Commercial",
-    description: "2 Elevators, Electrical, CCTV, Fire, Plumbing",
+    title: "OASS Park Apartment",
+    image: oassParkApartment,
     location: "Kigali, Rwanda",
+    activities: [
+      "Structural Works",
+      "Walling",
+      "Plastering",
+    ],
   },
   {
-    title: "Wild Urban Oasis Park Apartment",
-    category: "Commercial",
-    description: "Structural & Finishing works",
+    title: "Kimironko Commercial Building",
+    image: kimironkoCommercial,
+    location: "Kimironko, Kigali",
+    activities: [
+      "Supply and Installation of Electrical Activities",
+      "Elevator (Lift)",
+      "Fire Alarm System",
+      "Generator Installation",
+      "Firefighting System",
+      "Switchgear",
+      "Transformer",
+      "MV Line Cable",
+    ],
+  },
+  {
+    title: "Wintana Apartment",
+    image: wintanaApartment,
     location: "Kigali, Rwanda",
+    activities: [
+      "Supply and Installation of Electrical Activities",
+      "Elevator (Lift)",
+    ],
   },
   {
-    title: "World Vision Rwanda HQ",
-    category: "Elevators",
-    description: "Elevator & Electrical installation",
+    title: "WorldVision Headquarters Rwanda",
+    image: worldvisionHQ,
     location: "Kigali, Rwanda",
-  },
-  {
-    title: "Hospital Pédiatrique de Remera",
-    category: "Hospitals",
-    description: "Full MEP & Elevators for pediatric healthcare facility",
-    location: "Remera, Kigali",
-  },
-  {
-    title: "A&F Plaza",
-    category: "Commercial",
-    description: "Complete MEP solutions for commercial complex",
-    location: "Kigali, Rwanda",
-  },
-  {
-    title: "Baho International Hospital",
-    category: "Hospitals",
-    description: "Comprehensive MEP and vertical transportation",
-    location: "Kigali, Rwanda",
-  },
-  {
-    title: "Ikaze House Commercial Building",
-    category: "Commercial",
-    description: "Full MEP infrastructure installation",
-    location: "Gisimenti, Kigali",
-  },
-  {
-    title: "Victor Villa",
-    category: "Elevators",
-    description: "Premium residential elevator installation",
-    location: "Kigali, Rwanda",
-  },
-  {
-    title: "Twiga House Accommodation",
-    category: "Commercial",
-    description: "Complete MEP solutions for hospitality",
-    location: "Kigali, Rwanda",
-  },
-  {
-    title: "Remera Hospital – Gisimenti",
-    category: "Hospitals",
-    description: "Healthcare facility MEP infrastructure",
-    location: "Gisimenti, Kigali",
-  },
-  {
-    title: "Rushaki 30kV Transmission Line",
-    category: "Transmission Lines",
-    description: "High voltage transmission line engineering",
-    location: "Rushaki, Rwanda",
-  },
-  {
-    title: "Mushishiro 30kV Transmission Line",
-    category: "Transmission Lines",
-    description: "Power transmission infrastructure project",
-    location: "Mushishiro, Rwanda",
+    activities: [
+      "Elevator Supply and Installation",
+    ],
   },
 ];
 
-const categories = ["All", "Elevators", "Electrical", "Hospitals", "Commercial", "Transmission Lines"];
-
 const Projects = () => {
-  const [activeCategory, setActiveCategory] = useState("All");
-
-  const filteredProjects = activeCategory === "All" 
-    ? allProjects 
-    : allProjects.filter(p => p.category === activeCategory);
-
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case "Elevators": return Building;
-      case "Electrical": return Zap;
-      case "Hospitals": return Activity;
-      case "Transmission Lines": return Zap;
-      default: return Building;
-    }
-  };
-
   return (
     <Layout>
       {/* Hero */}
@@ -122,62 +98,72 @@ const Projects = () => {
         </div>
       </section>
 
-      {/* Filter */}
-      <section className="py-8 bg-secondary border-b">
+      {/* Featured Projects Grid */}
+      <section className="py-16 lg:py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="flex items-center gap-2 flex-wrap justify-center">
-            <Filter className="h-5 w-5 text-muted-foreground mr-2" />
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                  activeCategory === category
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-card hover:bg-primary/10"
-                }`}
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+            {featuredProjects.map((project, index) => (
+              <div
+                key={index}
+                className="bg-card border rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
-                {category}
-              </button>
+                {/* Project Image - Grayscale */}
+                <div className="relative h-72 md:h-80 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover grayscale"
+                  />
+                </div>
+                
+                {/* Project Content */}
+                <div className="p-6 lg:p-8">
+                  {/* Title and Location */}
+                  <h3 className="font-heading font-bold text-xl lg:text-2xl mb-2 text-foreground">
+                    {project.title}
+                  </h3>
+                  <div className="flex items-center text-sm text-muted-foreground mb-6">
+                    <MapPin className="h-4 w-4 mr-1" />
+                    {project.location}
+                  </div>
+                  
+                  {/* What We Have Done Section */}
+                  <div className="border-t pt-5">
+                    <h4 className="font-semibold text-primary mb-4 flex items-center gap-2">
+                      <span className="w-8 h-0.5 bg-mep-orange"></span>
+                      What We Have Done
+                    </h4>
+                    <ul className="space-y-2">
+                      {project.activities.map((activity, actIndex) => (
+                        <li key={actIndex} className="flex items-start gap-3 text-sm text-muted-foreground">
+                          <CheckCircle className="h-4 w-4 text-mep-orange flex-shrink-0 mt-0.5" />
+                          <span>{activity}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Projects Grid */}
-      <section className="py-16 lg:py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project, index) => {
-              const Icon = getCategoryIcon(project.category);
-              return (
-                <div
-                  key={index}
-                  className="group bg-card border rounded-lg overflow-hidden card-hover"
-                >
-                  <div className="h-48 bg-primary/5 flex items-center justify-center group-hover:bg-primary/10 transition-colors relative">
-                    <Icon className="h-20 w-20 text-primary/30" />
-                    {project.ongoing && (
-                      <span className="absolute top-4 right-4 px-3 py-1 bg-mep-orange text-white text-xs font-semibold rounded-full">
-                        Ongoing
-                      </span>
-                    )}
-                  </div>
-                  <div className="p-6">
-                    <span className="inline-block px-3 py-1 bg-mep-orange/10 text-mep-orange text-xs font-semibold rounded-full mb-3">
-                      {project.category}
-                    </span>
-                    <h3 className="font-heading font-bold text-lg mb-2">{project.title}</h3>
-                    <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
-                    <div className="flex items-center text-sm text-muted-foreground">
-                      <MapPin className="h-4 w-4 mr-1" />
-                      {project.location}
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+      {/* CTA Section */}
+      <section className="py-16 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
+            Ready to Start Your Project?
+          </h2>
+          <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
+            Join our growing list of satisfied clients. Contact us today for a consultation.
+          </p>
+          <a
+            href="/contact"
+            className="btn-primary inline-flex items-center gap-2"
+          >
+            Get in Touch
+          </a>
         </div>
       </section>
     </Layout>
