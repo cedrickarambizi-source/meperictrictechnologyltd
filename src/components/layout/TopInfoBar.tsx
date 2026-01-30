@@ -4,7 +4,7 @@ const TopInfoBar = () => {
   return (
     <div className="info-bar w-full py-2.5">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap items-center justify-between gap-2 text-sm text-white">
+        <div className="flex flex-wrap items-center justify-between gap-2 text-sm font-medium text-white">
           <div className="flex items-center gap-6">
             <a 
               href="mailto:info@mepelectric.rw" 
@@ -14,18 +14,23 @@ const TopInfoBar = () => {
               <span className="hidden sm:inline">info@mepelectric.rw</span>
             </a>
             <a 
-              href="tel:+250788123456" 
+              href="tel:+250788645567" 
               className="flex items-center gap-2 hover:opacity-80 transition-opacity"
             >
               <Phone className="h-4 w-4" />
-              <span>+250 788 123 456</span>
+              <span>+250 788 645 567</span>
             </a>
           </div>
-          <div className="flex items-center gap-2">
+          <a 
+            href="https://maps.app.goo.gl/UMiHCVPAyGDR3C9B6"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+          >
             <MapPin className="h-4 w-4" />
-            <span className="hidden md:inline">Remera – Gisimenti, Ikaze House F2-22, Kigali</span>
-            <span className="md:hidden">Kigali, Rwanda</span>
-          </div>
+            <span className="hidden md:inline">Our Location</span>
+            <span className="md:hidden">Location</span>
+          </a>
         </div>
       </div>
     </div>
