@@ -25,6 +25,11 @@ const teamMembers = [{
   description: "Expert in project delivery and operations excellence",
   photo: jeanPaulTuyambaze
 }, {
+  name: "Cedric Karambizi",
+  role: "Marketing Director",
+  description: "Strategic marketing and business development leader",
+  photo: cedricKarambizi
+}, {
   name: "Gerald Rwililiza",
   role: "Senior Mechanical Engineer",
   description: "Specialist in HVAC and mechanical systems",
@@ -59,11 +64,6 @@ const teamMembers = [{
   role: "Finance Manager",
   description: "Expert in financial planning and management",
   photo: umutoniwaseDivine
-}, {
-  name: "Cedric Karambizi",
-  role: "Marketing Director",
-  description: "Strategic marketing and business development leader",
-  photo: cedricKarambizi
 }];
 
 interface TeamCardProps {
