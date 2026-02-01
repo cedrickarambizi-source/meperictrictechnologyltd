@@ -4,43 +4,43 @@ import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
-import landmarkProject from "@/assets/projects/landmark-project.png";
-import omicaBuilding from "@/assets/projects/omica-building.png";
-import oassParkApartment from "@/assets/projects/oass-park-apartment.png";
-import kimironkoCommercial from "@/assets/projects/kimironko-commercial.png";
-import wintanaApartment from "@/assets/projects/wintana-apartment.png";
-import worldvisionHq from "@/assets/projects/worldvision-hq.png";
+import ikazeHouse from "@/assets/projects/ikaze-house.png";
+import afPlaza from "@/assets/projects/af-plaza.png";
+import kafamHouse from "@/assets/projects/kafam-house.png";
+import laCroixDuSud from "@/assets/projects/la-croix-du-sud.png";
+import yyussaCityCenter from "@/assets/projects/yyussa-city-center.png";
+import bahoHospital from "@/assets/projects/baho-hospital.png";
 
 const projects = [
   {
-    title: "Landmark Project",
-    image: landmarkProject,
-    activities: "Electrical, Elevators, Fire Alarm, CCTV, IP Phone, Generator, Firefighting",
+    title: "IKAZE HOUSE",
+    image: ikazeHouse,
+    activities: "Electrical, Fire Alarm, CCTV, IP Phone, Internet, Elevator, Firefighting, Plumbing",
   },
   {
-    title: "Omica Building",
-    image: omicaBuilding,
-    activities: "Electrical, Elevator, Fire Alarm, Generator, Firefighting, Switchgear, Transformer",
+    title: "A&F PLAZA",
+    image: afPlaza,
+    activities: "Supply and installation of 2 elevators (lifts)",
   },
   {
-    title: "OASS Park Apartment",
-    image: oassParkApartment,
-    activities: "Structural Works, Walling, Plastering",
+    title: "KAFAM HOUSE",
+    image: kafamHouse,
+    activities: "Electrical, Fire Alarm, CCTV, IP Phone, Internet, Elevator, Generator, Firefighting",
   },
   {
-    title: "Kimironko Commercial Building",
-    image: kimironkoCommercial,
-    activities: "Electrical, Elevator, Fire Alarm, Generator, Firefighting, Switchgear, MV Line",
+    title: "LA CROIX DU SUD – Kwa Nyirinkwaya",
+    image: laCroixDuSud,
+    activities: "Electrical, Elevator, Fire Alarm, Generator, Firefighting, Switchgear, Transformer, MV Line",
   },
   {
-    title: "Wintana Apartment",
-    image: wintanaApartment,
-    activities: "Electrical, Elevator Installation",
+    title: "YYUSSA CITY CENTER",
+    image: yyussaCityCenter,
+    activities: "Maintenance and repair of 7 elevators and 2 escalators",
   },
   {
-    title: "WorldVision Headquarters Rwanda",
-    image: worldvisionHq,
-    activities: "Elevator Supply and Installation",
+    title: "BAHO INTERNATIONAL HOSPITAL",
+    image: bahoHospital,
+    activities: "Electrical, Fire Alarm, CCTV, IP Phone, Elevator, Firefighting, Plumbing, Nursing Systems, AC",
   },
 ];
 
@@ -120,7 +120,7 @@ const ProjectsShowcase = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                       <div className="absolute bottom-0 left-0 right-0 p-6">
-                        <h3 className="font-heading font-bold text-xl md:text-2xl text-white mb-2">
+                        <h3 className="font-bold text-xl md:text-2xl text-white mb-2">
                           {project.title}
                         </h3>
                         <div className="flex items-center gap-2">
