@@ -1,85 +1,135 @@
 import Layout from "@/components/layout/Layout";
-import { MapPin, CheckCircle } from "lucide-react";
+import { MapPin, CheckCircle, Calendar, Building, User, Phone } from "lucide-react";
 
 // Import project images
-import landmarkProject from "@/assets/projects/landmark-project.png";
-import omicaBuilding from "@/assets/projects/omica-building.png";
-import oassParkApartment from "@/assets/projects/oass-park-apartment.png";
-import kimironkoCommercial from "@/assets/projects/kimironko-commercial.png";
-import wintanaApartment from "@/assets/projects/wintana-apartment.png";
-import worldvisionHQ from "@/assets/projects/worldvision-hq.png";
+import ikazeHouse from "@/assets/projects/ikaze-house.png";
+import afPlaza from "@/assets/projects/af-plaza.png";
+import kafamHouse from "@/assets/projects/kafam-house.png";
+import laCroixDuSud from "@/assets/projects/la-croix-du-sud.png";
+import yyussaCityCenter from "@/assets/projects/yyussa-city-center.png";
+import bahoHospital from "@/assets/projects/baho-hospital.png";
 
-const featuredProjects = [
+interface ProjectDetail {
+  label: string;
+  value: string;
+}
+
+interface Project {
+  title: string;
+  image: string;
+  details: ProjectDetail[];
+  activities: string[];
+}
+
+const featuredProjects: Project[] = [
   {
-    title: "Landmark Project",
-    image: landmarkProject,
-    location: "Kigali, Rwanda",
+    title: "IKAZE HOUSE",
+    image: ikazeHouse,
+    details: [
+      { label: "Project Location", value: "Kigali – Remera-Gisiment" },
+      { label: "Project Name", value: "Ikaze House Commercial Building" },
+      { label: "Project Owner", value: "Nkeramihigo Jean Bosco" },
+      { label: "Owner Contact", value: "+250 788 304 600" },
+      { label: "Period of Installation", value: "2018 – 2020" },
+      { label: "Number of Floors", value: "B, G, 1, 2, 3, 4, 5, 6 (Eight floors)" },
+    ],
     activities: [
-      "Supply and Installation of Electrical Activities",
-      "Two Elevators (Lifts)",
-      "Fire Alarm System",
-      "CCTV Cameras",
-      "IP Telephone",
-      "Internet Network",
-      "Generator Installation",
-      "Firefighting System",
+      "Electrical works",
+      "Fire alarm system",
+      "CCTV cameras",
+      "IP telephone system",
+      "Internet installation",
+      "Elevator (lift) access door control",
+      "Firefighting system",
+      "Plumbing works",
     ],
   },
   {
-    title: "Omica Building",
-    image: omicaBuilding,
-    location: "Kigali, Rwanda",
+    title: "A&F PLAZA",
+    image: afPlaza,
+    details: [
+      { label: "Project Name", value: "A&F Plaza" },
+      { label: "Period of Installation", value: "2023" },
+    ],
     activities: [
-      "Supply and Installation of Electrical Activities",
-      "Elevator (Lift)",
-      "Fire Alarm System",
-      "Generator Installation",
-      "Firefighting System",
-      "Switchgear",
-      "Transformer",
-      "MV Line Cables",
+      "Supply and installation of 2 elevators (lifts)",
     ],
   },
   {
-    title: "OASS Park Apartment",
-    image: oassParkApartment,
-    location: "Kigali, Rwanda",
+    title: "KAFAM HOUSE",
+    image: kafamHouse,
+    details: [
+      { label: "Project Location", value: "Kigali – Nyarutarama – Gishushu" },
+      { label: "Project Name", value: "Kafam Commercial Building" },
+      { label: "Project Owner", value: "Karagwa Joseph" },
+      { label: "Owner Contact", value: "+250 782 419 496" },
+      { label: "Period of Installation", value: "2018 – 2022" },
+      { label: "Number of Floors", value: "B1, B2, B3, G, 1, 2, 3, 4, 5, 6 (Ten floors)" },
+    ],
     activities: [
-      "Structural Works",
-      "Walling",
-      "Plastering",
+      "Electrical works",
+      "Fire alarm system",
+      "CCTV cameras",
+      "IP telephone system",
+      "Internet installation",
+      "Elevator (lift) supply and installation",
+      "Generator installation",
+      "Firefighting system",
     ],
   },
   {
-    title: "Kimironko Commercial Building",
-    image: kimironkoCommercial,
-    location: "Kimironko, Kigali",
+    title: "LA CROIX DU SUD – Kwa Nyirinkwaya",
+    image: laCroixDuSud,
+    details: [
+      { label: "Period of Installation", value: "2024 – Ongoing" },
+      { label: "Number of Floors", value: "B, G, 1, 2, 3, 4 (Six floors)" },
+    ],
     activities: [
-      "Supply and Installation of Electrical Activities",
-      "Elevator (Lift)",
-      "Fire Alarm System",
-      "Generator Installation",
-      "Firefighting System",
-      "Switchgear",
-      "Transformer",
-      "MV Line Cable",
+      "Supply and installation of electrical works",
+      "Elevator (lift) supply and installation",
+      "Fire alarm system",
+      "Generator installation",
+      "Firefighting system",
+      "Switchgear installation",
+      "Transformer installation",
+      "MV line cables",
     ],
   },
   {
-    title: "Wintana Apartment",
-    image: wintanaApartment,
-    location: "Kigali, Rwanda",
+    title: "YYUSSA CITY CENTER",
+    image: yyussaCityCenter,
+    details: [
+      { label: "Service Type", value: "Maintenance and Repair" },
+      { label: "Period", value: "2025 – Ongoing" },
+    ],
     activities: [
-      "Supply and Installation of Electrical Activities",
-      "Elevator (Lift)",
+      "Maintenance and repair of 7 elevators",
+      "Maintenance and repair of 2 escalators",
     ],
   },
   {
-    title: "WorldVision Headquarters Rwanda",
-    image: worldvisionHQ,
-    location: "Kigali, Rwanda",
+    title: "BAHO INTERNATIONAL HOSPITAL",
+    image: bahoHospital,
+    details: [
+      { label: "Project Location", value: "Nyarutarama" },
+      { label: "Project Name", value: "Baho International Hospital" },
+      { label: "Project Owner", value: "Kayibanda Joseph" },
+      { label: "Owner Contact", value: "+250 788 306 805" },
+      { label: "Period of Installation", value: "2016 – 2021" },
+      { label: "Number of Floors", value: "B1, G, 1, 2, 3, 4 (Six floors)" },
+    ],
     activities: [
-      "Elevator Supply and Installation",
+      "Electrical works",
+      "Fire alarm system",
+      "CCTV cameras",
+      "IP telephone system",
+      "Internet installation",
+      "Elevator (lift) access door control",
+      "Firefighting system",
+      "Plumbing works",
+      "Nursing signalization",
+      "Bed head installation",
+      "Air conditioning system",
     ],
   },
 ];
@@ -90,7 +140,7 @@ const Projects = () => {
       {/* Hero */}
       <section className="bg-primary py-20 lg:py-28">
         <div className="container mx-auto px-4 text-center text-primary-foreground">
-          <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">Our Projects</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Projects</h1>
           <p className="text-lg opacity-90 max-w-2xl mx-auto">
             Discover our portfolio of completed and ongoing MEP and elevator projects 
             across Rwanda and East Africa.
@@ -101,39 +151,50 @@ const Projects = () => {
       {/* Featured Projects Grid */}
       <section className="py-16 lg:py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid md:grid-cols-2 gap-10 lg:gap-14">
             {featuredProjects.map((project, index) => (
               <div
                 key={index}
-                className="bg-card border rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="bg-card border rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
-                {/* Project Image - Grayscale */}
-                <div className="relative h-72 md:h-80 overflow-hidden">
+                {/* Project Image */}
+                <div className="relative aspect-[4/3] overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h3 className="font-bold text-xl lg:text-2xl text-white drop-shadow-lg">
+                      {project.title}
+                    </h3>
+                  </div>
                 </div>
                 
                 {/* Project Content */}
-                <div className="p-6 lg:p-8">
-                  {/* Title and Location */}
-                  <h3 className="font-heading font-bold text-xl lg:text-2xl mb-2 text-foreground">
-                    {project.title}
-                  </h3>
-                  <div className="flex items-center text-sm text-muted-foreground mb-6">
-                    <MapPin className="h-4 w-4 mr-1" />
-                    {project.location}
+                <div className="p-6 lg:p-8 space-y-6">
+                  {/* Project Details */}
+                  <div className="space-y-3">
+                    {project.details.map((detail, detailIndex) => (
+                      <div key={detailIndex} className="flex items-start gap-3 text-sm">
+                        <span className="font-medium text-foreground min-w-[140px]">
+                          {detail.label}:
+                        </span>
+                        <span className="text-muted-foreground">
+                          {detail.value}
+                        </span>
+                      </div>
+                    ))}
                   </div>
                   
                   {/* What We Have Done Section */}
-                  <div className="border-t pt-5">
-                    <h4 className="font-semibold text-primary mb-4 flex items-center gap-2">
+                  <div className="border-t pt-6">
+                    <h4 className="font-semibold text-primary mb-4 flex items-center gap-2 text-lg">
                       <span className="w-8 h-0.5 bg-mep-orange"></span>
                       What We Have Done
                     </h4>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2.5">
                       {project.activities.map((activity, actIndex) => (
                         <li key={actIndex} className="flex items-start gap-3 text-sm text-muted-foreground">
                           <CheckCircle className="h-4 w-4 text-mep-orange flex-shrink-0 mt-0.5" />
@@ -152,7 +213,7 @@ const Projects = () => {
       {/* CTA Section */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Start Your Project?
           </h2>
           <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
