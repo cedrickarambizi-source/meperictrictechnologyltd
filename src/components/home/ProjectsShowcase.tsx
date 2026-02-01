@@ -1,9 +1,16 @@
 import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, Award } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
+// Import ALL project images
+import landmarkProject from "@/assets/projects/landmark-project.png";
+import omicaBuilding from "@/assets/projects/omica-building.png";
+import oassParkApartment from "@/assets/projects/oass-park-apartment.png";
+import kimironkoCommercial from "@/assets/projects/kimironko-commercial.png";
+import wintanaApartment from "@/assets/projects/wintana-apartment.png";
+import worldvisionHq from "@/assets/projects/worldvision-hq.png";
 import ikazeHouse from "@/assets/projects/ikaze-house.png";
 import afPlaza from "@/assets/projects/af-plaza.png";
 import kafamHouse from "@/assets/projects/kafam-house.png";
@@ -13,34 +20,64 @@ import bahoHospital from "@/assets/projects/baho-hospital.png";
 
 const projects = [
   {
+    title: "LANDMARK PROJECT",
+    image: landmarkProject,
+    summary: "Electrical, Elevators, Fire Alarm, CCTV, IP Phone, Internet, Generator, Firefighting",
+  },
+  {
+    title: "OMICA BUILDING",
+    image: omicaBuilding,
+    summary: "Electrical, Elevator, Fire Alarm, Generator, Firefighting, Switchgear, Transformer",
+  },
+  {
+    title: "OASS PARK APARTMENT",
+    image: oassParkApartment,
+    summary: "Structural works, Walling, Plastering",
+  },
+  {
+    title: "KIMIRONKO COMMERCIAL BUILDING",
+    image: kimironkoCommercial,
+    summary: "Electrical, Elevator, Fire Alarm, Generator, Firefighting, Switchgear, Transformer",
+  },
+  {
+    title: "WINTANA APARTMENT",
+    image: wintanaApartment,
+    summary: "Electrical works, Elevator supply and installation",
+  },
+  {
+    title: "WORLDVISION HQ RWANDA",
+    image: worldvisionHq,
+    summary: "Elevator supply and installation",
+  },
+  {
     title: "IKAZE HOUSE",
     image: ikazeHouse,
-    activities: "Electrical, Fire Alarm, CCTV, IP Phone, Internet, Elevator, Firefighting, Plumbing",
+    summary: "Electrical, Fire Alarm, CCTV, IP Phone, Internet, Elevator, Firefighting, Plumbing",
   },
   {
     title: "A&F PLAZA",
     image: afPlaza,
-    activities: "Supply and installation of 2 elevators (lifts)",
+    summary: "Supply and installation of 2 elevators (lifts)",
   },
   {
     title: "KAFAM HOUSE",
     image: kafamHouse,
-    activities: "Electrical, Fire Alarm, CCTV, IP Phone, Internet, Elevator, Generator, Firefighting",
+    summary: "Electrical, Fire Alarm, CCTV, IP Phone, Internet, Elevator, Generator, Firefighting",
   },
   {
     title: "LA CROIX DU SUD – Kwa Nyirinkwaya",
     image: laCroixDuSud,
-    activities: "Electrical, Elevator, Fire Alarm, Generator, Firefighting, Switchgear, Transformer, MV Line",
+    summary: "Electrical, Elevator, Fire Alarm, Generator, Firefighting, Switchgear, Transformer, MV Line",
   },
   {
     title: "YYUSSA CITY CENTER",
     image: yyussaCityCenter,
-    activities: "Maintenance and repair of 7 elevators and 2 escalators",
+    summary: "Maintenance and repair of 7 elevators and 2 escalators",
   },
   {
     title: "BAHO INTERNATIONAL HOSPITAL",
     image: bahoHospital,
-    activities: "Electrical, Fire Alarm, CCTV, IP Phone, Elevator, Firefighting, Plumbing, Nursing Systems, AC",
+    summary: "Electrical, Fire Alarm, CCTV, IP Phone, Elevator, Firefighting, Plumbing, Nursing Systems, AC",
   },
 ];
 
@@ -88,10 +125,19 @@ const ProjectsShowcase = () => {
   return (
     <section className="py-20 lg:py-28 bg-muted/30">
       <div className="container mx-auto px-4">
+        {/* Credibility Statement */}
+        <div className="flex items-center justify-center gap-4 mb-8">
+          <Award className="h-8 w-8 text-mep-orange" />
+          <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-primary text-center">
+            10+ Years of Proven Experience in Engineering & Elevator Solutions
+          </h3>
+          <Award className="h-8 w-8 text-mep-orange" />
+        </div>
+
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-mep-orange font-semibold uppercase tracking-wider text-sm">
-            Projects Showcase
+            What We Have Done
           </span>
           <h2 className="section-heading mt-2 mb-4">
             Our Completed Projects
@@ -129,7 +175,7 @@ const ProjectsShowcase = () => {
                           </span>
                         </div>
                         <p className="text-white/90 text-sm mt-2 line-clamp-2">
-                          {project.activities}
+                          {project.summary}
                         </p>
                       </div>
                     </div>

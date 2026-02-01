@@ -8,12 +8,12 @@ interface ProjectCardProps {
 const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <div className="bg-card border rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-      {/* Project Image - Grayscale */}
+      {/* Project Image - Original Colors */}
       <div className="relative aspect-[4/3] overflow-hidden">
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-full object-cover grayscale"
+          className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
         <div className="absolute bottom-4 left-4 right-4">
