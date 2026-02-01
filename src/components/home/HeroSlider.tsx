@@ -85,7 +85,7 @@ const HeroSlider = () => {
                 href="https://drive.google.com/file/d/1rSXmarbXMECfryBugomxR1DQU3jkHUec/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-2 border-white/70 text-white hover:bg-white hover:text-primary font-semibold px-8 py-4 rounded-md transition-all duration-300 inline-flex items-center gap-2"
+                className="bg-amber-800 hover:bg-amber-900 text-white font-semibold px-8 py-4 rounded-md transition-all duration-300 inline-flex items-center gap-2 shadow-lg"
               >
                 <FileText className="h-5 w-5" />
                 View Our Company Profile
