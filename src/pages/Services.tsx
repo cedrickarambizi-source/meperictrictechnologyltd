@@ -1,62 +1,65 @@
 import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { 
-  Building2, 
-  Wrench, 
-  Zap, 
-  Droplets, 
-  Settings, 
-  Shield,
   ArrowRight,
   CheckCircle,
-  MoveHorizontal
 } from "lucide-react";
+
+// Service images
+import elevatorInstallation from "@/assets/services/elevator-installation.jpg";
+import elevatorMaintenance from "@/assets/services/elevator-maintenance.jpg";
+import escalators from "@/assets/services/escalators.jpg";
+import platformLifts from "@/assets/services/platform-lifts.jpg";
+import electricalSystems from "@/assets/services/electrical-systems.jpg";
+import mechanicalSystems from "@/assets/services/mechanical-systems.jpg";
+import plumbingSystems from "@/assets/services/plumbing-systems.jpg";
+import preventiveMaintenance from "@/assets/services/preventive-maintenance.jpg";
 
 const services = [
   {
-    icon: Building2,
+    image: elevatorInstallation,
     title: "Elevator Supply & Installation",
     description: "State-of-the-art elevator systems for residential, commercial, and industrial buildings. We partner with internationally recognized manufacturers to deliver reliable, safe, and efficient vertical transportation solutions.",
     benefits: ["Premium quality equipment", "Professional installation", "Customized solutions", "Safety compliance"],
   },
   {
-    icon: Wrench,
+    image: elevatorMaintenance,
     title: "Elevator Maintenance & Modernization",
     description: "Comprehensive maintenance programs and modernization solutions for existing elevator systems. Our preventive maintenance ensures optimal performance and extended equipment life.",
     benefits: ["24/7 emergency support", "Preventive maintenance", "Parts replacement", "Performance optimization"],
   },
   {
-    icon: MoveHorizontal,
+    image: escalators,
     title: "Escalators & Moving Walkways",
     description: "Complete escalator and moving walkway solutions for commercial centers, airports, and public spaces. Designed for high traffic and maximum reliability.",
     benefits: ["High capacity systems", "Energy efficient", "Low maintenance", "Safety features"],
   },
   {
-    icon: Shield,
+    image: platformLifts,
     title: "Platform & Accessibility Lifts",
     description: "Specialized accessibility solutions including platform lifts and wheelchair lifts. Ensuring buildings are accessible to everyone.",
     benefits: ["ADA compliant", "Space efficient", "Indoor/outdoor options", "Easy operation"],
   },
   {
-    icon: Zap,
+    image: electricalSystems,
     title: "Electrical Engineering Systems",
     description: "Complete electrical infrastructure design, installation, and power distribution systems. From low voltage to high voltage transmission lines.",
     benefits: ["Power distribution", "Lighting systems", "Generator installation", "Transmission lines"],
   },
   {
-    icon: Settings,
+    image: mechanicalSystems,
     title: "Mechanical Engineering Systems",
     description: "HVAC systems, ventilation, and mechanical infrastructure for optimal building performance. Climate control solutions for any environment.",
     benefits: ["HVAC installation", "Ventilation systems", "Fire suppression", "Building automation"],
   },
   {
-    icon: Droplets,
+    image: plumbingSystems,
     title: "Plumbing & Water Systems",
     description: "Advanced plumbing solutions including water supply, drainage, and fire protection systems. Complete water management infrastructure.",
     benefits: ["Water supply", "Drainage systems", "Fire protection", "Water treatment"],
   },
   {
-    icon: Shield,
+    image: preventiveMaintenance,
     title: "Preventive Maintenance Contracts",
     description: "Tailored maintenance contracts ensuring system reliability and longevity. Regular inspections and proactive maintenance to prevent downtime.",
     benefits: ["Regular inspections", "Priority service", "Cost predictability", "Extended lifespan"],
@@ -89,9 +92,6 @@ const Services = () => {
                 }`}
               >
                 <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                  <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                    <service.icon className="h-8 w-8 text-primary" />
-                  </div>
                   <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4">{service.title}</h2>
                   <p className="text-muted-foreground mb-6 leading-relaxed">{service.description}</p>
                   <ul className="space-y-3 mb-8">
@@ -109,8 +109,12 @@ const Services = () => {
                     Get a Quote <ArrowRight className="h-5 w-5" />
                   </Link>
                 </div>
-                <div className={`bg-secondary rounded-lg h-80 flex items-center justify-center ${index % 2 === 1 ? "lg:order-1" : ""}`}>
-                  <service.icon className="h-32 w-32 text-primary/20" />
+                <div className={`rounded-lg overflow-hidden ${index % 2 === 1 ? "lg:order-1" : ""}`}>
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-80 object-cover grayscale"
+                  />
                 </div>
               </div>
             ))}
