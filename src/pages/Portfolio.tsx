@@ -1,50 +1,7 @@
 import Layout from "@/components/layout/Layout";
-import { Building, Zap, Activity, MapPin, ExternalLink } from "lucide-react";
-
-const portfolioItems = [
-  {
-    title: "MINAFFET Project",
-    category: "Government",
-    description: "Complete MEP installation including 2 elevators, electrical systems, CCTV, fire protection, and plumbing for Rwanda's Ministry of Foreign Affairs.",
-    scope: ["2 Passenger Elevators", "Electrical Systems", "CCTV Installation", "Fire Protection", "Plumbing"],
-    icon: Building,
-  },
-  {
-    title: "Hospital Pédiatrique de Remera",
-    category: "Healthcare",
-    description: "Full MEP and elevator solutions for a pediatric healthcare facility, ensuring safe and efficient operations for patient care.",
-    scope: ["Hospital Elevators", "HVAC Systems", "Medical Gas", "Electrical Infrastructure", "Plumbing"],
-    icon: Activity,
-  },
-  {
-    title: "World Vision Rwanda HQ",
-    category: "Corporate",
-    description: "Modern elevator and complete electrical infrastructure installation for the international organization's headquarters.",
-    scope: ["Passenger Elevator", "Electrical Distribution", "Emergency Power", "Lighting Systems"],
-    icon: Building,
-  },
-  {
-    title: "Rushaki 30kV Transmission Line",
-    category: "Infrastructure",
-    description: "High voltage transmission line engineering project supporting Rwanda's power infrastructure development.",
-    scope: ["30kV Transmission", "Tower Installation", "Line Stringing", "Substation Work"],
-    icon: Zap,
-  },
-  {
-    title: "A&F Plaza",
-    category: "Commercial",
-    description: "Comprehensive MEP solutions for a multi-story commercial plaza, including vertical transportation systems.",
-    scope: ["Commercial Elevators", "HVAC", "Electrical", "Plumbing", "Fire Protection"],
-    icon: Building,
-  },
-  {
-    title: "Baho International Hospital",
-    category: "Healthcare",
-    description: "State-of-the-art MEP infrastructure for a major international hospital facility.",
-    scope: ["Multiple Elevators", "Medical MEP", "HVAC Systems", "Power Distribution"],
-    icon: Activity,
-  },
-];
+import ProjectCard from "@/components/projects/ProjectCard";
+import { oldProjects, newProjects } from "@/data/projects";
+import { ExternalLink } from "lucide-react";
 
 const Portfolio = () => {
   return (
@@ -60,45 +17,47 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Portfolio Items */}
+      {/* Old Projects Section */}
       <section className="py-16 lg:py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="space-y-16">
-            {portfolioItems.map((item, index) => (
-              <div
-                key={index}
-                className={`grid lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? "" : ""
-                }`}
-              >
-                <div className={`bg-secondary rounded-lg h-80 flex items-center justify-center ${index % 2 === 1 ? "lg:order-2" : ""}`}>
-                  <item.icon className="h-32 w-32 text-primary/20" />
-                </div>
-                <div className={index % 2 === 1 ? "lg:order-1" : ""}>
-                  <span className="inline-block px-3 py-1 bg-mep-orange/10 text-mep-orange text-sm font-semibold rounded-full mb-4">
-                    {item.category}
-                  </span>
-                  <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4">{item.title}</h2>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">{item.description}</p>
-                  <div className="mb-6">
-                    <h4 className="font-semibold mb-3">Project Scope:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {item.scope.map((scope, i) => (
-                        <span
-                          key={i}
-                          className="px-3 py-1 bg-secondary text-sm rounded-full"
-                        >
-                          {scope}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="flex items-center text-sm text-muted-foreground">
-                    <MapPin className="h-4 w-4 mr-1" />
-                    Rwanda
-                  </div>
-                </div>
-              </div>
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="text-mep-orange font-semibold uppercase tracking-wider text-sm">
+              Our Legacy
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">
+              Old Projects
+            </h2>
+            <p className="text-muted-foreground">
+              Years of excellence in MEP engineering and elevator installations across Rwanda.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+            {oldProjects.map((project, index) => (
+              <ProjectCard key={`old-${index}`} project={project} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* New & Recent Projects Section */}
+      <section className="py-16 lg:py-24 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="text-mep-orange font-semibold uppercase tracking-wider text-sm">
+              Recent & Ongoing
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">
+              New & Recent Projects
+            </h2>
+            <p className="text-muted-foreground">
+              Our latest projects showcasing comprehensive MEP solutions and modern engineering.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-10 lg:gap-14">
+            {newProjects.map((project, index) => (
+              <ProjectCard key={`new-${index}`} project={project} />
             ))}
           </div>
         </div>
