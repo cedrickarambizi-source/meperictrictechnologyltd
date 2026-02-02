@@ -1,9 +1,25 @@
 import Layout from "@/components/layout/Layout";
-import LogoMarquee from "@/components/partners/LogoMarquee";
 import PartnershipValues from "@/components/partners/PartnershipValues";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+
+// Import partner logos
+import eaglePartner from "@/assets/partners/eagle-partner.png";
+import fujihd from "@/assets/partners/fujihd-logo.png";
+import tsty from "@/assets/partners/tsty-logo.png";
+import equity from "@/assets/partners/equity-logo.png";
+import ncba from "@/assets/partners/ncba-logo.png";
+import partner6 from "@/assets/partners/partner-6.jpg";
+
+const partners = [
+  { name: "Eagle Partner", logo: eaglePartner },
+  { name: "FUJIHD - Hengfu Group", logo: fujihd },
+  { name: "TSTY", logo: tsty },
+  { name: "Equity", logo: equity },
+  { name: "NCBA", logo: ncba },
+  { name: "Partner", logo: partner6 },
+];
 
 const Partners = () => {
   return (
@@ -23,8 +39,34 @@ const Partners = () => {
         </div>
       </section>
 
-      {/* Logo Marquee */}
-      <LogoMarquee />
+      {/* Logo Grid Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4 tracking-tight">
+              Our Partners & Clients
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Trusted by leading organizations across various industries
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
+            {partners.map((partner, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center p-6 bg-card rounded-xl border border-border/50 shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer h-32"
+              >
+                <img
+                  src={partner.logo}
+                  alt={partner.name}
+                  className="max-w-full max-h-20 object-contain"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Trust Statement Section */}
       <section className="py-20 bg-muted">
