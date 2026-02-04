@@ -1,5 +1,13 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 // Service images
 import transmissionLine from "@/assets/services/transmission-line.jpg";
@@ -60,35 +68,61 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-card rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden border border-border/50"
-            >
-              {/* Service Image - No grayscale, original colors */}
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              {/* Service Content */}
-              <div className="p-6">
-                <h3 className="font-heading font-bold text-xl mb-3 text-foreground">{service.title}</h3>
-                <p className="text-muted-foreground mb-4 leading-relaxed">{service.description}</p>
-                <Link
-                  to="/services"
-                  className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:gap-3 transition-all"
-                >
-                  Learn More <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-          ))}
+        {/* Services Carousel */}
+        <div className="px-12">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            plugins={[
+              Autoplay({
+                delay: 4000,
+                stopOnInteraction: true,
+              }),
+            ]}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {services.map((service, index) => (
+                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <div className="bg-card rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden border border-border/50 h-full">
+                    {/* Service Image */}
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    {/* Service Content */}
+                    <div className="p-6">
+                      <h3 className="font-heading font-bold text-xl mb-3 text-foreground">
+                        {service.title}
+                      </h3>
+                      <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
+                        {service.description}
+                      </p>
+                      <Link
+                        to="/services"
+                        className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:gap-3 transition-all"
+                      >
+                        Learn More <ArrowRight className="h-4 w-4" />
+                      </Link>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex -left-6 h-12 w-12 bg-primary text-primary-foreground hover:bg-primary/90 border-none shadow-lg" />
+            <CarouselNext className="hidden md:flex -right-6 h-12 w-12 bg-primary text-primary-foreground hover:bg-primary/90 border-none shadow-lg" />
+          </Carousel>
         </div>
+
+        {/* Carousel Indicator for Mobile */}
+        <p className="text-center text-muted-foreground text-sm mt-6 md:hidden">
+          ← Swipe to explore more services →
+        </p>
 
         {/* CTA */}
         <div className="text-center mt-12">
