@@ -63,9 +63,12 @@ const Footer = () => {
                 </span>
               </li>
               <li>
-                <a href="tel:+250788123456" className="flex items-center gap-3 hover:opacity-80">
-                  <Phone className="h-5 w-5 flex-shrink-0" />
-                  <span className="text-sm">+250 788 123 456</span>
+                <a href="tel:+250788123456" className="flex items-center gap-3 hover:opacity-80">+250 788 123 456
+
+                <Phone className="h-5 w-5 flex-shrink-0" />
+                  <span className="text-sm">+250 788 123 456
++250 781  175  264     
+                </span>
                 </a>
               </li>
               <li>
@@ -83,7 +86,7 @@ const Footer = () => {
       <div className="border-t border-white/20">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm opacity-90">
-            <p>© 2024 MEP Erictric Technology Ltd. All rights reserved.</p>
+            <p>© 2026 MEP Erictric Technology Ltd. All rights reserved.</p>
             <div className="flex gap-6">
               <Link to="/privacy" className="hover:underline">Privacy Policy</Link>
               <Link to="/terms" className="hover:underline">Terms of Service</Link>
