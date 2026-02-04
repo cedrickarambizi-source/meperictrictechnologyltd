@@ -6,16 +6,46 @@ import {
 } from "lucide-react";
 
 // Service images
+import transmissionLine from "@/assets/services/transmission-line.jpg";
+import internetConnection from "@/assets/services/internet-connection.jpg";
+import wastewaterTreatment from "@/assets/services/wastewater-treatment.jpg";
+import accessPoint from "@/assets/services/access-point.jpg";
+import cctvInstallation from "@/assets/services/cctv-installation.jpg";
 import elevatorInstallation from "@/assets/services/elevator-installation.jpg";
 import elevatorMaintenance from "@/assets/services/elevator-maintenance.jpg";
-import escalators from "@/assets/services/escalators.jpg";
-import platformLifts from "@/assets/services/platform-lifts.jpg";
 import electricalSystems from "@/assets/services/electrical-systems.jpg";
-import mechanicalSystems from "@/assets/services/mechanical-systems.jpg";
-import plumbingSystems from "@/assets/services/plumbing-systems.jpg";
-import preventiveMaintenance from "@/assets/services/preventive-maintenance.jpg";
 
 const services = [
+  {
+    image: transmissionLine,
+    title: "Transmission Line",
+    description: "High voltage power transmission infrastructure for reliable electricity distribution. We design, install, and maintain transmission lines that power communities and industries across the region.",
+    benefits: ["High voltage systems", "Power distribution", "Grid connectivity", "Safety compliance"],
+  },
+  {
+    image: internetConnection,
+    title: "Internet Connection",
+    description: "Enterprise-grade fiber optic and network infrastructure solutions. We provide end-to-end connectivity services ensuring high-speed, reliable internet access for businesses and institutions.",
+    benefits: ["Fiber optic installation", "Network design", "High-speed connectivity", "Enterprise solutions"],
+  },
+  {
+    image: wastewaterTreatment,
+    title: "Waste Water Treatment Plant",
+    description: "Modern water treatment facilities designed for environmental compliance and sustainability. Complete solutions from design to installation and ongoing maintenance.",
+    benefits: ["Water purification", "Environmental compliance", "Sustainable systems", "Regular maintenance"],
+  },
+  {
+    image: accessPoint,
+    title: "Access Point",
+    description: "Professional wireless network infrastructure with enterprise-grade access points. Comprehensive coverage solutions for offices, hotels, hospitals, and commercial spaces.",
+    benefits: ["Full coverage", "Enterprise hardware", "Scalable solutions", "Secure networks"],
+  },
+  {
+    image: cctvInstallation,
+    title: "CCTV Installation",
+    description: "Professional security surveillance systems for comprehensive property protection. HD cameras, monitoring systems, and integrated security solutions for all property types.",
+    benefits: ["HD surveillance", "24/7 monitoring", "Remote access", "Professional installation"],
+  },
   {
     image: elevatorInstallation,
     title: "Elevator Supply & Installation",
@@ -29,40 +59,10 @@ const services = [
     benefits: ["24/7 emergency support", "Preventive maintenance", "Parts replacement", "Performance optimization"],
   },
   {
-    image: escalators,
-    title: "Escalators & Moving Walkways",
-    description: "Complete escalator and moving walkway solutions for commercial centers, airports, and public spaces. Designed for high traffic and maximum reliability.",
-    benefits: ["High capacity systems", "Energy efficient", "Low maintenance", "Safety features"],
-  },
-  {
-    image: platformLifts,
-    title: "Platform & Accessibility Lifts",
-    description: "Specialized accessibility solutions including platform lifts and wheelchair lifts. Ensuring buildings are accessible to everyone.",
-    benefits: ["ADA compliant", "Space efficient", "Indoor/outdoor options", "Easy operation"],
-  },
-  {
     image: electricalSystems,
     title: "Electrical Engineering Systems",
     description: "Complete electrical infrastructure design, installation, and power distribution systems. From low voltage to high voltage transmission lines.",
     benefits: ["Power distribution", "Lighting systems", "Generator installation", "Transmission lines"],
-  },
-  {
-    image: mechanicalSystems,
-    title: "Mechanical Engineering Systems",
-    description: "HVAC systems, ventilation, and mechanical infrastructure for optimal building performance. Climate control solutions for any environment.",
-    benefits: ["HVAC installation", "Ventilation systems", "Fire suppression", "Building automation"],
-  },
-  {
-    image: plumbingSystems,
-    title: "Plumbing & Water Systems",
-    description: "Advanced plumbing solutions including water supply, drainage, and fire protection systems. Complete water management infrastructure.",
-    benefits: ["Water supply", "Drainage systems", "Fire protection", "Water treatment"],
-  },
-  {
-    image: preventiveMaintenance,
-    title: "Preventive Maintenance Contracts",
-    description: "Tailored maintenance contracts ensuring system reliability and longevity. Regular inspections and proactive maintenance to prevent downtime.",
-    benefits: ["Regular inspections", "Priority service", "Cost predictability", "Extended lifespan"],
   },
 ];
 
@@ -74,7 +74,7 @@ const Services = () => {
         <div className="container mx-auto px-4 text-center text-primary-foreground">
           <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">Our Services</h1>
           <p className="text-lg opacity-90 max-w-2xl mx-auto">
-            Comprehensive MEP and elevator solutions tailored to your project needs. 
+            Comprehensive MEP, technology, and infrastructure solutions tailored to your project needs. 
             From design to maintenance, we deliver excellence at every stage.
           </p>
         </div>
@@ -83,7 +83,7 @@ const Services = () => {
       {/* Services List */}
       <section className="py-16 lg:py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="space-y-16">
+          <div className="space-y-20">
             {services.map((service, index) => (
               <div
                 key={index}
@@ -92,13 +92,13 @@ const Services = () => {
                 }`}
               >
                 <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                  <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4">{service.title}</h2>
+                  <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4 text-foreground">{service.title}</h2>
                   <p className="text-muted-foreground mb-6 leading-relaxed">{service.description}</p>
                   <ul className="space-y-3 mb-8">
                     {service.benefits.map((benefit, i) => (
                       <li key={i} className="flex items-center gap-3">
                         <CheckCircle className="h-5 w-5 text-mep-orange flex-shrink-0" />
-                        <span>{benefit}</span>
+                        <span className="text-foreground">{benefit}</span>
                       </li>
                     ))}
                   </ul>
@@ -109,11 +109,11 @@ const Services = () => {
                     Get a Quote <ArrowRight className="h-5 w-5" />
                   </Link>
                 </div>
-                <div className={`rounded-lg overflow-hidden ${index % 2 === 1 ? "lg:order-1" : ""}`}>
+                <div className={`rounded-xl overflow-hidden shadow-lg ${index % 2 === 1 ? "lg:order-1" : ""}`}>
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-80 object-cover grayscale"
+                    className="w-full h-80 object-cover"
                   />
                 </div>
               </div>

@@ -1,28 +1,63 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Facebook, Linkedin, Twitter, Instagram } from "lucide-react";
 import logo from "@/assets/logo.jpeg";
+import { Separator } from "@/components/ui/separator";
+
 const Footer = () => {
-  return <footer className="bg-primary text-primary-foreground">
-      <div className="container mx-auto px-4 py-16 bg-[#414248]">
+  const services = [
+    "Transmission Line",
+    "Internet Connection",
+    "Waste Water Treatment",
+    "Access Point",
+    "CCTV Installation",
+    "Elevator Installation",
+    "Electrical Systems",
+    "Maintenance Contracts",
+  ];
+
+  return (
+    <footer className="bg-primary text-primary-foreground">
+      <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <img src={logo} alt="MEP Electric Technology Ltd" className="h-16 w-auto bg-white p-2 rounded" />
+            <img 
+              src={logo} 
+              alt="MEP Electric Technology Ltd" 
+              className="h-16 w-auto bg-white p-2 rounded-lg" 
+            />
             <p className="text-sm opacity-90 leading-relaxed">
-              Since 2016, delivering world-class MEP and elevator solutions for residential, 
-              commercial, and industrial projects across Rwanda and East Africa.
+              Since 2016, delivering world-class MEP, technology, and infrastructure 
+              solutions for residential, commercial, and industrial projects across 
+              Rwanda and East Africa.
             </p>
             <div className="flex gap-4 pt-2">
-              <a href="#" className="hover:opacity-80 transition-opacity" aria-label="Facebook">
+              <a 
+                href="#" 
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors" 
+                aria-label="Facebook"
+              >
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="hover:opacity-80 transition-opacity" aria-label="LinkedIn">
+              <a 
+                href="#" 
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors" 
+                aria-label="LinkedIn"
+              >
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="hover:opacity-80 transition-opacity" aria-label="Twitter">
+              <a 
+                href="#" 
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors" 
+                aria-label="Twitter"
+              >
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="hover:opacity-80 transition-opacity" aria-label="Instagram">
+              <a 
+                href="#" 
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors" 
+                aria-label="Instagram"
+              >
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
@@ -30,51 +65,94 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading font-bold text-lg mb-6">Quick Links</h4>
-            <ul className="space-y-3">
-              {["Home", "About Us", "Services", "Projects", "Contact"].map(item => <li key={item}>
-                  <Link to={`/${item === "Home" ? "" : item.toLowerCase().replace(" ", "-")}`} className="text-sm opacity-90 hover:opacity-100 hover:underline transition-all">
-                    {item}
+            <h4 className="font-heading font-bold text-lg mb-6 relative">
+              Quick Links
+              <span className="absolute bottom-0 left-0 w-12 h-0.5 bg-mep-orange -mb-2"></span>
+            </h4>
+            <ul className="space-y-3 mt-4">
+              {[
+                { name: "Home", path: "/" },
+                { name: "About Us", path: "/about" },
+                { name: "Services", path: "/services" },
+                { name: "Projects", path: "/projects" },
+                { name: "Portfolio", path: "/portfolio" },
+                { name: "Contact", path: "/contact" },
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link 
+                    to={item.path} 
+                    className="text-sm opacity-90 hover:opacity-100 hover:text-mep-orange transition-all flex items-center gap-2"
+                  >
+                    <span className="w-1.5 h-1.5 bg-mep-orange rounded-full"></span>
+                    {item.name}
                   </Link>
-                </li>)}
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Our Services */}
           <div>
-            <h4 className="font-heading font-bold text-lg mb-6">Our Services</h4>
-            <ul className="space-y-3">
-              {["Elevator Installation", "Electrical Engineering", "Mechanical Systems", "Plumbing Solutions", "Maintenance Contracts"].map(item => <li key={item}>
-                  <Link to="/services" className="text-sm opacity-90 hover:opacity-100 hover:underline transition-all">
+            <h4 className="font-heading font-bold text-lg mb-6 relative">
+              Our Services
+              <span className="absolute bottom-0 left-0 w-12 h-0.5 bg-mep-orange -mb-2"></span>
+            </h4>
+            <ul className="space-y-3 mt-4">
+              {services.map((item) => (
+                <li key={item}>
+                  <Link 
+                    to="/services" 
+                    className="text-sm opacity-90 hover:opacity-100 hover:text-mep-orange transition-all flex items-center gap-2"
+                  >
+                    <span className="w-1.5 h-1.5 bg-mep-orange rounded-full"></span>
                     {item}
                   </Link>
-                </li>)}
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-heading font-bold text-lg mb-6">Contact Us</h4>
-            <ul className="space-y-4">
+            <h4 className="font-heading font-bold text-lg mb-6 relative">
+              Contact Us
+              <span className="absolute bottom-0 left-0 w-12 h-0.5 bg-mep-orange -mb-2"></span>
+            </h4>
+            <ul className="space-y-4 mt-4">
               <li className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" />
-                <span className="text-sm opacity-90">
+                <div className="w-10 h-10 bg-mep-orange/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <MapPin className="h-5 w-5 text-mep-orange" />
+                </div>
+                <span className="text-sm opacity-90 leading-relaxed">
                   Remera – Gisimenti, Ikaze House F2-22, Kigali, Rwanda
                 </span>
               </li>
               <li>
-                <a href="tel:+250788123456" className="flex items-center gap-3 hover:opacity-80">   
-
-                <Phone className="h-5 w-5 flex-shrink-0" />
-                  <span className="text-sm">+250 788 123 456
-+250 781  175  264     
-                </span>
+                <a 
+                  href="tel:+250781175264" 
+                  className="flex items-start gap-3 hover:opacity-80 transition-opacity"
+                >
+                  <div className="w-10 h-10 bg-mep-orange/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Phone className="h-5 w-5 text-mep-orange" />
+                  </div>
+                  <div className="text-sm">
+                    <p className="font-semibold text-base">+250 781 175 264</p>
+                    <p className="opacity-75">Mon - Fri, 8am - 5pm</p>
+                  </div>
                 </a>
               </li>
               <li>
-                <a href="mailto:info@mepelectric.rw" className="flex items-center gap-3 hover:opacity-80">
-                  <Mail className="h-5 w-5 flex-shrink-0" />
-                  <span className="text-sm">info@mepelectric.rw</span>
+                <a 
+                  href="mailto:info@mepelectric.rw" 
+                  className="flex items-start gap-3 hover:opacity-80 transition-opacity"
+                >
+                  <div className="w-10 h-10 bg-mep-orange/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Mail className="h-5 w-5 text-mep-orange" />
+                  </div>
+                  <div className="text-sm">
+                    <p className="font-semibold">info@mepelectric.rw</p>
+                    <p className="opacity-75">Send us an email</p>
+                  </div>
                 </a>
               </li>
             </ul>
@@ -82,18 +160,31 @@ const Footer = () => {
         </div>
       </div>
 
+      {/* Transmission-style Divider */}
+      <div className="container mx-auto px-4">
+        <div className="flex items-center gap-4">
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-white/30 to-white/30"></div>
+          <div className="flex gap-2">
+            <span className="w-2 h-2 bg-mep-orange rounded-full"></span>
+            <span className="w-2 h-2 bg-white/50 rounded-full"></span>
+            <span className="w-2 h-2 bg-mep-orange rounded-full"></span>
+          </div>
+          <div className="flex-1 h-px bg-gradient-to-l from-transparent via-white/30 to-white/30"></div>
+        </div>
+      </div>
+
       {/* Bottom Bar */}
-      <div className="border-t border-white/20">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm opacity-90">
-            <p>© 2026 MEP Erictric Technology Ltd. All rights reserved.</p>
-            <div className="flex gap-6">
-              <Link to="/privacy" className="hover:underline">Privacy Policy</Link>
-              <Link to="/terms" className="hover:underline">Terms of Service</Link>
-            </div>
+      <div className="container mx-auto px-4 py-6">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm opacity-90">
+          <p>© 2026 MEP Electric Technology Ltd. All rights reserved.</p>
+          <div className="flex gap-6">
+            <Link to="/privacy" className="hover:text-mep-orange transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-mep-orange transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;
