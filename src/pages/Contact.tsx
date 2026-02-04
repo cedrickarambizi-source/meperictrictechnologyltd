@@ -181,12 +181,19 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map Placeholder */}
-      <section className="h-96 bg-secondary flex items-center justify-center">
-        <div className="text-center text-muted-foreground">
-          <MapPin className="h-16 w-16 mx-auto mb-4 opacity-30" />
-          <p>Map: Remera – Gisimenti, Ikaze House F2-22, Kigali, Rwanda</p>
-        </div>
+      {/* Google Map */}
+      <section className="h-[450px] w-full">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.4894!2d30.1089!3d-1.9536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca7a1a3b2c5a9%3A0x123456789!2sMEP%20ERICTRIC%20TECHNOLOGY%20LTD!5e0!3m2!1sen!2srw!4v1704067200000!5m2!1sen!2srw"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="MEP ERICTRIC TECHNOLOGY LTD - Remera, Gisimenti, Ikaze House F2-22, Kigali, Rwanda"
+          className="w-full h-full"
+        />
       </section>
     </Layout>
   );
