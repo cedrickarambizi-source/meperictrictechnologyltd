@@ -44,7 +44,7 @@ const HeroSlider = () => {
   }, [nextSlide]);
 
   return (
-    <section className="relative h-[600px] md:h-[700px] lg:h-[800px] overflow-hidden">
+    <section className="relative h-[650px] md:h-[750px] lg:h-[85vh] min-h-[700px] max-h-[900px] overflow-hidden">
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
@@ -64,17 +64,27 @@ const HeroSlider = () => {
 
       {/* Content Overlay */}
       <div className="absolute inset-0 z-20 flex items-center">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl animate-slide-up">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white leading-tight mb-6">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-4xl animate-slide-up space-y-8">
+            {/* Authority badge */}
+            <div className="flex items-center gap-3">
+              <span className="w-12 h-0.5 bg-mep-orange"></span>
+              <span className="text-mep-orange font-semibold uppercase tracking-widest text-sm">
+                Trusted Engineering Partner Since 2016
+              </span>
+            </div>
+            
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-white leading-[1.1] tracking-tight">
               Powering Rwanda and East Africa with Excellence in Mechanical, 
               Electrical & Plumbing Solutions
             </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl">
+            
+            <p className="text-lg md:text-xl lg:text-2xl text-white/90 max-w-2xl leading-relaxed">
               Since 2016, MEP Erictric Technology Ltd has delivered world-class MEP 
               and elevator solutions for residential, commercial, and industrial projects.
             </p>
-            <div className="flex flex-wrap gap-4">
+            
+            <div className="flex flex-wrap gap-4 pt-4">
               <Link to="/contact" className="btn-primary inline-flex items-center">
                 Request a Quote
               </Link>
@@ -98,21 +108,21 @@ const HeroSlider = () => {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-3 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full transition-all"
+        className="absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-30 p-3 lg:p-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full transition-all border border-white/20"
         aria-label="Previous slide"
       >
-        <ChevronLeft className="h-6 w-6 text-white" />
+        <ChevronLeft className="h-5 w-5 lg:h-6 lg:w-6 text-white" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-3 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full transition-all"
+        className="absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-30 p-3 lg:p-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full transition-all border border-white/20"
         aria-label="Next slide"
       >
-        <ChevronRight className="h-6 w-6 text-white" />
+        <ChevronRight className="h-5 w-5 lg:h-6 lg:w-6 text-white" />
       </button>
 
       {/* Dot Indicators */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-3">
+      <div className="absolute bottom-10 lg:bottom-12 left-1/2 -translate-x-1/2 z-30 flex gap-3">
         {slides.map((_, index) => (
           <button
             key={index}

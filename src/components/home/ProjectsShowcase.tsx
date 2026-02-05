@@ -164,15 +164,18 @@ const ProjectsShowcase = () => {
         {/* Credibility Statement */}
         <div className="flex items-center justify-center gap-4 mb-8">
           <Award className="h-8 w-8 text-mep-orange" />
-          <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-primary text-center">
+        <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-primary text-center tracking-tight">
             10+ Years of Proven Experience in Engineering & Elevator Solutions
           </h3>
           <Award className="h-8 w-8 text-mep-orange" />
         </div>
 
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-mep-orange font-semibold uppercase tracking-wider text-sm">
+      <div className="text-center max-w-3xl mx-auto mb-14">
+        <div className="flex items-center justify-center gap-3 mb-4">
+          <span className="section-divider"></span>
+        </div>
+        <span className="text-mep-orange font-semibold uppercase tracking-widest text-sm">
             What We Have Done
           </span>
           <h2 className="section-heading mt-2 mb-4">
@@ -191,26 +194,26 @@ const ProjectsShowcase = () => {
               {projects.map((project, index) => (
                 <div
                   key={index}
-                  className="flex-[0_0_100%] min-w-0 md:flex-[0_0_80%] lg:flex-[0_0_70%] px-4"
+                  className="flex-[0_0_100%] min-w-0 md:flex-[0_0_85%] lg:flex-[0_0_75%] px-4"
                 >
-                  <div className="bg-card rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
-                    <div className="relative aspect-[16/10] overflow-hidden">
+                  <div className="bg-card rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-2xl group">
+                    <div className="relative aspect-[16/10] overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                      <div className="absolute bottom-0 left-0 right-0 p-6">
-                        <h3 className="font-bold text-xl md:text-2xl text-white mb-2">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                      
+                      {/* Project info overlay */}
+                      <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8 transform transition-transform duration-300">
+                        <span className="inline-block px-3 py-1 bg-mep-orange text-white text-xs font-semibold rounded-full mb-3">
+                          Completed Project
+                        </span>
+                        <h3 className="font-bold text-xl md:text-2xl lg:text-3xl text-white mb-2 leading-tight">
                           {project.title}
                         </h3>
-                        <div className="flex items-center gap-2">
-                          <span className="inline-block px-3 py-1 bg-mep-orange text-white text-xs font-semibold rounded-full">
-                            What We Have Done
-                          </span>
-                        </div>
-                        <p className="text-white/90 text-sm mt-2 line-clamp-2">
+                        <p className="text-white/90 text-sm lg:text-base mt-2 line-clamp-2 max-w-lg">
                           {project.summary}
                         </p>
                       </div>
@@ -256,7 +259,7 @@ const ProjectsShowcase = () => {
 
         {/* CTA */}
         <div className="text-center mt-10">
-          <Link to="/projects" className="btn-primary inline-flex items-center gap-2">
+        <Link to="/projects" className="btn-primary inline-flex items-center gap-2 hover:gap-3 transition-all">
             View All Projects <ArrowRight className="h-5 w-5" />
           </Link>
         </div>

@@ -21,16 +21,19 @@ const PartnersSection = () => {
   const [isPaused, setIsPaused] = useState(false);
 
   return (
-    <section className="py-16 bg-background overflow-hidden">
-      <div className="container mx-auto px-4 mb-10">
+    <section className="py-16 lg:py-24 bg-background overflow-hidden">
+      <div className="container mx-auto px-4 mb-12">
         <div className="text-center max-w-3xl mx-auto">
-          <span className="text-mep-orange font-semibold uppercase tracking-wider text-sm">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <span className="section-divider"></span>
+          </div>
+          <span className="text-mep-orange font-semibold uppercase tracking-widest text-sm">
             Trusted By Industry Leaders
           </span>
           <h2 className="section-heading mt-2 mb-4">
             Partners & Clients
           </h2>
-          <p className="section-subheading">
+          <p className="section-subheading text-lg">
             We collaborate with leading organizations across various industries to deliver 
             exceptional engineering solutions.
           </p>
@@ -55,12 +58,12 @@ const PartnersSection = () => {
             {partners.map((partner, index) => (
               <div
                 key={`first-${index}`}
-                className="flex-shrink-0 mx-8 w-40 h-24 flex items-center justify-center bg-card rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 cursor-pointer"
+                className="flex-shrink-0 mx-8 lg:mx-10 w-44 h-28 flex items-center justify-center bg-card rounded-xl border border-border/30 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
               >
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="max-w-[140px] max-h-[80px] object-contain"
+                  className="max-w-[150px] max-h-[90px] object-contain"
                 />
               </div>
             ))}
@@ -68,12 +71,12 @@ const PartnersSection = () => {
             {partners.map((partner, index) => (
               <div
                 key={`second-${index}`}
-                className="flex-shrink-0 mx-8 w-40 h-24 flex items-center justify-center bg-card rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 cursor-pointer"
+                className="flex-shrink-0 mx-8 lg:mx-10 w-44 h-28 flex items-center justify-center bg-card rounded-xl border border-border/30 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
               >
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="max-w-[140px] max-h-[80px] object-contain"
+                  className="max-w-[150px] max-h-[90px] object-contain"
                 />
               </div>
             ))}
@@ -81,12 +84,12 @@ const PartnersSection = () => {
             {partners.map((partner, index) => (
               <div
                 key={`third-${index}`}
-                className="flex-shrink-0 mx-8 w-40 h-24 flex items-center justify-center bg-card rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 cursor-pointer"
+                className="flex-shrink-0 mx-8 lg:mx-10 w-44 h-28 flex items-center justify-center bg-card rounded-xl border border-border/30 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
               >
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="max-w-[140px] max-h-[80px] object-contain"
+                  className="max-w-[150px] max-h-[90px] object-contain"
                 />
               </div>
             ))}
