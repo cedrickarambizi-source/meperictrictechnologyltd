@@ -17,6 +17,12 @@ import kafamHouse from "@/assets/projects/kafam-house.png";
 import laCroixDuSud from "@/assets/projects/la-croix-du-sud.png";
 import yyussaCityCenter from "@/assets/projects/yyussa-city-center.png";
 import bahoHospital from "@/assets/projects/baho-hospital.png";
+import twigaHouse from "@/assets/projects/twiga-house.png";
+import hospitalPediatriqueRemera from "@/assets/projects/hospital-pediatrique-remera.png";
+import mininter from "@/assets/projects/mininter.png";
+import nisr from "@/assets/projects/nisr.png";
+import rwaruteneTransmission from "@/assets/projects/rwarutene-transmission.png";
+import gahangaStreetLight from "@/assets/projects/gahanga-street-light.png";
 
 const projects = [
   {
@@ -78,6 +84,36 @@ const projects = [
     title: "BAHO INTERNATIONAL HOSPITAL",
     image: bahoHospital,
     summary: "Electrical, Fire Alarm, CCTV, IP Phone, Elevator, Firefighting, Plumbing, Nursing Systems, AC",
+  },
+  {
+    title: "TWIGA HOUSE ACCOMMODATION",
+    image: twigaHouse,
+    summary: "Elevator supply and installation",
+  },
+  {
+    title: "HOSPITAL PÉDIATRIQUE DE REMERA",
+    image: hospitalPediatriqueRemera,
+    summary: "Electrical, Elevator, Scanner installation",
+  },
+  {
+    title: "MININTER",
+    image: mininter,
+    summary: "Elevator supply and installation",
+  },
+  {
+    title: "NATIONAL INSTITUTE OF STATISTICS (NISR)",
+    image: nisr,
+    summary: "Elevator supply and installation",
+  },
+  {
+    title: "RWARUTENE 30KV TRANSMISSION LINE",
+    image: rwaruteneTransmission,
+    summary: "Electrical Transmission Line Construction (1.6 km)",
+  },
+  {
+    title: "GAHANGA STREET LIGHT",
+    image: gahangaStreetLight,
+    summary: "Electrical Street Light Installation (2.8 km)",
   },
 ];
 

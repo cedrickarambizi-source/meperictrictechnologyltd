@@ -11,6 +11,12 @@ import kafamHouse from "@/assets/projects/kafam-house.png";
 import laCroixDuSud from "@/assets/projects/la-croix-du-sud.png";
 import yyussaCityCenter from "@/assets/projects/yyussa-city-center.png";
 import bahoHospital from "@/assets/projects/baho-hospital.png";
+import twigaHouse from "@/assets/projects/twiga-house.png";
+import hospitalPediatriqueRemera from "@/assets/projects/hospital-pediatrique-remera.png";
+import mininter from "@/assets/projects/mininter.png";
+import nisr from "@/assets/projects/nisr.png";
+import rwaruteneTransmission from "@/assets/projects/rwarutene-transmission.png";
+import gahangaStreetLight from "@/assets/projects/gahanga-street-light.png";
 
 export interface ProjectDetail {
   label: string;
@@ -204,6 +210,88 @@ export const newProjects: Project[] = [
       "Nursing signalization",
       "Bed head installation",
       "Air conditioning system",
+    ],
+  },
+  {
+    title: "TWIGA HOUSE ACCOMMODATION",
+    image: twigaHouse,
+    details: [
+      { label: "Project Location", value: "Kigali – Gasabo District, Remera Sector" },
+      { label: "Period of Installation", value: "2024 (Completed)" },
+      { label: "Number of Floors", value: "B2, B1, G, 1, 2, 3 (Six floors)" },
+    ],
+    activities: [
+      "Supply and Installation of Elevator (Lift)",
+    ],
+  },
+  {
+    title: "HOSPITAL PÉDIATRIQUE DE REMERA",
+    image: hospitalPediatriqueRemera,
+    details: [
+      { label: "Period of Installation", value: "2024" },
+      { label: "Number of Floors", value: "G, 1, 2, 3 (Four floors)" },
+    ],
+    activities: [
+      "Supply and Installation of Electrical Activities",
+      "Elevator (Lift) Installation",
+      "Scanner Installation",
+    ],
+  },
+  {
+    title: "MININTER",
+    image: mininter,
+    details: [
+      { label: "Project Location", value: "Kigali – Kacyiru" },
+      { label: "Project Owner", value: "MININTER" },
+      { label: "Period of Installation", value: "2019 – 2023" },
+      { label: "Number of Floors", value: "G, 1, 2, 3, 4 (Five floors)" },
+    ],
+    activities: [
+      "Elevator (Lift) Supply and Installation",
+    ],
+  },
+  {
+    title: "NATIONAL INSTITUTE OF STATISTICS OF RWANDA (NISR)",
+    image: nisr,
+    details: [
+      { label: "Project Location", value: "Kigali – Gasabo District, Remera Sector" },
+      { label: "Project Owner", value: "NISR" },
+      { label: "Period of Installation", value: "2024 (Completed)" },
+      { label: "Number of Floors", value: "B2, B1, G, 1, 2, 3 (Six floors)" },
+    ],
+    activities: [
+      "Supply and Installation of Elevator (Lift)",
+    ],
+  },
+  {
+    title: "RWARUTENE 30KV TRANSMISSION LINE",
+    image: rwaruteneTransmission,
+    details: [
+      { label: "Project Location", value: "Ngoma – Rwarutene" },
+      { label: "Project Owner", value: "ELOHIM" },
+      { label: "Managing Director", value: "Charlotte Nishimwe" },
+      { label: "Owner Contact", value: "+250 788 308 203" },
+      { label: "Distance", value: "1.6 km" },
+      { label: "Period of Installation", value: "06/2021 – 07/2021" },
+    ],
+    activities: [
+      "Electrical Transmission Line Construction Activities",
+    ],
+  },
+  {
+    title: "GAHANGA STREET LIGHT",
+    image: gahangaStreetLight,
+    details: [
+      { label: "Project Location", value: "Kicukiro – Gahanga" },
+      { label: "Project Name", value: "Gahanga Street Light" },
+      { label: "Project Owner", value: "ECOJEC" },
+      { label: "Managing Director", value: "Didas Twagirayezu" },
+      { label: "Owner Contact", value: "+250 788 305 638" },
+      { label: "Distance", value: "2.8 km" },
+      { label: "Period of Installation", value: "05/2022 – 08/2022" },
+    ],
+    activities: [
+      "Electrical Street Light Installation Activities",
     ],
   },
 ];
