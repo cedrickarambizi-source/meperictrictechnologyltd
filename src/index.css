@@ -136,6 +136,15 @@
     );
   }
 
+  /* Enhanced visual hierarchy utilities */
+  .section-divider {
+    @apply w-16 h-1 bg-mep-orange mx-auto;
+  }
+
+  .section-divider-left {
+    @apply w-16 h-1 bg-mep-orange;
+  }
+
   .info-bar {
     background: hsl(var(--mep-blue-dark));
   }
@@ -161,6 +170,38 @@
   .btn-secondary {
     @apply border-2 border-white text-white font-semibold px-8 py-4 rounded-md 
            hover:bg-white hover:text-primary transition-all duration-300;
+  }
+
+  /* Professional card with lift effect */
+  .pro-card {
+    @apply bg-card border border-border/50 rounded-xl p-6 
+           transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
+  }
+
+  /* Stat card for credibility */
+  .stat-card {
+    @apply bg-primary text-primary-foreground p-8 rounded-xl text-center
+           transition-all duration-300 hover:shadow-xl hover:scale-[1.02];
+  }
+
+  /* Process step indicator */
+  .process-step {
+    @apply relative flex items-start gap-6 pb-8;
+  }
+
+  .process-step::before {
+    content: '';
+    @apply absolute left-6 top-14 w-0.5 h-full bg-border -translate-x-1/2;
+  }
+
+  .process-step:last-child::before {
+    @apply hidden;
+  }
+
+  .process-number {
+    @apply w-12 h-12 rounded-full bg-primary text-primary-foreground 
+           flex items-center justify-center font-bold text-lg flex-shrink-0
+           shadow-md;
   }
 
   .nav-link {
