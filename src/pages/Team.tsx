@@ -97,7 +97,7 @@ const TeamCard = ({
           <div className="absolute inset-0 bg-gradient-to-t from-team-card via-team-card/20 to-transparent z-10" />
           
           {/* Member Photo - Natural, no filters */}
-          <img src={member.photo} alt={member.name} className={`
+          <img src={member.photo} alt={member.name} loading="lazy" decoding="async" className={`
               w-full h-full object-cover object-[center_20%]
               transition-transform duration-500
               ${isHovered ? 'scale-102' : 'scale-100'}

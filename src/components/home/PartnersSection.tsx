@@ -63,6 +63,8 @@ const PartnersSection = () => {
                 <img
                   src={partner.logo}
                   alt={partner.name}
+                  loading="lazy"
+                  decoding="async"
                   className="max-w-[150px] max-h-[90px] object-contain"
                 />
               </div>
@@ -76,6 +78,8 @@ const PartnersSection = () => {
                 <img
                   src={partner.logo}
                   alt={partner.name}
+                  loading="lazy"
+                  decoding="async"
                   className="max-w-[150px] max-h-[90px] object-contain"
                 />
               </div>
@@ -89,6 +93,8 @@ const PartnersSection = () => {
                 <img
                   src={partner.logo}
                   alt={partner.name}
+                  loading="lazy"
+                  decoding="async"
                   className="max-w-[150px] max-h-[90px] object-contain"
                 />
               </div>

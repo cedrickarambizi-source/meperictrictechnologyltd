@@ -152,6 +152,8 @@ const Projects = () => {
               <img
                 src={authCertificatesImg}
                 alt="MEP Erictric Technology Ltd Authorization Certificates - RDB Registration, FUJIHD, Daikin, SafeEagle, TSTY"
+                loading="lazy"
+                decoding="async"
                 className="w-full rounded-lg"
               />
             </div>
@@ -164,6 +166,8 @@ const Projects = () => {
               <img
                 src={completionCertificatesImg}
                 alt="MEP Erictric Technology Ltd Project Completion Certificates"
+                loading="lazy"
+                decoding="async"
                 className="w-full rounded-lg"
               />
             </div>

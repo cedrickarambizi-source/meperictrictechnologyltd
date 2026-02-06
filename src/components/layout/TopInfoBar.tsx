@@ -7,11 +7,11 @@ const TopInfoBar = () => {
         <div className="flex flex-wrap items-center justify-between gap-2 text-sm font-medium text-white">
           <div className="flex items-center gap-6">
             <a 
-              href="mailto:info@mepelectric.rw" 
+              href="mailto:meperictric40@gmail.com" 
               className="flex items-center gap-2 hover:opacity-80 transition-opacity"
             >
               <Mail className="h-4 w-4" />
-              <span className="hidden sm:inline">info@mepelectric.rw</span>
+              <span className="hidden sm:inline">meperictric40@gmail.com</span>
             </a>
             <a 
               href="tel:+250788645567" 
