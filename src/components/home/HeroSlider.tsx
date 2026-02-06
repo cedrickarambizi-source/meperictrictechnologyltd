@@ -56,6 +56,8 @@ const HeroSlider = () => {
           <img
             src={slide.image}
             alt={slide.alt}
+            loading={index === 0 ? "eager" : "lazy"}
+            decoding={index === 0 ? "sync" : "async"}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 hero-overlay" />

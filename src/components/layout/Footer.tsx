@@ -24,6 +24,8 @@ const Footer = () => {
             <img 
               src={logo} 
               alt="MEP Electric Technology Ltd" 
+              loading="lazy"
+              decoding="async"
               className="h-16 w-auto bg-white p-2 rounded-lg" 
             />
             <p className="text-sm opacity-90 leading-relaxed">
