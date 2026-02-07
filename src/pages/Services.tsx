@@ -11,9 +11,9 @@ import internetConnection from "@/assets/services/internet-connection.jpg";
 import wastewaterTreatment from "@/assets/services/wastewater-treatment.jpg";
 import accessPoint from "@/assets/services/access-point.jpg";
 import cctvInstallation from "@/assets/services/cctv-installation.jpg";
-import elevatorInstallation from "@/assets/services/elevator-installation.jpg";
-import elevatorMaintenance from "@/assets/services/elevator-maintenance.jpg";
-import electricalSystems from "@/assets/services/electrical-systems.jpg";
+import elevatorInstallation from "@/assets/services/elevator-installation-new.jpg";
+import elevatorMaintenance from "@/assets/services/elevator-maintenance-new.jpg";
+import electricalSystems from "@/assets/services/electrical-systems-new.jpg";
 
 const services = [
   {
