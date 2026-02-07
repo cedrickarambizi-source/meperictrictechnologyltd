@@ -7,7 +7,6 @@ import Autoplay from "embla-carousel-autoplay";
 // Import ALL project images
 import landmarkProject from "@/assets/projects/landmark-project.png";
 import omicaBuilding from "@/assets/projects/omica-building.png";
-import oassParkApartment from "@/assets/projects/oass-park-apartment.png";
 import kimironkoCommercial from "@/assets/projects/kimironko-commercial.png";
 import wintanaApartment from "@/assets/projects/wintana-apartment.png";
 import worldvisionHq from "@/assets/projects/worldvision-hq.png";
@@ -34,11 +33,6 @@ const projects = [
     title: "OMICA BUILDING",
     image: omicaBuilding,
     summary: "Electrical, Elevator, Fire Alarm, Generator, Firefighting, Switchgear, Transformer",
-  },
-  {
-    title: "OASS PARK APARTMENT",
-    image: oassParkApartment,
-    summary: "Structural works, Walling, Plastering",
   },
   {
     title: "KIMIRONKO COMMERCIAL BUILDING",
