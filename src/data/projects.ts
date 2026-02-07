@@ -1,7 +1,6 @@
 // Import all project images
 import landmarkProject from "@/assets/projects/landmark-project.png";
 import omicaBuilding from "@/assets/projects/omica-building.png";
-import oassParkApartment from "@/assets/projects/oass-park-apartment.png";
 import kimironkoCommercial from "@/assets/projects/kimironko-commercial.png";
 import wintanaApartment from "@/assets/projects/wintana-apartment.png";
 import worldvisionHq from "@/assets/projects/worldvision-hq.png";
@@ -58,15 +57,6 @@ export const oldProjects: Project[] = [
       "Switchgear",
       "Transformer",
       "MV line cables",
-    ],
-  },
-  {
-    title: "OASS PARK APARTMENT",
-    image: oassParkApartment,
-    activities: [
-      "Structural works",
-      "Walling",
-      "Plastering",
     ],
   },
   {

@@ -1,5 +1,6 @@
 import { CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import AnimatedCounter from "./AnimatedCounter";
 
 const highlights = [
   "Founded in 2016 in Kigali, Rwanda",
@@ -9,10 +10,10 @@ const highlights = [
 ];
 
 const stats = [
-  { number: "10+", label: "Years of Excellence" },
-  { number: "60+", label: "Projects Completed" },
-  { number: "20+", label: "Expert Engineers" },
-  { number: "15+", label: "Professional Certificates" },
+  { number: 10, suffix: "+", label: "Years of Excellence" },
+  { number: 60, suffix: "+", label: "Projects Completed" },
+  { number: 20, suffix: "+", label: "Expert Engineers" },
+  { number: 15, suffix: "+", label: "Professional Certificates" },
 ];
 
 const AboutSection = () => {
@@ -72,9 +73,12 @@ const AboutSection = () => {
                 key={index}
                 className="stat-card"
               >
-                <div className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-3">
-                  {stat.number}
-                </div>
+                <AnimatedCounter
+                  end={stat.number}
+                  suffix={stat.suffix}
+                  duration={2000}
+                  className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-3"
+                />
                 <div className="text-sm lg:text-base opacity-90 font-medium">{stat.label}</div>
               </div>
             ))}
