@@ -86,59 +86,62 @@ const TeamCard = ({
     transitionDelay: `${index * 100}ms`
   }} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
       <div className={`
-          relative bg-team-card rounded-2xl overflow-hidden 
+          relative bg-white rounded-2xl overflow-hidden 
           transition-all duration-500 ease-out
-          shadow-team hover:shadow-team-hover
+          shadow-lg hover:shadow-2xl
           ${isHovered ? '-translate-y-2' : 'translate-y-0'}
         `}>
-        {/* Image Container - Full portrait showing attire */}
-        <div className="relative h-96 overflow-hidden bg-team-card-accent">
-          {/* Subtle bottom gradient for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-t from-team-card via-team-card/20 to-transparent z-10" />
+        {/* Image Container - Centered portrait with proper face framing */}
+        <div className="relative h-80 sm:h-96 overflow-hidden bg-slate-100">
+          {/* Subtle bottom gradient for text readability - lighter */}
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent z-10" />
           
-          {/* Member Photo - Natural, no filters */}
-          <img src={member.photo} alt={member.name} loading="lazy" decoding="async" className={`
-              w-full h-full object-cover object-[center_20%]
-              transition-transform duration-500
-              ${isHovered ? 'scale-102' : 'scale-100'}
-            `} />
-
-          {/* Decorative Elements */}
-          <div className="absolute top-4 right-4 w-20 h-20 rounded-full bg-team-accent/10 blur-xl" />
-          <div className="absolute bottom-8 left-4 w-16 h-16 rounded-full bg-team-accent-secondary/10 blur-xl" />
+          {/* Member Photo - Centered face positioning, enhanced clarity */}
+          <img 
+            src={member.photo} 
+            alt={member.name} 
+            loading="lazy" 
+            decoding="async" 
+            className={`
+              w-full h-full object-cover object-center
+              transition-all duration-500
+              brightness-105 contrast-105
+              ${isHovered ? 'scale-105' : 'scale-100'}
+            `} 
+          />
         </div>
 
         {/* Content */}
-        <div className="relative z-20 p-6 -mt-8">
+        <div className="relative z-20 p-5 -mt-12 bg-gradient-to-t from-slate-900 via-slate-900/95 to-transparent">
           {/* Role Badge */}
-          <span className="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-wider text-team-role bg-team-role-bg rounded-full mb-3 bg-zinc-950">
+          <span className="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white bg-primary rounded-full mb-2">
             {member.role}
           </span>
 
           {/* Name */}
-          <h3 className="font-heading font-bold text-xl text-white mb-2 group-hover:text-team-accent transition-colors duration-300">
+          <h3 className="font-heading font-bold text-lg text-white mb-1 group-hover:text-mep-orange transition-colors duration-300">
             {member.name}
           </h3>
 
           {/* Description - Appears on hover */}
           <div className={`
               overflow-hidden transition-all duration-500 ease-out
-              ${isHovered ? 'max-h-20 opacity-100' : 'max-h-0 opacity-0'}
+              ${isHovered ? 'max-h-16 opacity-100' : 'max-h-0 opacity-0'}
             `}>
-            <p className="text-team-text-muted text-sm leading-relaxed">
+            <p className="text-slate-300 text-sm leading-relaxed">
               {member.description}
             </p>
           </div>
 
           {/* Social Links */}
           <div className={`
-              flex gap-3 mt-4 transition-all duration-500 ease-out
+              flex gap-2 mt-3 transition-all duration-500 ease-out
               ${isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
             `}>
-            <a href="#" className="p-2 bg-team-social rounded-full hover:bg-team-accent transition-colors duration-300" aria-label={`${member.name} LinkedIn`}>
+            <a href="#" className="p-2 bg-white/20 rounded-full hover:bg-mep-orange transition-colors duration-300" aria-label={`${member.name} LinkedIn`}>
               <Linkedin className="h-4 w-4 text-white" />
             </a>
-            <a href="#" className="p-2 bg-team-social rounded-full hover:bg-team-accent transition-colors duration-300" aria-label={`${member.name} Email`}>
+            <a href="#" className="p-2 bg-white/20 rounded-full hover:bg-mep-orange transition-colors duration-300" aria-label={`${member.name} Email`}>
               <Mail className="h-4 w-4 text-white" />
             </a>
           </div>
@@ -174,7 +177,7 @@ const Team = () => {
   }, []);
   return <Layout>
       {/* Hero Section */}
-      <section className="bg-team-bg py-20 lg:py-28">
+      <section className="bg-slate-900 py-16 lg:py-24">
         <div className="container mx-auto px-4">
           {/* Section Header */}
           <div ref={headerRef} className={`
@@ -193,8 +196,8 @@ const Team = () => {
             </p>
           </div>
 
-          {/* Team Grid */}
-          <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {/* Team Grid - Optimized responsive layout */}
+          <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
             {teamMembers.map((member, index) => <TeamCard key={member.name} member={member} index={index} isVisible={isGridVisible} />)}
           </div>
 

@@ -90,14 +90,14 @@ const ServicesSection = () => {
               {services.map((service, index) => (
                 <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
                   <div className="bg-card rounded-xl shadow-md hover:shadow-xl transition-all duration-300 group overflow-hidden border border-border/30 h-full hover:-translate-y-1">
-                    {/* Service Image */}
-                    <div className="aspect-[4/3] overflow-hidden">
+                    {/* Service Image - Bright and clear */}
+                    <div className="aspect-[4/3] overflow-hidden bg-slate-100">
                       <img
                         src={service.image}
                         alt={service.title}
                         loading="lazy"
                         decoding="async"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-105 contrast-105"
                       />
                     </div>
                     {/* Service Content */}

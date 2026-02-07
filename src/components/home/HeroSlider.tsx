@@ -58,9 +58,9 @@ const HeroSlider = () => {
             alt={slide.alt}
             loading={index === 0 ? "eager" : "lazy"}
             decoding={index === 0 ? "sync" : "async"}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover brightness-110 contrast-105"
           />
-          <div className="absolute inset-0 hero-overlay" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/70 via-slate-900/40 to-transparent" />
         </div>
       ))}
 
