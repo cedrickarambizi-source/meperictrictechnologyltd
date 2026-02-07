@@ -109,13 +109,13 @@ const Services = () => {
                     Get a Quote <ArrowRight className="h-5 w-5" />
                   </Link>
                 </div>
-                <div className={`rounded-xl overflow-hidden shadow-lg ${index % 2 === 1 ? "lg:order-1" : ""}`}>
+                <div className={`rounded-xl overflow-hidden shadow-lg bg-muted/30 ${index % 2 === 1 ? "lg:order-1" : ""}`}>
                   <img
                     src={service.image}
                     alt={service.title}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-80 object-cover"
+                    className="w-full h-80 object-cover brightness-105 contrast-105"
                   />
                 </div>
               </div>
