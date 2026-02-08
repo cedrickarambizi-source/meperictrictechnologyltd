@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback } from "react";
-import { ChevronLeft, ChevronRight, FileText } from "lucide-react";
+import { useState, useEffect } from "react";
+import { FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroElectrical from "@/assets/hero-electrical.jpg";
 import heroElevator from "@/assets/hero-elevator.jpg";
@@ -15,41 +15,21 @@ const slides = [
 
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  const nextSlide = useCallback(() => {
-    if (isAnimating) return;
-    setIsAnimating(true);
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-    setTimeout(() => setIsAnimating(false), 500);
-  }, [isAnimating]);
-
-  const prevSlide = useCallback(() => {
-    if (isAnimating) return;
-    setIsAnimating(true);
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-    setTimeout(() => setIsAnimating(false), 500);
-  }, [isAnimating]);
-
-  const goToSlide = (index: number) => {
-    if (isAnimating || index === currentSlide) return;
-    setIsAnimating(true);
-    setCurrentSlide(index);
-    setTimeout(() => setIsAnimating(false), 500);
-  };
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 5000);
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 3500);
     return () => clearInterval(interval);
-  }, [nextSlide]);
+  }, []);
 
   return (
     <section className="relative h-[650px] md:h-[750px] lg:h-[85vh] min-h-[700px] max-h-[900px] overflow-hidden">
-      {/* Slides */}
+      {/* Slides with smooth fade transition */}
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
             index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}
         >
@@ -105,38 +85,6 @@ const HeroSlider = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Navigation Arrows */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-30 p-3 lg:p-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full transition-all border border-white/20"
-        aria-label="Previous slide"
-      >
-        <ChevronLeft className="h-5 w-5 lg:h-6 lg:w-6 text-white" />
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-30 p-3 lg:p-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full transition-all border border-white/20"
-        aria-label="Next slide"
-      >
-        <ChevronRight className="h-5 w-5 lg:h-6 lg:w-6 text-white" />
-      </button>
-
-      {/* Dot Indicators */}
-      <div className="absolute bottom-10 lg:bottom-12 left-1/2 -translate-x-1/2 z-30 flex gap-3">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all ${
-              index === currentSlide
-                ? "bg-white w-8"
-                : "bg-white/50 hover:bg-white/70"
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
       </div>
     </section>
   );
