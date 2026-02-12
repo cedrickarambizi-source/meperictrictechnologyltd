@@ -1,9 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
-import { 
-  ArrowRight,
-  CheckCircle,
-} from "lucide-react";
+import { ArrowRight, CheckCircle } from "lucide-react";
 
 // Service images
 import transmissionLine from "@/assets/services/transmission-line.jpg";
@@ -11,8 +8,7 @@ import internetConnection from "@/assets/services/internet-connection.jpg";
 import wastewaterTreatment from "@/assets/services/wastewater-treatment.jpg";
 import accessPoint from "@/assets/services/access-point.jpg";
 import cctvInstallation from "@/assets/services/cctv-installation.jpg";
-import elevatorInstallation from "@/assets/services/elevator-installation-new.jpg";
-import elevatorMaintenance from "@/assets/services/elevator-maintenance-new.jpg";
+import elevatorTechnician from "@/assets/services/elevator-technician.jpg";
 import electricalSystems from "@/assets/services/electrical-systems-new.jpg";
 
 const services = [
@@ -47,13 +43,13 @@ const services = [
     benefits: ["HD surveillance", "24/7 monitoring", "Remote access", "Professional installation"],
   },
   {
-    image: elevatorInstallation,
+    image: elevatorTechnician,
     title: "Elevator Supply & Installation",
     description: "State-of-the-art elevator systems for residential, commercial, and industrial buildings. We partner with internationally recognized manufacturers to deliver reliable, safe, and efficient vertical transportation solutions.",
     benefits: ["Premium quality equipment", "Professional installation", "Customized solutions", "Safety compliance"],
   },
   {
-    image: elevatorMaintenance,
+    image: elevatorTechnician,
     title: "Elevator Maintenance & Modernization",
     description: "Comprehensive maintenance programs and modernization solutions for existing elevator systems. Our preventive maintenance ensures optimal performance and extended equipment life.",
     benefits: ["24/7 emergency support", "Preventive maintenance", "Parts replacement", "Performance optimization"],
@@ -115,7 +111,7 @@ const Services = () => {
                     alt={service.title}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-80 object-cover brightness-105 contrast-105"
+                    className="w-full h-80 object-cover"
                   />
                 </div>
               </div>

@@ -15,7 +15,7 @@ import internetConnection from "@/assets/services/internet-connection.jpg";
 import wastewaterTreatment from "@/assets/services/wastewater-treatment.jpg";
 import accessPoint from "@/assets/services/access-point.jpg";
 import cctvInstallation from "@/assets/services/cctv-installation.jpg";
-import elevatorInstallation from "@/assets/services/elevator-installation-new.jpg";
+import elevatorTechnician from "@/assets/services/elevator-technician.jpg";
 
 const services = [
   {
@@ -44,7 +44,7 @@ const services = [
     description: "Professional security surveillance systems for comprehensive property protection.",
   },
   {
-    image: elevatorInstallation,
+    image: elevatorTechnician,
     title: "Elevator Supply & Installation",
     description: "State-of-the-art elevator systems for residential, commercial, and industrial buildings.",
   },
@@ -90,17 +90,15 @@ const ServicesSection = () => {
               {services.map((service, index) => (
                 <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
                   <div className="bg-card rounded-xl shadow-md hover:shadow-xl transition-all duration-300 group overflow-hidden border border-border/30 h-full hover:-translate-y-1">
-                    {/* Service Image - Bright and clear */}
                     <div className="aspect-[4/3] overflow-hidden bg-slate-100">
                       <img
                         src={service.image}
                         alt={service.title}
                         loading="lazy"
                         decoding="async"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-105 contrast-105"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                       />
                     </div>
-                    {/* Service Content */}
                     <div className="p-6 lg:p-7">
                       <h3 className="font-heading font-bold text-lg lg:text-xl mb-3 text-foreground">
                         {service.title}
@@ -124,12 +122,10 @@ const ServicesSection = () => {
           </Carousel>
         </div>
 
-        {/* Carousel Indicator for Mobile */}
         <p className="text-center text-muted-foreground text-sm mt-6 md:hidden">
           ← Swipe to explore more services →
         </p>
 
-        {/* CTA */}
         <div className="text-center mt-12">
           <Link to="/services" className="btn-primary inline-flex items-center gap-2 hover:gap-3 transition-all">
             View All Services <ArrowRight className="h-5 w-5" />

@@ -11,6 +11,7 @@ import tsty from "@/assets/partners/tsty-logo.png";
 import equity from "@/assets/partners/equity-logo.png";
 import ncba from "@/assets/partners/ncba-logo.png";
 import partner6 from "@/assets/partners/partner-6.jpg";
+import bahoHospital from "@/assets/partners/baho-hospital-logo.jpg";
 
 const partners = [
   { name: "Eagle Partner", logo: eaglePartner },
@@ -19,6 +20,7 @@ const partners = [
   { name: "Equity", logo: equity },
   { name: "NCBA", logo: ncba },
   { name: "Partner", logo: partner6 },
+  { name: "Baho International Hospital", logo: bahoHospital },
 ];
 
 const Partners = () => {
