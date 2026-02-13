@@ -31,7 +31,7 @@ const teamMembers = [
     name: "Karambizi Cedric",
     role: "Marketing Director",
     description: "Strategic marketing and business development leader",
-    photo: Karambizi Cedric,
+    photo: KarambiziCedric,
   },
   {
     name: "Gerald Rwililiza",
