@@ -45,7 +45,7 @@ const services = [
   },
   {
     image: elevatorTechnician,
-    title: "Elevator Supply & Installation",
+    title: "Smart Elevator Installation & Repair Solutions",
     description: "State-of-the-art elevator systems for residential, commercial, and industrial buildings.",
   },
 ];
