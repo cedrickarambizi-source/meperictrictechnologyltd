@@ -28,10 +28,10 @@ const teamMembers = [
     photo: jeanPaulTuyambaze,
   },
   {
-    name: "Cedric Karambizi",
+    name: "Karambizi Cedric",
     role: "Marketing Director",
     description: "Strategic marketing and business development leader",
-    photo: cedricKarambizi,
+    photo: Karambizi Cedric,
   },
   {
     name: "Gerald Rwililiza",
@@ -73,7 +73,7 @@ const teamMembers = [
     name: "Umutoniwase Divine",
     role: "Finance Manager",
     description: "Expert in financial planning and management",
-    photo: umutoniwaseDivine,
+m,         photo: umutoniwaseDivine,
   },
 ];
 
