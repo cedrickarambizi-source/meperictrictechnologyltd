@@ -37,7 +37,7 @@ export const oldProjects: Project[] = [
       { label: "Project Location", value: "Kigali- Nyarugenge District- Nyarugenge" },
       { label: "Project Name", value: "Landmark One" },
       { label: "Project Owner", value: "Kayumba Eudes" },
-      { label: "Owner Contact", value: "+250788 305 191" },
+      { label: "Owner Contact", value: "+250 788 305 191" },
       { label: "Period of Installation", value: "2023-2024" },
       { label: "Number of Floors", value: "B, G, 1, 2, 3, 4, 5, 6,7,8 (Ten floors)" },
     activities: [
