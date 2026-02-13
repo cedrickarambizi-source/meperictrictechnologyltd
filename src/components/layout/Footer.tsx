@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="space-y-4">
             <img 
               src={logo} 
-              alt="MEP Electric Technology Ltd" 
+              alt="MEP Erictric Technology Ltd" 
               loading="lazy"
               decoding="async"
               className="h-16 w-auto bg-white p-2 rounded-lg" 
