@@ -178,7 +178,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm opacity-90">
-          <p>© 2026 MEP Electric Technology Ltd. All rights reserved.</p>
+          <p>© 2026 MEP Erictric Technology Ltd. All rights reserved.</p>
           <div className="flex gap-6">
             <Link to="/privacy" className="hover:text-mep-orange transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-mep-orange transition-colors">Terms of Service</Link>
