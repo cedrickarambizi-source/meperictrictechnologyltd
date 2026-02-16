@@ -73,7 +73,7 @@ const teamMembers = [
     name: "Umutoniwase Divine",
     role: "Finance Manager",
     description: "Expert in financial planning and management",
-m,         photo: umutoniwaseDivine,
+    photo: umutoniwaseDivine,
   },
 ];
 
