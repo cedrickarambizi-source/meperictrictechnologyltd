@@ -32,7 +32,6 @@ export interface Project {
 // Old Projects (Legacy Portfolio)
 export const oldProjects: Project[] = [
   {
-    {
   title: "LANDMARK PROJECT",
   image: landmarkProject,
   details: [
