@@ -22,40 +22,60 @@ export interface ProjectDetail {
   value: string;
 }
 
+export type ServiceCategory =
+  | "Electrical"
+  | "Elevator"
+  | "Fire Safety"
+  | "CCTV & Security"
+  | "Plumbing"
+  | "Transmission"
+  | "Maintenance";
+
+export type ProjectLocation = "Kigali" | "Eastern Province" | "Other";
+
 export interface Project {
   title: string;
   image: string;
   details?: ProjectDetail[];
   activities: string[];
+  categories: ServiceCategory[];
+  location: ProjectLocation;
+  status: "completed" | "ongoing";
 }
 
 // Old Projects (Legacy Portfolio)
 export const oldProjects: Project[] = [
   {
     title: "LANDMARK PROJECT",
-  image: landmarkProject,
-  details: [
-    { label: "Project Location", value: "Kigali – Nyarugenge District – Nyarugenge" },
-    { label: "Project Name", value: "Landmark One" },
-    { label: "Project Owner", value: "Kayumba Eudes" },
-    { label: "Owner Contact", value: "+250 788 305 191" },
-    { label: "Period of Installation", value: "2023–2024" },
-    { label: "Number of Floors", value: "B, G, 1, 2, 3, 4, 5, 6, 7, 8 (Ten floors)" }
-  ],
-  activities: [
-    "Supply and installation of electrical activities",
-    "Supply and installation of two elevators (lifts)",
-    "Fire alarm system",
-    "CCTV cameras",
-    "IP telephone system",
-    "Internet network",
-    "Generator installation",
-    "Firefighting system"
-  ]
-},
+    image: landmarkProject,
+    categories: ["Electrical", "Elevator", "Fire Safety", "CCTV & Security"],
+    location: "Kigali",
+    status: "completed",
+    details: [
+      { label: "Project Location", value: "Kigali – Nyarugenge District – Nyarugenge" },
+      { label: "Project Name", value: "Landmark One" },
+      { label: "Project Owner", value: "Kayumba Eudes" },
+      { label: "Owner Contact", value: "+250 788 305 191" },
+      { label: "Period of Installation", value: "2023–2024" },
+      { label: "Number of Floors", value: "B, G, 1, 2, 3, 4, 5, 6, 7, 8 (Ten floors)" },
+    ],
+    activities: [
+      "Supply and installation of electrical activities",
+      "Supply and installation of two elevators (lifts)",
+      "Fire alarm system",
+      "CCTV cameras",
+      "IP telephone system",
+      "Internet network",
+      "Generator installation",
+      "Firefighting system",
+    ],
+  },
   {
     title: "OMICA BUILDING",
     image: omicaBuilding,
+    categories: ["Electrical", "Elevator", "Fire Safety"],
+    location: "Kigali",
+    status: "completed",
     activities: [
       "Supply and installation of electrical activities",
       "Elevator (lift)",
@@ -70,6 +90,9 @@ export const oldProjects: Project[] = [
   {
     title: "KIMIRONKO COMMERCIAL BUILDING",
     image: kimironkoCommercial,
+    categories: ["Electrical", "Elevator", "Fire Safety"],
+    location: "Kigali",
+    status: "completed",
     activities: [
       "Supply and installation of electrical activities",
       "Elevator (lift)",
@@ -84,6 +107,9 @@ export const oldProjects: Project[] = [
   {
     title: "WINTANA APARTMENT",
     image: wintanaApartment,
+    categories: ["Electrical", "Elevator"],
+    location: "Kigali",
+    status: "completed",
     activities: [
       "Supply and installation of electrical activities",
       "Elevator (lift)",
@@ -92,9 +118,10 @@ export const oldProjects: Project[] = [
   {
     title: "WORLDVISION HEADQUARTERS RWANDA",
     image: worldvisionHq,
-    activities: [
-      "Elevator supply and installation",
-    ],
+    categories: ["Elevator"],
+    location: "Kigali",
+    status: "completed",
+    activities: ["Elevator supply and installation"],
   },
 ];
 
@@ -103,6 +130,9 @@ export const newProjects: Project[] = [
   {
     title: "IKAZE HOUSE",
     image: ikazeHouse,
+    categories: ["Electrical", "Elevator", "Fire Safety", "CCTV & Security", "Plumbing"],
+    location: "Kigali",
+    status: "completed",
     details: [
       { label: "Project Location", value: "Kigali – Remera-Gisiment" },
       { label: "Project Name", value: "Ikaze House Commercial Building" },
@@ -125,17 +155,21 @@ export const newProjects: Project[] = [
   {
     title: "A&F PLAZA",
     image: afPlaza,
+    categories: ["Elevator"],
+    location: "Kigali",
+    status: "completed",
     details: [
       { label: "Project Name", value: "A&F Plaza" },
       { label: "Period of Installation", value: "2023" },
     ],
-    activities: [
-      "Supply and installation of 2 elevators (lifts)",
-    ],
+    activities: ["Supply and installation of 2 elevators (lifts)"],
   },
   {
     title: "KAFAM HOUSE",
     image: kafamHouse,
+    categories: ["Electrical", "Elevator", "Fire Safety", "CCTV & Security"],
+    location: "Kigali",
+    status: "completed",
     details: [
       { label: "Project Location", value: "Kigali – Nyarutarama – Gishushu" },
       { label: "Project Name", value: "Kafam Commercial Building" },
@@ -158,6 +192,9 @@ export const newProjects: Project[] = [
   {
     title: "LA CROIX DU SUD – Kwa Nyirinkwaya",
     image: laCroixDuSud,
+    categories: ["Electrical", "Elevator", "Fire Safety"],
+    location: "Kigali",
+    status: "ongoing",
     details: [
       { label: "Period of Installation", value: "2024 – Ongoing" },
       { label: "Number of Floors", value: "B, G, 1, 2, 3, 4 (Six floors)" },
@@ -176,6 +213,9 @@ export const newProjects: Project[] = [
   {
     title: "YYUSSA CITY CENTER",
     image: yyussaCityCenter,
+    categories: ["Elevator", "Maintenance"],
+    location: "Kigali",
+    status: "ongoing",
     details: [
       { label: "Service Type", value: "Maintenance and Repair" },
       { label: "Period", value: "2025 – Ongoing" },
@@ -188,6 +228,9 @@ export const newProjects: Project[] = [
   {
     title: "BAHO INTERNATIONAL HOSPITAL",
     image: bahoHospital,
+    categories: ["Electrical", "Elevator", "Fire Safety", "CCTV & Security", "Plumbing"],
+    location: "Kigali",
+    status: "completed",
     details: [
       { label: "Project Location", value: "Nyarutarama" },
       { label: "Project Name", value: "Baho International Hospital" },
@@ -213,18 +256,22 @@ export const newProjects: Project[] = [
   {
     title: "TWIGA HOUSE ACCOMMODATION",
     image: twigaHouse,
+    categories: ["Elevator"],
+    location: "Kigali",
+    status: "completed",
     details: [
       { label: "Project Location", value: "Kigali – Gasabo District, Remera Sector" },
       { label: "Period of Installation", value: "2024 (Completed)" },
       { label: "Number of Floors", value: "B2, B1, G, 1, 2, 3 (Six floors)" },
     ],
-    activities: [
-      "Supply and Installation of Elevator (Lift)",
-    ],
+    activities: ["Supply and Installation of Elevator (Lift)"],
   },
   {
     title: "HOSPITAL PÉDIATRIQUE DE REMERA",
     image: hospitalPediatriqueRemera,
+    categories: ["Electrical", "Elevator"],
+    location: "Kigali",
+    status: "completed",
     details: [
       { label: "Period of Installation", value: "2024" },
       { label: "Number of Floors", value: "G, 1, 2, 3 (Four floors)" },
@@ -238,32 +285,37 @@ export const newProjects: Project[] = [
   {
     title: "MININTER",
     image: mininter,
+    categories: ["Elevator"],
+    location: "Kigali",
+    status: "completed",
     details: [
       { label: "Project Location", value: "Kigali – Kacyiru" },
       { label: "Project Owner", value: "MININTER" },
       { label: "Period of Installation", value: "2019 – 2023" },
       { label: "Number of Floors", value: "G, 1, 2, 3, 4 (Five floors)" },
     ],
-    activities: [
-      "Elevator (Lift) Supply and Installation",
-    ],
+    activities: ["Elevator (Lift) Supply and Installation"],
   },
   {
     title: "NATIONAL INSTITUTE OF STATISTICS OF RWANDA (NISR)",
     image: nisr,
+    categories: ["Elevator"],
+    location: "Kigali",
+    status: "completed",
     details: [
       { label: "Project Location", value: "Kigali – Gasabo District, Remera Sector" },
       { label: "Project Owner", value: "NISR" },
       { label: "Period of Installation", value: "2024 (Completed)" },
       { label: "Number of Floors", value: "B2, B1, G, 1, 2, 3 (Six floors)" },
     ],
-    activities: [
-      "Supply and Installation of Elevator (Lift)",
-    ],
+    activities: ["Supply and Installation of Elevator (Lift)"],
   },
   {
     title: "RWARUTENE 30KV TRANSMISSION LINE",
     image: rwaruteneTransmission,
+    categories: ["Transmission", "Electrical"],
+    location: "Eastern Province",
+    status: "completed",
     details: [
       { label: "Project Location", value: "Ngoma – Rwarutene" },
       { label: "Project Owner", value: "ELOHIM" },
@@ -272,13 +324,14 @@ export const newProjects: Project[] = [
       { label: "Distance", value: "1.6 km" },
       { label: "Period of Installation", value: "06/2021 – 07/2021" },
     ],
-    activities: [
-      "Electrical Transmission Line Construction Activities",
-    ],
+    activities: ["Electrical Transmission Line Construction Activities"],
   },
   {
     title: "GAHANGA STREET LIGHT",
     image: gahangaStreetLight,
+    categories: ["Electrical"],
+    location: "Kigali",
+    status: "completed",
     details: [
       { label: "Project Location", value: "Kicukiro – Gahanga" },
       { label: "Project Name", value: "Gahanga Street Light" },
@@ -288,11 +341,22 @@ export const newProjects: Project[] = [
       { label: "Distance", value: "2.8 km" },
       { label: "Period of Installation", value: "05/2022 – 08/2022" },
     ],
-    activities: [
-      "Electrical Street Light Installation Activities",
-    ],
+    activities: ["Electrical Street Light Installation Activities"],
   },
 ];
 
 // All projects combined
 export const allProjects: Project[] = [...oldProjects, ...newProjects];
+
+// Unique categories for filtering
+export const allCategories: ServiceCategory[] = [
+  "Electrical",
+  "Elevator",
+  "Fire Safety",
+  "CCTV & Security",
+  "Plumbing",
+  "Transmission",
+  "Maintenance",
+];
+
+export const allLocations: ProjectLocation[] = ["Kigali", "Eastern Province", "Other"];
