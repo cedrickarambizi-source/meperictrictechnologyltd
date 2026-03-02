@@ -11,7 +11,7 @@ import jimmyBimenyimana from "@/assets/team/jimmy-bimenyimana.jpg";
 import umutoniwaseDivine from "@/assets/team/umutoniwase-divine.jpg";
 import fabriceTuyizere from "@/assets/team/fabrice-tuyizere.jpg";
 import ngabonzizaBenjamin from "@/assets/team/ngabonziza-benjamin-plumbing.jpg";
-import Karambizicedric from "@/assets/team/Karambizi-cedric.jpg";
+import KarambiziCedric from "@/assets/team/cedric-karambizi.jpg";
 import isaacMuhoza from "@/assets/team/isaac-muhoza.jpg";
 
 const teamMembers = [

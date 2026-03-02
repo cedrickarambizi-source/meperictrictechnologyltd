@@ -32,9 +32,7 @@ export interface Project {
 // Old Projects (Legacy Portfolio)
 export const oldProjects: Project[] = [
   {
-    {
-  
-  title: "LANDMARK PROJECT",
+    title: "LANDMARK PROJECT",
   image: landmarkProject,
   details: [
     { label: "Project Location", value: "Kigali – Nyarugenge District – Nyarugenge" },
