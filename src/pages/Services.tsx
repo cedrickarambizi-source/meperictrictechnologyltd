@@ -5,6 +5,9 @@ import ScrollReveal from "@/components/motion/ScrollReveal";
 import StaggerChildren, { staggerItem } from "@/components/motion/StaggerChildren";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, ChevronDown } from "lucide-react";
+import SEOHead from "@/components/seo/SEOHead";
+import StructuredData, { buildBreadcrumbSchema, faqSchema } from "@/components/seo/StructuredData";
+import FAQSection from "@/components/services/FAQSection";
 
 // Service images
 import transmissionLine from "@/assets/services/transmission-line.jpg";
@@ -228,6 +231,19 @@ const ServiceCard = ({ service, index }: { service: ServiceData; index: number }
 const Services = () => {
   return (
     <Layout>
+      <SEOHead
+        title="MEP & Elevator Installation Services in Kigali | Electrical & Mechanical Experts"
+        description="Professional electrical, plumbing, HVAC, and elevator installation services in Rwanda."
+        canonical="/services"
+      />
+      <StructuredData
+        id="breadcrumb-services"
+        data={buildBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Services", path: "/services" },
+        ])}
+      />
+      <StructuredData id="faq-schema" data={faqSchema} />
       {/* Hero */}
       <section className="bg-primary py-20 lg:py-28">
         <div className="container mx-auto px-4 text-center text-primary-foreground">
@@ -251,6 +267,9 @@ const Services = () => {
           </div>
         </div>
       </section>
+
+      {/* FAQ */}
+      <FAQSection />
 
       {/* CTA */}
       <section className="py-16 bg-mep-orange">

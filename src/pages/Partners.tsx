@@ -2,6 +2,8 @@ import Layout from "@/components/layout/Layout";
 import PartnershipValues from "@/components/partners/PartnershipValues";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import SEOHead from "@/components/seo/SEOHead";
+import StructuredData, { buildBreadcrumbSchema } from "@/components/seo/StructuredData";
 import { ArrowRight } from "lucide-react";
 
 // Import partner logos
@@ -26,6 +28,18 @@ const partners = [
 const Partners = () => {
   return (
     <Layout>
+      <SEOHead
+        title="Partners & Clients | MEP Erictric Technology Ltd"
+        description="Trusted partners and clients of MEP Erictric Technology Ltd across Rwanda and East Africa."
+        canonical="/partners"
+      />
+      <StructuredData
+        id="breadcrumb-partners"
+        data={buildBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Partners & Clients", path: "/partners" },
+        ])}
+      />
       {/* Hero Section */}
       <section className="py-24 md:py-32 bg-secondary">
         <div className="container mx-auto px-4 text-center">

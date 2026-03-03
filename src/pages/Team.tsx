@@ -1,7 +1,8 @@
 import Layout from "@/components/layout/Layout";
 import { useState, useEffect, useRef } from "react";
 import TeamMemberCard from "@/components/team/TeamMemberCard";
-
+import SEOHead from "@/components/seo/SEOHead";
+import StructuredData, { buildBreadcrumbSchema } from "@/components/seo/StructuredData";
 // Team member photos
 import nzabonimamaEric from "@/assets/team/nzabonimana-eric.jpg";
 import jeanPaulTuyambaze from "@/assets/team/jean-paul-tuyambaze.jpg";
@@ -109,6 +110,18 @@ const Team = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title="Meet Our Engineering Team | MEP Erictric Technology Ltd"
+        description="Meet the skilled engineers and professionals behind MEP Erictric Technology Ltd's elevator and MEP solutions in Rwanda."
+        canonical="/team"
+      />
+      <StructuredData
+        id="breadcrumb-team"
+        data={buildBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Meet Our Team", path: "/team" },
+        ])}
+      />
       {/* Hero Section - Deep Navy Background */}
       <section className="bg-gradient-to-b from-slate-900 via-slate-900 to-slate-800 py-16 lg:py-24 min-h-screen">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
