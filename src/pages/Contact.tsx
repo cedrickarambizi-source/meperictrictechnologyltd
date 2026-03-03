@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 import { CheckCircle, ArrowRight, ArrowLeft, MapPin, Mail, Phone } from "lucide-react";
+import SEOHead from "@/components/seo/SEOHead";
+import StructuredData, { buildBreadcrumbSchema } from "@/components/seo/StructuredData";
 
 type ServiceType =
   | "Elevator Installation"
@@ -134,6 +136,18 @@ const Contact = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title="Contact MEP Erictric Technology Ltd | Kigali Engineering Experts"
+        description="Get in touch for MEP, electrical, and elevator installation services in Rwanda."
+        canonical="/contact"
+      />
+      <StructuredData
+        id="breadcrumb-contact"
+        data={buildBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Contact", path: "/contact" },
+        ])}
+      />
       {/* Hero */}
       <section className="bg-primary py-16 lg:py-20">
         <div className="container mx-auto px-4 text-center text-primary-foreground">

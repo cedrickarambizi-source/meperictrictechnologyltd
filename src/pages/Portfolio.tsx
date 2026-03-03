@@ -2,10 +2,24 @@ import Layout from "@/components/layout/Layout";
 import ProjectCard from "@/components/projects/ProjectCard";
 import { oldProjects, newProjects } from "@/data/projects";
 import { ExternalLink } from "lucide-react";
+import SEOHead from "@/components/seo/SEOHead";
+import StructuredData, { buildBreadcrumbSchema } from "@/components/seo/StructuredData";
 
 const Portfolio = () => {
   return (
     <Layout>
+      <SEOHead
+        title="Portfolio | MEP Erictric Technology Ltd Engineering Projects"
+        description="Explore our flagship MEP engineering and elevator installation projects across Rwanda and East Africa."
+        canonical="/portfolio"
+      />
+      <StructuredData
+        id="breadcrumb-portfolio"
+        data={buildBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Portfolio", path: "/portfolio" },
+        ])}
+      />
       {/* Hero */}
       <section className="bg-primary py-20 lg:py-28">
         <div className="container mx-auto px-4 text-center text-primary-foreground">

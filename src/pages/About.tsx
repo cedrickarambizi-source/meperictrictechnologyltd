@@ -1,9 +1,23 @@
 import Layout from "@/components/layout/Layout";
 import { CheckCircle, Target, Eye, Award, MapPin, Phone, Mail, Clock, ExternalLink } from "lucide-react";
+import SEOHead from "@/components/seo/SEOHead";
+import StructuredData, { buildBreadcrumbSchema } from "@/components/seo/StructuredData";
 
 const About = () => {
   return (
     <Layout>
+      <SEOHead
+        title="About MEP Erictric Technology Ltd | Engineering Company in Kigali"
+        description="Trusted engineering contractor delivering high-quality MEP and elevator solutions across Rwanda."
+        canonical="/about"
+      />
+      <StructuredData
+        id="breadcrumb-about"
+        data={buildBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "About Us", path: "/about" },
+        ])}
+      />
       {/* Hero */}
       <section className="bg-primary py-20 lg:py-28">
         <div className="container mx-auto px-4 text-center text-primary-foreground">

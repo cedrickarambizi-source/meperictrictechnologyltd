@@ -1,4 +1,6 @@
 import { useState, useMemo } from "react";
+import SEOHead from "@/components/seo/SEOHead";
+import StructuredData, { buildBreadcrumbSchema } from "@/components/seo/StructuredData";
 import { motion, AnimatePresence } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import ProjectCard from "@/components/projects/ProjectCard";
@@ -47,6 +49,18 @@ const Projects = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title="Our Engineering Projects in Rwanda | MEP & Elevator Installations"
+        description="Explore completed and ongoing MEP, electrical, mechanical and elevator projects across Kigali and East Africa."
+        canonical="/projects"
+      />
+      <StructuredData
+        id="breadcrumb-projects"
+        data={buildBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Projects", path: "/projects" },
+        ])}
+      />
       {/* Hero */}
       <section className="bg-primary py-20 lg:py-28">
         <div className="container mx-auto px-4 text-center text-primary-foreground">
