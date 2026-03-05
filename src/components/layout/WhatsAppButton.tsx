@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const WHATSAPP_URL =
-  "https://wa.me/250781175264?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20engineering%20services.";
+  "https://wa.me/250781175264?text=mwiriwe%20neza%2C%20Nshaka%20kumenya%20byinshi%20muri%20service%20mutanga%20na%20project%20mwakoze%20ho";
 
 const WhatsAppButton = () => {
   const [showTooltip, setShowTooltip] = useState(false);
