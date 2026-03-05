@@ -18,7 +18,7 @@ const WelcomePopup = () => {
   useEffect(() => {
     if (!isVisible) return;
     sessionStorage.setItem("welcome-popup-seen", "true");
-    const hideTimer = setTimeout(() => setIsVisible(false), 4000);
+    const hideTimer = setTimeout(() => setIsVisible(false), 5000);
     return () => clearTimeout(hideTimer);
   }, [isVisible]);
 
