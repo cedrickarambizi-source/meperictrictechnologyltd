@@ -62,16 +62,11 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    /* Team Page Colors */
-    --team-bg: 240 60% 16%;
-    --team-card: 240 50% 20%;
-    --team-card-accent: 240 45% 25%;
-    --team-accent: 40 85% 55%;
-    --team-accent-secondary: 24 85% 53%;
-    --team-text-muted: 220 20% 70%;
-    --team-role: 40 75% 60%;
-    --team-role-bg: 40 75% 60%;
-    --team-social: 240 40% 30%;
+  /* Team Page Colors */
+  --team-bg: 220 33% 97%;
+  --team-heading: 216 56% 9%;
+  --team-subtitle: 220 9% 46%;
+  --team-hero: 220 33% 97%;
   }
 
   .dark {
