@@ -1,11 +1,9 @@
 import Layout from "@/components/layout/Layout";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import TeamMemberCard from "@/components/team/TeamMemberCard";
 import SEOHead from "@/components/seo/SEOHead";
 import StructuredData, { buildBreadcrumbSchema } from "@/components/seo/StructuredData";
 import ScrollReveal from "@/components/motion/ScrollReveal";
-import StaggerChildren, { staggerItem } from "@/components/motion/StaggerChildren";
-import { motion } from "framer-motion";
 import { Calendar, Briefcase, Users, Globe } from "lucide-react";
 
 // Team member photos
@@ -105,9 +103,10 @@ const stats = [
 const Team = () => {
   const [activeFilter, setActiveFilter] = useState("All");
 
-  const filteredMembers = activeFilter === "All"
-    ? teamMembers
-    : teamMembers.filter((m) => m.category === activeFilter);
+  const filteredMembers = useMemo(
+    () => (activeFilter === "All" ? teamMembers : teamMembers.filter((m) => m.category === activeFilter)),
+    [activeFilter]
+  );
 
   return (
     <Layout>
@@ -124,18 +123,16 @@ const Team = () => {
         ])}
       />
 
-      {/* Dark Premium Background */}
       <div className="bg-team-page-gradient min-h-screen relative">
-        {/* Subtle grid texture overlay */}
         <div
           className="absolute inset-0 opacity-[0.03] pointer-events-none"
           style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-            backgroundSize: '60px 60px',
+            backgroundImage:
+              "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
           }}
         />
 
-        {/* Hero Header */}
         <section className="relative pt-24 pb-10 lg:pt-32 lg:pb-12">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
@@ -161,31 +158,29 @@ const Team = () => {
           </div>
         </section>
 
-        {/* Stats Section */}
         <section className="relative pb-10 lg:pb-14">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <StaggerChildren className="grid grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
-              {stats.map((stat) => (
-                <motion.div
-                  key={stat.label}
-                  variants={staggerItem}
-                  className="bg-white rounded-2xl p-6 lg:p-8 text-center shadow-[0_12px_35px_rgba(0,0,0,0.15)] hover:-translate-y-1.5 transition-transform duration-300"
-                >
-                  <div className="mx-auto mb-3 w-11 h-11 rounded-full bg-[hsl(var(--accent-blue)/0.1)] flex items-center justify-center">
-                    <stat.icon className="h-5 w-5 text-primary" />
+            <ScrollReveal>
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
+                {stats.map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="bg-card rounded-2xl p-6 lg:p-8 text-center shadow-[0_8px_22px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-all duration-300 ease-out"
+                  >
+                    <div className="mx-auto mb-3 w-11 h-11 rounded-full bg-[hsl(var(--accent-blue)/0.1)] flex items-center justify-center">
+                      <stat.icon className="h-5 w-5 text-primary" />
+                    </div>
+                    <p className="text-2xl lg:text-[32px] font-extrabold text-primary mb-1">{stat.value}</p>
+                    <p className="text-xs lg:text-sm text-muted-foreground font-medium">{stat.label}</p>
                   </div>
-                  <p className="text-2xl lg:text-[32px] font-extrabold text-primary mb-1">{stat.value}</p>
-                  <p className="text-xs lg:text-sm text-muted-foreground font-medium">{stat.label}</p>
-                </motion.div>
-              ))}
-            </StaggerChildren>
+                ))}
+              </div>
+            </ScrollReveal>
           </div>
         </section>
 
-        {/* Filter + Team Grid */}
         <section className="relative py-16 lg:pt-10 lg:pb-28">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Filters */}
             <ScrollReveal>
               <div className="flex flex-wrap justify-center gap-2 mb-10">
                 {filters.map((filter) => (
@@ -193,10 +188,11 @@ const Team = () => {
                     key={filter}
                     onClick={() => setActiveFilter(filter)}
                     className={`
-                      px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300
-                      ${activeFilter === filter
-                        ? "bg-primary text-white shadow-lg"
-                        : "bg-transparent text-white/80 border border-white/20 hover:bg-accent-blue hover:text-white hover:border-transparent"
+                      px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ease-out
+                      ${
+                        activeFilter === filter
+                          ? "bg-primary text-primary-foreground shadow-md"
+                          : "bg-transparent text-white/80 border border-white/20 hover:bg-accent-blue hover:text-primary-foreground hover:border-transparent"
                       }
                     `}
                   >
@@ -206,26 +202,21 @@ const Team = () => {
               </div>
             </ScrollReveal>
 
-            {/* Team Grid */}
-            <StaggerChildren
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
-              staggerDelay={0.08}
-            >
-              {filteredMembers.map((member, index) => (
-                <motion.div key={member.name} variants={staggerItem}>
-                  <TeamMemberCard member={member} index={index} />
-                </motion.div>
-              ))}
-            </StaggerChildren>
+            <ScrollReveal>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                {filteredMembers.map((member, index) => (
+                  <TeamMemberCard key={member.name} member={member} index={index} />
+                ))}
+              </div>
+            </ScrollReveal>
 
-            {/* Bottom CTA */}
-            <ScrollReveal delay={0.3}>
+            <ScrollReveal delay={0.2}>
               <div className="text-center mt-20">
-                <div className="inline-flex items-center gap-4 px-8 py-4 bg-white/10 backdrop-blur-sm rounded-full border border-white/15">
+                <div className="inline-flex items-center gap-4 px-8 py-4 bg-white/10 rounded-full border border-white/15">
                   <span className="text-white/70">Want to join our team?</span>
                   <a
                     href="/contact"
-                    className="font-semibold text-white hover:text-accent-blue transition-colors"
+                    className="font-semibold text-white hover:text-accent-blue transition-colors duration-300 ease-out"
                   >
                     Get in touch →
                   </a>
@@ -240,3 +231,4 @@ const Team = () => {
 };
 
 export default Team;
+
