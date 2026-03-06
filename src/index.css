@@ -134,6 +134,10 @@
     );
   }
 
+  .bg-team-page-gradient {
+    background: linear-gradient(180deg, #081F47 0%, hsl(var(--mep-blue-dark)) 100%);
+  }
+
   /* Enhanced visual hierarchy utilities */
   .section-divider {
     @apply w-16 h-1 bg-mep-orange mx-auto;
