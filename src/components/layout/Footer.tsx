@@ -189,17 +189,17 @@ const Footer = () => {
 
       {/* Developer Credit */}
       <div className="text-center pb-[18px] mt-5">
-        <p className="text-[13px] font-medium text-white/70">
-          Created by{" "}
+        <div className="flex items-center justify-center gap-2.5 flex-wrap">
+          <p className="text-[13px] font-medium text-white/70">Created by Cedric Karambizi</p>
           <a
             href="https://digital-genesis-navy.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-accent-blue transition-colors duration-300"
+            className="px-3.5 py-1.5 rounded-full bg-accent-blue text-primary-foreground text-xs font-semibold transition-colors duration-300 ease-out hover:bg-primary"
           >
-            Cedric Karambizi
+            Click
           </a>
-        </p>
+        </div>
       </div>
     </footer>
   );
