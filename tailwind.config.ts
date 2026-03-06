@@ -81,6 +81,7 @@ export default {
         "team-heading": "hsl(var(--team-heading))",
         "team-subtitle": "hsl(var(--team-subtitle))",
         "team-hero": "hsl(var(--team-hero))",
+        "accent-blue": "hsl(var(--accent-blue))",
       },
       boxShadow: {
         "team": "0 4px 20px -4px rgba(0, 0, 0, 0.3)",

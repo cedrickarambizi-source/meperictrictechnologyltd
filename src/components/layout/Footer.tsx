@@ -186,6 +186,21 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      {/* Developer Credit */}
+      <div className="text-center pb-[18px] mt-5">
+        <p className="text-[13px] font-medium text-white/70">
+          Created by{" "}
+          <a
+            href="https://digital-genesis-navy.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-accent-blue transition-colors duration-300"
+          >
+            Cedric Karambizi
+          </a>
+        </p>
+      </div>
     </footer>
   );
 };

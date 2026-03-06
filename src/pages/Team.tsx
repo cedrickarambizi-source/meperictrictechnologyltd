@@ -124,97 +124,117 @@ const Team = () => {
         ])}
       />
 
-      {/* Hero Header */}
-      <section className="bg-team-hero pt-20 pb-16 lg:pt-28 lg:pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <div className="text-center max-w-3xl mx-auto">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-team-heading tracking-tight mb-4">
-                Meet Our Leadership & Engineering Team
-              </h1>
-              <div className="mx-auto mb-6" style={{ width: 120, height: 4, borderRadius: 4, background: "linear-gradient(90deg, #0F2F6B, #2E5BFF)" }} />
-              <p className="text-base md:text-lg text-team-subtitle leading-relaxed">
-                Our certified engineers and specialists deliver world-class Mechanical, Electrical,
-                and Plumbing (MEP) solutions across Rwanda and the region.
-              </p>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+      {/* Dark Premium Background */}
+      <div className="bg-team-page-gradient min-h-screen relative">
+        {/* Subtle grid texture overlay */}
+        <div
+          className="absolute inset-0 opacity-[0.03] pointer-events-none"
+          style={{
+            backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+            backgroundSize: '60px 60px',
+          }}
+        />
 
-      {/* Stats Section */}
-      <section className="bg-team-bg py-12 lg:py-16 -mt-8 relative z-10">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <StaggerChildren className="grid grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto -mt-16">
-            {stats.map((stat) => (
-              <motion.div
-                key={stat.label}
-                variants={staggerItem}
-                className="bg-white rounded-[14px] p-7 text-center shadow-[0_10px_30px_rgba(15,47,107,0.12)] hover:-translate-y-1 transition-transform duration-300"
-              >
-                <div className="mx-auto mb-3 w-11 h-11 rounded-full bg-[#EEF2FF] flex items-center justify-center">
-                  <stat.icon className="h-5 w-5 text-[#0F2F6B]" />
-                </div>
-                <p className="text-2xl lg:text-3xl font-bold text-[#0F2F6B] mb-1">{stat.value}</p>
-                <p className="text-xs lg:text-sm text-[#6B7280] font-medium">{stat.label}</p>
-              </motion.div>
-            ))}
-          </StaggerChildren>
-        </div>
-      </section>
-
-      {/* Filter + Team Grid */}
-      <section className="bg-team-bg py-16 lg:py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Filters */}
-          <ScrollReveal>
-            <div className="flex flex-wrap justify-center gap-2 mb-12">
-              {filters.map((filter) => (
-                <button
-                  key={filter}
-                  onClick={() => setActiveFilter(filter)}
-                  className={`
-                    px-5 py-2 rounded-full text-sm font-medium transition-all duration-300
-                    ${activeFilter === filter
-                      ? "bg-[#0F2F6B] text-white shadow-md"
-                      : "bg-white text-[#6B7280] border border-[rgba(15,47,107,0.12)] hover:bg-[#EEF2FF] hover:text-[#0F2F6B]"
-                    }
-                  `}
-                >
-                  {filter}
-                </button>
-              ))}
-            </div>
-          </ScrollReveal>
-
-          {/* Team Grid */}
-          <StaggerChildren
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
-            staggerDelay={0.08}
-          >
-            {filteredMembers.map((member, index) => (
-              <motion.div key={member.name} variants={staggerItem}>
-                <TeamMemberCard member={member} index={index} />
-              </motion.div>
-            ))}
-          </StaggerChildren>
-
-          {/* Bottom CTA */}
-          <ScrollReveal delay={0.3}>
-            <div className="text-center mt-20">
-              <div className="inline-flex items-center gap-4 px-8 py-4 bg-white rounded-full shadow-[0_10px_30px_rgba(15,47,107,0.12)] border border-[rgba(15,47,107,0.08)]">
-                <span className="text-[#6B7280]">Want to join our team?</span>
-                <a
-                  href="/contact"
-                  className="font-semibold text-[#0F2F6B] hover:text-[#2E5BFF] transition-colors"
-                >
-                  Get in touch →
-                </a>
+        {/* Hero Header */}
+        <section className="relative pt-24 pb-10 lg:pt-32 lg:pb-12">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollReveal>
+              <div className="text-center max-w-3xl mx-auto">
+                <h1 className="text-3xl md:text-4xl lg:text-[38px] font-extrabold text-white tracking-tight mb-5 leading-tight">
+                  Meet Our Leadership & Engineering Team
+                </h1>
+                <div
+                  className="mx-auto mb-5"
+                  style={{
+                    width: 120,
+                    height: 4,
+                    borderRadius: 4,
+                    background: "linear-gradient(90deg, hsl(var(--mep-blue-dark)), hsl(var(--accent-blue)))",
+                  }}
+                />
+                <p className="text-base md:text-[16px] text-white/75 leading-relaxed max-w-[700px] mx-auto">
+                  Our certified engineers and specialists deliver world-class Mechanical, Electrical,
+                  and Plumbing (MEP) solutions across Rwanda and the region.
+                </p>
               </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+            </ScrollReveal>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="relative pb-10 lg:pb-14">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <StaggerChildren className="grid grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
+              {stats.map((stat) => (
+                <motion.div
+                  key={stat.label}
+                  variants={staggerItem}
+                  className="bg-white rounded-2xl p-6 lg:p-8 text-center shadow-[0_12px_35px_rgba(0,0,0,0.15)] hover:-translate-y-1.5 transition-transform duration-300"
+                >
+                  <div className="mx-auto mb-3 w-11 h-11 rounded-full bg-[hsl(var(--accent-blue)/0.1)] flex items-center justify-center">
+                    <stat.icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <p className="text-2xl lg:text-[32px] font-extrabold text-primary mb-1">{stat.value}</p>
+                  <p className="text-xs lg:text-sm text-muted-foreground font-medium">{stat.label}</p>
+                </motion.div>
+              ))}
+            </StaggerChildren>
+          </div>
+        </section>
+
+        {/* Filter + Team Grid */}
+        <section className="relative py-16 lg:pt-10 lg:pb-28">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Filters */}
+            <ScrollReveal>
+              <div className="flex flex-wrap justify-center gap-2 mb-10">
+                {filters.map((filter) => (
+                  <button
+                    key={filter}
+                    onClick={() => setActiveFilter(filter)}
+                    className={`
+                      px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300
+                      ${activeFilter === filter
+                        ? "bg-primary text-white shadow-lg"
+                        : "bg-transparent text-white/80 border border-white/20 hover:bg-accent-blue hover:text-white hover:border-transparent"
+                      }
+                    `}
+                  >
+                    {filter}
+                  </button>
+                ))}
+              </div>
+            </ScrollReveal>
+
+            {/* Team Grid */}
+            <StaggerChildren
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+              staggerDelay={0.08}
+            >
+              {filteredMembers.map((member, index) => (
+                <motion.div key={member.name} variants={staggerItem}>
+                  <TeamMemberCard member={member} index={index} />
+                </motion.div>
+              ))}
+            </StaggerChildren>
+
+            {/* Bottom CTA */}
+            <ScrollReveal delay={0.3}>
+              <div className="text-center mt-20">
+                <div className="inline-flex items-center gap-4 px-8 py-4 bg-white/10 backdrop-blur-sm rounded-full border border-white/15">
+                  <span className="text-white/70">Want to join our team?</span>
+                  <a
+                    href="/contact"
+                    className="font-semibold text-white hover:text-accent-blue transition-colors"
+                  >
+                    Get in touch →
+                  </a>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+      </div>
     </Layout>
   );
 };
