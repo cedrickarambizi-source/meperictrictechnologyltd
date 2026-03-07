@@ -39,7 +39,7 @@ const teamMembers = [
     description: "Strategic marketing and business development leader",
     photo: KarambiziCedric,
     category: "Leadership",
-    imagePosition: "center 15%",
+    imagePosition: "center 30%",
   },
   {
     name: "Gerald Rwililiza",
