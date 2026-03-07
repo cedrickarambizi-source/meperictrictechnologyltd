@@ -6,6 +6,7 @@ interface TeamMember {
   description: string;
   photo: string;
   category?: string;
+  imagePosition?: string;
 }
 
 interface TeamMemberCardProps {
@@ -33,7 +34,7 @@ const TeamMemberCard = ({ member }: TeamMemberCardProps) => {
           loading="lazy"
           decoding="async"
           className="w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]"
-          style={{ objectPosition: "center 25%", imageRendering: "auto", backfaceVisibility: "hidden" }}
+          style={{ objectPosition: member.imagePosition || "center 25%", imageRendering: "auto", backfaceVisibility: "hidden" }}
         />
         <div className="absolute inset-x-0 bottom-0 h-px bg-black/5" />
       </div>
