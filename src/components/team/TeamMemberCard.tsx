@@ -6,6 +6,7 @@ interface TeamMember {
   description: string;
   photo: string;
   category?: string;
+  imagePosition?: string;
 }
 
 interface TeamMemberCardProps {
