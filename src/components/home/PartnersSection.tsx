@@ -8,6 +8,9 @@ import equity from "@/assets/partners/equity-logo.png";
 import ncba from "@/assets/partners/ncba-logo.png";
 import partner6 from "@/assets/partners/partner-6.jpg";
 import bahoHospital from "@/assets/partners/baho-hospital-logo.jpg";
+import sofaluxKap from "@/assets/partners/sofalux-kap-logo.jpg";
+import rwandaMfa from "@/assets/partners/rwanda-mfa-logo.jpg";
+import rwandaCoat from "@/assets/partners/rwanda-coat-logo.png";
 
 const partners = [
   { name: "Eagle Partner", logo: eaglePartner },
@@ -17,6 +20,9 @@ const partners = [
   { name: "NCBA", logo: ncba },
   { name: "Partner", logo: partner6 },
   { name: "Baho International Hospital", logo: bahoHospital },
+  { name: "Sofalux Ltd - KAP", logo: sofaluxKap },
+  { name: "Ministry of Foreign Affairs", logo: rwandaMfa },
+  { name: "Government of Rwanda", logo: rwandaCoat },
 ];
 
 const PartnersSection = () => {
