@@ -48,7 +48,7 @@ export interface Project {
   status: "completed" | "ongoing";
 }
 
-// Old Projects (Legacy Portfolio)
+// Old Projects (Legacy Portfolio) - sorted by scale/complexity
 export const oldProjects: Project[] = [
   {
     title: "LANDMARK PROJECT",
