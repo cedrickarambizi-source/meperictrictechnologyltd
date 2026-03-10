@@ -38,6 +38,18 @@ const projects = [
     description: "Comprehensive MEP solutions for medical facility",
     icon: Activity,
   },
+  {
+    title: "KGP Apartment",
+    category: "Electrical & Elevator",
+    description: "6 elevators, generator, switchgear, transformer, MV line cables",
+    icon: Building,
+  },
+  {
+    title: "Victory Villa",
+    category: "Full MEP",
+    description: "Electrical, fire alarm, CCTV, elevator, access door control",
+    icon: Building,
+  },
 ];
 
 const ProjectsSection = () => {
