@@ -22,6 +22,10 @@ import mininter from "@/assets/projects/mininter.png";
 import nisr from "@/assets/projects/nisr.png";
 import rwaruteneTransmission from "@/assets/projects/rwarutene-transmission.png";
 import gahangaStreetLight from "@/assets/projects/gahanga-street-light.png";
+import zaraApartment from "@/assets/projects/zara-apartment.png";
+import villaHouse from "@/assets/projects/villa-house.png";
+import kgpApartment from "@/assets/projects/kgp-apartment.png";
+import victoryVilla from "@/assets/projects/victory-villa.png";
 
 const projects = [
   {
