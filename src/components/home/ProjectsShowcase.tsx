@@ -30,9 +30,39 @@ import minaffetProcurement from "@/assets/projects/minaffet-procurement.png";
 
 const projects = [
   {
+    title: "KGP APARTMENT",
+    image: kgpApartment,
+    summary: "Electrical, 6 Elevators, Generator, Switchgear, Transformer, MV Line Cables",
+  },
+  {
     title: "LANDMARK PROJECT",
     image: landmarkProject,
     summary: "Electrical, Elevators, Fire Alarm, CCTV, IP Phone, Internet, Generator, Firefighting",
+  },
+  {
+    title: "KAFAM HOUSE",
+    image: kafamHouse,
+    summary: "Electrical, Fire Alarm, CCTV, IP Phone, Internet, Elevator, Generator, Firefighting",
+  },
+  {
+    title: "BAHO INTERNATIONAL HOSPITAL",
+    image: bahoHospital,
+    summary: "Electrical, Fire Alarm, CCTV, IP Phone, Elevator, Firefighting, Plumbing, Nursing Systems, AC",
+  },
+  {
+    title: "IKAZE HOUSE",
+    image: ikazeHouse,
+    summary: "Electrical, Fire Alarm, CCTV, IP Phone, Internet, Elevator, Firefighting, Plumbing",
+  },
+  {
+    title: "YYUSSA CITY CENTER",
+    image: yyussaCityCenter,
+    summary: "Maintenance and repair of 7 elevators and 2 escalators",
+  },
+  {
+    title: "LA CROIX DU SUD – Kwa Nyirinkwaya",
+    image: laCroixDuSud,
+    summary: "Electrical, Elevator, Fire Alarm, Generator, Firefighting, Switchgear, Transformer, MV Line",
   },
   {
     title: "OMICA BUILDING",
@@ -45,6 +75,46 @@ const projects = [
     summary: "Electrical, Elevator, Fire Alarm, Generator, Firefighting, Switchgear, Transformer",
   },
   {
+    title: "VICTORY VILLA",
+    image: victoryVilla,
+    summary: "Electrical, Fire Alarm, CCTV, IP Phone, Internet, Elevator, Access Door Control",
+  },
+  {
+    title: "ZARA APARTMENT",
+    image: zaraApartment,
+    summary: "Mechanical and Electrical activities for Elevator (Lift)",
+  },
+  {
+    title: "MINAFFET PROCUREMENT OFFICE",
+    image: minaffetProcurement,
+    summary: "Elevator (Lift) Installation – 7 Levels",
+  },
+  {
+    title: "NATIONAL INSTITUTE OF STATISTICS (NISR)",
+    image: nisr,
+    summary: "Elevator supply and installation",
+  },
+  {
+    title: "TWIGA HOUSE ACCOMMODATION",
+    image: twigaHouse,
+    summary: "Elevator supply and installation",
+  },
+  {
+    title: "MININTER",
+    image: mininter,
+    summary: "Elevator supply and installation",
+  },
+  {
+    title: "HOSPITAL PÉDIATRIQUE DE REMERA",
+    image: hospitalPediatriqueRemera,
+    summary: "Electrical, Elevator, Scanner installation",
+  },
+  {
+    title: "A&F PLAZA",
+    image: afPlaza,
+    summary: "Supply and installation of 2 elevators (lifts)",
+  },
+  {
     title: "WINTANA APARTMENT",
     image: wintanaApartment,
     summary: "Electrical works, Elevator supply and installation",
@@ -55,54 +125,9 @@ const projects = [
     summary: "Elevator supply and installation",
   },
   {
-    title: "IKAZE HOUSE",
-    image: ikazeHouse,
-    summary: "Electrical, Fire Alarm, CCTV, IP Phone, Internet, Elevator, Firefighting, Plumbing",
-  },
-  {
-    title: "A&F PLAZA",
-    image: afPlaza,
-    summary: "Supply and installation of 2 elevators (lifts)",
-  },
-  {
-    title: "KAFAM HOUSE",
-    image: kafamHouse,
-    summary: "Electrical, Fire Alarm, CCTV, IP Phone, Internet, Elevator, Generator, Firefighting",
-  },
-  {
-    title: "LA CROIX DU SUD – Kwa Nyirinkwaya",
-    image: laCroixDuSud,
-    summary: "Electrical, Elevator, Fire Alarm, Generator, Firefighting, Switchgear, Transformer, MV Line",
-  },
-  {
-    title: "YYUSSA CITY CENTER",
-    image: yyussaCityCenter,
-    summary: "Maintenance and repair of 7 elevators and 2 escalators",
-  },
-  {
-    title: "BAHO INTERNATIONAL HOSPITAL",
-    image: bahoHospital,
-    summary: "Electrical, Fire Alarm, CCTV, IP Phone, Elevator, Firefighting, Plumbing, Nursing Systems, AC",
-  },
-  {
-    title: "TWIGA HOUSE ACCOMMODATION",
-    image: twigaHouse,
-    summary: "Elevator supply and installation",
-  },
-  {
-    title: "HOSPITAL PÉDIATRIQUE DE REMERA",
-    image: hospitalPediatriqueRemera,
-    summary: "Electrical, Elevator, Scanner installation",
-  },
-  {
-    title: "MININTER",
-    image: mininter,
-    summary: "Elevator supply and installation",
-  },
-  {
-    title: "NATIONAL INSTITUTE OF STATISTICS (NISR)",
-    image: nisr,
-    summary: "Elevator supply and installation",
+    title: "VILLA HOUSE",
+    image: villaHouse,
+    summary: "Mechanical and Electrical activities for Elevator (Lift)",
   },
   {
     title: "RWARUTENE 30KV TRANSMISSION LINE",
@@ -113,31 +138,6 @@ const projects = [
     title: "GAHANGA STREET LIGHT",
     image: gahangaStreetLight,
     summary: "Electrical Street Light Installation (2.8 km)",
-  },
-  {
-    title: "ZARA APARTMENT",
-    image: zaraApartment,
-    summary: "Mechanical and Electrical activities for Elevator (Lift)",
-  },
-  {
-    title: "VILLA HOUSE",
-    image: villaHouse,
-    summary: "Mechanical and Electrical activities for Elevator (Lift)",
-  },
-  {
-    title: "KGP APARTMENT",
-    image: kgpApartment,
-    summary: "Electrical, 6 Elevators, Generator, Switchgear, Transformer, MV Line Cables",
-  },
-  {
-    title: "VICTORY VILLA",
-    image: victoryVilla,
-    summary: "Electrical, Fire Alarm, CCTV, IP Phone, Internet, Elevator, Access Door Control",
-  },
-  {
-    title: "MINAFFET PROCUREMENT OFFICE",
-    image: minaffetProcurement,
-    summary: "Elevator (Lift) Installation – 7 Levels",
   },
 ];
 
