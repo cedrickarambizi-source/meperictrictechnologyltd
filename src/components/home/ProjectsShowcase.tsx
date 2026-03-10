@@ -113,6 +113,26 @@ const projects = [
     image: gahangaStreetLight,
     summary: "Electrical Street Light Installation (2.8 km)",
   },
+  {
+    title: "ZARA APARTMENT",
+    image: zaraApartment,
+    summary: "Mechanical and Electrical activities for Elevator (Lift)",
+  },
+  {
+    title: "VILLA HOUSE",
+    image: villaHouse,
+    summary: "Mechanical and Electrical activities for Elevator (Lift)",
+  },
+  {
+    title: "KGP APARTMENT",
+    image: kgpApartment,
+    summary: "Electrical, 6 Elevators, Generator, Switchgear, Transformer, MV Line Cables",
+  },
+  {
+    title: "VICTORY VILLA",
+    image: victoryVilla,
+    summary: "Electrical, Fire Alarm, CCTV, IP Phone, Internet, Elevator, Access Door Control",
+  },
 ];
 
 const ProjectsShowcase = () => {

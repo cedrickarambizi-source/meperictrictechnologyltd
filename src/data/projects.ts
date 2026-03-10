@@ -347,6 +347,79 @@ export const newProjects: Project[] = [
     ],
     activities: ["Electrical Street Light Installation Activities"],
   },
+  {
+    title: "ZARA APARTMENT",
+    image: zaraApartment,
+    categories: ["Elevator", "Electrical"],
+    location: "Kigali",
+    status: "ongoing" as const,
+    details: [
+      { label: "Project Location", value: "Kigali – Gasabo District, Kacyiru" },
+      { label: "Period of Installation", value: "2025 – 2026" },
+      { label: "Number of Floors", value: "G, 1, 2, 3, 4, 5, 6 (8 Steps)" },
+    ],
+    activities: [
+      "Installation of Mechanical and Electrical activities for Elevator (Lift)",
+    ],
+  },
+  {
+    title: "VILLA HOUSE",
+    image: villaHouse,
+    categories: ["Elevator", "Electrical"],
+    location: "Kigali",
+    status: "completed" as const,
+    details: [
+      { label: "Project Location", value: "Kigali – Gasabo District, Gacuriro" },
+      { label: "Period of Installation", value: "2024 – 2025" },
+      { label: "Number of Floors", value: "G, 1, 2, 3, 4 (5 Steps)" },
+    ],
+    activities: [
+      "Installation of Mechanical and Electrical activities for Elevator (Lift)",
+    ],
+  },
+  {
+    title: "KGP APARTMENT",
+    image: kgpApartment,
+    categories: ["Electrical", "Elevator"],
+    location: "Kigali",
+    status: "ongoing" as const,
+    details: [
+      { label: "Project Location", value: "Kigali – Gasabo District, Remera Sector / Kacyiru" },
+      { label: "Period of Installation", value: "2023 – Ongoing" },
+    ],
+    activities: [
+      "Supply and installation of electrical works",
+      "Elevator systems (6 lifts)",
+      "Generator installation",
+      "Switchgear installation",
+      "Transformer installation",
+      "MV Line Cables",
+      "Supply and installation of 6 elevators",
+    ],
+  },
+  {
+    title: "VICTORY VILLA",
+    image: victoryVilla,
+    categories: ["Electrical", "Elevator", "Fire Safety", "CCTV & Security"],
+    location: "Kigali",
+    status: "completed" as const,
+    details: [
+      { label: "Project Location", value: "Kigali – Gacuriro" },
+      { label: "Project Owner", value: "Karegeya Jean" },
+      { label: "Owner Contact", value: "+250 788 500 391" },
+      { label: "Period of Installation", value: "2018 – 2019" },
+      { label: "Number of Floors", value: "B, G, 1, 2, 3 (Five Steps)" },
+    ],
+    activities: [
+      "Electrical installation",
+      "Fire alarm systems",
+      "CCTV cameras",
+      "IP telephone",
+      "Internet infrastructure",
+      "Elevator (Lift) supply and installation",
+      "Access door control systems",
+    ],
+  },
 ];
 
 // All projects combined
