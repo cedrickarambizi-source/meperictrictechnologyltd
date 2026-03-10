@@ -50,6 +50,12 @@ const projects = [
     description: "Electrical, fire alarm, CCTV, elevator, access door control",
     icon: Building,
   },
+  {
+    title: "MINAFFET Procurement Office",
+    category: "Elevator",
+    description: "Elevator (Lift) installation across 7 levels",
+    icon: Building,
+  },
 ];
 
 const ProjectsSection = () => {

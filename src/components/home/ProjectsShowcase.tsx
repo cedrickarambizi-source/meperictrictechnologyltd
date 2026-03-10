@@ -134,6 +134,11 @@ const projects = [
     image: victoryVilla,
     summary: "Electrical, Fire Alarm, CCTV, IP Phone, Internet, Elevator, Access Door Control",
   },
+  {
+    title: "MINAFFET PROCUREMENT OFFICE",
+    image: minaffetProcurement,
+    summary: "Elevator (Lift) Installation – 7 Levels",
+  },
 ];
 
 const ProjectsShowcase = () => {
