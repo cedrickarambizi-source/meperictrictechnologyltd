@@ -20,6 +20,7 @@ import zaraApartment from "@/assets/projects/zara-apartment.png";
 import villaHouse from "@/assets/projects/villa-house.png";
 import kgpApartment from "@/assets/projects/kgp-apartment.png";
 import victoryVilla from "@/assets/projects/victory-villa.png";
+import minaffetProcurement from "@/assets/projects/minaffet-procurement.png";
 
 export interface ProjectDetail {
   label: string;
