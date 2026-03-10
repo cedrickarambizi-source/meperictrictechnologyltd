@@ -3,9 +3,27 @@ import { ArrowRight, Building, Zap, Activity, MapPin } from "lucide-react";
 
 const projects = [
   {
-    title: "MINAFFET Project",
-    category: "Elevators & Electrical",
-    description: "2 Elevators, Electrical, CCTV, Fire, Plumbing installation",
+    title: "KGP Apartment",
+    category: "Electrical & Elevator",
+    description: "6 elevators, generator, switchgear, transformer, MV line cables",
+    icon: Building,
+  },
+  {
+    title: "MINAFFET Procurement Office",
+    category: "Elevator",
+    description: "Elevator (Lift) installation across 7 levels",
+    icon: Building,
+  },
+  {
+    title: "Baho International Hospital",
+    category: "Full MEP",
+    description: "Comprehensive MEP solutions for medical facility",
+    icon: Activity,
+  },
+  {
+    title: "Kafam House",
+    category: "Full MEP",
+    description: "10-floor commercial building with full MEP systems",
     icon: Building,
   },
   {
@@ -27,33 +45,15 @@ const projects = [
     icon: Zap,
   },
   {
-    title: "OMICA Apartment",
-    category: "Ongoing",
-    description: "Electrical systems and elevator installation",
-    icon: Building,
-  },
-  {
-    title: "Baho International Hospital",
-    category: "Full MEP",
-    description: "Comprehensive MEP solutions for medical facility",
-    icon: Activity,
-  },
-  {
-    title: "KGP Apartment",
-    category: "Electrical & Elevator",
-    description: "6 elevators, generator, switchgear, transformer, MV line cables",
-    icon: Building,
-  },
-  {
     title: "Victory Villa",
     category: "Full MEP",
     description: "Electrical, fire alarm, CCTV, elevator, access door control",
     icon: Building,
   },
   {
-    title: "MINAFFET Procurement Office",
-    category: "Elevator",
-    description: "Elevator (Lift) installation across 7 levels",
+    title: "OMICA Apartment",
+    category: "Ongoing",
+    description: "Electrical systems and elevator installation",
     icon: Building,
   },
 ];
