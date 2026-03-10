@@ -26,6 +26,7 @@ import zaraApartment from "@/assets/projects/zara-apartment.png";
 import villaHouse from "@/assets/projects/villa-house.png";
 import kgpApartment from "@/assets/projects/kgp-apartment.png";
 import victoryVilla from "@/assets/projects/victory-villa.png";
+import minaffetProcurement from "@/assets/projects/minaffet-procurement.png";
 
 const projects = [
   {
@@ -132,6 +133,11 @@ const projects = [
     title: "VICTORY VILLA",
     image: victoryVilla,
     summary: "Electrical, Fire Alarm, CCTV, IP Phone, Internet, Elevator, Access Door Control",
+  },
+  {
+    title: "MINAFFET PROCUREMENT OFFICE",
+    image: minaffetProcurement,
+    summary: "Elevator (Lift) Installation – 7 Levels",
   },
 ];
 

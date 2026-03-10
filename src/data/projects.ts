@@ -20,6 +20,7 @@ import zaraApartment from "@/assets/projects/zara-apartment.png";
 import villaHouse from "@/assets/projects/villa-house.png";
 import kgpApartment from "@/assets/projects/kgp-apartment.png";
 import victoryVilla from "@/assets/projects/victory-villa.png";
+import minaffetProcurement from "@/assets/projects/minaffet-procurement.png";
 
 export interface ProjectDetail {
   label: string;
@@ -419,6 +420,22 @@ export const newProjects: Project[] = [
       "Elevator (Lift) supply and installation",
       "Access door control systems",
     ],
+  },
+  {
+    title: "MINAFFET PROCUREMENT OFFICE",
+    image: minaffetProcurement,
+    categories: ["Elevator"],
+    location: "Kigali",
+    status: "completed" as const,
+    details: [
+      { label: "Project Location", value: "Kigali – Gasabo District, Kimihurura" },
+      { label: "Project Name", value: "MINAFFET Procurement Office" },
+      { label: "Client Representative", value: "Jean Bosco Rukundo" },
+      { label: "Owner Contact", value: "+250 788 308 045" },
+      { label: "Period of Installation", value: "January 2023 – February 2023" },
+      { label: "Number of Floors", value: "B, G, 1, 2, 3, 4, 5 (7 Levels)" },
+    ],
+    activities: ["Elevator (Lift) Installation"],
   },
 ];
 
