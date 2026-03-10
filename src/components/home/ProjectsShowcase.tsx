@@ -22,6 +22,10 @@ import mininter from "@/assets/projects/mininter.png";
 import nisr from "@/assets/projects/nisr.png";
 import rwaruteneTransmission from "@/assets/projects/rwarutene-transmission.png";
 import gahangaStreetLight from "@/assets/projects/gahanga-street-light.png";
+import zaraApartment from "@/assets/projects/zara-apartment.png";
+import villaHouse from "@/assets/projects/villa-house.png";
+import kgpApartment from "@/assets/projects/kgp-apartment.png";
+import victoryVilla from "@/assets/projects/victory-villa.png";
 
 const projects = [
   {
@@ -108,6 +112,26 @@ const projects = [
     title: "GAHANGA STREET LIGHT",
     image: gahangaStreetLight,
     summary: "Electrical Street Light Installation (2.8 km)",
+  },
+  {
+    title: "ZARA APARTMENT",
+    image: zaraApartment,
+    summary: "Mechanical and Electrical activities for Elevator (Lift)",
+  },
+  {
+    title: "VILLA HOUSE",
+    image: villaHouse,
+    summary: "Mechanical and Electrical activities for Elevator (Lift)",
+  },
+  {
+    title: "KGP APARTMENT",
+    image: kgpApartment,
+    summary: "Electrical, 6 Elevators, Generator, Switchgear, Transformer, MV Line Cables",
+  },
+  {
+    title: "VICTORY VILLA",
+    image: victoryVilla,
+    summary: "Electrical, Fire Alarm, CCTV, IP Phone, Internet, Elevator, Access Door Control",
   },
 ];
 
