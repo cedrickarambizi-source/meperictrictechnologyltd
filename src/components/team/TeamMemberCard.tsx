@@ -1,4 +1,4 @@
-import { Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail, Phone } from "lucide-react";
 
 interface TeamMember {
   name: string;
@@ -7,6 +7,7 @@ interface TeamMember {
   photo: string;
   category?: string;
   imagePosition?: string;
+  phones?: string[];
 }
 
 interface TeamMemberCardProps {
@@ -55,6 +56,22 @@ const TeamMemberCard = ({ member }: TeamMemberCardProps) => {
           {member.description}
         </p>
 
+        {/* Phone Numbers */}
+        {member.phones && member.phones.length > 0 && (
+          <div className="flex flex-col items-center gap-1 mb-3">
+            {member.phones.map((phone) => (
+              <a
+                key={phone}
+                href={`tel:${phone.replace(/\s/g, "")}`}
+                className="inline-flex items-center gap-1.5 text-[12px] text-muted-foreground hover:text-primary transition-colors duration-300"
+              >
+                <Phone className="h-3 w-3" />
+                <span>{phone}</span>
+              </a>
+            ))}
+          </div>
+        )}
+
         {/* Social Icons */}
         <div className="flex justify-center gap-2.5 mt-3.5">
           <a
@@ -78,4 +95,3 @@ const TeamMemberCard = ({ member }: TeamMemberCardProps) => {
 };
 
 export default TeamMemberCard;
-
