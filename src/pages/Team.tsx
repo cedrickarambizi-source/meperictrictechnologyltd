@@ -25,6 +25,7 @@ const teamMembers = [
     description: "Visionary leader with 15+ years in MEP engineering",
     photo: nzabonimamaEric,
     category: "Leadership",
+    phones: ["+250 788 645 567", "+250 781 175 264"],
   },
   {
     name: "Jean Paul Tuyambaze",
@@ -32,6 +33,7 @@ const teamMembers = [
     description: "Expert in project delivery and operations excellence",
     photo: jeanPaulTuyambaze,
     category: "Operations",
+    phones: ["+250 785 920 279"],
   },
   {
     name: "Karambizi Cedric",
@@ -39,6 +41,7 @@ const teamMembers = [
     description: "Strategic marketing and business development leader",
     photo: KarambiziCedric,
     category: "Leadership",
+    phones: ["+250 796 692 269"],
   },
   {
     name: "Gerald Rwililiza",
@@ -46,6 +49,7 @@ const teamMembers = [
     description: "Specialist in HVAC and mechanical systems",
     photo: rwilizaGerald,
     category: "Engineering",
+    phones: ["+250 782 171 806"],
   },
   {
     name: "Callixte Ndayisenga",
@@ -53,6 +57,7 @@ const teamMembers = [
     description: "Expert in electrical systems and power distribution",
     photo: callixteNdayisenga,
     category: "Engineering",
+    phones: ["+250 788 397 195"],
   },
   {
     name: "Jimmy Bimenyimana",
@@ -60,6 +65,7 @@ const teamMembers = [
     description: "Specialist in high voltage transmission infrastructure",
     photo: jimmyBimenyimana,
     category: "Engineering",
+    phones: [],
   },
   {
     name: "NGABONZIZA Benjamin",
@@ -67,6 +73,7 @@ const teamMembers = [
     description: "Expert in plumbing systems and water infrastructure",
     photo: ngabonzizaBenjamin,
     category: "Engineering",
+    phones: [],
   },
   {
     name: "Isaac Muhoza",
@@ -74,6 +81,7 @@ const teamMembers = [
     description: "Specialist in MEP systems design and coordination",
     photo: isaacMuhoza,
     category: "Engineering",
+    phones: ["+250 787 305 101"],
   },
   {
     name: "Fabrice Tuyizere",
@@ -81,6 +89,7 @@ const teamMembers = [
     description: "Expert in tender preparation and contract management",
     photo: fabriceTuyizere,
     category: "Tender & Commercial",
+    phones: ["+250 780 730 744"],
   },
   {
     name: "Umutoniwase Divine",
@@ -88,6 +97,7 @@ const teamMembers = [
     description: "Expert in financial planning and management",
     photo: umutoniwaseDivine,
     category: "Finance",
+    phones: ["+250 783 030 423"],
   },
 ];
 
