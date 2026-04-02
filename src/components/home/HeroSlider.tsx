@@ -82,8 +82,8 @@ const HeroSlider = () => {
               index === currentSlide ? "scale-110" : "scale-100"
             }`}
           />
-          {/* Dark blue gradient overlay 65% */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[hsl(216,72%,17%,0.75)] via-[hsl(216,62%,27%,0.6)] to-[hsl(216,62%,27%,0.35)]" />
+          {/* Dark blue gradient overlay 45% */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[hsl(216,72%,17%,0.55)] via-[hsl(216,62%,27%,0.4)] to-[hsl(216,62%,27%,0.25)]" />
         </div>
       ))}
 
