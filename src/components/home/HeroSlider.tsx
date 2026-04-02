@@ -64,7 +64,7 @@ const HeroSlider = () => {
   }, []);
 
   return (
-    <section className="relative h-[100vh] min-h-[600px] max-h-[1100px] overflow-hidden">
+    <section className="relative h-[100vh] min-h-[600px] max-h-[1100px] overflow-hidden bg-[hsl(216,72%,12%)]">
       {/* Slides with smooth fade + zoom parallax */}
       {slides.map((slide, index) => (
         <div
@@ -73,61 +73,76 @@ const HeroSlider = () => {
             index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}
         >
-          <img
-            src={slide.image}
-            alt={slide.alt}
-            loading={index === 0 ? "eager" : "lazy"}
-            decoding={index === 0 ? "sync" : "async"}
-            className={`w-full h-full object-cover transition-transform duration-[6000ms] ease-out ${
-              index === currentSlide ? "scale-110" : "scale-100"
+          <div
+            className={`w-full h-full transition-transform duration-[6000ms] ease-out ${
+              index === currentSlide ? "scale-105" : "scale-100"
             }`}
-          />
-          {/* Dark blue gradient overlay 45% */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[hsl(216,72%,17%,0.55)] via-[hsl(216,62%,27%,0.4)] to-[hsl(216,62%,27%,0.25)]" />
+          >
+            <img
+              src={slide.image}
+              alt={slide.alt}
+              loading={index === 0 ? "eager" : "lazy"}
+              decoding={index === 0 ? "sync" : "async"}
+              fetchPriority={index === 0 ? "high" : "auto"}
+              className="w-full h-full object-cover"
+              style={{ imageRendering: "auto" }}
+            />
+          </div>
+          {/* Refined gradient overlay — lighter to show images better */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[hsl(216,72%,12%,0.70)] via-[hsl(216,62%,20%,0.45)] to-[hsl(216,50%,25%,0.20)]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[hsl(216,72%,12%,0.50)] via-transparent to-[hsl(216,72%,12%,0.15)]" />
         </div>
       ))}
 
       {/* Static Content Overlay */}
       <div className="absolute inset-0 z-20 flex items-center">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-4xl space-y-8">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="max-w-3xl space-y-6 md:space-y-8">
             {/* Authority badge */}
             <div className="flex items-center gap-3 animate-fade-in">
               <span className="w-12 h-0.5 bg-mep-orange"></span>
-              <span className="text-mep-orange font-semibold uppercase tracking-widest text-sm">
+              <span className="text-mep-orange font-semibold uppercase tracking-widest text-xs md:text-sm">
                 Trusted Engineering Partner Since 2016
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-white leading-[1.1] tracking-tight animate-slide-up">
+            <h1
+              className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-white leading-[1.08] tracking-tight animate-slide-up"
+              style={{ textShadow: "0 2px 20px rgba(0,0,0,0.4)" }}
+            >
               Powering Rwanda & East Africa with Excellence in MEP Solutions
             </h1>
 
-            <p className="text-lg md:text-xl lg:text-2xl text-white/90 max-w-2xl leading-relaxed animate-slide-up">
+            <p
+              className="text-base md:text-xl lg:text-2xl text-white/95 max-w-2xl leading-relaxed animate-slide-up"
+              style={{ textShadow: "0 1px 10px rgba(0,0,0,0.3)" }}
+            >
               Delivering world-class Mechanical, Electrical & Plumbing systems since 2016.
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-wrap gap-4 pt-4 animate-slide-up">
+            <div className="flex flex-wrap gap-3 md:gap-4 pt-2 md:pt-4 animate-slide-up">
               <Link
                 to="/contact"
-                className="bg-mep-orange hover:bg-mep-orange-hover text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl inline-flex items-center"
+                className="bg-mep-orange hover:bg-mep-orange-hover text-white font-semibold px-6 md:px-8 py-3.5 md:py-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl inline-flex items-center text-sm md:text-base"
               >
                 Request a Quote
               </Link>
               <Link
                 to="/projects"
-                className="border-2 border-white/80 text-white font-semibold px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 inline-flex items-center"
+                className="border-2 border-white/80 text-white font-semibold px-6 md:px-8 py-3.5 md:py-4 rounded-lg hover:bg-white/10 transition-all duration-300 inline-flex items-center text-sm md:text-base"
               >
                 View Projects
               </Link>
-              <Link
-                to="/services"
-                className="text-white/80 hover:text-white font-semibold px-6 py-4 rounded-lg transition-all duration-300 inline-flex items-center gap-2 hover:bg-white/5"
+              <a
+                href="https://claude.ai/public/artifacts/16323224-122e-4455-9272-efa6e71df1fe"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/90 hover:text-white font-semibold px-4 md:px-6 py-3.5 md:py-4 rounded-lg transition-all duration-300 inline-flex items-center gap-2 hover:bg-white/10 text-sm md:text-base"
               >
                 <Calculator className="h-5 w-5" />
                 MEP Calculator
-              </Link>
+              </a>
             </div>
           </div>
         </div>
