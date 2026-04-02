@@ -1,39 +1,55 @@
 import { useState, useEffect } from "react";
 import { FileText, Calculator } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroElectrical from "@/assets/hero-electrical.jpg";
-import heroElevator from "@/assets/hero-elevator.jpg";
-import heroMechanical from "@/assets/hero-mechanical.jpg";
-import heroHospital from "@/assets/hero-hospital.jpg";
+import yyussaCityCenter from "@/assets/projects/yyussa-city-center.png";
+import kgpApartment from "@/assets/projects/kgp-apartment.png";
+import omicaBuilding from "@/assets/projects/omica-building.png";
+import laCroixDuSud from "@/assets/projects/la-croix-du-sud.png";
+import kafamHouse from "@/assets/projects/kafam-house.png";
+import villaHouse from "@/assets/projects/villa-house.png";
 
 const slides = [
   {
-    image: heroElectrical,
-    alt: "Electrical Infrastructure",
-    project: "LANDMARK PROJECT",
-    location: "Nyarugenge, Kigali",
-    year: "2023–2024",
-  },
-  {
-    image: heroElevator,
-    alt: "Modern Elevator Systems",
+    image: yyussaCityCenter,
+    alt: "YYUSSA City Center",
     project: "YYUSSA CITY CENTER",
     location: "Kigali",
     year: "2025",
   },
   {
-    image: heroMechanical,
-    alt: "Mechanical Engineering",
+    image: kgpApartment,
+    alt: "KGP Apartment",
+    project: "KGP APARTMENT",
+    location: "Kigali",
+    year: "2024",
+  },
+  {
+    image: omicaBuilding,
+    alt: "Omica Apartment",
+    project: "OMICA APARTMENT",
+    location: "Kigali",
+    year: "2023–2024",
+  },
+  {
+    image: laCroixDuSud,
+    alt: "La Croix du Sud",
+    project: "PROJECT LA CROIX DU SUD",
+    location: "Kigali",
+    year: "2022–2023",
+  },
+  {
+    image: villaHouse,
+    alt: "Kwa Nyirinkwaya",
+    project: "KWA NYIRINKWAYA",
+    location: "Kigali",
+    year: "2023",
+  },
+  {
+    image: kafamHouse,
+    alt: "Kafam House",
     project: "KAFAM HOUSE",
     location: "Nyarutarama, Kigali",
     year: "2018–2022",
-  },
-  {
-    image: heroHospital,
-    alt: "Commercial Buildings",
-    project: "BAHO INTERNATIONAL HOSPITAL",
-    location: "Nyarutarama, Kigali",
-    year: "2016–2021",
   },
 ];
 
@@ -66,8 +82,8 @@ const HeroSlider = () => {
               index === currentSlide ? "scale-110" : "scale-100"
             }`}
           />
-          {/* Dark blue gradient overlay 65% */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[hsl(216,72%,17%,0.75)] via-[hsl(216,62%,27%,0.6)] to-[hsl(216,62%,27%,0.35)]" />
+          {/* Dark blue gradient overlay 45% */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[hsl(216,72%,17%,0.55)] via-[hsl(216,62%,27%,0.4)] to-[hsl(216,62%,27%,0.25)]" />
         </div>
       ))}
 
