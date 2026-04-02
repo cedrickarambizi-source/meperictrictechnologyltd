@@ -5,13 +5,10 @@ import logo from "@/assets/logo.jpeg";
 
 const navLinks = [
   { name: "Home", path: "/" },
-  { name: "Projects", path: "/projects" },
-  { name: "Partners & Clients", path: "/partners" },
-  { name: "Meet Our Team", path: "/team" },
   { name: "Services", path: "/services" },
-  { name: "About Us", path: "/about" },
+  { name: "Projects", path: "/projects" },
+  { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
-  { name: "Portfolio", path: "/portfolio" },
 ];
 
 const Header = () => {
@@ -29,7 +26,7 @@ const Header = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full bg-white transition-shadow duration-300 ${
+      className={`sticky top-0 z-50 w-full bg-white transition-all duration-300 ${
         isScrolled ? "shadow-lg" : "shadow-sm"
       }`}
     >
@@ -53,6 +50,14 @@ const Header = () => {
                 {link.name}
               </Link>
             ))}
+
+            {/* M.E.P Special Button */}
+            <Link
+              to="/services"
+              className="mep-special-btn bg-white text-primary border-2 border-primary font-bold px-5 py-2 rounded-full transition-all duration-300 hover:bg-mep-orange hover:border-mep-orange hover:text-white hover:shadow-[0_0_20px_hsl(var(--mep-orange)/0.4)]"
+            >
+              M.E.P
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -83,6 +88,13 @@ const Header = () => {
                   {link.name}
                 </Link>
               ))}
+              <Link
+                to="/services"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="mx-4 mt-2 text-center bg-white text-primary border-2 border-primary font-bold px-5 py-3 rounded-full hover:bg-mep-orange hover:border-mep-orange hover:text-white transition-all"
+              >
+                M.E.P
+              </Link>
             </div>
           </nav>
         )}
