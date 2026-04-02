@@ -218,6 +218,16 @@
     content: '';
     @apply absolute bottom-0 left-0 w-full h-0.5 bg-primary;
   }
+
+  /* M.E.P Special Button Bounce */
+  .mep-special-btn {
+    animation: mep-bounce 2.5s ease-in-out infinite;
+  }
+
+  @keyframes mep-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+  }
 }
 
 @layer utilities {
