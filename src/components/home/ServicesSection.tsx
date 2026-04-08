@@ -1,130 +1,116 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
+import { ArrowRight, Check } from "lucide-react";
 
-// Service images
+import elevatorTechnician from "@/assets/services/elevator-technician.jpg";
 import transmissionLine from "@/assets/services/transmission-line.jpg";
 import internetConnection from "@/assets/services/internet-connection.jpg";
 import wastewaterTreatment from "@/assets/services/wastewater-treatment.jpg";
 import accessPoint from "@/assets/services/access-point.jpg";
 import cctvInstallation from "@/assets/services/cctv-installation.jpg";
-import elevatorTechnician from "@/assets/services/elevator-technician.jpg";
 
 const services = [
   {
+    image: elevatorTechnician,
+    title: "Smart Elevator Installation & Repair",
+    description: "State-of-the-art elevator systems for residential, commercial, and industrial buildings.",
+    checklist: ["Passenger Lift Installation", "Escalator Installation", "Lift Modernization", "Preventive Maintenance"],
+  },
+  {
     image: transmissionLine,
-    title: "Transmission Line",
-    description: "High voltage power transmission infrastructure for reliable electricity distribution across regions.",
+    title: "Electrical Systems",
+    description: "High voltage power transmission and distribution infrastructure for reliable electricity.",
+    checklist: ["Lighting Networks", "Security Systems", "CCTV Installation", "Lightning Protection"],
   },
   {
     image: internetConnection,
-    title: "Internet Connection",
-    description: "High-speed fiber optic and enterprise network solutions for seamless connectivity.",
+    title: "Internet & Network Solutions",
+    description: "Enterprise-grade connectivity and smart building integration solutions.",
+    checklist: ["Fiber Optic Networks", "Enterprise Connectivity", "Network Infrastructure", "Smart Building Integration"],
   },
   {
     image: wastewaterTreatment,
-    title: "Waste Water Treatment Plant",
-    description: "Modern water treatment facilities ensuring clean water and environmental compliance.",
+    title: "Mechanical Systems",
+    description: "Complete mechanical engineering solutions for modern buildings and facilities.",
+    checklist: ["HVAC Systems", "Fire Fighting", "Pumping Solutions", "Fire Suppression"],
   },
   {
     image: accessPoint,
-    title: "Access Point",
-    description: "Enterprise-grade wireless network access points for comprehensive coverage.",
+    title: "Pipeline & Plumbing Systems",
+    description: "Professional plumbing and pipeline solutions for all building types.",
+    checklist: ["Water Supply", "Sewage Treatment", "Rainwater Harvesting", "Hot Water Systems"],
   },
   {
     image: cctvInstallation,
-    title: "CCTV Installation",
-    description: "Professional security surveillance systems for comprehensive property protection.",
-  },
-  {
-    image: elevatorTechnician,
-    title: "Smart Elevator Installation & Repair Solutions",
-    description: "State-of-the-art elevator systems for residential, commercial, and industrial buildings.",
+    title: "Solar & Power Backup",
+    description: "Sustainable energy solutions and reliable power backup systems.",
+    checklist: ["Solar Panel Installation", "Generator Systems", "UPS Solutions", "Power Monitoring"],
   },
 ];
 
 const ServicesSection = () => {
   return (
-    <section className="py-20 lg:py-32 bg-muted">
+    <section className="py-24 lg:py-32 bg-[#F5F5F5]">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <span className="section-divider"></span>
-          </div>
-          <span className="text-mep-orange font-semibold uppercase tracking-widest text-sm">
-            Our Services
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="inline-flex items-center gap-2 bg-mep-orange/10 border border-mep-orange/20 rounded-full px-5 py-2 mb-6">
+            <span className="text-mep-orange font-semibold uppercase tracking-widest text-xs">
+              Our Services
+            </span>
           </span>
-          <h2 className="section-heading mt-2 mb-4">
+          <h2 className="section-heading text-foreground mb-4">
             Comprehensive MEP & Technology Solutions
           </h2>
-          <p className="section-subheading text-lg">
-            From power infrastructure to smart building technology – 
+          <p className="text-muted-foreground text-lg leading-relaxed">
+            From power infrastructure to smart building technology —
             we deliver excellence and innovation at every level.
           </p>
         </div>
 
-        {/* Services Carousel */}
-        <div className="px-4 lg:px-12">
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            plugins={[
-              Autoplay({
-                delay: 4000,
-                stopOnInteraction: true,
-              }),
-            ]}
-            className="w-full"
-          >
-            <CarouselContent className="-ml-4">
-              {services.map((service, index) => (
-                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                  <div className="bg-card rounded-xl shadow-md hover:shadow-xl transition-all duration-300 group overflow-hidden border border-border/30 h-full hover:-translate-y-1">
-                    <div className="aspect-[4/3] overflow-hidden bg-slate-100">
-                      <img
-                        src={service.image}
-                        alt={service.title}
-                        loading="lazy"
-                        decoding="async"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                      />
-                    </div>
-                    <div className="p-6 lg:p-7">
-                      <h3 className="font-heading font-bold text-lg lg:text-xl mb-3 text-foreground">
-                        {service.title}
-                      </h3>
-                      <p className="text-muted-foreground mb-5 leading-relaxed text-sm">
-                        {service.description}
-                      </p>
-                      <Link
-                        to="/services"
-                        className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:gap-3 transition-all group/link"
-                      >
-                        Learn More <ArrowRight className="h-4 w-4 transition-transform group-hover/link:translate-x-0.5" />
-                      </Link>
-                    </div>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-6 h-12 w-12 bg-primary text-primary-foreground hover:bg-primary/90 border-none shadow-lg" />
-            <CarouselNext className="hidden md:flex -right-6 h-12 w-12 bg-primary text-primary-foreground hover:bg-primary/90 border-none shadow-lg" />
-          </Carousel>
-        </div>
+        {/* Services Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 group hover:-translate-y-1 border border-transparent hover:border-mep-orange/20"
+            >
+              {/* Image */}
+              <div className="aspect-[4/3] overflow-hidden">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
 
-        <p className="text-center text-muted-foreground text-sm mt-6 md:hidden">
-          ← Swipe to explore more services →
-        </p>
+              {/* Content */}
+              <div className="p-6">
+                <h3 className="font-bold text-lg text-foreground mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                  {service.description}
+                </p>
+                <ul className="space-y-2 mb-5">
+                  {service.checklist.map((item, i) => (
+                    <li key={i} className="flex items-center gap-2 text-sm text-foreground/80">
+                      <Check className="h-4 w-4 text-mep-orange flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  to="/services"
+                  className="inline-flex items-center gap-2 text-mep-orange font-semibold text-sm hover:gap-3 transition-all group/link"
+                >
+                  Learn More <ArrowRight className="h-4 w-4 transition-transform group-hover/link:translate-x-0.5" />
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
 
         <div className="text-center mt-12">
           <Link to="/services" className="btn-primary inline-flex items-center gap-2 hover:gap-3 transition-all">

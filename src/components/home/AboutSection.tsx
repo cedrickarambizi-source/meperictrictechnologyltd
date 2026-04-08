@@ -18,35 +18,29 @@ const stats = [
 
 const AboutSection = () => {
   return (
-    <section className="py-20 lg:py-32 bg-background">
+    <section className="py-24 lg:py-32 bg-white">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <span className="section-divider-left"></span>
-                <span className="text-mep-orange font-semibold uppercase tracking-wider text-sm">
-                About Us
+                <span className="section-divider-left" />
+                <span className="text-mep-orange font-semibold uppercase tracking-widest text-xs">
+                  About Us
                 </span>
               </div>
-              <h2 className="section-heading leading-tight">
+              <h2 className="section-heading text-foreground leading-tight">
                 Rwanda's Leading MEP & Elevator Engineering Company
               </h2>
             </div>
-            
+
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Founded in 2016, MEP Erictric Technology Ltd is a Rwandan-based engineering 
-              company located in Remera – Gisimenti, Kigali. The company specializes in 
-              the supply, installation, and maintenance of elevators and vertical 
-              transportation systems, alongside comprehensive Mechanical, Electrical, 
+              Founded in 2016, MEP Erictric Technology Ltd is a Rwandan-based engineering
+              company located in Remera – Gisimenti, Kigali. The company specializes in
+              the supply, installation, and maintenance of elevators and vertical
+              transportation systems, alongside comprehensive Mechanical, Electrical,
               and Plumbing (MEP) solutions.
-            </p>
-            
-            <p className="text-muted-foreground leading-relaxed">
-              With a strong focus on safety, reliability, and innovation, the company 
-              has grown into one of the leading elevator and MEP solution providers in 
-              Rwanda and the East African region.
             </p>
 
             <ul className="space-y-4 pt-2">
@@ -60,7 +54,7 @@ const AboutSection = () => {
 
             <Link
               to="/about"
-              className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all mt-4"
+              className="inline-flex items-center gap-2 text-mep-orange font-semibold hover:gap-3 transition-all mt-4"
             >
               Learn More About Us →
             </Link>
@@ -71,15 +65,15 @@ const AboutSection = () => {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="stat-card"
+                className="bg-[#0D1B4B] text-white p-8 rounded-2xl text-center transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
               >
                 <AnimatedCounter
                   end={stat.number}
                   suffix={stat.suffix}
                   duration={2000}
-                  className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-3"
+                  className="text-4xl md:text-5xl lg:text-6xl font-black mb-3"
                 />
-                <div className="text-sm lg:text-base opacity-90 font-medium">{stat.label}</div>
+                <div className="text-sm opacity-70 font-medium">{stat.label}</div>
               </div>
             ))}
           </div>

@@ -1,92 +1,62 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Instagram, Youtube } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Youtube, Clock, Globe } from "lucide-react";
 import logo from "@/assets/logo.jpeg";
-import { Separator } from "@/components/ui/separator";
 
 const Footer = () => {
-  const services = [
-    "Transmission Line",
-    "Internet Connection",
-    "Waste Water Treatment",
-    "Solar Energy",
-    "Access Point",
-    "CCTV Installation",
-    "Plumbing Activities",
-    "Elevator Installation",
-    "Electrical Systems",
-    "Maintenance Contracts",
-  ];
-
   return (
-    <footer className="bg-primary text-primary-foreground">
-      <div className="container mx-auto px-4 py-16">
+    <footer className="bg-[#0A0A0F] text-white relative">
+      {/* Orange glow line at top */}
+      <div className="h-px bg-gradient-to-r from-transparent via-mep-orange/60 to-transparent" />
+
+      <div className="container mx-auto px-4 py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Company Info */}
-          <div className="space-y-4">
-            <img 
-              src={logo} 
-              alt="MEP Erictric Technology Ltd" 
-              loading="lazy"
-              decoding="async"
-              className="h-16 w-auto bg-white p-2 rounded-lg" 
-            />
-            <p className="text-sm opacity-90 leading-relaxed">
-              Since 2016, delivering world-class MEP, technology, and infrastructure 
-              solutions for residential, commercial, and industrial projects across 
-              Rwanda and East Africa.
+          {/* Brand */}
+          <div className="space-y-5">
+            <div className="flex items-center gap-3">
+              <img src={logo} alt="MEP Erictric Technology Ltd" loading="lazy" className="h-14 w-auto rounded-lg" />
+              <div>
+                <span className="font-bold text-sm leading-none">MEP ERICTRIC</span>
+                <span className="block text-white/40 text-[10px] tracking-widest uppercase">Technology Ltd</span>
+              </div>
+            </div>
+            <p className="text-white/50 text-sm leading-relaxed">
+              Engineering excellence across East Africa since 2016. Delivering world-class MEP solutions for commercial, industrial, and government projects.
             </p>
-            <div className="flex gap-4 pt-2">
-              <a 
-                href="https://x.com/MEPerictrictech" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 hover:scale-110 transition-all duration-300" 
-                aria-label="X (Twitter)"
-              >
-                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-              </a>
-              <a 
-                href="https://www.instagram.com/meperictrictechnologyltd/?hl=en" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 hover:scale-110 transition-all duration-300" 
-                aria-label="Instagram"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a 
-                href="https://www.youtube.com/@MepErictric" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 hover:scale-110 transition-all duration-300" 
-                aria-label="YouTube"
-              >
-                <Youtube className="h-5 w-5" />
-              </a>
+            <div className="flex gap-3 pt-2">
+              {[
+                { href: "https://x.com/MEPerictrictech", label: "X", icon: <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> },
+                { href: "https://www.instagram.com/meperictrictechnologyltd/?hl=en", label: "Instagram", icon: <Instagram className="h-4 w-4" /> },
+                { href: "https://www.youtube.com/@MepErictric", label: "YouTube", icon: <Youtube className="h-4 w-4" /> },
+              ].map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="w-10 h-10 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-mep-orange/20 hover:border-mep-orange/30 hover:text-mep-orange hover:scale-110 transition-all duration-300"
+                >
+                  {social.icon}
+                </a>
+              ))}
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading font-bold text-lg mb-6 relative">
-              Quick Links
-              <span className="absolute bottom-0 left-0 w-12 h-0.5 bg-mep-orange -mb-2"></span>
-            </h4>
-            <ul className="space-y-3 mt-4">
+            <h4 className="font-bold text-sm mb-6 uppercase tracking-wider">Quick Links</h4>
+            <ul className="space-y-3">
               {[
                 { name: "Home", path: "/" },
                 { name: "About Us", path: "/about" },
-                { name: "Services", path: "/services" },
-                { name: "Projects", path: "/projects" },
-                { name: "Portfolio", path: "/portfolio" },
-                { name: "Contact", path: "/contact" },
+                { name: "Our Services", path: "/services" },
+                { name: "Our Projects", path: "/projects" },
+                { name: "Our Team", path: "/team" },
+                { name: "Contact Us", path: "/contact" },
               ].map((item) => (
                 <li key={item.name}>
-                  <Link 
-                    to={item.path} 
-                    className="text-sm opacity-90 hover:opacity-100 hover:text-mep-orange transition-all flex items-center gap-2"
-                  >
-                    <span className="w-1.5 h-1.5 bg-mep-orange rounded-full"></span>
+                  <Link to={item.path} className="text-white/40 hover:text-mep-orange transition-colors text-sm flex items-center gap-2">
+                    <span className="w-1 h-1 bg-mep-orange/50 rounded-full" />
                     {item.name}
                   </Link>
                 </li>
@@ -94,20 +64,21 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Our Services */}
+          {/* Services */}
           <div>
-            <h4 className="font-heading font-bold text-lg mb-6 relative">
-              Our Services
-              <span className="absolute bottom-0 left-0 w-12 h-0.5 bg-mep-orange -mb-2"></span>
-            </h4>
-            <ul className="space-y-3 mt-4">
-              {services.map((item) => (
+            <h4 className="font-bold text-sm mb-6 uppercase tracking-wider">Our Services</h4>
+            <ul className="space-y-3">
+              {[
+                "Electrical Engineering",
+                "Mechanical Systems",
+                "Plumbing Solutions",
+                "Elevator Installation",
+                "Solar Energy",
+                "Power Backup Systems",
+              ].map((item) => (
                 <li key={item}>
-                  <Link 
-                    to="/services" 
-                    className="text-sm opacity-90 hover:opacity-100 hover:text-mep-orange transition-all flex items-center gap-2"
-                  >
-                    <span className="w-1.5 h-1.5 bg-mep-orange rounded-full"></span>
+                  <Link to="/services" className="text-white/40 hover:text-mep-orange transition-colors text-sm flex items-center gap-2">
+                    <span className="w-1 h-1 bg-mep-orange/50 rounded-full" />
                     {item}
                   </Link>
                 </li>
@@ -115,71 +86,52 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact */}
           <div>
-            <h4 className="font-heading font-bold text-lg mb-6 relative">
-              Contact Us
-              <span className="absolute bottom-0 left-0 w-12 h-0.5 bg-mep-orange -mb-2"></span>
-            </h4>
-            <ul className="space-y-4 mt-4">
+            <h4 className="font-bold text-sm mb-6 uppercase tracking-wider">Contact Info</h4>
+            <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <div className="w-10 h-10 bg-mep-orange/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <MapPin className="h-5 w-5 text-mep-orange" />
-                </div>
-                <span className="text-sm opacity-90 leading-relaxed">
-                  Remera – Gisimenti, Ikaze House F2-22, Kigali, Rwanda
-                </span>
+                <MapPin className="h-4 w-4 text-mep-orange flex-shrink-0 mt-0.5" />
+                <span className="text-white/40 text-sm">KG 684 St, Kacyiru, Kigali, Rwanda</span>
               </li>
               <li>
-                <a 
-                  href="tel:+250781175264" 
-                  className="flex items-start gap-3 hover:opacity-80 transition-opacity"
-                >
-                  <div className="w-10 h-10 bg-mep-orange/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone className="h-5 w-5 text-mep-orange" />
-                  </div>
-                  <div className="text-sm">
-                    <p className="font-semibold text-base">+250 781 175 264</p>
-                    <p className="opacity-75">Mon - Fri, 8am - 5pm</p>
-                  </div>
+                <a href="tel:+250788645567" className="flex items-start gap-3 hover:text-mep-orange transition-colors">
+                  <Phone className="h-4 w-4 text-mep-orange flex-shrink-0 mt-0.5" />
+                  <span className="text-white/40 text-sm">+250 788 645 567</span>
                 </a>
               </li>
               <li>
-                <a 
-                  href="mailto:meperictric40@gmail.com" 
-                  className="flex items-start gap-3 hover:opacity-80 transition-opacity"
-                >
-                  <div className="w-10 h-10 bg-mep-orange/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Mail className="h-5 w-5 text-mep-orange" />
-                  </div>
-                  <div className="text-sm">
-                    <p className="font-semibold">meperictric40@gmail.com</p>
-                    <p className="opacity-75">Send us an email</p>
-                  </div>
+                <a href="tel:+250781175264" className="flex items-start gap-3 hover:text-mep-orange transition-colors">
+                  <Phone className="h-4 w-4 text-mep-orange flex-shrink-0 mt-0.5" />
+                  <span className="text-white/40 text-sm">+250 781 175 264</span>
                 </a>
+              </li>
+              <li>
+                <a href="mailto:meperictric40@gmail.com" className="flex items-start gap-3 hover:text-mep-orange transition-colors">
+                  <Mail className="h-4 w-4 text-mep-orange flex-shrink-0 mt-0.5" />
+                  <span className="text-white/40 text-sm">meperictric40@gmail.com</span>
+                </a>
+              </li>
+              <li className="flex items-start gap-3">
+                <Globe className="h-4 w-4 text-mep-orange flex-shrink-0 mt-0.5" />
+                <span className="text-white/40 text-sm">meperictictech.com</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Clock className="h-4 w-4 text-mep-orange flex-shrink-0 mt-0.5" />
+                <span className="text-white/40 text-sm">Mon–Fri: 8AM – 6PM</span>
               </li>
             </ul>
           </div>
         </div>
       </div>
 
-      {/* Transmission-style Divider */}
-      <div className="container mx-auto px-4">
-        <div className="flex items-center gap-4">
-          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-white/30 to-white/30"></div>
-          <div className="flex gap-2">
-            <span className="w-2 h-2 bg-mep-orange rounded-full"></span>
-            <span className="w-2 h-2 bg-white/50 rounded-full"></span>
-            <span className="w-2 h-2 bg-mep-orange rounded-full"></span>
-          </div>
-          <div className="flex-1 h-px bg-gradient-to-l from-transparent via-white/30 to-white/30"></div>
-        </div>
-      </div>
+      {/* Orange divider */}
+      <div className="h-px bg-gradient-to-r from-transparent via-mep-orange/30 to-transparent" />
 
       {/* Bottom Bar */}
       <div className="container mx-auto px-4 py-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm opacity-90">
-          <p>© 2026 MEP Erictric Technology Ltd. All rights reserved.</p>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/30">
+          <p>© 2026 MEP Erictric Technology Ltd. All Rights Reserved.</p>
           <div className="flex gap-6">
             <Link to="/privacy" className="hover:text-mep-orange transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-mep-orange transition-colors">Terms of Service</Link>
@@ -188,14 +140,14 @@ const Footer = () => {
       </div>
 
       {/* Developer Credit */}
-      <div className="text-center pb-[18px] mt-5">
-        <div className="flex items-center justify-center gap-2.5 flex-wrap">
-          <p className="text-[13px] font-medium text-white/70">Created by Cedric Karambizi</p>
+      <div className="text-center pb-5">
+        <div className="flex items-center justify-center gap-2.5">
+          <p className="text-[11px] text-white/20">Created by Cedric Karambizi</p>
           <a
             href="https://digital-genesis-navy.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-3.5 py-1.5 rounded-full bg-accent-blue text-primary-foreground text-xs font-semibold transition-colors duration-300 ease-out hover:bg-primary"
+            className="px-3 py-1 rounded-full bg-mep-orange/20 text-mep-orange text-[10px] font-semibold hover:bg-mep-orange/30 transition-colors"
           >
             Click
           </a>

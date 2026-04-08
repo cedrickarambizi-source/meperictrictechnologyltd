@@ -2,55 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 @layer base {
   :root {
-    /* MEP Electric Brand Colors */
+    /* 2026 Dark Premium Palette */
     --background: 0 0% 100%;
-    --foreground: 216 28% 17%;
+    --foreground: 230 25% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 216 28% 17%;
+    --card-foreground: 230 25% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 216 28% 17%;
+    --popover-foreground: 230 25% 8%;
 
     /* Deep Electric Blue - Primary Brand */
     --primary: 216 62% 27%;
     --primary-foreground: 0 0% 100%;
 
-    /* Light Blue Gray */
     --secondary: 210 25% 95%;
     --secondary-foreground: 216 62% 27%;
 
-    /* Muted Gray */
     --muted: 210 20% 96%;
     --muted-foreground: 215 16% 47%;
 
-    /* Electric Blue Accent */
     --accent: 216 62% 27%;
     --accent-foreground: 0 0% 100%;
 
-    /* Orange CTA */
-    --destructive: 24 85% 53%;
+    --destructive: 24 100% 50%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 214 32% 91%;
     --input: 214 32% 91%;
     --ring: 216 62% 27%;
+    --radius: 0.75rem;
 
-    --radius: 0.5rem;
-
-    /* Custom MEP Colors */
+    /* MEP 2026 Colors */
     --mep-blue-dark: 216 62% 27%;
-    --mep-blue-deep: 216 72% 17%;
+    --mep-blue-deep: 220 72% 17%;
     --mep-blue-light: 210 60% 50%;
-    --mep-orange: 24 85% 53%;
-    --mep-orange-hover: 24 85% 45%;
+    --mep-orange: 24 100% 50%;
+    --mep-orange-hover: 24 100% 42%;
     --mep-gray: 220 13% 40%;
     --mep-gray-light: 220 14% 96%;
-    --mep-navy-overlay: 216 72% 17%;
+    --mep-navy-overlay: 220 72% 17%;
+
+    /* 2026 Dark Sections */
+    --dark-bg: 240 20% 4%;
+    --dark-navy: 220 60% 15%;
+    --dark-card: 220 40% 10%;
+    --dark-surface: 230 25% 8%;
 
     /* Sidebar */
     --sidebar-background: 0 0% 98%;
@@ -62,22 +63,21 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-  /* Team Page Colors */
-  --team-bg: 220 33% 97%;
-  --team-heading: 216 56% 9%;
-  --team-subtitle: 220 9% 46%;
-  --team-hero: 220 33% 97%;
+    /* Team Page Colors */
+    --team-bg: 220 33% 97%;
+    --team-heading: 216 56% 9%;
+    --team-subtitle: 220 9% 46%;
+    --team-hero: 220 33% 97%;
 
-  /* Accent Blue */
-  --accent-blue: 227 100% 59%;
+    --accent-blue: 227 100% 59%;
   }
 
   .dark {
-    --background: 216 72% 8%;
+    --background: 240 20% 4%;
     --foreground: 210 40% 98%;
-    --card: 216 72% 10%;
+    --card: 220 40% 10%;
     --card-foreground: 210 40% 98%;
-    --popover: 216 72% 10%;
+    --popover: 220 40% 10%;
     --popover-foreground: 210 40% 98%;
     --primary: 210 60% 50%;
     --primary-foreground: 0 0% 100%;
@@ -87,19 +87,11 @@
     --muted-foreground: 215 20% 65%;
     --accent: 217 33% 17%;
     --accent-foreground: 210 40% 98%;
-    --destructive: 24 85% 53%;
+    --destructive: 24 100% 50%;
     --destructive-foreground: 0 0% 100%;
     --border: 217 33% 17%;
     --input: 217 33% 17%;
     --ring: 212 27% 84%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -117,7 +109,7 @@
   }
 
   h3, h4 {
-    @apply font-sans font-medium tracking-tight;
+    @apply font-sans font-semibold tracking-tight;
   }
 
   h5, h6 {
@@ -126,67 +118,129 @@
 }
 
 @layer components {
+  /* Glassmorphism */
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
+  }
+
+  .glass-nav {
+    @apply bg-[#0A0A0F]/80 backdrop-blur-2xl border-b border-white/5;
+  }
+
+  /* Hero overlay */
   .hero-overlay {
     background: linear-gradient(
       135deg,
-      hsl(var(--mep-navy-overlay) / 0.85) 0%,
-      hsl(var(--mep-blue-dark) / 0.7) 100%
+      hsl(var(--dark-bg) / 0.90) 0%,
+      hsl(var(--dark-navy) / 0.70) 50%,
+      transparent 100%
     );
   }
 
-  .bg-team-page-gradient {
-    background: linear-gradient(180deg, #081F47 0%, hsl(var(--mep-blue-dark)) 100%);
-  }
-
-  /* Enhanced visual hierarchy utilities */
+  /* Section styles */
   .section-divider {
-    @apply w-16 h-1 bg-mep-orange mx-auto;
+    @apply w-16 h-1 bg-mep-orange mx-auto rounded-full;
   }
 
   .section-divider-left {
-    @apply w-16 h-1 bg-mep-orange;
+    @apply w-16 h-1 bg-mep-orange rounded-full;
   }
 
   .info-bar {
-    background: hsl(var(--mep-blue-dark));
+    background: hsl(var(--dark-bg));
   }
 
   .section-heading {
-    @apply text-3xl md:text-4xl font-heading font-bold text-primary;
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold;
   }
 
   .section-subheading {
     @apply text-lg text-muted-foreground max-w-2xl mx-auto;
   }
 
-  .card-hover {
-    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  /* Dark section backgrounds */
+  .bg-dark {
+    background: #0A0A0F;
   }
 
+  .bg-dark-navy {
+    background: #0D1B4B;
+  }
+
+  .bg-dark-surface {
+    background: #1A1A2E;
+  }
+
+  .bg-team-page-gradient {
+    background: linear-gradient(180deg, #081F47 0%, hsl(var(--mep-blue-dark)) 100%);
+  }
+
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-500 hover:shadow-2xl hover:-translate-y-1;
+  }
+
+  /* Orange glow effect */
+  .orange-glow {
+    box-shadow: 0 0 20px hsl(24 100% 50% / 0.3), 0 0 60px hsl(24 100% 50% / 0.1);
+  }
+
+  .orange-glow-hover:hover {
+    box-shadow: 0 0 20px hsl(24 100% 50% / 0.4), 0 0 60px hsl(24 100% 50% / 0.15);
+  }
+
+  /* Buttons */
   .btn-primary {
-    @apply bg-mep-orange text-white font-semibold px-8 py-4 rounded-md 
-           hover:bg-mep-orange-hover transition-all duration-300 
+    @apply bg-mep-orange text-white font-semibold px-8 py-4 rounded-xl
+           hover:bg-mep-orange-hover transition-all duration-300
            shadow-lg hover:shadow-xl;
   }
 
   .btn-secondary {
-    @apply border-2 border-white text-white font-semibold px-8 py-4 rounded-md 
+    @apply border-2 border-white text-white font-semibold px-8 py-4 rounded-xl
            hover:bg-white hover:text-primary transition-all duration-300;
   }
 
-  /* Professional card with lift effect */
-  .pro-card {
-    @apply bg-card border border-border/50 rounded-xl p-6 
-           transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
+  .btn-ghost {
+    @apply text-white/90 font-semibold px-6 py-4 rounded-xl
+           hover:bg-white/10 transition-all duration-300;
   }
 
-  /* Stat card for credibility */
+  /* Nav link */
+  .nav-link {
+    @apply relative text-white/70 font-medium transition-all duration-300 hover:text-white;
+  }
+
+  .nav-link.active {
+    @apply text-white;
+  }
+
+  .nav-link.active::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-mep-orange rounded-full;
+  }
+
+  /* M.E.P Special Button Bounce */
+  .mep-special-btn {
+    animation: mep-bounce 2.5s ease-in-out infinite;
+  }
+
+  @keyframes mep-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+  }
+
+  /* Stat card */
   .stat-card {
     @apply bg-primary text-primary-foreground p-8 rounded-xl text-center
            transition-all duration-300 hover:shadow-xl hover:scale-[1.02];
   }
 
-  /* Process step indicator */
+  /* Process step */
   .process-step {
     @apply relative flex items-start gap-6 pb-8;
   }
@@ -201,32 +255,47 @@
   }
 
   .process-number {
-    @apply w-12 h-12 rounded-full bg-primary text-primary-foreground 
+    @apply w-12 h-12 rounded-full bg-primary text-primary-foreground
            flex items-center justify-center font-bold text-lg flex-shrink-0
            shadow-md;
   }
 
-  .nav-link {
-    @apply relative text-foreground font-medium transition-colors hover:text-primary;
+  /* Pro card */
+  .pro-card {
+    @apply bg-card border border-border/50 rounded-xl p-6
+           transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
   }
 
-  .nav-link.active {
-    @apply text-primary;
+  /* Shimmer animation */
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
   }
 
-  .nav-link.active::after {
-    content: '';
-    @apply absolute bottom-0 left-0 w-full h-0.5 bg-primary;
+  .shimmer-text {
+    background: linear-gradient(90deg, #fff 0%, #FF6B00 50%, #fff 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s linear infinite;
   }
 
-  /* M.E.P Special Button Bounce */
-  .mep-special-btn {
-    animation: mep-bounce 2.5s ease-in-out infinite;
+  /* Scroll indicator */
+  @keyframes scroll-bounce {
+    0%, 100% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(8px); opacity: 0.5; }
   }
 
-  @keyframes mep-bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-4px); }
+  .animate-scroll-bounce {
+    animation: scroll-bounce 2s ease-in-out infinite;
+  }
+
+  /* Particle float */
+  @keyframes float {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    25% { transform: translateY(-20px) translateX(10px); }
+    50% { transform: translateY(-10px) translateX(-5px); }
+    75% { transform: translateY(-25px) translateX(15px); }
   }
 }
 
@@ -236,15 +305,18 @@
   }
 
   @keyframes marquee {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-33.333%);
-    }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-33.333%); }
   }
 
   .animate-marquee {
     animation: marquee 25s linear infinite;
+  }
+
+  /* Orange gradient text */
+  .text-gradient-orange {
+    background: linear-gradient(135deg, #FF6B00 0%, #FF9500 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
