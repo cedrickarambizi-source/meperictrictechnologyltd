@@ -1,11 +1,11 @@
 import Layout from "@/components/layout/Layout";
 import HeroSlider from "@/components/home/HeroSlider";
-import AboutSection from "@/components/home/AboutSection";
+import StatsTickerBar from "@/components/home/StatsTickerBar";
+import TrustIndicators from "@/components/home/TrustIndicators";
+import EngineeringProcess from "@/components/home/EngineeringProcess";
 import ServicesSection from "@/components/home/ServicesSection";
 import ProjectsShowcase from "@/components/home/ProjectsShowcase";
-import EngineeringProcess from "@/components/home/EngineeringProcess";
 import SafetyCompliance from "@/components/home/SafetyCompliance";
-import TrustIndicators from "@/components/home/TrustIndicators";
 import LeadershipMessage from "@/components/home/LeadershipMessage";
 import PartnersSection from "@/components/home/PartnersSection";
 import CTASection from "@/components/home/CTASection";
@@ -28,7 +28,7 @@ const Index = () => {
       <StructuredData id="local-business-schema" data={localBusinessSchema} />
       <StructuredData id="site-nav-schema" data={siteNavigationSchema} />
       <HeroSlider />
-      <AboutSection />
+      <StatsTickerBar />
       <TrustIndicators />
       <EngineeringProcess />
       <ServicesSection />

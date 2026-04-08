@@ -1,171 +1,102 @@
 import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, ChevronLeft, ChevronRight, Award } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, Check } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
-// Import ALL project images
 import landmarkProject from "@/assets/projects/landmark-project.png";
 import omicaBuilding from "@/assets/projects/omica-building.png";
 import kimironkoCommercial from "@/assets/projects/kimironko-commercial.png";
 import wintanaApartment from "@/assets/projects/wintana-apartment.png";
 import worldvisionHq from "@/assets/projects/worldvision-hq.png";
-import ikazeHouse from "@/assets/projects/ikaze-house.png";
-import afPlaza from "@/assets/projects/af-plaza.png";
-import kafamHouse from "@/assets/projects/kafam-house.png";
-import laCroixDuSud from "@/assets/projects/la-croix-du-sud.png";
-import yyussaCityCenter from "@/assets/projects/yyussa-city-center.png";
-import bahoHospital from "@/assets/projects/baho-hospital.png";
-import twigaHouse from "@/assets/projects/twiga-house.png";
-import hospitalPediatriqueRemera from "@/assets/projects/hospital-pediatrique-remera.png";
-import mininter from "@/assets/projects/mininter.png";
-import nisr from "@/assets/projects/nisr.png";
-import rwaruteneTransmission from "@/assets/projects/rwarutene-transmission.png";
-import gahangaStreetLight from "@/assets/projects/gahanga-street-light.png";
-import zaraApartment from "@/assets/projects/zara-apartment.png";
-import villaHouse from "@/assets/projects/villa-house.png";
 import kgpApartment from "@/assets/projects/kgp-apartment.png";
-import victoryVilla from "@/assets/projects/victory-villa.png";
-import minaffetProcurement from "@/assets/projects/minaffet-procurement.png";
 
 const projects = [
   {
-    title: "KGP APARTMENT",
-    image: kgpApartment,
-    summary: "Electrical, 6 Elevators, Generator, Switchgear, Transformer, MV Line Cables",
-  },
-  {
     title: "LANDMARK PROJECT",
     image: landmarkProject,
-    summary: "Electrical, Elevators, Fire Alarm, CCTV, IP Phone, Internet, Generator, Firefighting",
-  },
-  {
-    title: "KAFAM HOUSE",
-    image: kafamHouse,
-    summary: "Electrical, Fire Alarm, CCTV, IP Phone, Internet, Elevator, Generator, Firefighting",
-  },
-  {
-    title: "BAHO INTERNATIONAL HOSPITAL",
-    image: bahoHospital,
-    summary: "Electrical, Fire Alarm, CCTV, IP Phone, Elevator, Firefighting, Plumbing, Nursing Systems, AC",
-  },
-  {
-    title: "IKAZE HOUSE",
-    image: ikazeHouse,
-    summary: "Electrical, Fire Alarm, CCTV, IP Phone, Internet, Elevator, Firefighting, Plumbing",
-  },
-  {
-    title: "YYUSSA CITY CENTER",
-    image: yyussaCityCenter,
-    summary: "Maintenance and repair of 7 elevators and 2 escalators",
-  },
-  {
-    title: "LA CROIX DU SUD – Kwa Nyirinkwaya",
-    image: laCroixDuSud,
-    summary: "Electrical, Elevator, Fire Alarm, Generator, Firefighting, Switchgear, Transformer, MV Line",
+    status: "Completed" as const,
+    tags: ["Electrical", "Elevator", "Fire Safety", "+1"],
+    services: [
+      "Supply and installation of electrical activities",
+      "Supply and installation of two elevators (lifts)",
+      "Fire alarm system",
+    ],
+    moreCount: 5,
   },
   {
     title: "OMICA BUILDING",
     image: omicaBuilding,
-    summary: "Electrical, Elevator, Fire Alarm, Generator, Firefighting, Switchgear, Transformer",
+    status: "Completed" as const,
+    tags: ["Electrical", "Elevator", "Fire Safety"],
+    services: [
+      "Supply and installation of electrical activities",
+      "Elevator (lift)",
+      "Fire alarm system",
+    ],
+    moreCount: 5,
   },
   {
     title: "KIMIRONKO COMMERCIAL BUILDING",
     image: kimironkoCommercial,
-    summary: "Electrical, Elevator, Fire Alarm, Generator, Firefighting, Switchgear, Transformer",
-  },
-  {
-    title: "VICTORY VILLA",
-    image: victoryVilla,
-    summary: "Electrical, Fire Alarm, CCTV, IP Phone, Internet, Elevator, Access Door Control",
-  },
-  {
-    title: "ZARA APARTMENT",
-    image: zaraApartment,
-    summary: "Mechanical and Electrical activities for Elevator (Lift)",
-  },
-  {
-    title: "MINAFFET PROCUREMENT OFFICE",
-    image: minaffetProcurement,
-    summary: "Elevator (Lift) Installation – 7 Levels",
-  },
-  {
-    title: "NATIONAL INSTITUTE OF STATISTICS (NISR)",
-    image: nisr,
-    summary: "Elevator supply and installation",
-  },
-  {
-    title: "TWIGA HOUSE ACCOMMODATION",
-    image: twigaHouse,
-    summary: "Elevator supply and installation",
-  },
-  {
-    title: "MININTER",
-    image: mininter,
-    summary: "Elevator supply and installation",
-  },
-  {
-    title: "HOSPITAL PÉDIATRIQUE DE REMERA",
-    image: hospitalPediatriqueRemera,
-    summary: "Electrical, Elevator, Scanner installation",
-  },
-  {
-    title: "A&F PLAZA",
-    image: afPlaza,
-    summary: "Supply and installation of 2 elevators (lifts)",
+    status: "Completed" as const,
+    tags: ["Electrical", "Elevator", "Fire Safety"],
+    services: [
+      "Supply and installation of electrical activities",
+      "Elevator (lift)",
+      "Fire alarm system",
+    ],
+    moreCount: 5,
   },
   {
     title: "WINTANA APARTMENT",
     image: wintanaApartment,
-    summary: "Electrical works, Elevator supply and installation",
+    status: "Completed" as const,
+    tags: ["Electrical", "Elevator"],
+    services: [
+      "Supply and installation of electrical activities",
+      "Elevator (lift)",
+    ],
+    moreCount: 0,
   },
   {
     title: "WORLDVISION HQ RWANDA",
     image: worldvisionHq,
-    summary: "Elevator supply and installation",
+    status: "Completed" as const,
+    tags: ["Elevator"],
+    services: ["Elevator supply and installation"],
+    moreCount: 0,
   },
   {
-    title: "VILLA HOUSE",
-    image: villaHouse,
-    summary: "Mechanical and Electrical activities for Elevator (Lift)",
-  },
-  {
-    title: "RWARUTENE 30KV TRANSMISSION LINE",
-    image: rwaruteneTransmission,
-    summary: "Electrical Transmission Line Construction (1.6 km)",
-  },
-  {
-    title: "GAHANGA STREET LIGHT",
-    image: gahangaStreetLight,
-    summary: "Electrical Street Light Installation (2.8 km)",
+    title: "KGP APARTMENT",
+    image: kgpApartment,
+    status: "Ongoing" as const,
+    tags: ["Electrical", "Elevator"],
+    services: [
+      "Supply and installation of electrical works",
+      "Elevator systems (6 lifts)",
+      "Generator installation",
+    ],
+    moreCount: 4,
   },
 ];
 
 const ProjectsShowcase = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  
+
   const autoplayPlugin = Autoplay({
-    delay: 3000,
+    delay: 4000,
     stopOnInteraction: false,
     stopOnMouseEnter: true,
   });
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    {
-      loop: true,
-      align: "center",
-      skipSnaps: false,
-    },
+    { loop: true, align: "start", skipSnaps: false },
     [autoplayPlugin]
   );
 
-  const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev();
-  }, [emblaApi]);
-
-  const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext();
-  }, [emblaApi]);
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
@@ -176,73 +107,88 @@ const ProjectsShowcase = () => {
     if (!emblaApi) return;
     onSelect();
     emblaApi.on("select", onSelect);
-    emblaApi.on("reInit", onSelect);
-    return () => {
-      emblaApi.off("select", onSelect);
-    };
+    return () => { emblaApi.off("select", onSelect); };
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="py-20 lg:py-28 bg-muted/30">
-      <div className="container mx-auto px-4">
-        {/* Credibility Statement */}
-        <div className="flex items-center justify-center gap-4 mb-8">
-          <Award className="h-8 w-8 text-mep-orange" />
-        <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-primary text-center tracking-tight">
-            10+ Years of Proven Experience in Engineering & Elevator Solutions
-          </h3>
-          <Award className="h-8 w-8 text-mep-orange" />
-        </div>
+    <section className="py-24 lg:py-32 bg-[#0A0A0F] relative overflow-hidden">
+      {/* Background glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-mep-orange/3 rounded-full blur-3xl pointer-events-none" />
 
+      <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-      <div className="text-center max-w-3xl mx-auto mb-14">
-        <div className="flex items-center justify-center gap-3 mb-4">
-          <span className="section-divider"></span>
-        </div>
-        <span className="text-mep-orange font-semibold uppercase tracking-widest text-sm">
-            What We Have Done
+        <div className="text-center max-w-3xl mx-auto mb-14">
+          <span className="inline-flex items-center gap-2 bg-mep-orange/15 border border-mep-orange/30 rounded-full px-5 py-2 mb-6">
+            <span className="text-mep-orange font-semibold uppercase tracking-widest text-xs">
+              What We Have Done
+            </span>
           </span>
-          <h2 className="section-heading mt-2 mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4">
             Our Completed Projects
           </h2>
-          <p className="section-subheading">
-            Explore our portfolio of successfully delivered MEP and engineering projects 
+          <p className="text-white/50 text-lg leading-relaxed max-w-2xl mx-auto">
+            Explore our portfolio of successfully delivered MEP and engineering projects
             across Rwanda and East Africa.
           </p>
         </div>
 
         {/* Carousel */}
-        <div className="relative max-w-5xl mx-auto">
+        <div className="relative max-w-6xl mx-auto">
           <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex touch-pan-y">
+            <div className="flex touch-pan-y -ml-4">
               {projects.map((project, index) => (
                 <div
                   key={index}
-                  className="flex-[0_0_100%] min-w-0 md:flex-[0_0_85%] lg:flex-[0_0_75%] px-4"
+                  className="flex-[0_0_100%] min-w-0 md:flex-[0_0_50%] lg:flex-[0_0_33.333%] pl-4"
                 >
-                  <div className="bg-card rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-2xl group">
-                    <div className="relative aspect-[16/10] overflow-hidden transition-all duration-500">
+                  <div className="bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 group h-full flex flex-col">
+                    {/* Image */}
+                    <div className="relative aspect-[4/3] overflow-hidden">
                       <img
                         src={project.image}
                         alt={project.title}
                         loading="lazy"
                         decoding="async"
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 brightness-105 contrast-105"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
-                      
-                      {/* Project info overlay */}
-                      <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8 transform transition-transform duration-300">
-                        <span className="inline-block px-3 py-1 bg-mep-orange text-white text-xs font-semibold rounded-full mb-3">
-                          Completed Project
+                      {/* Status badge */}
+                      <div className="absolute top-3 right-3">
+                        <span className={`px-3 py-1 rounded-full text-xs font-bold ${
+                          project.status === "Ongoing"
+                            ? "bg-mep-orange text-white"
+                            : "bg-[#0D1B4B] text-white"
+                        }`}>
+                          {project.status}
                         </span>
-                        <h3 className="font-bold text-xl md:text-2xl lg:text-3xl text-white mb-2 leading-tight">
-                          {project.title}
-                        </h3>
-                        <p className="text-white/90 text-sm lg:text-base mt-2 line-clamp-2 max-w-lg">
-                          {project.summary}
-                        </p>
                       </div>
+                      {/* Tags */}
+                      <div className="absolute bottom-3 left-3 flex gap-1.5 flex-wrap">
+                        {project.tags.map((tag, i) => (
+                          <span key={i} className="bg-white/90 backdrop-blur-sm text-foreground text-[10px] font-semibold px-2.5 py-1 rounded-full">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="p-5 flex-1 flex flex-col">
+                      <h3 className="font-bold text-foreground mb-3 text-sm leading-tight">
+                        {project.title}
+                      </h3>
+                      <ul className="space-y-2 flex-1">
+                        {project.services.map((service, i) => (
+                          <li key={i} className="flex items-start gap-2 text-xs text-muted-foreground">
+                            <Check className="h-3.5 w-3.5 text-mep-orange flex-shrink-0 mt-0.5" />
+                            {service}
+                          </li>
+                        ))}
+                      </ul>
+                      {project.moreCount > 0 && (
+                        <Link to="/projects" className="text-mep-orange font-semibold text-xs mt-3 hover:underline inline-block">
+                          +{project.moreCount} more activities →
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -250,18 +196,18 @@ const ProjectsShowcase = () => {
             </div>
           </div>
 
-          {/* Navigation Arrows */}
+          {/* Nav Arrows */}
           <button
             onClick={scrollPrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-3 bg-primary/90 hover:bg-primary text-white rounded-full shadow-lg transition-all -translate-x-1/2 md:translate-x-0"
-            aria-label="Previous project"
+            className="absolute -left-4 top-1/2 -translate-y-1/2 z-10 p-3 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white rounded-full shadow-lg transition-all border border-white/10"
+            aria-label="Previous"
           >
             <ChevronLeft className="h-5 w-5" />
           </button>
           <button
             onClick={scrollNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-3 bg-primary/90 hover:bg-primary text-white rounded-full shadow-lg transition-all translate-x-1/2 md:translate-x-0"
-            aria-label="Next project"
+            className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 p-3 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white rounded-full shadow-lg transition-all border border-white/10"
+            aria-label="Next"
           >
             <ChevronRight className="h-5 w-5" />
           </button>
@@ -273,10 +219,10 @@ const ProjectsShowcase = () => {
             <button
               key={index}
               onClick={() => emblaApi?.scrollTo(index)}
-              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+              className={`rounded-full transition-all duration-300 ${
                 index === selectedIndex
-                  ? "bg-primary w-8"
-                  : "bg-primary/30 hover:bg-primary/50"
+                  ? "bg-mep-orange w-8 h-2.5"
+                  : "bg-white/20 hover:bg-white/40 w-2.5 h-2.5"
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />
@@ -284,8 +230,8 @@ const ProjectsShowcase = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-10">
-        <Link to="/projects" className="btn-primary inline-flex items-center gap-2 hover:gap-3 transition-all">
+        <div className="text-center mt-12">
+          <Link to="/projects" className="inline-flex items-center gap-2 bg-mep-orange hover:bg-mep-orange-hover text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-[0_0_30px_hsl(24_100%_50%/0.3)] hover:shadow-[0_0_40px_hsl(24_100%_50%/0.5)] hover:gap-3">
             View All Projects <ArrowRight className="h-5 w-5" />
           </Link>
         </div>

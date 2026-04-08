@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 import logo from "@/assets/logo.jpeg";
 
 const navLinks = [
   { name: "Home", path: "/" },
-  { name: "Our Team", path: "/team" },
   { name: "Services", path: "/services" },
   { name: "Projects", path: "/projects" },
+  { name: "Team", path: "/team" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
 ];
@@ -18,52 +18,69 @@ const Header = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full bg-white transition-all duration-300 ${
-        isScrolled ? "shadow-lg" : "shadow-sm"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled
+          ? "glass-nav shadow-2xl"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between py-3">
+        <div className="flex items-center justify-between py-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
-            <img src={logo} alt="MEP Electric Technology Ltd" className="h-14 w-auto" />
+          <Link to="/" className="flex items-center gap-3 group">
+            <div className="relative">
+              <img src={logo} alt="MEP Erictric Technology Ltd" className="h-12 w-auto rounded-lg" />
+              <div className="absolute inset-0 rounded-lg bg-mep-orange/0 group-hover:bg-mep-orange/10 transition-colors duration-300" />
+            </div>
+            <div className="hidden sm:block">
+              <span className="text-white font-bold text-sm leading-none tracking-wide">MEP ERICTRIC</span>
+              <span className="block text-white/50 text-[10px] tracking-widest uppercase">Technology Ltd</span>
+            </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          {/* Desktop Navigation - Center */}
+          <nav className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`nav-link py-2 ${
-                  location.pathname === link.path ? "active" : ""
+                className={`nav-link px-4 py-2 rounded-lg text-sm ${
+                  location.pathname === link.path ? "active bg-white/5" : ""
                 }`}
               >
                 {link.name}
               </Link>
             ))}
-
-            {/* M.E.P Special Button */}
-            <Link
-              to="/services"
-              className="mep-special-btn bg-white text-primary border-2 border-primary font-bold px-5 py-2 rounded-full transition-all duration-300 hover:bg-mep-orange hover:border-mep-orange hover:text-white hover:shadow-[0_0_20px_hsl(var(--mep-orange)/0.4)]"
+            <a
+              href="https://claude.ai/public/artifacts/16323224-122e-4455-9272-efa6e71df1fe"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav-link px-4 py-2 rounded-lg text-sm"
             >
-              M.E.P
-            </Link>
+              MEP Calculator
+            </a>
           </nav>
+
+          {/* Right side - CTA */}
+          <div className="hidden lg:flex items-center gap-3">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 bg-mep-orange hover:bg-mep-orange-hover text-white font-semibold px-6 py-2.5 rounded-full transition-all duration-300 shadow-lg hover:shadow-[0_0_25px_hsl(24_100%_50%/0.4)] text-sm"
+            >
+              Request a Quote <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 text-foreground"
+            className="lg:hidden p-2 text-white"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -73,28 +90,37 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <nav className="lg:hidden py-4 border-t animate-fade-in">
-            <div className="flex flex-col gap-2">
+          <nav className="lg:hidden py-4 border-t border-white/10 animate-fade-in">
+            <div className="flex flex-col gap-1">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`px-4 py-3 rounded-md transition-colors ${
+                  className={`px-4 py-3 rounded-xl text-sm font-medium transition-all ${
                     location.pathname === link.path
-                      ? "bg-primary text-primary-foreground"
-                      : "hover:bg-secondary"
+                      ? "bg-mep-orange text-white"
+                      : "text-white/70 hover:text-white hover:bg-white/5"
                   }`}
                 >
                   {link.name}
                 </Link>
               ))}
-              <Link
-                to="/services"
+              <a
+                href="https://claude.ai/public/artifacts/16323224-122e-4455-9272-efa6e71df1fe"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="mx-4 mt-2 text-center bg-white text-primary border-2 border-primary font-bold px-5 py-3 rounded-full hover:bg-mep-orange hover:border-mep-orange hover:text-white transition-all"
+                className="px-4 py-3 rounded-xl text-sm font-medium text-white/70 hover:text-white hover:bg-white/5 transition-all"
               >
-                M.E.P
+                MEP Calculator
+              </a>
+              <Link
+                to="/contact"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="mx-4 mt-3 text-center bg-mep-orange hover:bg-mep-orange-hover text-white font-semibold px-6 py-3 rounded-full transition-all"
+              >
+                Request a Quote →
               </Link>
             </div>
           </nav>

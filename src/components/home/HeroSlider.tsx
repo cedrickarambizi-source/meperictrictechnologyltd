@@ -1,55 +1,92 @@
 import { useState, useEffect } from "react";
-import { FileText, Calculator } from "lucide-react";
+import { FileText, Calculator, ArrowRight, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
-import yyussaCityCenter from "@/assets/projects/yyussa-city-center.png";
-import kgpApartment from "@/assets/projects/kgp-apartment.png";
+
+import landmarkProject from "@/assets/projects/landmark-project.png";
 import omicaBuilding from "@/assets/projects/omica-building.png";
-import laCroixDuSud from "@/assets/projects/la-croix-du-sud.png";
+import kimironkoCommercial from "@/assets/projects/kimironko-commercial.png";
 import kafamHouse from "@/assets/projects/kafam-house.png";
-import villaHouse from "@/assets/projects/villa-house.png";
+import kgpApartment from "@/assets/projects/kgp-apartment.png";
+import bahoHospital from "@/assets/projects/baho-hospital.png";
 
 const slides = [
   {
-    image: yyussaCityCenter,
-    alt: "YYUSSA City Center",
-    project: "YYUSSA CITY CENTER",
-    location: "Kigali",
-    year: "2025",
-  },
-  {
-    image: kgpApartment,
-    alt: "KGP Apartment",
-    project: "KGP APARTMENT",
-    location: "Kigali",
-    year: "2024",
+    image: landmarkProject,
+    project: "LANDMARK PROJECT",
+    location: "Kigali – Nyarugenge",
+    year: "2023–2024",
+    tags: ["Electrical", "Elevator", "Fire Safety", "+1"],
+    services: [
+      "Supply and installation of electrical activities",
+      "Supply and installation of two elevators (lifts)",
+      "Fire alarm system",
+    ],
+    moreCount: 5,
   },
   {
     image: omicaBuilding,
-    alt: "Omica Apartment",
-    project: "OMICA APARTMENT",
+    project: "OMICA BUILDING",
     location: "Kigali",
     year: "2023–2024",
+    tags: ["Electrical", "Elevator", "Fire Safety"],
+    services: [
+      "Supply and installation of electrical activities",
+      "Elevator (lift)",
+      "Fire alarm system",
+    ],
+    moreCount: 5,
   },
   {
-    image: laCroixDuSud,
-    alt: "La Croix du Sud",
-    project: "PROJECT LA CROIX DU SUD",
+    image: kimironkoCommercial,
+    project: "KIMIRONKO COMMERCIAL BUILDING",
     location: "Kigali",
     year: "2022–2023",
-  },
-  {
-    image: villaHouse,
-    alt: "Kwa Nyirinkwaya",
-    project: "KWA NYIRINKWAYA",
-    location: "Kigali",
-    year: "2023",
+    tags: ["Electrical", "Elevator", "Fire Safety"],
+    services: [
+      "Supply and installation of electrical activities",
+      "Elevator (lift)",
+      "Fire alarm system",
+    ],
+    moreCount: 5,
   },
   {
     image: kafamHouse,
-    alt: "Kafam House",
     project: "KAFAM HOUSE",
     location: "Nyarutarama, Kigali",
     year: "2018–2022",
+    tags: ["Electrical", "Elevator", "CCTV", "Fire Safety"],
+    services: [
+      "Electrical works & fire alarm system",
+      "Elevator (lift) supply and installation",
+      "CCTV cameras & IP telephone",
+    ],
+    moreCount: 5,
+  },
+  {
+    image: kgpApartment,
+    project: "KGP APARTMENT",
+    location: "Kigali",
+    year: "2023–Ongoing",
+    tags: ["Electrical", "Elevator"],
+    services: [
+      "Supply and installation of electrical works",
+      "Elevator systems (6 lifts)",
+      "Generator installation",
+    ],
+    moreCount: 4,
+  },
+  {
+    image: bahoHospital,
+    project: "BAHO INTERNATIONAL HOSPITAL",
+    location: "Nyarutarama, Kigali",
+    year: "2016–2021",
+    tags: ["Electrical", "Elevator", "Plumbing", "Fire Safety"],
+    services: [
+      "Electrical works & fire alarm system",
+      "Elevator (lift) access door control",
+      "Plumbing works & nursing systems",
+    ],
+    moreCount: 6,
   },
 ];
 
@@ -64,100 +101,124 @@ const HeroSlider = () => {
   }, []);
 
   return (
-    <section className="relative h-[100vh] min-h-[600px] max-h-[1100px] overflow-hidden bg-[hsl(216,72%,12%)]">
-      {/* Slides with smooth fade + zoom parallax */}
+    <section className="relative h-[100vh] min-h-[700px] overflow-hidden bg-[#0A0A0F]">
+      {/* Background slides */}
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-[1500ms] ease-in-out ${
+          className={`absolute inset-0 transition-opacity duration-[1800ms] ease-in-out ${
             index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}
         >
           <div
-            className={`w-full h-full transition-transform duration-[6000ms] ease-out ${
-              index === currentSlide ? "scale-105" : "scale-100"
+            className={`w-full h-full transition-transform duration-[8000ms] ease-out ${
+              index === currentSlide ? "scale-110" : "scale-100"
             }`}
           >
             <img
               src={slide.image}
-              alt={slide.alt}
+              alt={slide.project}
               loading={index === 0 ? "eager" : "lazy"}
               decoding={index === 0 ? "sync" : "async"}
               fetchPriority={index === 0 ? "high" : "auto"}
               className="w-full h-full object-cover"
-              style={{ imageRendering: "auto" }}
             />
           </div>
-          {/* Refined gradient overlay — lighter to show images better */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[hsl(216,72%,12%,0.70)] via-[hsl(216,62%,20%,0.45)] to-[hsl(216,50%,25%,0.20)]" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[hsl(216,72%,12%,0.50)] via-transparent to-[hsl(216,72%,12%,0.15)]" />
+          {/* Deep cinematic gradient */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0F] via-[#0A0A0F]/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0F] via-transparent to-[#0A0A0F]/30" />
         </div>
       ))}
 
-      {/* Static Content Overlay */}
+      {/* Floating particles effect */}
+      <div className="absolute inset-0 z-15 pointer-events-none overflow-hidden">
+        {[...Array(6)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-mep-orange/30 rounded-full"
+            style={{
+              left: `${15 + i * 15}%`,
+              top: `${20 + i * 10}%`,
+              animation: `float ${4 + i}s ease-in-out infinite`,
+              animationDelay: `${i * 0.5}s`,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Content Overlay */}
       <div className="absolute inset-0 z-20 flex items-center">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-3xl space-y-6 md:space-y-8">
-            {/* Authority badge */}
-            <div className="flex items-center gap-3 animate-fade-in">
-              <span className="w-12 h-0.5 bg-mep-orange"></span>
-              <span className="text-mep-orange font-semibold uppercase tracking-widest text-xs md:text-sm">
-                Trusted Engineering Partner Since 2016
+            {/* Orange pill badge */}
+            <div className="inline-flex items-center gap-2 bg-mep-orange/15 border border-mep-orange/30 rounded-full px-5 py-2 animate-fade-in">
+              <span className="w-2 h-2 bg-mep-orange rounded-full animate-pulse" />
+              <span className="text-mep-orange font-semibold uppercase tracking-widest text-xs">
+                ⚡ Trusted Engineering Partner Since 2016
               </span>
             </div>
 
+            {/* Headline */}
             <h1
-              className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-white leading-[1.08] tracking-tight animate-slide-up"
-              style={{ textShadow: "0 2px 20px rgba(0,0,0,0.4)" }}
+              className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-[0.95] tracking-tight animate-slide-up"
             >
-              Powering Rwanda & East Africa with Excellence in MEP Solutions
+              Powering Rwanda &{" "}
+              <br className="hidden md:block" />
+              East Africa With{" "}
+              <br className="hidden md:block" />
+              <span className="text-gradient-orange">Excellence</span> in MEP
             </h1>
 
-            <p
-              className="text-base md:text-xl lg:text-2xl text-white/95 max-w-2xl leading-relaxed animate-slide-up"
-              style={{ textShadow: "0 1px 10px rgba(0,0,0,0.3)" }}
-            >
-              Delivering world-class Mechanical, Electrical & Plumbing systems since 2016.
+            {/* Subtitle */}
+            <p className="text-lg md:text-xl text-white/60 max-w-2xl leading-relaxed animate-slide-up">
+              World-class Mechanical, Electrical & Plumbing solutions
+              engineered for modern structures across East Africa.
             </p>
 
-            {/* Buttons */}
-            <div className="flex flex-wrap gap-3 md:gap-4 pt-2 md:pt-4 animate-slide-up">
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-3 pt-2 animate-slide-up">
               <Link
                 to="/contact"
-                className="bg-mep-orange hover:bg-mep-orange-hover text-white font-semibold px-6 md:px-8 py-3.5 md:py-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl inline-flex items-center text-sm md:text-base"
+                className="inline-flex items-center gap-2 bg-mep-orange hover:bg-mep-orange-hover text-white font-bold px-7 py-4 rounded-xl transition-all duration-300 shadow-[0_0_30px_hsl(24_100%_50%/0.3)] hover:shadow-[0_0_40px_hsl(24_100%_50%/0.5)] text-sm"
               >
-                Request a Quote
+                <ArrowRight className="h-4 w-4" /> Request a Quote
               </Link>
               <Link
                 to="/projects"
-                className="border-2 border-white/80 text-white font-semibold px-6 md:px-8 py-3.5 md:py-4 rounded-lg hover:bg-white/10 transition-all duration-300 inline-flex items-center text-sm md:text-base"
+                className="inline-flex items-center gap-2 border-2 border-white/20 text-white font-semibold px-7 py-4 rounded-xl hover:bg-white/5 hover:border-white/40 transition-all duration-300 text-sm"
               >
-                View Projects
+                View Our Projects
               </Link>
               <a
                 href="https://claude.ai/public/artifacts/16323224-122e-4455-9272-efa6e71df1fe"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/90 hover:text-white font-semibold px-4 md:px-6 py-3.5 md:py-4 rounded-lg transition-all duration-300 inline-flex items-center gap-2 hover:bg-white/10 text-sm md:text-base"
+                className="inline-flex items-center gap-2 text-white/70 hover:text-white font-semibold px-5 py-4 rounded-xl hover:bg-white/5 transition-all duration-300 text-sm"
               >
-                <Calculator className="h-5 w-5" />
-                MEP Calculator
+                <Calculator className="h-4 w-4" /> MEP Calculator
               </a>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Project Info Tag (bottom-left) */}
-      <div className="absolute bottom-8 left-0 z-20">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="inline-flex items-center gap-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-6 py-3 transition-all duration-700">
-            <div className="w-1 h-10 bg-mep-orange rounded-full" />
+      {/* Project Info Card (bottom-left) */}
+      <div className="absolute bottom-24 md:bottom-12 left-0 z-20">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="glass-card inline-flex items-center gap-4 px-6 py-4 transition-all duration-700">
+            <div className="w-1 h-12 bg-mep-orange rounded-full" />
             <div>
-              <p className="text-white font-semibold text-sm md:text-base">
+              <div className="flex gap-2 mb-1">
+                {slides[currentSlide].tags.slice(0, 3).map((tag, i) => (
+                  <span key={i} className="text-[10px] text-mep-orange bg-mep-orange/10 px-2 py-0.5 rounded-full font-medium">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <p className="text-white font-bold text-sm">
                 {slides[currentSlide].project}
               </p>
-              <p className="text-white/70 text-xs md:text-sm">
+              <p className="text-white/50 text-xs">
                 {slides[currentSlide].location} · {slides[currentSlide].year}
               </p>
             </div>
@@ -165,28 +226,50 @@ const HeroSlider = () => {
         </div>
       </div>
 
-      {/* Company Profile Button (bottom-right) */}
-      <div className="absolute bottom-8 right-0 z-20 hidden md:block">
-        <div className="container mx-auto px-4 lg:px-8 flex justify-end">
+      {/* Company Profile (bottom-right) */}
+      <div className="absolute bottom-24 md:bottom-12 right-0 z-20 hidden md:block">
+        <div className="container mx-auto px-6 lg:px-12 flex justify-end">
           <a
             href="https://drive.google.com/file/d/1rSXmarbXMECfryBugomxR1DQU3jkHUec/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white font-medium px-5 py-3 rounded-xl hover:bg-white/20 transition-all duration-300"
+            className="glass-card inline-flex items-center gap-2 text-white/80 hover:text-white font-medium px-5 py-3 transition-all duration-300 hover:bg-white/10 text-sm"
           >
             <FileText className="h-4 w-4" />
-            Company Profile
+            Download Company Profile
           </a>
         </div>
       </div>
 
+      {/* Scroll indicator */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 hidden md:flex flex-col items-center gap-2">
+        <span className="text-white/30 text-xs tracking-widest uppercase">Scroll</span>
+        <ChevronDown className="h-5 w-5 text-white/30 animate-scroll-bounce" />
+      </div>
+
+      {/* Slide indicators */}
+      <div className="absolute right-6 top-1/2 -translate-y-1/2 z-20 hidden lg:flex flex-col gap-2">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`transition-all duration-300 rounded-full ${
+              index === currentSlide
+                ? "w-2 h-8 bg-mep-orange"
+                : "w-2 h-2 bg-white/20 hover:bg-white/40"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+
       {/* Mobile sticky quote button */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden p-3 bg-white/95 backdrop-blur-sm border-t shadow-lg">
+      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden p-3 bg-[#0A0A0F]/95 backdrop-blur-xl border-t border-white/10">
         <Link
           to="/contact"
-          className="block w-full bg-mep-orange hover:bg-mep-orange-hover text-white font-semibold py-3.5 rounded-lg text-center transition-all"
+          className="block w-full bg-mep-orange hover:bg-mep-orange-hover text-white font-bold py-3.5 rounded-xl text-center transition-all shadow-[0_0_20px_hsl(24_100%_50%/0.3)]"
         >
-          Request a Quote
+          Request a Quote →
         </Link>
       </div>
     </section>
