@@ -4,11 +4,11 @@ import logo from "@/assets/logo.jpeg";
 
 const Footer = () => {
   return (
-    <footer className="text-white relative bg-[#150986]">
+    <footer className="text-white relative bg-[#12356e]">
       {/* Orange glow line at top */}
       <div className="h-px bg-gradient-to-r from-transparent via-mep-orange/60 to-transparent" />
 
-      <div className="container mx-auto px-4 bg-accent py-16 lg:py-20">
+      <div className="container mx-auto px-4 py-16 lg:py-20 bg-[#12356e]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="space-y-5">

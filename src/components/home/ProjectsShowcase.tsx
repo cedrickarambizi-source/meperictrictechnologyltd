@@ -111,7 +111,7 @@ const ProjectsShowcase = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="py-24 lg:py-32 relative overflow-hidden bg-[#18189a]">
+    <section className="py-24 lg:py-32 relative overflow-hidden bg-[#12356e]">
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-mep-orange/3 rounded-full blur-3xl pointer-events-none" />
 
