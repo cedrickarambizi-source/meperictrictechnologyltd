@@ -29,7 +29,7 @@ const services = [
   },
   {
     image: wastewaterTreatment,
-    title: "Mechanical Systems",
+    title: "wastewater treatment plant",
     description: "Complete mechanical engineering solutions for modern buildings and facilities.",
     checklist: ["HVAC Systems", "Fire Fighting", "Pumping Solutions", "Fire Suppression"],
   },

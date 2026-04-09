@@ -10,14 +10,14 @@ const stats = [
 
 const StatsTickerBar = () => {
   return (
-    <section className="relative bg-[#0A0A0F] border-t border-white/5">
+    <section className="relative border-t border-white/5 bg-[#050570]">
       <div className="absolute left-0 top-0 bottom-0 w-1 bg-mep-orange" />
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
           {stats.map((stat, index) => (
             <div
               key={stat.label}
-              className={`flex items-center gap-4 py-8 px-6 ${
+              className={`flex items-center gap-4 py-8 px-6 bg-[#070773] ${
                 index < stats.length - 1 ? "md:border-r border-white/5" : ""
               }`}
             >

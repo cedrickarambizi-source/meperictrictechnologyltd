@@ -4,11 +4,11 @@ import logo from "@/assets/logo.jpeg";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0A0A0F] text-white relative">
+    <footer className="text-white relative bg-[#150986]">
       {/* Orange glow line at top */}
       <div className="h-px bg-gradient-to-r from-transparent via-mep-orange/60 to-transparent" />
 
-      <div className="container mx-auto px-4 py-16 lg:py-20">
+      <div className="container mx-auto px-4 bg-accent py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="space-y-5">
@@ -19,7 +19,7 @@ const Footer = () => {
                 <span className="block text-white/40 text-[10px] tracking-widest uppercase">Technology Ltd</span>
               </div>
             </div>
-            <p className="text-white/50 text-sm leading-relaxed">
+            <p className="text-white/50 text-sm leading-relaxed border-[#dc1e1e]">
               Engineering excellence across East Africa since 2016. Delivering world-class MEP solutions for commercial, industrial, and government projects.
             </p>
             <div className="flex gap-3 pt-2">
@@ -89,10 +89,10 @@ const Footer = () => {
           {/* Contact */}
           <div>
             <h4 className="font-bold text-sm mb-6 uppercase tracking-wider">Contact Info</h4>
-            <ul className="space-y-4">
+            <ul className="space-y-4 text-primary-foreground">
               <li className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 text-mep-orange flex-shrink-0 mt-0.5" />
-                <span className="text-white/40 text-sm">KG 684 St, Kacyiru, Kigali, Rwanda</span>
+                <span className="text-white/40 text-sm">, Kigali, Rwanda</span>
               </li>
               <li>
                 <a href="tel:+250788645567" className="flex items-start gap-3 hover:text-mep-orange transition-colors">

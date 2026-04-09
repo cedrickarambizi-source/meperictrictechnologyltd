@@ -147,20 +147,20 @@ const HeroSlider = () => {
       </div>
 
       {/* Content Overlay */}
-      <div className="absolute inset-0 z-20 flex items-center">
+      <div className="absolute inset-0 z-20 flex items-center bg-[#0b1c75]">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-3xl space-y-6 md:space-y-8">
             {/* Orange pill badge */}
             <div className="inline-flex items-center gap-2 bg-mep-orange/15 border border-mep-orange/30 rounded-full px-5 py-2 animate-fade-in">
               <span className="w-2 h-2 bg-mep-orange rounded-full animate-pulse" />
               <span className="text-mep-orange font-semibold uppercase tracking-widest text-xs">
-                ⚡ Trusted Engineering Partner Since 2016
+                &nbsp;TRUSTED ENGINEERING PARTNER SINCE 2016
               </span>
             </div>
 
             {/* Headline */}
             <h1
-              className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-[0.95] tracking-tight animate-slide-up"
+              className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[0.95] tracking-tight animate-slide-up xl:text-lg"
             >
               Powering Rwanda &{" "}
               <br className="hidden md:block" />
