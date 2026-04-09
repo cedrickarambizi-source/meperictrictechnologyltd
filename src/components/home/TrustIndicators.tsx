@@ -15,7 +15,7 @@ const stats = [
 
 const TrustIndicators = () => {
   return (
-    <section className="py-24 lg:py-32 bg-[#0D1B4B] relative overflow-hidden">
+    <section className="py-24 lg:py-32 relative overflow-hidden bg-[#6c6f67]">
       {/* Subtle background circles */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-mep-orange/5 rounded-full translate-x-1/2 -translate-y-1/2 blur-3xl" />
@@ -54,7 +54,7 @@ const TrustIndicators = () => {
                 end={stat.number}
                 suffix={stat.suffix}
                 duration={2000}
-                className="text-3xl md:text-4xl font-black text-white mb-1"
+                className="text-3xl font-black text-white mb-1 md:text-2xl"
               />
               <p className="text-white/50 text-xs font-medium tracking-wide">{stat.label}</p>
             </motion.div>

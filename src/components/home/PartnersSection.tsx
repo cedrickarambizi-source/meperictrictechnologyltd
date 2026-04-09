@@ -31,7 +31,7 @@ const PartnersSection = () => {
     <section className="py-20 lg:py-28 bg-white overflow-hidden">
       <div className="container mx-auto px-4 mb-12">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="section-heading text-foreground mb-4">
+          <h2 className="section-heading text-foreground mb-4 text-3xl">
             Our Valued Clients & Partners
           </h2>
           <p className="text-muted-foreground text-lg">

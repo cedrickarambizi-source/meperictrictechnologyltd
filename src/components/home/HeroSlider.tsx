@@ -160,23 +160,21 @@ const HeroSlider = () => {
 
             {/* Headline */}
             <h1
-              className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[0.95] tracking-tight animate-slide-up xl:text-lg"
+              className="text-4xl md:text-6xl lg:text-7xl text-white leading-[0.95] tracking-tight animate-slide-up xl:text-xl font-extrabold text-center"
             >
-              Powering Rwanda &{" "}
+              Powering Rwanda &East Africa With
               <br className="hidden md:block" />
-              East Africa With{" "}
-              <br className="hidden md:block" />
-              <span className="text-gradient-orange">Excellence</span> in MEP
+              Excellence in MEP
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg md:text-xl text-white/60 max-w-2xl leading-relaxed animate-slide-up">
+            <p className="text-lg md:text-xl text-white/60 max-w-2xl leading-relaxed animate-slide-up mx-auto">
               World-class Mechanical, Electrical & Plumbing solutions
               engineered for modern structures across East Africa.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-3 pt-2 animate-slide-up">
+            <div className="flex flex-wrap gap-3 pt-2 animate-slide-up justify-center">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-mep-orange hover:bg-mep-orange-hover text-white font-bold px-7 py-4 rounded-xl transition-all duration-300 shadow-[0_0_30px_hsl(24_100%_50%/0.3)] hover:shadow-[0_0_40px_hsl(24_100%_50%/0.5)] text-sm"
@@ -193,7 +191,7 @@ const HeroSlider = () => {
                 href="https://claude.ai/public/artifacts/16323224-122e-4455-9272-efa6e71df1fe"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-white/70 hover:text-white font-semibold px-5 py-4 rounded-xl hover:bg-white/5 transition-all duration-300 text-sm"
+                className="inline-flex items-center gap-2 text-white/70 hover:text-white font-semibold px-5 py-4 rounded-xl transition-all duration-300 text-sm bg-[#ed6307]"
               >
                 <Calculator className="h-4 w-4" /> MEP Calculator
               </a>
