@@ -176,12 +176,6 @@ const HeroSlider = () => {
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-3 pt-2 animate-slide-up justify-center">
               <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 bg-mep-orange hover:bg-mep-orange-hover text-white font-bold px-7 py-4 rounded-xl transition-all duration-300 shadow-[0_0_30px_hsl(24_100%_50%/0.3)] hover:shadow-[0_0_40px_hsl(24_100%_50%/0.5)] text-sm"
-              >
-                <ArrowRight className="h-4 w-4" /> Request a Quote
-              </Link>
-              <Link
                 to="/projects"
                 className="inline-flex items-center gap-2 border-2 border-white/20 text-white font-semibold px-7 py-4 rounded-xl hover:bg-white/5 hover:border-white/40 transition-all duration-300 text-sm"
               >
