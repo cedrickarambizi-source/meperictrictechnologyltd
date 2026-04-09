@@ -92,7 +92,7 @@ const Footer = () => {
             <ul className="space-y-4 text-primary-foreground">
               <li className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 text-mep-orange flex-shrink-0 mt-0.5" />
-                <span className="text-white/40 text-sm">, Kigali, Rwanda</span>
+                <span className="text-white/40 text-sm">Remera,Gisimenti , 2ND Floor, F2-22<br /> Kigali, Rwanda</span>
               </li>
               <li>
                 <a href="tel:+250788645567" className="flex items-start gap-3 hover:text-mep-orange transition-colors">
