@@ -84,7 +84,7 @@ const teamMembers = [
     phones: ["+250 787 305 101"],
   },
   {
-    name: "Fabrice Tuyizere",
+    name: "Fabrice Izereyesu",
     role: "Tender Manager",
     description: "Expert in tender preparation and contract management",
     photo: fabriceTuyizere,
@@ -143,7 +143,7 @@ const Team = () => {
           }}
         />
 
-        <section className="relative pt-24 pb-10 lg:pt-32 lg:pb-12">
+        <section className="relative pt-24 pb-10 lg:pt-32 lg:pb-12 bg-[#12356e]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
               <div className="text-center max-w-3xl mx-auto">
@@ -168,7 +168,7 @@ const Team = () => {
           </div>
         </section>
 
-        <section className="relative pb-10 lg:pb-14">
+        <section className="relative pb-10 lg:pb-14 bg-[#6c6f67]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
@@ -189,7 +189,7 @@ const Team = () => {
           </div>
         </section>
 
-        <section className="relative py-16 lg:pt-10 lg:pb-28">
+        <section className="relative py-16 lg:pt-10 lg:pb-28 bg-[#12356e]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
               <div className="flex flex-wrap justify-center gap-2 mb-10">
