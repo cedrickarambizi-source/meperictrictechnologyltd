@@ -261,15 +261,6 @@ const HeroSlider = () => {
         ))}
       </div>
 
-      {/* Mobile sticky quote button */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden p-3 bg-[#0A0A0F]/95 backdrop-blur-xl border-t border-white/10">
-        <Link
-          to="/contact"
-          className="block w-full bg-mep-orange hover:bg-mep-orange-hover text-white font-bold py-3.5 rounded-xl text-center transition-all shadow-[0_0_20px_hsl(24_100%_50%/0.3)]"
-        >
-          Request a Quote →
-        </Link>
-      </div>
     </section>
   );
 };
