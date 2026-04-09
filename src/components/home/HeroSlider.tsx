@@ -147,7 +147,7 @@ const HeroSlider = () => {
       </div>
 
       {/* Content Overlay */}
-      <div className="absolute inset-0 z-20 flex items-center justify-center bg-[#0b1c75]">
+      <div className="absolute inset-0 z-20 flex items-center justify-center bg-[#12356e]">
         <div className="container mx-auto px-6 lg:px-12 text-center">
           <div className="max-w-3xl mx-auto space-y-6 md:space-y-8">
             {/* Orange pill badge */}
