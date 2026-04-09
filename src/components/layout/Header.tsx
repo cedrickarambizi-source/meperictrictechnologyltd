@@ -32,7 +32,7 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between lg:justify-start py-4">
+        <div className="flex items-center justify-between lg:justify-center py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
             <div className="relative">
