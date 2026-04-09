@@ -25,7 +25,7 @@ const commitments = [
 
 const SafetyCompliance = () => {
   return (
-    <section className="py-20 lg:py-28 bg-[#1A1A2E] text-white">
+    <section className="py-20 lg:py-28 text-white bg-[#4f5c72]">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-6">
