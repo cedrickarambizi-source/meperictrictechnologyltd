@@ -1,92 +1,32 @@
 import { useState, useEffect } from "react";
-import { FileText, Calculator, ArrowRight, ChevronDown } from "lucide-react";
+import { Calculator, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import landmarkProject from "@/assets/projects/landmark-project.png";
-import omicaBuilding from "@/assets/projects/omica-building.png";
-import kimironkoCommercial from "@/assets/projects/kimironko-commercial.png";
-import kafamHouse from "@/assets/projects/kafam-house.png";
-import kgpApartment from "@/assets/projects/kgp-apartment.png";
-import bahoHospital from "@/assets/projects/baho-hospital.png";
+import amahoroStadium from "@/assets/projects/amahoro-stadium.webp";
+import pinnacleHotel from "@/assets/projects/pinnacle-hotel.jpg";
+import kigaliConventionCentre from "@/assets/projects/kigali-convention-centre.jpg";
 
 const slides = [
   {
-    image: landmarkProject,
-    project: "LANDMARK PROJECT",
-    location: "Kigali – Nyarugenge",
-    year: "2023–2024",
-    tags: ["Electrical", "Elevator", "Fire Safety", "+1"],
-    services: [
-      "Supply and installation of electrical activities",
-      "Supply and installation of two elevators (lifts)",
-      "Fire alarm system",
-    ],
-    moreCount: 5,
+    image: amahoroStadium,
+    project: "AMAHORO NATIONAL STADIUM",
+    location: "Kigali, Rwanda",
+    year: "Landmark Project",
+    tags: ["Electrical", "MEP Systems", "Fire Safety"],
   },
   {
-    image: omicaBuilding,
-    project: "OMICA BUILDING",
-    location: "Kigali",
-    year: "2023–2024",
+    image: pinnacleHotel,
+    project: "PINNACLE HOTEL",
+    location: "Kigali, Rwanda",
+    year: "Hospitality",
+    tags: ["Electrical", "Plumbing", "HVAC"],
+  },
+  {
+    image: kigaliConventionCentre,
+    project: "KIGALI CONVENTION CENTRE",
+    location: "Kigali, Rwanda",
+    year: "Iconic Structure",
     tags: ["Electrical", "Elevator", "Fire Safety"],
-    services: [
-      "Supply and installation of electrical activities",
-      "Elevator (lift)",
-      "Fire alarm system",
-    ],
-    moreCount: 5,
-  },
-  {
-    image: kimironkoCommercial,
-    project: "KIMIRONKO COMMERCIAL BUILDING",
-    location: "Kigali",
-    year: "2022–2023",
-    tags: ["Electrical", "Elevator", "Fire Safety"],
-    services: [
-      "Supply and installation of electrical activities",
-      "Elevator (lift)",
-      "Fire alarm system",
-    ],
-    moreCount: 5,
-  },
-  {
-    image: kafamHouse,
-    project: "KAFAM HOUSE",
-    location: "Nyarutarama, Kigali",
-    year: "2018–2022",
-    tags: ["Electrical", "Elevator", "CCTV", "Fire Safety"],
-    services: [
-      "Electrical works & fire alarm system",
-      "Elevator (lift) supply and installation",
-      "CCTV cameras & IP telephone",
-    ],
-    moreCount: 5,
-  },
-  {
-    image: kgpApartment,
-    project: "KGP APARTMENT",
-    location: "Kigali",
-    year: "2023–Ongoing",
-    tags: ["Electrical", "Elevator"],
-    services: [
-      "Supply and installation of electrical works",
-      "Elevator systems (6 lifts)",
-      "Generator installation",
-    ],
-    moreCount: 4,
-  },
-  {
-    image: bahoHospital,
-    project: "BAHO INTERNATIONAL HOSPITAL",
-    location: "Nyarutarama, Kigali",
-    year: "2016–2021",
-    tags: ["Electrical", "Elevator", "Plumbing", "Fire Safety"],
-    services: [
-      "Electrical works & fire alarm system",
-      "Elevator (lift) access door control",
-      "Plumbing works & nursing systems",
-    ],
-    moreCount: 6,
   },
 ];
 
@@ -147,7 +87,7 @@ const HeroSlider = () => {
       </div>
 
       {/* Content Overlay */}
-      <div className="absolute inset-0 z-20 flex items-center justify-center bg-[#12356e]">
+      <div className="absolute inset-0 z-20 flex items-center justify-center bg-[#12356e]/60">
         <div className="container mx-auto px-6 lg:px-12 text-center">
           <div className="max-w-3xl mx-auto space-y-6 md:space-y-8">
             {/* Orange pill badge */}
@@ -218,21 +158,6 @@ const HeroSlider = () => {
         </div>
       </div>
 
-      {/* Company Profile (bottom-right) */}
-      <div className="absolute bottom-24 md:bottom-12 right-0 z-20 hidden md:block">
-        <div className="container mx-auto px-6 lg:px-12 flex justify-end">
-          <a
-            href="https://drive.google.com/file/d/1rSXmarbXMECfryBugomxR1DQU3jkHUec/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="glass-card inline-flex items-center gap-2 text-white/80 hover:text-white font-medium px-5 py-3 transition-all duration-300 hover:bg-white/10 text-sm"
-          >
-            <FileText className="h-4 w-4" />
-            Download Company Profile
-          </a>
-        </div>
-      </div>
-
       {/* Scroll indicator */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 hidden md:flex flex-col items-center gap-2">
         <span className="text-white/30 text-xs tracking-widest uppercase">Scroll</span>
@@ -254,7 +179,6 @@ const HeroSlider = () => {
           />
         ))}
       </div>
-
     </section>
   );
 };
