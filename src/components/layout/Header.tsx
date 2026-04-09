@@ -68,15 +68,6 @@ const Header = () => {
             </a>
           </nav>
 
-          {/* Right side - CTA */}
-          <div className="hidden lg:flex items-center gap-3">
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 bg-mep-orange hover:bg-mep-orange-hover text-white font-semibold px-6 py-2.5 rounded-full transition-all duration-300 shadow-lg hover:shadow-[0_0_25px_hsl(24_100%_50%/0.4)] text-sm"
-            >
-              Request a Quote <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -115,13 +106,6 @@ const Header = () => {
               >
                 MEP Calculator
               </a>
-              <Link
-                to="/contact"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="mx-4 mt-3 text-center bg-mep-orange hover:bg-mep-orange-hover text-white font-semibold px-6 py-3 rounded-full transition-all"
-              >
-                Request a Quote →
-              </Link>
             </div>
           </nav>
         )}
