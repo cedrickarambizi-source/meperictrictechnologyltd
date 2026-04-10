@@ -40,7 +40,7 @@ const EngineeringProcess = () => {
             </span>
             <span className="section-divider-left" />
           </div>
-          <h2 className="section-heading text-foreground mb-4">
+          <h2 className="section-heading text-foreground mb-4 text-2xl">
             How We Execute Projects
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">

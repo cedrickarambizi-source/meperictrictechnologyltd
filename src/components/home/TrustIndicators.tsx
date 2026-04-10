@@ -29,7 +29,7 @@ const TrustIndicators = () => {
               Why Choose Us
             </span>
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mt-3 mb-5">
+          <h2 className="text-3xl md:text-4xl font-black text-white mt-3 mb-5 lg:text-4xl">
             Trusted by Rwanda's Leading Organizations
           </h2>
           <p className="text-white/50 text-lg max-w-2xl mx-auto leading-relaxed">
