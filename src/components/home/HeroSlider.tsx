@@ -134,29 +134,6 @@ const HeroSlider = () => {
         </div>
       </div>
 
-      {/* Project Info Card (bottom-left) */}
-      <div className="absolute bottom-24 md:bottom-12 left-0 z-20">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="glass-card inline-flex items-center gap-4 px-6 py-4 transition-all duration-700">
-            <div className="w-1 h-12 bg-mep-orange rounded-full" />
-            <div>
-              <div className="flex gap-2 mb-1">
-                {slides[currentSlide].tags.slice(0, 3).map((tag, i) => (
-                  <span key={i} className="text-[10px] text-mep-orange bg-mep-orange/10 px-2 py-0.5 rounded-full font-medium">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <p className="text-white font-bold text-sm">
-                {slides[currentSlide].project}
-              </p>
-              <p className="text-white/50 text-xs">
-                {slides[currentSlide].location} · {slides[currentSlide].year}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Scroll indicator */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 hidden md:flex flex-col items-center gap-2">
