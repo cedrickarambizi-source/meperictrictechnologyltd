@@ -58,7 +58,7 @@ const ServicesSection = () => {
               Our Services
             </span>
           </span>
-          <h2 className="section-heading text-foreground mb-4">
+          <h2 className="section-heading text-foreground mb-4 text-3xl">
             Comprehensive MEP & Technology Solutions
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
