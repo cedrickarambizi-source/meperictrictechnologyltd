@@ -52,7 +52,7 @@ const HeroSlider = () => {
         >
           <div
             className={`w-full h-full transition-transform duration-[8000ms] ease-out ${
-              index === currentSlide ? "scale-110" : "scale-100"
+              index === currentSlide ? "scale-105" : "scale-100"
             }`}
           >
             <img
@@ -62,11 +62,12 @@ const HeroSlider = () => {
               decoding={index === 0 ? "sync" : "async"}
               fetchPriority={index === 0 ? "high" : "auto"}
               className="w-full h-full object-cover"
+              style={{ imageRendering: 'auto' }}
             />
           </div>
-          {/* Deep cinematic gradient */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0F] via-[#0A0A0F]/70 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0F] via-transparent to-[#0A0A0F]/30" />
+          {/* Subtle gradient for text readability only */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10" />
         </div>
       ))}
 
