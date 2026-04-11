@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, FileText } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.jpeg";
 
 const navLinks = [
@@ -65,15 +65,6 @@ const Header = () => {
               className="nav-link px-4 py-2 rounded-lg text-sm"
             >
               MEP Calculator
-            </a>
-            <a
-              href="https://drive.google.com/file/d/1rSXmarbXMECfryBugomxR1DQU3jkHUec/view?usp=drive_link"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#12356e] border border-white/20 text-white font-medium px-4 py-2 rounded-lg text-sm hover:bg-white/10 transition-all duration-300 ml-2"
-            >
-              <FileText className="h-4 w-4" />
-              Company Profile
             </a>
           </nav>
 
