@@ -34,8 +34,25 @@ const Index = () => {
         loop
         muted
         playsInline
+        preload="auto"
         className="fixed inset-0 w-full h-full object-cover z-0"
         src="/videos/hero-bg.mp4"
+        ref={(el) => {
+          if (el) {
+            // Force play on all devices, even those that block autoplay
+            const playVideo = () => {
+              el.play().catch(() => {});
+            };
+            playVideo();
+            el.addEventListener('pause', playVideo);
+            el.addEventListener('ended', () => { el.currentTime = 0; playVideo(); });
+            document.addEventListener('touchstart', playVideo, { once: true });
+            document.addEventListener('click', playVideo, { once: true });
+            document.addEventListener('visibilitychange', () => {
+              if (!document.hidden) playVideo();
+            });
+          }
+        }}
       />
       {/* Dark overlay for readability */}
       <div className="fixed inset-0 bg-black/60 z-0" />
