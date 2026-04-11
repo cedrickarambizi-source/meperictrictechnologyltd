@@ -5,20 +5,8 @@ const HeroSlider = () => {
   return (
     <section className="relative h-[100vh] min-h-[700px] overflow-hidden bg-[#0A0A0F]">
       {/* Background Video */}
-      <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
-        >
-          <source src="/videos/hero-bg.mp4" type="video/mp4" />
-        </video>
-        {/* Gradient overlays for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10" />
-      </div>
+      {/* Background gradient */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#0A0A0F] via-[#1a1a2e] to-[#0A0A0F]" />
 
       {/* Floating particles effect */}
       <div className="absolute inset-0 z-15 pointer-events-none overflow-hidden">
