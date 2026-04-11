@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import Layout from "@/components/layout/Layout";
 import HeroSlider from "@/components/home/HeroSlider";
 import StatsTickerBar from "@/components/home/StatsTickerBar";
@@ -17,6 +18,71 @@ import StructuredData, {
 } from "@/components/seo/StructuredData";
 
 const Index = () => {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+
+    if (!video) return;
+
+    const forcePlay = () => {
+      video.muted = true;
+      video.defaultMuted = true;
+      video.autoplay = true;
+      video.loop = true;
+      video.playsInline = true;
+      video.setAttribute("muted", "");
+      video.setAttribute("autoplay", "");
+      video.setAttribute("loop", "");
+      video.setAttribute("playsinline", "true");
+      video.setAttribute("webkit-playsinline", "true");
+      video.setAttribute("preload", "auto");
+      video.play().catch(() => {});
+    };
+
+    const resumePlayback = () => {
+      if (video.ended) {
+        video.currentTime = 0;
+      }
+
+      if (video.paused || video.readyState >= 2) {
+        forcePlay();
+      }
+    };
+
+    forcePlay();
+
+    video.addEventListener("loadedmetadata", forcePlay);
+    video.addEventListener("loadeddata", forcePlay);
+    video.addEventListener("canplay", forcePlay);
+    video.addEventListener("pause", resumePlayback);
+    video.addEventListener("ended", resumePlayback);
+
+    document.addEventListener("visibilitychange", resumePlayback);
+    document.addEventListener("touchstart", resumePlayback, { passive: true });
+    document.addEventListener("touchend", resumePlayback, { passive: true });
+    document.addEventListener("click", resumePlayback, { passive: true });
+    document.addEventListener("scroll", resumePlayback, { passive: true });
+    window.addEventListener("focus", resumePlayback);
+    window.addEventListener("pageshow", resumePlayback);
+
+    return () => {
+      video.removeEventListener("loadedmetadata", forcePlay);
+      video.removeEventListener("loadeddata", forcePlay);
+      video.removeEventListener("canplay", forcePlay);
+      video.removeEventListener("pause", resumePlayback);
+      video.removeEventListener("ended", resumePlayback);
+
+      document.removeEventListener("visibilitychange", resumePlayback);
+      document.removeEventListener("touchstart", resumePlayback);
+      document.removeEventListener("touchend", resumePlayback);
+      document.removeEventListener("click", resumePlayback);
+      document.removeEventListener("scroll", resumePlayback);
+      window.removeEventListener("focus", resumePlayback);
+      window.removeEventListener("pageshow", resumePlayback);
+    };
+  }, []);
+
   return (
     <Layout>
       <SEOHead
@@ -28,36 +94,20 @@ const Index = () => {
       <StructuredData id="local-business-schema" data={localBusinessSchema} />
       <StructuredData id="site-nav-schema" data={siteNavigationSchema} />
 
-      {/* Fixed fullscreen background video */}
       <video
+        ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
         preload="auto"
-        className="fixed inset-0 w-full h-full object-cover z-0"
+        disablePictureInPicture
+        controlsList="nodownload noplaybackrate nofullscreen noremoteplayback"
+        className="fixed inset-0 h-full w-full object-cover z-0"
         src="/videos/hero-bg.mp4"
-        ref={(el) => {
-          if (el) {
-            // Force play on all devices, even those that block autoplay
-            const playVideo = () => {
-              el.play().catch(() => {});
-            };
-            playVideo();
-            el.addEventListener('pause', playVideo);
-            el.addEventListener('ended', () => { el.currentTime = 0; playVideo(); });
-            document.addEventListener('touchstart', playVideo, { once: true });
-            document.addEventListener('click', playVideo, { once: true });
-            document.addEventListener('visibilitychange', () => {
-              if (!document.hidden) playVideo();
-            });
-          }
-        }}
       />
-      {/* Dark overlay for readability */}
       <div className="fixed inset-0 bg-black/60 z-0" />
 
-      {/* Page content above video */}
       <div className="relative z-10">
         <HeroSlider />
         <StatsTickerBar />
