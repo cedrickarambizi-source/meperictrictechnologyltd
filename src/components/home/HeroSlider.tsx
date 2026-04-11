@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 
 const HeroSlider = () => {
   return (
-    <section className="relative h-[100vh] min-h-[700px] overflow-hidden bg-[#0A0A0F]">
-      {/* Background Video */}
-      {/* Background gradient */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#0A0A0F] via-[#1a1a2e] to-[#0A0A0F]" />
+    <section className="relative h-[100vh] min-h-[700px] overflow-hidden bg-transparent">
 
       {/* Floating particles effect */}
       <div className="absolute inset-0 z-15 pointer-events-none overflow-hidden">
