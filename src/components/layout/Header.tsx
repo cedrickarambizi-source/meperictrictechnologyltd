@@ -59,7 +59,7 @@ const Header = () => {
               </Link>
             ))}
             <a
-              href="https://claude.ai/public/artifacts/16323224-122e-4455-9272-efa6e71df1fe"
+              href="https://mepestimatecalculator.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="nav-link px-4 py-2 rounded-lg text-sm"
@@ -97,7 +97,7 @@ const Header = () => {
                 </Link>
               ))}
               <a
-                href="https://claude.ai/public/artifacts/16323224-122e-4455-9272-efa6e71df1fe"
+                href="https://mepestimatecalculator.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMobileMenuOpen(false)}
