@@ -55,7 +55,7 @@ const HeroSlider = () => {
                 View Our Projects
               </Link>
               <a
-                href="https://claude.ai/public/artifacts/16323224-122e-4455-9272-efa6e71df1fe"
+                href="https://mepestimatecalculator.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-white/70 hover:text-white font-semibold px-5 py-4 rounded-xl transition-all duration-300 text-sm bg-[#ed6307]"
