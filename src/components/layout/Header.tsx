@@ -66,15 +66,6 @@ const Header = () => {
             >
               MEP Calculator
             </a>
-            <a
-              href="https://drive.google.com/file/d/1rSXmarbXMECfryBugomxR1DQU3jkHUec/view?usp=drive_link"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#12356e] border border-white/20 text-white font-medium px-4 py-2 rounded-lg text-sm hover:bg-white/10 transition-all duration-300 ml-2"
-            >
-              <FileText className="h-4 w-4" />
-              Company Profile
-            </a>
           </nav>
 
           {/* Mobile Menu Button */}
