@@ -34,7 +34,7 @@ const HeroSlider = () => {
             </div>
 
             {/* Headline */}
-            <h1 className="lg:text-7xl text-white leading-[0.95] tracking-tight animate-slide-up xl:text-xl font-extrabold text-center md:text-2xl text-2xl">
+            <h1 className="text-white leading-[0.95] tracking-tight animate-slide-up xl:text-xl font-extrabold text-center md:text-2xl text-2xl lg:text-3xl">
               Powering Rwanda &East Africa With
               <br className="hidden md:block" />
               Excellence in MEP
