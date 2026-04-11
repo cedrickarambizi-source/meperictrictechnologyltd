@@ -27,16 +27,32 @@ const Index = () => {
       <StructuredData id="org-schema" data={organizationSchema} />
       <StructuredData id="local-business-schema" data={localBusinessSchema} />
       <StructuredData id="site-nav-schema" data={siteNavigationSchema} />
-      <HeroSlider />
-      <StatsTickerBar />
-      <TrustIndicators />
-      <EngineeringProcess />
-      <ServicesSection />
-      <ProjectsShowcase />
-      <SafetyCompliance />
-      <LeadershipMessage />
-      <PartnersSection />
-      <CTASection />
+
+      {/* Fixed fullscreen background video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="fixed inset-0 w-full h-full object-cover z-0"
+        src="/videos/hero-bg.mp4"
+      />
+      {/* Dark overlay for readability */}
+      <div className="fixed inset-0 bg-black/60 z-0" />
+
+      {/* Page content above video */}
+      <div className="relative z-10">
+        <HeroSlider />
+        <StatsTickerBar />
+        <TrustIndicators />
+        <EngineeringProcess />
+        <ServicesSection />
+        <ProjectsShowcase />
+        <SafetyCompliance />
+        <LeadershipMessage />
+        <PartnersSection />
+        <CTASection />
+      </div>
     </Layout>
   );
 };
