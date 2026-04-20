@@ -442,8 +442,63 @@ export const newProjects: Project[] = [
   },
 ];
 
+// Latest additions - appended to maintain existing order
+export const latestProjects: Project[] = [
+  {
+    title: "TYK APARTMENTS – REMERA",
+    image: tykApartments,
+    categories: ["Electrical", "Elevator"],
+    location: "Kigali",
+    status: "ongoing",
+    details: [
+      { label: "Project Location", value: "Remera, Gasabo, Kigali" },
+      { label: "Period of Installation", value: "Ongoing (2026)" },
+      { label: "Number of Floors", value: "G+6 (Residential Building)" },
+    ],
+    activities: [
+      "Ongoing electrical installation for elevator systems",
+      "Precision-focused vertical transportation works",
+      "Safety and reliability engineering",
+    ],
+  },
+  {
+    title: "FOUR SQUARE CHURCH BUILDING",
+    image: fourSquareChurch,
+    categories: ["Elevator"],
+    location: "Kigali",
+    status: "ongoing",
+    details: [
+      { label: "Project Location", value: "Kigali" },
+      { label: "Period of Installation", value: "Ongoing" },
+      { label: "Number of Floors", value: "5 Floors" },
+    ],
+    activities: [
+      "Supply and installation of a modern elevator system",
+      "Smooth operation and safety integration",
+      "Structural integration works",
+    ],
+  },
+  {
+    title: "NYARUTARAMA RESIDENTIAL APARTMENTS",
+    image: nyarutaramaResidential,
+    categories: ["Elevator"],
+    location: "Kigali",
+    status: "completed",
+    details: [
+      { label: "Project Location", value: "Nyarutarama, Gasabo, Kigali" },
+      { label: "Number of Floors", value: "7-Floor Residential Building" },
+      { label: "Status", value: "Completed" },
+    ],
+    activities: [
+      "Installation of 1 high-performance elevator",
+      "Advanced safety systems",
+      "Professional commissioning",
+    ],
+  },
+];
+
 // All projects combined
-export const allProjects: Project[] = [...oldProjects, ...newProjects];
+export const allProjects: Project[] = [...oldProjects, ...newProjects, ...latestProjects];
 
 // Unique categories for filtering
 export const allCategories: ServiceCategory[] = [
