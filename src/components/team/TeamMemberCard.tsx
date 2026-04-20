@@ -34,7 +34,7 @@ const TeamMemberCard = ({ member }: TeamMemberCardProps) => {
           alt={member.name}
           loading="lazy"
           decoding="async"
-          className="w-full h-auto object-contain object-center sm:h-full sm:object-cover sm:object-top transition-transform duration-300 ease-out group-hover:scale-[1.03]"
+          className="w-full h-auto object-contain object-center sm:h-full sm:object-top transition-transform duration-300 ease-out group-hover:scale-[1.03] sm:object-fill"
         />
         <div className="absolute inset-x-0 bottom-0 h-px bg-black/5" />
       </div>
