@@ -21,6 +21,9 @@ import villaHouse from "@/assets/projects/villa-house.png";
 import kgpApartment from "@/assets/projects/kgp-apartment.png";
 import victoryVilla from "@/assets/projects/victory-villa.png";
 import minaffetProcurement from "@/assets/projects/minaffet-procurement.png";
+import tykApartments from "@/assets/projects/tyk-apartments.png";
+import fourSquareChurch from "@/assets/projects/four-square-church.png";
+import nyarutaramaResidential from "@/assets/projects/nyarutarama-residential.png";
 
 export interface ProjectDetail {
   label: string;
