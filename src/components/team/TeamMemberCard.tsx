@@ -28,13 +28,13 @@ const TeamMemberCard = ({ member }: TeamMemberCardProps) => {
       `}
     >
       {/* Image */}
-      <div className="relative overflow-hidden w-full h-auto sm:h-[240px] lg:h-[260px]">
+      <div className="relative overflow-hidden w-full h-[320px] sm:h-[240px] lg:h-[260px]">
         <img
           src={member.photo}
           alt={member.name}
           loading="lazy"
           decoding="async"
-          className="w-full h-auto object-contain object-center sm:h-full sm:object-top transition-transform duration-300 ease-out group-hover:scale-[1.03] sm:object-fill"
+          className="w-full h-full object-cover object-top transition-transform duration-300 ease-out group-hover:scale-[1.03]"
         />
         <div className="absolute inset-x-0 bottom-0 h-px bg-black/5" />
       </div>
