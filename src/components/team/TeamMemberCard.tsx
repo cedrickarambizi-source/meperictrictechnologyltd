@@ -28,7 +28,7 @@ const TeamMemberCard = ({ member }: TeamMemberCardProps) => {
       `}
     >
       {/* Image */}
-      <div className="relative overflow-hidden w-full h-auto sm:h-[240px] lg:h-[260px]">
+      <div className="relative overflow-hidden w-full h-[320px] sm:h-[240px] lg:h-[260px]">
         <img
           src={member.photo}
           alt={member.name}
