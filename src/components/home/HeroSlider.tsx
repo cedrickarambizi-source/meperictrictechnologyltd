@@ -5,22 +5,6 @@ const HeroSlider = () => {
   return (
     <section className="relative h-[100vh] min-h-[700px] overflow-hidden bg-transparent">
 
-      {/* Floating particles effect */}
-      <div className="absolute inset-0 z-15 pointer-events-none overflow-hidden">
-        {[...Array(6)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-mep-orange/30 rounded-full"
-            style={{
-              left: `${15 + i * 15}%`,
-              top: `${20 + i * 10}%`,
-              animation: `float ${4 + i}s ease-in-out infinite`,
-              animationDelay: `${i * 0.5}s`,
-            }}
-          />
-        ))}
-      </div>
-
       {/* Content Overlay */}
       <div className="absolute inset-0 z-20 flex items-center justify-center">
         <div className="container mx-auto px-6 lg:px-12 text-center">
