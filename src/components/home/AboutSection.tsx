@@ -11,7 +11,7 @@ const highlights = [
 
 const stats = [
   { number: 10, suffix: "+", label: "Years of Excellence" },
-  { number: 60, suffix: "+", label: "Projects Completed" },
+  { number: 4, suffix: "+", label: "Projects Completed" },
   { number: 20, suffix: "+", label: "Expert Engineers" },
   { number: 15, suffix: "+", label: "Professional Certificates" },
 ];
