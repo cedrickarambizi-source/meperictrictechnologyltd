@@ -25,7 +25,7 @@ const HeroSlider = () => {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg md:text-xl text-white/60 max-w-2xl leading-relaxed animate-slide-up mx-auto">
+            <p className="text-lg md:text-xl max-w-2xl leading-relaxed animate-slide-up mx-auto text-gray-50">
               World-class Mechanical, Electrical & Plumbing solutions
               engineered for modern structures across East Africa.
             </p>
