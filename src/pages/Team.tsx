@@ -17,6 +17,7 @@ import fabriceTuyizere from "@/assets/team/fabrice-tuyizere.jpg";
 import ngabonzizaBenjamin from "@/assets/team/ngabonziza-benjamin-plumbing.jpg";
 import KarambiziCedric from "@/assets/team/cedric-karambizi.jpg";
 import isaacMuhoza from "@/assets/team/isaac-muhoza.jpg";
+import fidelleHirwa from "@/assets/team/fidelle-hirwa.png.asset.json";
 
 const teamMembers = [
   {
@@ -99,9 +100,17 @@ const teamMembers = [
     category: "Finance",
     phones: ["+250 783 030 423"],
   },
+  {
+    name: "Fidelle Hirwa",
+    role: "IT Professional Administrator",
+    description: "Expert in IT systems administration and digital infrastructure management",
+    photo: fidelleHirwa.url,
+    category: "IT",
+    phones: [],
+  },
 ];
 
-const filters = ["All", "Leadership", "Engineering", "Operations", "Finance", "Tender & Commercial"];
+const filters = ["All", "Leadership", "Engineering", "Operations", "Finance", "Tender & Commercial", "IT"];
 
 const stats = [
   { icon: Calendar, value: "10+", label: "Years Industry Experience" },
