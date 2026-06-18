@@ -137,7 +137,7 @@ const Contact = () => {
   return (
     <Layout>
       <SEOHead
-        title="Contact MEP Erictric Technology Ltd | Kigali Engineering Experts"
+        title="Contact MEP Erictric | Kigali Engineering Experts"
         description="Get in touch for MEP, electrical, and elevator installation services in Rwanda."
         canonical="/contact"
       />

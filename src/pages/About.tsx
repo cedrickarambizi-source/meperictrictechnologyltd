@@ -7,7 +7,7 @@ const About = () => {
   return (
     <Layout>
       <SEOHead
-        title="About MEP Erictric Technology Ltd | Engineering Company in Kigali"
+        title="About MEP Erictric | Engineering Company in Kigali"
         description="Trusted engineering contractor delivering high-quality MEP and elevator solutions across Rwanda."
         canonical="/about"
       />

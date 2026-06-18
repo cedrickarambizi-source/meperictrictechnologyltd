@@ -1,0 +1,14 @@
+# MEP Erictric Technology Ltd
+
+> Professional MEP (Mechanical, Electrical, Plumbing) and elevator installation, maintenance, and engineering services in Rwanda and East Africa since 2016.
+
+## Pages
+
+- [Home](/): Overview of MEP Erictric Technology Ltd's engineering services.
+- [About](/about): Company history, mission, and engineering expertise.
+- [Services](/services): Elevator installation, electrical, mechanical, plumbing, CCTV, and network infrastructure services.
+- [Projects](/projects): Completed and ongoing MEP and elevator projects across Rwanda.
+- [Portfolio](/portfolio): Flagship engineering projects showcase.
+- [Partners & Clients](/partners): Trusted partners and clients across East Africa.
+- [Team](/team): Engineers and professionals behind our work.
+- [Contact](/contact): Get in touch for project consultations and quotes.
