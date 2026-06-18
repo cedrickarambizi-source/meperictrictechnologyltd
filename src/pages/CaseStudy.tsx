@@ -4,6 +4,8 @@ import Layout from "@/components/layout/Layout";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 import { allProjects } from "@/data/projects";
 import { ArrowLeft, ArrowRight, CheckCircle, MapPin, Calendar, Building2, User } from "lucide-react";
+import SEOHead from "@/components/seo/SEOHead";
+import StructuredData, { buildBreadcrumbSchema } from "@/components/seo/StructuredData";
 
 const CaseStudy = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -30,6 +32,19 @@ const CaseStudy = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title={`${project.title} | MEP Erictric Case Study`.slice(0, 60)}
+        description={`Case study: ${project.title}. ${project.activities?.[0] ?? "MEP and elevator engineering delivered by MEP Erictric Technology Ltd."}`.slice(0, 160)}
+        canonical={`/case-study/${slug}`}
+      />
+      <StructuredData
+        id={`breadcrumb-case-${slug}`}
+        data={buildBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Projects", path: "/projects" },
+          { name: project.title, path: `/case-study/${slug}` },
+        ])}
+      />
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[400px] overflow-hidden">
         <img src={project.image} alt={project.title} className="w-full h-full object-cover brightness-90" />

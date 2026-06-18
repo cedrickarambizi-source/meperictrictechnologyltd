@@ -50,7 +50,7 @@ const Projects = () => {
   return (
     <Layout>
       <SEOHead
-        title="Our Engineering Projects in Rwanda | MEP & Elevator Installations"
+        title="Our Engineering Projects | MEP & Elevator Installations"
         description="Explore completed and ongoing MEP, electrical, mechanical and elevator projects across Kigali and East Africa."
         canonical="/projects"
       />

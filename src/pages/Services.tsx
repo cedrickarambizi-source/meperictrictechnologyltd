@@ -232,7 +232,7 @@ const Services = () => {
   return (
     <Layout>
       <SEOHead
-        title="MEP & Elevator Installation Services in Kigali | Electrical & Mechanical Experts"
+        title="MEP & Elevator Services | Kigali Engineering Experts"
         description="Professional electrical, plumbing, HVAC, and elevator installation services in Rwanda."
         canonical="/services"
       />

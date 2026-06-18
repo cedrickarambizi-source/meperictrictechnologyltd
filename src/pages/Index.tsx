@@ -86,7 +86,7 @@ const Index = () => {
   return (
     <Layout>
       <SEOHead
-        title="MEP Erictric Technology Ltd | Professional MEP & Elevator Solutions in Rwanda"
+        title="MEP Erictric Technology | MEP & Elevator Solutions Rwanda"
         description="Leading MEP contractor in Kigali specializing in elevator installation, electrical systems, generator supply, and mechanical engineering services."
         canonical="/"
       />
