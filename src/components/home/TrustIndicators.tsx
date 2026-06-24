@@ -44,7 +44,7 @@ const TrustIndicators = () => {
                   </div>
                 </div>
               </div>
-              <div className="hidden md:flex absolute -bottom-8 -left-8 bg-white rounded-xl shadow-2xl px-5 py-4 items-center gap-3 ring-1 ring-mep-blue/10">
+              <div className="hidden md:flex absolute -bottom-16 -left-12 bg-white rounded-xl shadow-2xl px-5 py-4 items-center gap-3 ring-1 ring-mep-blue/10">
                 <div className="w-11 h-11 rounded-lg bg-mep-blue/10 flex items-center justify-center">
                   <Award className="h-5 w-5 text-mep-blue" />
                 </div>
