@@ -1,10 +1,10 @@
 import AnimatedCounter from "./AnimatedCounter";
-import { Briefcase, Clock, Globe, Users } from "lucide-react";
+import { Briefcase, Clock, Landmark, Users } from "lucide-react";
 
 const stats = [
-  { number: 4, suffix: "+", label: "Projects Completed", icon: Briefcase },
+  { number: 26, suffix: "+", label: "Projects Completed", icon: Briefcase },
   { number: 10, suffix: "+", label: "Years Experience", icon: Clock },
-  { number: 5, suffix: "+", label: "Countries Served", icon: Globe },
+  { number: 3, suffix: "+", label: "Government Institutions Served", icon: Landmark },
   { number: 100, suffix: "+", label: "Satisfied Clients", icon: Users },
 ];
 
