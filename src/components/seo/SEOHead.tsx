@@ -7,7 +7,7 @@ interface SEOHeadProps {
   type?: string;
 }
 
-const SITE_URL = "https://meperictrictechnologyltd.lovable.app";
+const SITE_URL = "https://meperictrictech.com";
 
 const SEOHead = ({ title, description, canonical, type = "website" }: SEOHeadProps) => {
   useEffect(() => {

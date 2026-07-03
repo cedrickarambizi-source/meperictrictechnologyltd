@@ -1,48 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mutarawambere.lovable.app/</loc>
+    <loc>https://meperictrictech.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mutarawambere.lovable.app/projects</loc>
+    <loc>https://meperictrictech.com/projects</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mutarawambere.lovable.app/services</loc>
+    <loc>https://meperictrictech.com/services</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mutarawambere.lovable.app/about</loc>
+    <loc>https://meperictrictech.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mutarawambere.lovable.app/contact</loc>
+    <loc>https://meperictrictech.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mutarawambere.lovable.app/partners</loc>
+    <loc>https://meperictrictech.com/partners</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://mutarawambere.lovable.app/team</loc>
+    <loc>https://meperictrictech.com/team</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://mutarawambere.lovable.app/portfolio</loc>
+    <loc>https://meperictrictech.com/portfolio</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mutarawambere.lovable.app/about-us</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
 </urlset>
