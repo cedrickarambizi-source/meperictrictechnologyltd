@@ -17,7 +17,6 @@ import fabriceTuyizere from "@/assets/team/fabrice-tuyizere.jpg";
 import ngabonzizaBenjamin from "@/assets/team/ngabonziza-benjamin-plumbing.jpg";
 import KarambiziCedric from "@/assets/team/cedric-karambizi.jpg";
 import isaacMuhoza from "@/assets/team/isaac-muhoza.jpg";
-import fidelleHirwa from "@/assets/team/fidelle-hirwa.png.asset.json";
 
 const teamMembers = [
   {
@@ -27,6 +26,7 @@ const teamMembers = [
     photo: nzabonimamaEric,
     category: "Leadership",
     phones: ["+250 788 645 567", "+250 781 175 264"],
+    email: "eric.nzabonimana@meperictrictech.com",
   },
   {
     name: "Jean Paul Tuyambaze",
@@ -35,6 +35,7 @@ const teamMembers = [
     photo: jeanPaulTuyambaze,
     category: "Operations",
     phones: ["+250 785 920 279"],
+    email: "jeanpaul.tuyambaze@meperictrictech.com",
   },
   {
     name: "Karambizi Cedric",
@@ -104,7 +105,7 @@ const teamMembers = [
     name: "Fidelle Hirwa",
     role: "IT Professional Administrator",
     description: "Expert in IT systems administration and digital infrastructure management",
-    photo: fidelleHirwa.url,
+    photo: "/placeholder.svg",
     category: "IT",
     phones: [],
   },
@@ -156,7 +157,7 @@ const Team = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
               <div className="text-center max-w-3xl mx-auto">
-                <h1 className="text-3xl md:text-4xl lg:text-[38px] font-extrabold text-white tracking-tight mb-5 leading-tight">
+                <h1 className="text-2xl md:text-3xl lg:text-[32px] font-extrabold text-white tracking-tight mb-5 leading-tight">
                   Meet Our Leadership & Engineering Team
                 </h1>
                 <div

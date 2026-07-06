@@ -12,10 +12,10 @@ const CTASection = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center text-white">
-          <h2 className="text-3xl md:text-5xl font-black mb-6 leading-tight lg:text-4xl">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-6 leading-tight">
             Ready to Start Your Next Project?
           </h2>
-          <p className="text-xl md:text-2xl opacity-90 mb-10 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg opacity-90 mb-10 max-w-2xl mx-auto">
             Get a free consultation from our expert engineers today.
           </p>
           <Link

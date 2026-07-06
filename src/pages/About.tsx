@@ -21,7 +21,7 @@ const About = () => {
       {/* Hero */}
       <section className="bg-primary py-20 lg:py-28">
         <div className="container mx-auto px-4 text-center text-primary-foreground">
-          <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">About Us</h1>
+          <h1 className="text-3xl md:text-4xl font-heading font-bold mb-4">About Us</h1>
           <p className="text-lg opacity-90 max-w-2xl mx-auto">
             Learn about our journey, values, and commitment to excellence in MEP 
             and elevator engineering.

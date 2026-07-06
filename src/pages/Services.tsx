@@ -248,7 +248,7 @@ const Services = () => {
       <section className="bg-primary py-20 lg:py-28">
         <div className="container mx-auto px-4 text-center text-primary-foreground">
           <ScrollReveal>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
+            <h1 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h1>
             <p className="text-lg opacity-90 max-w-2xl mx-auto">
               Comprehensive MEP, technology, and infrastructure solutions tailored to your project needs.
               From design to maintenance, we deliver excellence at every stage.
@@ -274,7 +274,7 @@ const Services = () => {
       {/* CTA */}
       <section className="py-16 bg-mep-orange">
         <div className="container mx-auto px-4 text-center text-primary-foreground">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Need a Custom Solution?</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Need a Custom Solution?</h2>
           <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">Contact our team to discuss your specific requirements and get a tailored proposal.</p>
           <Link to="/contact" className="inline-flex items-center gap-2 bg-background text-foreground font-semibold px-8 py-4 rounded-md hover:bg-muted transition-colors">
             Contact Us Today <ArrowRight className="h-5 w-5" />

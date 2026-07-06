@@ -49,7 +49,7 @@ const Partners = () => {
       {/* Hero Section */}
       <section className="py-24 md:py-32 bg-secondary">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary mb-6 tracking-tight leading-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-6 tracking-tight leading-tight">
             Strategic Partnerships That Power
             <br />
             <span className="text-mep-orange">Engineering Excellence</span>

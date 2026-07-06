@@ -35,7 +35,7 @@ const SafetyCompliance = () => {
                 Safety & Quality
               </span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-black leading-tight">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-black leading-tight">
               Committed to Safety, Precision, and Reliability
             </h2>
             <p className="text-white/50 text-lg leading-relaxed">
