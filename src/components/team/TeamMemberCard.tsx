@@ -8,6 +8,7 @@ interface TeamMember {
   category?: string;
   imagePosition?: string;
   phones?: string[];
+  email?: string;
 }
 
 interface TeamMemberCardProps {
@@ -69,6 +70,19 @@ const TeamMemberCard = ({ member }: TeamMemberCardProps) => {
                 <span>{phone}</span>
               </a>
             ))}
+          </div>
+        )}
+
+        {/* Email */}
+        {member.email && (
+          <div className="flex justify-center mb-3">
+            <a
+              href={`mailto:${member.email}`}
+              className="inline-flex items-center gap-1.5 text-[12px] text-muted-foreground hover:text-primary transition-colors duration-300 break-all"
+            >
+              <Mail className="h-3 w-3" />
+              <span>{member.email}</span>
+            </a>
           </div>
         )}
 
