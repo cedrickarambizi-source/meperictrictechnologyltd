@@ -65,7 +65,7 @@ const Projects = () => {
       <section className="bg-primary py-20 lg:py-28">
         <div className="container mx-auto px-4 text-center text-primary-foreground">
           <ScrollReveal>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Projects</h1>
+            <h1 className="text-3xl md:text-4xl font-bold mb-4">Our Projects</h1>
             <p className="text-lg opacity-90 max-w-2xl mx-auto">
               Discover our portfolio of completed and ongoing MEP and elevator projects
               across Rwanda and East Africa.
@@ -160,7 +160,7 @@ const Projects = () => {
         <div className="container mx-auto px-4">
           <ScrollReveal className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-mep-orange font-semibold uppercase tracking-wider text-sm">Certifications & Compliance</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">Our Credentials & Authorizations</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mt-2 mb-4">Our Credentials & Authorizations</h2>
             <p className="text-muted-foreground">We maintain the highest standards of compliance and hold authorizations from leading international manufacturers.</p>
           </ScrollReveal>
 
@@ -215,7 +215,7 @@ const Projects = () => {
       {/* CTA */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Start Your Project?</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
           <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">Join our growing list of satisfied clients. Contact us today for a consultation.</p>
           <a href="/contact" className="btn-primary inline-flex items-center gap-2">Get in Touch</a>
         </div>

@@ -60,7 +60,7 @@ const CaseStudy = () => {
                   <span key={cat} className="px-3 py-1 bg-mep-orange text-white text-xs font-semibold rounded-full">{cat}</span>
                 ))}
               </div>
-              <h1 className="text-3xl md:text-5xl font-bold text-white">{project.title}</h1>
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">{project.title}</h1>
             </motion.div>
           </div>
         </div>

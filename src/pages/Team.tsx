@@ -156,7 +156,7 @@ const Team = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
               <div className="text-center max-w-3xl mx-auto">
-                <h1 className="text-3xl md:text-4xl lg:text-[38px] font-extrabold text-white tracking-tight mb-5 leading-tight">
+                <h1 className="text-2xl md:text-3xl lg:text-[32px] font-extrabold text-white tracking-tight mb-5 leading-tight">
                   Meet Our Leadership & Engineering Team
                 </h1>
                 <div

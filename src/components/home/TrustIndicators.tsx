@@ -63,7 +63,7 @@ const TrustIndicators = () => {
                 <span className="w-1.5 h-1.5 rounded-full bg-[#ed6307]" />
                 About MEP Erictric
               </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-mep-blue leading-[1.1]">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-mep-blue leading-[1.1]">
                 Building a Sustainable Future with{" "}
                 <span className="relative inline-block">
                   <span className="relative z-10">Precision</span>

@@ -27,7 +27,7 @@ const StatsTickerBar = () => {
                   end={stat.number}
                   suffix={stat.suffix}
                   duration={2000}
-                  className="text-3xl md:text-4xl font-black text-white shimmer-text"
+                  className="text-2xl md:text-3xl font-black text-white shimmer-text"
                 />
                 <p className="text-white/40 text-xs font-medium tracking-wide uppercase mt-1">
                   {stat.label}

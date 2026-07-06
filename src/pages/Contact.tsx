@@ -152,7 +152,7 @@ const Contact = () => {
       <section className="bg-primary py-16 lg:py-20">
         <div className="container mx-auto px-4 text-center text-primary-foreground">
           <ScrollReveal>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+            <h1 className="text-3xl md:text-4xl font-bold mb-4">Contact Us</h1>
             <p className="text-lg opacity-90 max-w-2xl mx-auto">
               Tell us about your project and get a tailored proposal from our engineering team.
             </p>

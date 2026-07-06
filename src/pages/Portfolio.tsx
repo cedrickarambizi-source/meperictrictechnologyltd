@@ -23,7 +23,7 @@ const Portfolio = () => {
       {/* Hero */}
       <section className="bg-primary py-20 lg:py-28">
         <div className="container mx-auto px-4 text-center text-primary-foreground">
-          <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">Our Portfolio</h1>
+          <h1 className="text-3xl md:text-4xl font-heading font-bold mb-4">Our Portfolio</h1>
           <p className="text-lg opacity-90 max-w-2xl mx-auto">
             Explore our flagship projects showcasing our expertise in MEP engineering 
             and elevator solutions across Rwanda.

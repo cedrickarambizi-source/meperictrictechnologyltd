@@ -123,7 +123,7 @@ const ProjectsShowcase = () => {
               What We Have Done
             </span>
           </span>
-          <h2 className="text-3xl md:text-4xl font-black text-white mb-4 lg:text-4xl">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-white mb-4">
             Our Completed Projects
           </h2>
           <p className="text-white/50 text-lg leading-relaxed max-w-2xl mx-auto">

@@ -28,7 +28,7 @@ const PartnershipValues = () => {
     <section className="py-20 bg-primary">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary-foreground mb-4 tracking-tight">
+          <h2 className="text-2xl md:text-3xl font-heading font-bold text-primary-foreground mb-4 tracking-tight">
             Why Organizations Partner With Us
           </h2>
           <p className="text-primary-foreground/80 max-w-2xl mx-auto text-lg">

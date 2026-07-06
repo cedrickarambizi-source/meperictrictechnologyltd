@@ -71,7 +71,7 @@ const AboutSection = () => {
                   end={stat.number}
                   suffix={stat.suffix}
                   duration={2000}
-                  className="text-4xl md:text-5xl lg:text-6xl font-black mb-3"
+                  className="text-3xl md:text-4xl lg:text-5xl font-black mb-3"
                 />
                 <div className="text-sm opacity-70 font-medium">{stat.label}</div>
               </div>
