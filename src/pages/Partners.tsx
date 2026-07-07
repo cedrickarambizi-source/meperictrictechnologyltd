@@ -52,7 +52,7 @@ const Partners = () => {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-6 tracking-tight leading-tight">
             Strategic Partnerships That Power
             <br />
-            <span className="text-mep-orange">Engineering Excellence</span>
+            <span className="text-primary">Engineering Excellence</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Our work is trusted by leading institutions, financial organizations, developers, 

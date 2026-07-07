@@ -57,7 +57,7 @@ const LogoPlaceholder = ({ name, category }: { name: string; category: string })
       <div className={`
         text-[10px] font-medium uppercase tracking-wider mt-1
         transition-colors duration-300
-        ${isHovered ? 'text-mep-orange' : 'text-muted-foreground/60'}
+        ${isHovered ? 'text-primary' : 'text-muted-foreground/60'}
       `}>
         {category}
       </div>

@@ -34,7 +34,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="w-10 h-10 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-mep-orange/20 hover:border-mep-orange/30 hover:text-mep-orange hover:scale-110 transition-all duration-300"
+                  className="w-10 h-10 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-mep-orange/20 hover:border-mep-orange/30 hover:text-primary hover:scale-110 transition-all duration-300"
                 >
                   {social.icon}
                 </a>
@@ -55,7 +55,7 @@ const Footer = () => {
                 { name: "Contact Us", path: "/contact" },
               ].map((item) => (
                 <li key={item.name}>
-                  <Link to={item.path} className="text-white/40 hover:text-mep-orange transition-colors text-sm flex items-center gap-2">
+                  <Link to={item.path} className="text-white/40 hover:text-primary transition-colors text-sm flex items-center gap-2">
                     <span className="w-1 h-1 bg-mep-orange/50 rounded-full" />
                     {item.name}
                   </Link>
@@ -77,7 +77,7 @@ const Footer = () => {
                 "Power Backup Systems",
               ].map((item) => (
                 <li key={item}>
-                  <Link to="/services" className="text-white/40 hover:text-mep-orange transition-colors text-sm flex items-center gap-2">
+                  <Link to="/services" className="text-white/40 hover:text-primary transition-colors text-sm flex items-center gap-2">
                     <span className="w-1 h-1 bg-mep-orange/50 rounded-full" />
                     {item}
                   </Link>
@@ -91,33 +91,33 @@ const Footer = () => {
             <h4 className="font-bold text-sm mb-6 uppercase tracking-wider">Contact Info</h4>
             <ul className="space-y-4 text-primary-foreground">
               <li className="flex items-start gap-3">
-                <MapPin className="h-4 w-4 text-mep-orange flex-shrink-0 mt-0.5" />
+                <MapPin className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
                 <span className="text-white/40 text-sm">Remera,Gisimenti , 2ND Floor, F2-22<br /> Kigali, Rwanda</span>
               </li>
               <li>
-                <a href="tel:+250788645567" className="flex items-start gap-3 hover:text-mep-orange transition-colors">
-                  <Phone className="h-4 w-4 text-mep-orange flex-shrink-0 mt-0.5" />
+                <a href="tel:+250788645567" className="flex items-start gap-3 hover:text-primary transition-colors">
+                  <Phone className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
                   <span className="text-white/40 text-sm">+250 788 645 567</span>
                 </a>
               </li>
               <li>
-                <a href="tel:+250781175264" className="flex items-start gap-3 hover:text-mep-orange transition-colors">
-                  <Phone className="h-4 w-4 text-mep-orange flex-shrink-0 mt-0.5" />
+                <a href="tel:+250781175264" className="flex items-start gap-3 hover:text-primary transition-colors">
+                  <Phone className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
                   <span className="text-white/40 text-sm">+250 781 175 264</span>
                 </a>
               </li>
               <li>
-                <a href="mailto:info@meperictrictech.com" className="flex items-start gap-3 hover:text-mep-orange transition-colors">
-                  <Mail className="h-4 w-4 text-mep-orange flex-shrink-0 mt-0.5" />
+                <a href="mailto:info@meperictrictech.com" className="flex items-start gap-3 hover:text-primary transition-colors">
+                  <Mail className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
                   <span className="text-white/40 text-sm">info@meperictrictech.com</span>
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <Globe className="h-4 w-4 text-mep-orange flex-shrink-0 mt-0.5" />
+                <Globe className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
                 <span className="text-white/40 text-sm">meperictictech.com</span>
               </li>
               <li className="flex items-start gap-3">
-                <Clock className="h-4 w-4 text-mep-orange flex-shrink-0 mt-0.5" />
+                <Clock className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
                 <span className="text-white/40 text-sm">Mon–Fri: 8AM – 6PM</span>
               </li>
             </ul>
@@ -133,8 +133,8 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/30">
           <p>© 2026 MEP Erictric Technology Ltd. All Rights Reserved.</p>
           <div className="flex gap-6">
-            <Link to="/privacy" className="hover:text-mep-orange transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-mep-orange transition-colors">Terms of Service</Link>
+            <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>
@@ -147,7 +147,7 @@ const Footer = () => {
             href="https://digital-genesis-navy.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-3 py-1 rounded-full bg-mep-orange/20 text-mep-orange text-[10px] font-semibold hover:bg-mep-orange/30 transition-colors"
+            className="px-3 py-1 rounded-full bg-mep-orange/20 text-primary text-[10px] font-semibold hover:bg-mep-orange/30 transition-colors"
           >
             Click
           </a>

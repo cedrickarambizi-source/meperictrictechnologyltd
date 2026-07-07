@@ -35,7 +35,7 @@ const EngineeringProcess = () => {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
             <span className="section-divider-left" />
-            <span className="text-mep-orange font-semibold uppercase tracking-widest text-xs">
+            <span className="text-primary font-semibold uppercase tracking-widest text-xs">
               Our Engineering Approach
             </span>
             <span className="section-divider-left" />
@@ -58,7 +58,7 @@ const EngineeringProcess = () => {
             <div key={index} className="relative group text-center">
               {/* Number circle */}
               <div className="w-24 h-24 mx-auto rounded-2xl bg-[#F5F5F5] border-2 border-transparent group-hover:border-mep-orange/30 flex flex-col items-center justify-center mb-6 transition-all duration-500 group-hover:shadow-lg group-hover:-translate-y-1 relative z-10">
-                <span className="text-mep-orange font-black text-2xl">{step.number}</span>
+                <span className="text-primary font-black text-2xl">{step.number}</span>
                 <step.icon className="h-5 w-5 text-foreground/40 mt-1" />
               </div>
 

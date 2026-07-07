@@ -159,7 +159,7 @@ const ServiceCard = ({ service, index }: { service: ServiceData; index: number }
           <ul className="space-y-3 mb-6">
             {service.benefits.map((benefit, i) => (
               <li key={i} className="flex items-center gap-3">
-                <CheckCircle className="h-5 w-5 text-mep-orange flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
                 <span className="text-foreground">{benefit}</span>
               </li>
             ))}

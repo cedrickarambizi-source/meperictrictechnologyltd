@@ -114,7 +114,7 @@ const About = () => {
                 "Quality guaranteed",
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-3 p-4 bg-secondary rounded-lg">
-                  <CheckCircle className="h-6 w-6 text-mep-orange flex-shrink-0" />
+                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0" />
                   <span className="font-medium">{item}</span>
                 </div>
               ))}
@@ -127,7 +127,7 @@ const About = () => {
       <section className="py-16 lg:py-24 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-mep-orange font-semibold uppercase tracking-wider text-sm">
+            <span className="text-primary font-semibold uppercase tracking-wider text-sm">
               Our Location & Operations
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">
@@ -168,7 +168,7 @@ const About = () => {
             <div className="space-y-6">
               <div className="bg-card rounded-xl p-6 shadow-sm border">
                 <h3 className="font-bold text-xl mb-4 flex items-center gap-2">
-                  <MapPin className="h-5 w-5 text-mep-orange" />
+                  <MapPin className="h-5 w-5 text-primary" />
                   Headquarters
                 </h3>
                 <div className="space-y-4">
@@ -183,7 +183,7 @@ const About = () => {
 
               <div className="bg-card rounded-xl p-6 shadow-sm border">
                 <h3 className="font-bold text-xl mb-4 flex items-center gap-2">
-                  <Phone className="h-5 w-5 text-mep-orange" />
+                  <Phone className="h-5 w-5 text-primary" />
                   Contact Information
                 </h3>
                 <div className="space-y-3">
@@ -210,7 +210,7 @@ const About = () => {
 
               <div className="bg-card rounded-xl p-6 shadow-sm border">
                 <h3 className="font-bold text-xl mb-4 flex items-center gap-2">
-                  <Clock className="h-5 w-5 text-mep-orange" />
+                  <Clock className="h-5 w-5 text-primary" />
                   Our Commitment
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">

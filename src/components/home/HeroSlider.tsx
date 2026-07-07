@@ -12,7 +12,7 @@ const HeroSlider = () => {
             {/* Orange pill badge */}
             <div className="inline-flex items-center gap-2 bg-mep-orange/15 border border-mep-orange/30 rounded-full px-5 py-2 animate-fade-in">
               <span className="w-2 h-2 bg-mep-orange rounded-full animate-pulse" />
-              <span className="text-mep-orange font-semibold uppercase tracking-widest text-xs">
+              <span className="text-primary font-semibold uppercase tracking-widest text-xs">
                 &nbsp;TRUSTED ENGINEERING PARTNER SINCE 2016
               </span>
             </div>

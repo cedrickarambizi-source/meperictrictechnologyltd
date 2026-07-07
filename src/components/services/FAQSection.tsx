@@ -35,7 +35,7 @@ const FAQSection = () => {
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-mep-orange font-semibold uppercase tracking-wider text-sm">
+            <span className="text-primary font-semibold uppercase tracking-wider text-sm">
               Common Questions
             </span>
             <h2 className="text-2xl md:text-3xl font-bold mt-2 mb-4">

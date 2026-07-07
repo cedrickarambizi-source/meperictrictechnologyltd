@@ -54,7 +54,7 @@ const ServicesSection = () => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-flex items-center gap-2 bg-mep-orange/10 border border-mep-orange/20 rounded-full px-5 py-2 mb-6">
-            <span className="text-mep-orange font-semibold uppercase tracking-widest text-xs">
+            <span className="text-primary font-semibold uppercase tracking-widest text-xs">
               Our Services
             </span>
           </span>
@@ -96,14 +96,14 @@ const ServicesSection = () => {
                 <ul className="space-y-2 mb-5">
                   {service.checklist.map((item, i) => (
                     <li key={i} className="flex items-center gap-2 text-sm text-foreground/80">
-                      <Check className="h-4 w-4 text-mep-orange flex-shrink-0" />
+                      <Check className="h-4 w-4 text-primary flex-shrink-0" />
                       {item}
                     </li>
                   ))}
                 </ul>
                 <Link
                   to="/services"
-                  className="inline-flex items-center gap-2 text-mep-orange font-semibold text-sm hover:gap-3 transition-all group/link"
+                  className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:gap-3 transition-all group/link"
                 >
                   Learn More <ArrowRight className="h-4 w-4 transition-transform group-hover/link:translate-x-0.5" />
                 </Link>

@@ -83,7 +83,7 @@ const TrustIndicators = () => {
                   <span className="text-sm font-semibold text-gray-800">Safety-First Engineering</span>
                 </div>
                 <div className="flex items-center gap-3 bg-white rounded-lg p-3 shadow-sm ring-1 ring-mep-blue/10">
-                  <Zap className="h-5 w-5 text-[#ed6307] flex-shrink-0" />
+                  <Zap className="h-5 w-5 text-primary flex-shrink-0" />
                   <span className="text-sm font-semibold text-gray-800">Sustainable Solutions</span>
                 </div>
               </div>

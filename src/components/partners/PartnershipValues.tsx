@@ -45,7 +45,7 @@ const PartnershipValues = () => {
             >
               <div className="w-14 h-14 rounded-lg bg-mep-orange/20 flex items-center justify-center mb-6
                             group-hover:bg-mep-orange/30 transition-colors duration-300">
-                <value.icon className="w-7 h-7 text-mep-orange" strokeWidth={1.5} />
+                <value.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
               </div>
               <h3 className="text-lg font-heading font-semibold text-primary-foreground mb-3 leading-tight">
                 {value.title}
