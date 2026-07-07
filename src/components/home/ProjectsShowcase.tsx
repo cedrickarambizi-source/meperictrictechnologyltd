@@ -119,7 +119,7 @@ const ProjectsShowcase = () => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <span className="inline-flex items-center gap-2 bg-mep-orange/15 border border-mep-orange/30 rounded-full px-5 py-2 mb-6">
-            <span className="text-mep-orange font-semibold uppercase tracking-widest text-xs">
+            <span className="text-primary font-semibold uppercase tracking-widest text-xs">
               What We Have Done
             </span>
           </span>
@@ -179,13 +179,13 @@ const ProjectsShowcase = () => {
                       <ul className="space-y-2 flex-1">
                         {project.services.map((service, i) => (
                           <li key={i} className="flex items-start gap-2 text-xs text-muted-foreground">
-                            <Check className="h-3.5 w-3.5 text-mep-orange flex-shrink-0 mt-0.5" />
+                            <Check className="h-3.5 w-3.5 text-primary flex-shrink-0 mt-0.5" />
                             {service}
                           </li>
                         ))}
                       </ul>
                       {project.moreCount > 0 && (
-                        <Link to="/projects" className="text-mep-orange font-semibold text-xs mt-3 hover:underline inline-block">
+                        <Link to="/projects" className="text-primary font-semibold text-xs mt-3 hover:underline inline-block">
                           +{project.moreCount} more activities →
                         </Link>
                       )}

@@ -31,7 +31,7 @@ const SafetyCompliance = () => {
           <div className="space-y-6">
             <div className="flex items-center gap-3">
               <span className="w-12 h-0.5 bg-mep-orange rounded-full" />
-              <span className="text-mep-orange font-semibold uppercase tracking-widest text-xs">
+              <span className="text-primary font-semibold uppercase tracking-widest text-xs">
                 Safety & Quality
               </span>
             </div>
@@ -51,7 +51,7 @@ const SafetyCompliance = () => {
                 key={index}
                 className="glass-card p-6 transition-all duration-500 hover:-translate-y-1 hover:border-mep-orange/20"
               >
-                <item.icon className="h-8 w-8 text-mep-orange mb-4" />
+                <item.icon className="h-8 w-8 text-primary mb-4" />
                 <h3 className="font-bold text-lg mb-2">{item.title}</h3>
                 <p className="text-white/40 text-sm leading-relaxed">
                   {item.description}

@@ -21,7 +21,7 @@ const StatsTickerBar = () => {
                 index < stats.length - 1 ? "md:border-r border-white/5" : ""
               }`}
             >
-              <stat.icon className="h-6 w-6 text-mep-orange flex-shrink-0" />
+              <stat.icon className="h-6 w-6 text-primary flex-shrink-0" />
               <div>
                 <AnimatedCounter
                   end={stat.number}

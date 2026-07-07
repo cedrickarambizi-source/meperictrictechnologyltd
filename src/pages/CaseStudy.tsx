@@ -79,7 +79,7 @@ const CaseStudy = () => {
                 <div className="grid sm:grid-cols-2 gap-3">
                   {project.activities.map((activity, i) => (
                     <div key={i} className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
-                      <CheckCircle className="h-5 w-5 text-mep-orange flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                       <span className="text-foreground text-sm">{activity}</span>
                     </div>
                   ))}
@@ -120,7 +120,7 @@ const CaseStudy = () => {
 
                   <div className="pt-3 border-t">
                     <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${
-                      project.status === "completed" ? "bg-primary/10 text-primary" : "bg-mep-orange/10 text-mep-orange"
+                      project.status === "completed" ? "bg-primary/10 text-primary" : "bg-mep-orange/10 text-primary"
                     }`}>
                       {project.status === "completed" ? "✓ Completed" : "● Ongoing"}
                     </span>

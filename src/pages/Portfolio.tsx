@@ -35,7 +35,7 @@ const Portfolio = () => {
       <section className="py-16 lg:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-mep-orange font-semibold uppercase tracking-wider text-sm">
+            <span className="text-primary font-semibold uppercase tracking-wider text-sm">
               Our Legacy
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">
@@ -58,7 +58,7 @@ const Portfolio = () => {
       <section className="py-16 lg:py-24 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-mep-orange font-semibold uppercase tracking-wider text-sm">
+            <span className="text-primary font-semibold uppercase tracking-wider text-sm">
               Recent & Ongoing
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">

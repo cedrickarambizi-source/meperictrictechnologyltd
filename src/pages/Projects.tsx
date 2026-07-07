@@ -159,7 +159,7 @@ const Projects = () => {
       <section className="py-16 lg:py-24 bg-muted/30">
         <div className="container mx-auto px-4">
           <ScrollReveal className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-mep-orange font-semibold uppercase tracking-wider text-sm">Certifications & Compliance</span>
+            <span className="text-primary font-semibold uppercase tracking-wider text-sm">Certifications & Compliance</span>
             <h2 className="text-2xl md:text-3xl font-bold mt-2 mb-4">Our Credentials & Authorizations</h2>
             <p className="text-muted-foreground">We maintain the highest standards of compliance and hold authorizations from leading international manufacturers.</p>
           </ScrollReveal>
@@ -173,7 +173,7 @@ const Projects = () => {
                   </div>
                   <div className="flex-1">
                     <h3 className="font-bold text-lg mb-1">{cert.name}</h3>
-                    <p className="text-sm text-mep-orange font-medium mb-1">{cert.authority}</p>
+                    <p className="text-sm text-primary font-medium mb-1">{cert.authority}</p>
                     <p className="text-xs text-muted-foreground mb-2">Issued: {cert.year}</p>
                     <p className="text-sm text-muted-foreground">{cert.description}</p>
                   </div>

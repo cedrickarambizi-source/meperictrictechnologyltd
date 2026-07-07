@@ -63,7 +63,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         <ul className="space-y-2">
           {project.activities.slice(0, 3).map((activity, i) => (
             <li key={i} className="flex items-start gap-2.5 text-sm text-muted-foreground">
-              <CheckCircle className="h-4 w-4 text-mep-orange flex-shrink-0 mt-0.5" />
+              <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
               <span>{activity}</span>
             </li>
           ))}

@@ -26,7 +26,7 @@ const AboutSection = () => {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <span className="section-divider-left" />
-                <span className="text-mep-orange font-semibold uppercase tracking-widest text-xs">
+                <span className="text-primary font-semibold uppercase tracking-widest text-xs">
                   About Us
                 </span>
               </div>
@@ -46,7 +46,7 @@ const AboutSection = () => {
             <ul className="space-y-4 pt-2">
               {highlights.map((item, index) => (
                 <li key={index} className="flex items-center gap-4 group">
-                  <CheckCircle className="h-5 w-5 text-mep-orange flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
                   <span className="font-medium text-foreground">{item}</span>
                 </li>
               ))}
@@ -54,7 +54,7 @@ const AboutSection = () => {
 
             <Link
               to="/about"
-              className="inline-flex items-center gap-2 text-mep-orange font-semibold hover:gap-3 transition-all mt-4"
+              className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all mt-4"
             >
               Learn More About Us →
             </Link>

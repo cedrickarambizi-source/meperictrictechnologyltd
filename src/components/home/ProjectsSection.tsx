@@ -64,7 +64,7 @@ const ProjectsSection = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-mep-orange font-semibold uppercase tracking-wider text-sm">
+          <span className="text-primary font-semibold uppercase tracking-wider text-sm">
             Our Projects
           </span>
           <h2 className="section-heading mt-2 mb-4">
@@ -87,7 +87,7 @@ const ProjectsSection = () => {
                 <project.icon className="h-20 w-20 text-primary/30" />
               </div>
               <div className="p-6">
-                <span className="inline-block px-3 py-1 bg-mep-orange/10 text-mep-orange text-xs font-semibold rounded-full mb-3">
+                <span className="inline-block px-3 py-1 bg-mep-orange/10 text-primary text-xs font-semibold rounded-full mb-3">
                   {project.category}
                 </span>
                 <h3 className="font-heading font-bold text-lg mb-2">{project.title}</h3>
