@@ -17,6 +17,7 @@ import fabriceTuyizere from "@/assets/team/fabrice-tuyizere.jpg";
 import ngabonzizaBenjamin from "@/assets/team/ngabonziza-benjamin-plumbing.jpg";
 import KarambiziCedric from "@/assets/team/cedric-karambizi.jpg";
 import isaacMuhoza from "@/assets/team/isaac-muhoza.jpg";
+import fidelleHirwa from "@/assets/team/fidelle-hirwa.png";
 
 const teamMembers = [
   {
@@ -44,6 +45,7 @@ const teamMembers = [
     photo: KarambiziCedric,
     category: "Leadership",
     phones: ["+250 796 692 269"],
+    email: "cedric.karambizi@meperictrictech.com",
   },
   {
     name: "Gerald Rwililiza",
@@ -52,6 +54,7 @@ const teamMembers = [
     photo: rwilizaGerald,
     category: "Engineering",
     phones: ["+250 782 171 806"],
+    email: "gerald.rwililiza@meperictrictech.com",
   },
   {
     name: "Callixte Ndayisenga",
@@ -60,6 +63,7 @@ const teamMembers = [
     photo: callixteNdayisenga,
     category: "Engineering",
     phones: ["+250 788 397 195"],
+    email: "callixte.ndayisenga@meperictrictech.com",
   },
   {
     name: "Jimmy Bimenyimana",
@@ -68,6 +72,7 @@ const teamMembers = [
     photo: jimmyBimenyimana,
     category: "Engineering",
     phones: [],
+    email: "jimmy.bimenyimana@meperictrictech.com",
   },
   {
     name: "NGABONZIZA Benjamin",
@@ -76,6 +81,7 @@ const teamMembers = [
     photo: ngabonzizaBenjamin,
     category: "Engineering",
     phones: [],
+    email: "benjamin.ngabonziza@meperictrictech.com",
   },
   {
     name: "Isaac Muhoza",
@@ -84,6 +90,8 @@ const teamMembers = [
     photo: isaacMuhoza,
     category: "Engineering",
     phones: ["+250 787 305 101"],
+    imagePosition: "center 20%",
+    email: "isaac.muhoza@meperictrictech.com",
   },
   {
     name: "Fabrice Izereyesu",
@@ -92,6 +100,7 @@ const teamMembers = [
     photo: fabriceTuyizere,
     category: "Tender & Commercial",
     phones: ["+250 780 730 744"],
+    email: "fabrice.izereyesu@meperictrictech.com",
   },
   {
     name: "Umutoniwase Divine",
@@ -100,14 +109,16 @@ const teamMembers = [
     photo: umutoniwaseDivine,
     category: "Finance",
     phones: ["+250 783 030 423"],
+    email: "divine.umutoniwase@meperictrictech.com",
   },
   {
     name: "Fidelle Hirwa",
     role: "IT Professional Administrator",
     description: "Expert in IT systems administration and digital infrastructure management",
-    photo: "/placeholder.svg",
+    photo: fidelleHirwa,
     category: "IT",
     phones: [],
+    email: "fidelle.hirwa@meperictrictech.com",
   },
 ];
 
