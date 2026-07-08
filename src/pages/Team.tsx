@@ -17,7 +17,8 @@ import fabriceTuyizere from "@/assets/team/fabrice-tuyizere.jpg";
 import ngabonzizaBenjamin from "@/assets/team/ngabonziza-benjamin-plumbing.jpg";
 import KarambiziCedric from "@/assets/team/cedric-karambizi.jpg";
 import isaacMuhoza from "@/assets/team/isaac-muhoza.jpg";
-import fidelleHirwa from "@/assets/team/fidelle-hirwa.png";
+import fidelleHirwaAsset from "@/assets/team/fidelle-hirwa.png.asset.json";
+const fidelleHirwa = fidelleHirwaAsset.url;
 
 const teamMembers = [
   {
