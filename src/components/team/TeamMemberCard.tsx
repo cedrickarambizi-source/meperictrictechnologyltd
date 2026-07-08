@@ -36,6 +36,7 @@ const TeamMemberCard = ({ member }: TeamMemberCardProps) => {
           loading="lazy"
           decoding="async"
           className="w-full h-full object-cover object-top transition-transform duration-300 ease-out group-hover:scale-[1.03]"
+          style={{ objectPosition: member.imagePosition || "center top" }}
         />
         <div className="absolute inset-x-0 bottom-0 h-px bg-black/5" />
       </div>
