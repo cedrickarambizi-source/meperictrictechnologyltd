@@ -8,7 +8,8 @@ import { Calendar, Briefcase, Users, Globe } from "lucide-react";
 
 // Team member photos
 import nzabonimamaEric from "@/assets/team/nzabonimana-eric.jpg";
-import jeanPaulTuyambaze from "@/assets/team/jean-paul-tuyambaze.jpg";
+import jeanPaulTuyambazeAsset from "@/assets/team/jean-paul-tuyambaze.jpg.asset.json";
+const jeanPaulTuyambaze = jeanPaulTuyambazeAsset.url;
 import rwilizaGerald from "@/assets/team/rwiliza-gerald.jpg";
 import callixteNdayisenga from "@/assets/team/callixte-ndayisenga.jpg";
 import jimmyBimenyimana from "@/assets/team/jimmy-bimenyimana.jpg";
