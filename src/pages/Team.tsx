@@ -37,6 +37,7 @@ const teamMembers = [
     description: "Expert in project delivery and operations excellence",
     photo: jeanPaulTuyambaze,
     category: "Operations",
+    fitContain: true,
     phones: ["+250 785 920 279"],
     email: "jeanpaul.tuyambaze@meperictrictech.com",
   },
