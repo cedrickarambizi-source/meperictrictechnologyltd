@@ -36,8 +36,10 @@ const TeamMemberCard = ({ member }: TeamMemberCardProps) => {
           alt={member.name}
           loading="lazy"
           decoding="async"
-          className="w-full h-full object-cover object-top transition-transform duration-300 ease-out group-hover:scale-[1.03]"
-          style={{ objectPosition: member.imagePosition || "center top" }}
+          className={`w-full h-full transition-transform duration-300 ease-out group-hover:scale-[1.03] ${
+            member.fitContain ? "object-contain object-center" : "object-cover object-top"
+          }`}
+          style={{ objectPosition: member.fitContain ? "center" : member.imagePosition || "center top" }}
         />
         <div className="absolute inset-x-0 bottom-0 h-px bg-black/5" />
       </div>
