@@ -9,6 +9,7 @@ interface TeamMember {
   imagePosition?: string;
   phones?: string[];
   email?: string;
+  fitContain?: boolean;
 }
 
 interface TeamMemberCardProps {
