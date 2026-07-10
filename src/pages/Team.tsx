@@ -8,8 +8,7 @@ import { Calendar, Briefcase, Users, Globe } from "lucide-react";
 
 // Team member photos
 import nzabonimamaEric from "@/assets/team/nzabonimana-eric.jpg";
-import jeanPaulTuyambazeAsset from "@/assets/team/jean-paul-tuyambaze.jpg.asset.json";
-const jeanPaulTuyambaze = jeanPaulTuyambazeAsset.url;
+import jeanPaulTuyambaze from "@/assets/team/jean-paul-tuyambaze.png";
 import rwilizaGerald from "@/assets/team/rwiliza-gerald.jpg";
 import callixteNdayisenga from "@/assets/team/callixte-ndayisenga.jpg";
 import jimmyBimenyimana from "@/assets/team/jimmy-bimenyimana.jpg";
@@ -18,8 +17,7 @@ import fabriceTuyizere from "@/assets/team/fabrice-tuyizere.jpg";
 import ngabonzizaBenjamin from "@/assets/team/ngabonziza-benjamin-plumbing.jpg";
 import KarambiziCedric from "@/assets/team/cedric-karambizi.jpg";
 import isaacMuhoza from "@/assets/team/isaac-muhoza.jpg";
-import fidelleHirwaAsset from "@/assets/team/fidelle-hirwa.png.asset.json";
-const fidelleHirwa = fidelleHirwaAsset.url;
+import fidelleHirwa from "@/assets/team/fidelle-hirwa.png";
 
 const teamMembers = [
   {
