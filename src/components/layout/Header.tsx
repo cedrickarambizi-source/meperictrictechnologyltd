@@ -8,6 +8,7 @@ const navLinks = [
   { name: "Services", path: "/services" },
   { name: "Projects", path: "/projects" },
   { name: "Team", path: "/team" },
+  { name: "FUJIHD Elevator", path: "/fujihd-elevator" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
 ];
