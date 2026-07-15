@@ -1,60 +1,109 @@
-import { Calculator, ChevronDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+
+const tabs = [
+  {
+    id: "mep",
+    eyebrow: "MEP Engineering",
+    title: "Powering Rwanda & East Africa With Excellence in MEP",
+    href: "/services",
+  },
+  {
+    id: "elevator",
+    eyebrow: "FUJIHD Elevator Partner",
+    title: "Trusted Elevator Solutions, Engineered Since 2019",
+    href: "/fujihd-elevator",
+  },
+  {
+    id: "projects",
+    eyebrow: "Signature Projects",
+    title: "Landmark Buildings, Delivered Across the Region",
+    href: "/projects",
+  },
+  {
+    id: "team",
+    eyebrow: "Our People",
+    title: "The Engineers Behind Every Installation",
+    href: "/team",
+  },
+];
 
 const HeroSlider = () => {
-  return (
-    <section className="relative h-[100vh] min-h-[700px] overflow-hidden bg-transparent">
+  const [active, setActive] = useState(0);
+  const current = tabs[active];
 
-      {/* Content Overlay */}
-      <div className="absolute inset-0 z-20 flex items-start justify-center pt-24 md:pt-32">
-        <div className="container mx-auto px-6 lg:px-12 text-center">
-          <div className="max-w-3xl mx-auto space-y-6 md:space-y-8">
-            {/* Orange pill badge */}
-            <div className="inline-flex items-center gap-2 bg-mep-orange/15 border border-mep-orange/30 rounded-full px-5 py-2 animate-fade-in">
-              <span className="w-2 h-2 bg-mep-orange rounded-full animate-pulse" />
-              <span className="text-primary font-semibold uppercase tracking-widest text-xs">
-                &nbsp;TRUSTED ENGINEERING PARTNER SINCE 2016
+  return (
+    <section className="relative min-h-[100vh] overflow-hidden bg-transparent">
+      {/* Bain-style navy → luminous blue sweep overlay (keeps video visible underneath) */}
+      <div
+        className="absolute inset-0 z-10 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(115deg, rgba(6,10,30,0.92) 0%, rgba(10,26,66,0.82) 38%, rgba(18,53,110,0.55) 62%, rgba(60,140,220,0.25) 88%, rgba(120,190,255,0.08) 100%)",
+        }}
+      />
+
+      {/* Content */}
+      <div className="absolute inset-0 z-20 flex flex-col justify-center">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="max-w-4xl space-y-8 animate-fade-in">
+            {/* Eyebrow */}
+            <div key={`eb-${current.id}`} className="animate-fade-in">
+              <span className="text-white/70 text-[11px] tracking-[0.25em] uppercase font-medium">
+                {current.eyebrow}
               </span>
             </div>
 
-            {/* Headline */}
-            <h1 className="text-white leading-[0.95] tracking-tight animate-slide-up xl:text-xl font-extrabold text-center md:text-2xl text-2xl lg:text-3xl">
-              Powering Rwanda & East Africa With
-              <br className="hidden md:block" />
-              Excellence in MEP
+            {/* Huge light-weight headline */}
+            <h1
+              key={`t-${current.id}`}
+              className="font-display text-white font-light leading-[1.05] tracking-tight animate-slide-up text-4xl md:text-6xl lg:text-7xl xl:text-[80px]"
+            >
+              {current.title}
             </h1>
 
-            {/* Subtitle */}
-            <p className="text-lg md:text-xl max-w-2xl leading-relaxed animate-slide-up mx-auto text-gray-50">
-              World-class Mechanical, Electrical & Plumbing solutions
-              engineered for modern structures across East Africa.
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-3 pt-2 animate-slide-up justify-center">
+            {/* Read More link */}
+            <div>
               <Link
-                to="/projects"
-                className="inline-flex items-center gap-2 border-2 border-white/20 text-white font-semibold px-7 py-4 rounded-xl hover:bg-white/5 hover:border-white/40 transition-all duration-300 text-sm"
+                to={current.href}
+                className="group inline-flex items-center gap-3 text-white text-sm tracking-[0.2em] uppercase font-medium border-b border-white/30 hover:border-mep-orange pb-2 transition-colors"
               >
-                View Our Projects
+                Read More
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
-              <a
-                href="https://mepestimatecalculator.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-white/70 hover:text-white font-semibold px-5 py-4 rounded-xl transition-all duration-300 text-sm bg-[#ed6307]"
-              >
-                <Calculator className="h-4 w-4" /> MEP Calculator
-              </a>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 hidden md:flex flex-col items-center gap-2">
-        <span className="text-white/30 text-xs tracking-widest uppercase">Scroll</span>
-        <ChevronDown className="h-5 w-5 text-white/30 animate-scroll-bounce" />
+      {/* Bottom tab strip (Bain-style) */}
+      <div className="absolute bottom-0 left-0 right-0 z-20 border-t border-white/15 bg-gradient-to-t from-black/40 to-transparent backdrop-blur-sm">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="grid grid-cols-2 md:grid-cols-4">
+            {tabs.map((t, i) => {
+              const isActive = i === active;
+              return (
+                <button
+                  key={t.id}
+                  onClick={() => setActive(i)}
+                  className={`relative text-left py-5 md:py-6 pr-4 transition-colors ${
+                    isActive ? "text-white" : "text-white/55 hover:text-white/90"
+                  }`}
+                >
+                  <span
+                    className={`absolute top-0 left-0 h-[2px] bg-mep-orange transition-all duration-500 ${
+                      isActive ? "w-full" : "w-0"
+                    }`}
+                  />
+                  <span className="text-[11px] md:text-[13px] tracking-wide font-normal">
+                    {t.eyebrow}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </section>
   );

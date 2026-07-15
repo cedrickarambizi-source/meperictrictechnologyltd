@@ -28,45 +28,59 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "glass-nav shadow-2xl"
-          : "bg-primary border-muted-foreground"
+          ? "bg-[#0A0A0F]/90 backdrop-blur-xl border-b border-white/10 shadow-2xl"
+          : "bg-transparent border-b border-white/10"
       }`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between lg:justify-center py-4">
+      <div className="container mx-auto px-6 lg:px-10">
+        <div className="flex items-center justify-between py-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
+          <Link to="/" className="flex items-center gap-3 group shrink-0">
             <div className="relative">
               <img src={logo} alt="MEP Erictric Technology Ltd" className="h-12 w-auto rounded-lg" />
               <div className="absolute inset-0 rounded-lg bg-mep-orange/0 group-hover:bg-mep-orange/10 transition-colors duration-300" />
             </div>
             <div className="hidden sm:block">
-              <span className="text-white font-bold text-sm leading-none tracking-wide">MEP ERICTRIC</span>
-              <span className="block text-white/50 text-[10px] tracking-widest uppercase">Technology Ltd</span>
+              <span className="text-white font-semibold text-sm leading-none tracking-wide">MEP ERICTRIC</span>
+              <span className="block text-white/50 text-[10px] tracking-[0.2em] uppercase mt-1">Technology Ltd</span>
             </div>
           </Link>
 
-          {/* Desktop Navigation - Center */}
-          <nav className="hidden lg:flex items-center gap-1 flex-1 justify-center">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`nav-link px-4 py-2 rounded-lg text-sm ${
-                  location.pathname === link.path ? "active bg-white/5" : ""
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
+          {/* Desktop Navigation - Bain-style minimal */}
+          <nav className="hidden lg:flex items-center gap-8">
+            {navLinks.map((link) => {
+              const active = location.pathname === link.path;
+              return (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`relative text-[13px] tracking-wide font-normal transition-colors duration-200 pb-1 ${
+                    active ? "text-white" : "text-white/70 hover:text-white"
+                  }`}
+                >
+                  {link.name}
+                  <span
+                    className={`absolute left-0 -bottom-0.5 h-[2px] bg-mep-orange transition-all duration-300 ${
+                      active ? "w-full" : "w-0"
+                    }`}
+                  />
+                </Link>
+              );
+            })}
             <a
               href="https://mepestimatecalculator.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="nav-link px-4 py-2 rounded-lg text-sm"
+              className="text-[13px] tracking-wide text-white/70 hover:text-white transition-colors duration-200"
             >
               MEP Calculator
             </a>
+            <Link
+              to="/contact"
+              className="ml-2 inline-flex items-center border border-white/40 text-white text-[11px] tracking-[0.18em] uppercase px-5 py-2.5 hover:bg-white hover:text-[#0A0A0F] transition-all duration-300"
+            >
+              Get a Quote
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -106,6 +120,13 @@ const Header = () => {
               >
                 MEP Calculator
               </a>
+            <Link
+              to="/contact"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="mt-3 mx-4 inline-flex items-center justify-center border border-white/40 text-white text-xs tracking-[0.18em] uppercase px-5 py-3 hover:bg-white hover:text-[#0A0A0F] transition-all"
+            >
+              Get a Quote
+            </Link>
             </div>
           </nav>
         )}

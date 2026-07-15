@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
@@ -102,19 +102,17 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Poppins', 'Inter', system-ui, sans-serif;
   }
 
-  h1, h2 {
-    @apply font-sans font-bold tracking-tight;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', 'Inter', system-ui, sans-serif;
+    @apply tracking-tight;
   }
 
-  h3, h4 {
-    @apply font-sans font-semibold tracking-tight;
-  }
-
-  h5, h6 {
-    @apply font-sans font-medium;
-  }
+  h1, h2 { @apply font-light; }
+  h3, h4 { @apply font-normal; }
+  h5, h6 { @apply font-medium; }
 }
 
 @layer components {
