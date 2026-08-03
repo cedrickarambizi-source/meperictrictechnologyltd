@@ -24,6 +24,8 @@ import minaffetProcurement from "@/assets/projects/minaffet-procurement.png";
 import tykApartments from "@/assets/projects/tyk-apartments.png";
 import fourSquareChurch from "@/assets/projects/four-square-church.png";
 import nyarutaramaResidential from "@/assets/projects/nyarutarama-residential.png";
+import gamicoBuilding from "@/assets/projects/gamico-building.jpg";
+import polycliniquePolyfam from "@/assets/projects/polyclinique-polyfam.jpg";
 
 export interface ProjectDetail {
   label: string;
@@ -493,6 +495,48 @@ export const latestProjects: Project[] = [
       "Installation of 1 high-performance elevator",
       "Advanced safety systems",
       "Professional commissioning",
+    ],
+  },
+  {
+    title: "GAMICO BUILDING COMPLEX",
+    image: gamicoBuilding,
+    categories: ["Electrical", "Elevator"],
+    location: "Kigali",
+    status: "ongoing",
+    details: [
+      { label: "Project Location", value: "Remera, Gasabo District, Kigali" },
+      { label: "Project Scope", value: "Four modern commercial buildings" },
+      { label: "Status", value: "Ongoing" },
+    ],
+    activities: [
+      "Elevator (lift) electrical installations",
+      "Compact substation installation",
+      "Medium Voltage (MV) cable installation",
+      "Power distribution systems",
+      "Electrical infrastructure & integration",
+      "Testing, commissioning & quality assurance",
+    ],
+  },
+  {
+    title: "POLYCLINIQUE POLYFAM",
+    image: polycliniquePolyfam,
+    categories: ["Electrical", "Elevator", "Fire Safety", "Plumbing"],
+    location: "Kigali",
+    status: "ongoing",
+    details: [
+      { label: "Project Location", value: "Remera, Kigali" },
+      { label: "Project Type", value: "Modern healthcare facility" },
+      { label: "Period of Installation", value: "2024–2025" },
+    ],
+    activities: [
+      "Electrical supply and installation across all floors",
+      "Elevator (lift) installation and commissioning",
+      "Fire alarm system installation, testing and commissioning",
+      "Generator supply and backup power system installation",
+      "Firefighting system installation",
+      "Switchgear installation and power distribution systems",
+      "Transformer installation",
+      "Medium Voltage (MV) line cabling and connections",
     ],
   },
 ];
