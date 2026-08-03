@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @layer base {
   :root {
@@ -100,19 +100,35 @@
     @apply border-border;
   }
 
+  * {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Poppins', 'Inter', system-ui, sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', 'Inter', system-ui, sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
     @apply tracking-tight;
   }
 
-  h1, h2 { @apply font-light; }
-  h3, h4 { @apply font-normal; }
-  h5, h6 { @apply font-medium; }
+  h1 { @apply font-extrabold; }
+  h2, h3 { @apply font-bold; }
+  h4, h5, h6 { @apply font-semibold; }
+
+  button, .btn-primary, .btn-secondary, .btn-ghost {
+    @apply font-semibold;
+  }
+
+  nav a { @apply font-medium; }
 }
 
 @layer components {
