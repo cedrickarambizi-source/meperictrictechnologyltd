@@ -14,9 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Poppins", "Inter", "system-ui", "sans-serif"],
-        heading: ["Poppins", "Inter", "system-ui", "sans-serif"],
-        display: ["Poppins", "Inter", "system-ui", "sans-serif"],
+        sans: ["Inter", "system-ui", "sans-serif"],
+        heading: ["Inter", "system-ui", "sans-serif"],
+        display: ["Inter", "system-ui", "sans-serif"],
         mono: ["Inter", "monospace"],
       },
       colors: {
