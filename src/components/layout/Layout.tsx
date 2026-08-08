@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { FileText } from "lucide-react";
+import { FileText, Mail, Phone, MapPin } from "lucide-react";
 import TopInfoBar from "./TopInfoBar";
 import Header from "./Header";
 import Footer from "./Footer";
