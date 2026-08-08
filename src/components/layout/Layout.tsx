@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { FileText } from "lucide-react";
+import { FileText, Mail, Phone, MapPin } from "lucide-react";
 import TopInfoBar from "./TopInfoBar";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -20,16 +20,43 @@ const Layout = ({ children }: LayoutProps) => {
       <main className="flex-1">{children}</main>
       <Footer />
 
-      {/* Fixed Company Profile button - bottom left */}
-      <a
-        href="https://drive.google.com/file/d/1rSXmarbXMECfryBugomxR1DQU3jkHUec/view?usp=drive_link"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 left-6 z-[90] inline-flex items-center gap-2 bg-primary border border-white/20 text-white font-medium px-4 py-3 rounded-xl text-sm hover:bg-primary/80 transition-all duration-300 shadow-lg"
-      >
-        <FileText className="h-4 w-4" />
-        Company Profile
-      </a>
+      {/* Fixed contact card + Company Profile button - bottom left */}
+      <div className="fixed bottom-6 left-6 z-[90] flex flex-col gap-2">
+        <div className="bg-[#0A0A0F]/95 backdrop-blur-xl border border-white/10 text-white/80 text-xs rounded-xl p-3 shadow-lg max-w-[260px] hidden sm:flex flex-col gap-2">
+          <a
+            href="https://maps.app.goo.gl/UMiHCVPAyGDR3C9B6"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:text-primary transition-colors"
+          >
+            <MapPin className="h-3.5 w-3.5 shrink-0" />
+            <span>KG 684 St, Kigali, Kacyiru</span>
+          </a>
+          <a
+            href="tel:+250782750432"
+            className="flex items-center gap-2 hover:text-primary transition-colors"
+          >
+            <Phone className="h-3.5 w-3.5 shrink-0" />
+            <span>+250 782 750 432 / +250 788 307 952</span>
+          </a>
+          <a
+            href="mailto:info@we-mep.rw"
+            className="flex items-center gap-2 hover:text-primary transition-colors"
+          >
+            <Mail className="h-3.5 w-3.5 shrink-0" />
+            <span>info@we-mep.rw</span>
+          </a>
+        </div>
+        <a
+          href="https://drive.google.com/file/d/1rSXmarbXMECfryBugomxR1DQU3jkHUec/view?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-primary border border-white/20 text-white font-medium px-4 py-3 rounded-xl text-sm hover:bg-primary/80 transition-all duration-300 shadow-lg w-fit"
+        >
+          <FileText className="h-4 w-4" />
+          Company Profile
+        </a>
+      </div>
     </div>
   );
 };
