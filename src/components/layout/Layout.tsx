@@ -4,7 +4,6 @@ import TopInfoBar from "./TopInfoBar";
 import Header from "./Header";
 import Footer from "./Footer";
 import WelcomePopup from "./WelcomePopup";
-import WhatsAppButton from "./WhatsAppButton";
 import SocialSidebar from "./SocialSidebar";
 
 interface LayoutProps {
