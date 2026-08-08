@@ -30,21 +30,21 @@ const Layout = ({ children }: LayoutProps) => {
             className="flex items-center gap-2 hover:text-primary transition-colors"
           >
             <MapPin className="h-3.5 w-3.5 shrink-0" />
-            <span>KG 684 St, Kigali, Kacyiru</span>
+            <span>&nbsp;Kigali,Remera, Gisimenti</span>
           </a>
           <a
-            href="tel:+250782750432"
+            href="tel:+250788645567"
             className="flex items-center gap-2 hover:text-primary transition-colors"
           >
             <Phone className="h-3.5 w-3.5 shrink-0" />
-            <span>+250 782 750 432 / +250 788 307 952</span>
+            <span>+25078-864-5567</span>
           </a>
           <a
-            href="mailto:info@we-mep.rw"
+            href="mailto:info@meperictrictech.com"
             className="flex items-center gap-2 hover:text-primary transition-colors"
           >
             <Mail className="h-3.5 w-3.5 shrink-0" />
-            <span>info@we-mep.rw</span>
+            <span>info@meperictrictech.com</span>
           </a>
         </div>
         <a
