@@ -14,7 +14,6 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="min-h-screen flex flex-col">
       <WelcomePopup />
-      <WhatsAppButton />
       <SocialSidebar />
       <TopInfoBar />
       <Header />
