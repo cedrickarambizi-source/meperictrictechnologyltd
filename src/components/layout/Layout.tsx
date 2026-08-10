@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 import { FileText, Mail, Phone, MapPin } from "lucide-react";
-import TopInfoBar from "./TopInfoBar";
 import Header from "./Header";
 import Footer from "./Footer";
 import WelcomePopup from "./WelcomePopup";
@@ -15,7 +14,6 @@ const Layout = ({ children }: LayoutProps) => {
     <div className="min-h-screen flex flex-col">
       <WelcomePopup />
       <SocialSidebar />
-      <TopInfoBar />
       <Header />
       <main className="flex-1">{children}</main>
       <Footer />
