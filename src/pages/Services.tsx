@@ -131,19 +131,22 @@ const services: ServiceData[] = [
   },
 ];
 
+export const slugify = (value: string) =>
+  value.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
 const ServiceCard = ({ service, index }: { service: ServiceData; index: number }) => {
   const [expanded, setExpanded] = useState(false);
   const isReversed = index % 2 === 1;
 
   return (
     <ScrollReveal delay={index * 0.05}>
-      <div className={`grid lg:grid-cols-2 gap-10 items-start ${isReversed ? "" : ""}`}>
+      <div id={slugify(service.title)} className="grid lg:grid-cols-2 gap-10 items-start scroll-mt-28">
         {/* Image */}
         <div className={`rounded-xl overflow-hidden shadow-lg bg-muted/30 ${isReversed ? "lg:order-2" : ""}`}>
           <motion.div whileHover={{ scale: 1.02 }} transition={{ duration: 0.4 }}>
             <img
               src={service.image}
-              alt={service.title}
+              alt={`${service.title} by MEPerictric Technology engineers in Kigali, Rwanda`}
               loading="lazy"
               decoding="async"
               className="w-full h-80 lg:h-96 object-cover"
@@ -232,8 +235,8 @@ const Services = () => {
   return (
     <Layout>
       <SEOHead
-        title="MEP & Elevator Services | Kigali Engineering Experts"
-        description="Professional electrical, plumbing, HVAC, and elevator installation services in Rwanda."
+        title="MEP & Elevator Services in Kigali, Rwanda | MEPerictric"
+        description="Electrical, elevator installation and maintenance, CCTV, fiber network, and water treatment services delivered by licensed MEP engineers in Kigali, Rwanda."
         canonical="/services"
       />
       <StructuredData
@@ -244,14 +247,47 @@ const Services = () => {
         ])}
       />
       <StructuredData id="faq-schema" data={faqSchema} />
+      <StructuredData
+        id="services-itemlist"
+        data={{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: "MEP & Elevator Services in Rwanda",
+          itemListElement: services.map((service, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            item: {
+              "@type": "Service",
+              name: service.title,
+              description: service.description,
+              serviceType: service.title,
+              url: `https://meperictrictech.com/services#${slugify(service.title)}`,
+              areaServed: { "@type": "Country", name: "Rwanda" },
+              provider: {
+                "@type": "Organization",
+                name: "MEPerictric Technology Ltd",
+                url: "https://meperictrictech.com",
+              },
+            },
+          })),
+        }}
+      />
       {/* Hero */}
       <section className="bg-primary py-20 lg:py-28">
         <div className="container mx-auto px-4 text-center text-primary-foreground">
           <ScrollReveal>
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h1>
+            <nav aria-label="Breadcrumb" className="mb-4 text-sm opacity-80">
+              <Link to="/" className="hover:underline">Home</Link>
+              <span className="mx-2">/</span>
+              <span aria-current="page">Services</span>
+            </nav>
+            <h1 className="text-3xl md:text-4xl font-bold mb-4">
+              MEP &amp; Elevator Engineering Services in Kigali, Rwanda
+            </h1>
             <p className="text-lg opacity-90 max-w-2xl mx-auto">
-              Comprehensive MEP, technology, and infrastructure solutions tailored to your project needs.
-              From design to maintenance, we deliver excellence at every stage.
+              Design, installation, testing, and maintenance of electrical, elevator, security,
+              network, and water treatment systems for commercial, institutional, and residential
+              buildings across Rwanda and East Africa.
             </p>
           </ScrollReveal>
         </div>
@@ -260,13 +296,44 @@ const Services = () => {
       {/* Services List */}
       <section className="py-16 lg:py-24 bg-background">
         <div className="container mx-auto px-4">
+          {/* Jump links */}
+          <nav aria-label="Service categories" className="mb-14">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">
+              Browse our services
+            </h2>
+            <ul className="flex flex-wrap gap-3">
+              {services.map((service) => (
+                <li key={service.title}>
+                  <a
+                    href={`#${slugify(service.title)}`}
+                    className="inline-block text-sm font-medium border border-border rounded-full px-4 py-2 hover:border-primary hover:text-primary transition-colors"
+                  >
+                    {service.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
           <div className="space-y-20">
             {services.map((service, index) => (
               <ServiceCard key={service.title} service={service} index={index} />
             ))}
           </div>
+
+          {/* Related internal links */}
+          <div className="mt-20 border-t border-border pt-10">
+            <h2 className="text-xl font-bold mb-4">Explore related pages</h2>
+            <ul className="flex flex-wrap gap-x-8 gap-y-3 text-primary font-medium">
+              <li><Link to="/projects" className="hover:underline">Completed MEP &amp; elevator projects in Rwanda</Link></li>
+              <li><Link to="/fujihd-elevator" className="hover:underline">FUJIHD elevator partnership</Link></li>
+              <li><Link to="/about" className="hover:underline">About our engineering team</Link></li>
+              <li><Link to="/contact" className="hover:underline">Request a project quote</Link></li>
+            </ul>
+          </div>
         </div>
       </section>
+
 
       {/* FAQ */}
       <FAQSection />
