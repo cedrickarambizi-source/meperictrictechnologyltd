@@ -131,19 +131,22 @@ const services: ServiceData[] = [
   },
 ];
 
+export const slugify = (value: string) =>
+  value.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
 const ServiceCard = ({ service, index }: { service: ServiceData; index: number }) => {
   const [expanded, setExpanded] = useState(false);
   const isReversed = index % 2 === 1;
 
   return (
     <ScrollReveal delay={index * 0.05}>
-      <div className={`grid lg:grid-cols-2 gap-10 items-start ${isReversed ? "" : ""}`}>
+      <div id={slugify(service.title)} className="grid lg:grid-cols-2 gap-10 items-start scroll-mt-28">
         {/* Image */}
         <div className={`rounded-xl overflow-hidden shadow-lg bg-muted/30 ${isReversed ? "lg:order-2" : ""}`}>
           <motion.div whileHover={{ scale: 1.02 }} transition={{ duration: 0.4 }}>
             <img
               src={service.image}
-              alt={service.title}
+              alt={`${service.title} by MEPerictric Technology engineers in Kigali, Rwanda`}
               loading="lazy"
               decoding="async"
               className="w-full h-80 lg:h-96 object-cover"
