@@ -32,8 +32,8 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "MEP Erictric Technology Ltd",
-  url: "https://meperictrictechnologyltd.lovable.app",
-  logo: "https://meperictrictechnologyltd.lovable.app/og-image.png",
+  url: "https://meperictrictech.com",
+  logo: "https://meperictrictech.com/og-image.png",
   description: "Leading MEP contractor in Kigali specializing in elevator installation, electrical systems, and mechanical engineering services.",
   foundingDate: "2016",
   address: {
@@ -57,8 +57,8 @@ export const localBusinessSchema = {
   "@type": "ProfessionalService",
   additionalType: "https://schema.org/ElectricalContractor",
   name: "MEP Erictric Technology Ltd",
-  url: "https://meperictrictechnologyltd.lovable.app",
-  image: "https://meperictrictechnologyltd.lovable.app/og-image.png",
+  url: "https://meperictrictech.com",
+  image: "https://meperictrictech.com/og-image.png",
   telephone: "+250788399856",
   email: "Hopetechnical1@gmail.com",
   address: {
@@ -101,14 +101,14 @@ export const siteNavigationSchema = {
   "@type": "SiteNavigationElement",
   name: "Main Navigation",
   hasPart: [
-    { "@type": "WebPage", name: "Home", url: "https://meperictrictechnologyltd.lovable.app/" },
-    { "@type": "WebPage", name: "Projects", url: "https://meperictrictechnologyltd.lovable.app/projects" },
-    { "@type": "WebPage", name: "Partners & Clients", url: "https://meperictrictechnologyltd.lovable.app/partners" },
-    { "@type": "WebPage", name: "Meet Our Team", url: "https://meperictrictechnologyltd.lovable.app/team" },
-    { "@type": "WebPage", name: "Services", url: "https://meperictrictechnologyltd.lovable.app/services" },
-    { "@type": "WebPage", name: "About Us", url: "https://meperictrictechnologyltd.lovable.app/about" },
-    { "@type": "WebPage", name: "Portfolio", url: "https://meperictrictechnologyltd.lovable.app/portfolio" },
-    { "@type": "WebPage", name: "Contact", url: "https://meperictrictechnologyltd.lovable.app/contact" },
+    { "@type": "WebPage", name: "Home", url: "https://meperictrictech.com/" },
+    { "@type": "WebPage", name: "Projects", url: "https://meperictrictech.com/projects" },
+    { "@type": "WebPage", name: "Partners & Clients", url: "https://meperictrictech.com/partners" },
+    { "@type": "WebPage", name: "Meet Our Team", url: "https://meperictrictech.com/team" },
+    { "@type": "WebPage", name: "Services", url: "https://meperictrictech.com/services" },
+    { "@type": "WebPage", name: "About Us", url: "https://meperictrictech.com/about" },
+    { "@type": "WebPage", name: "Portfolio", url: "https://meperictrictech.com/portfolio" },
+    { "@type": "WebPage", name: "Contact", url: "https://meperictrictech.com/contact" },
   ],
 };
 
@@ -119,7 +119,7 @@ export const buildBreadcrumbSchema = (items: { name: string; path: string }[]) =
     "@type": "ListItem",
     position: i + 1,
     name: item.name,
-    item: `https://meperictrictechnologyltd.lovable.app${item.path}`,
+    item: `https://meperictrictech.com${item.path}`,
   })),
 });
 
