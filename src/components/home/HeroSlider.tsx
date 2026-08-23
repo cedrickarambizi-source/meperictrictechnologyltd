@@ -6,7 +6,7 @@ const tabs = [
   {
     id: "mep",
     eyebrow: "MEP Engineering",
-    title: "Powering Rwanda & East Africa With Excellence in MEP",
+    title: "MEP & Elevator Engineering for Rwanda's Landmark Buildings",
     href: "/services",
   },
   {
