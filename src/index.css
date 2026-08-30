@@ -340,8 +340,8 @@
 
   /* Stat card */
   .stat-card {
-    @apply bg-primary text-primary-foreground p-8 rounded-xl text-center
-           transition-all duration-300 hover:shadow-xl hover:scale-[1.02];
+    @apply bg-secondary text-foreground p-8 rounded-[28px] text-center
+           transition-all duration-300 shadow-none;
   }
 
   /* Process step */
@@ -351,7 +351,7 @@
 
   .process-step::before {
     content: '';
-    @apply absolute left-6 top-14 w-0.5 h-full bg-border -translate-x-1/2;
+    @apply absolute left-6 top-14 w-px h-full bg-border -translate-x-1/2;
   }
 
   .process-step:last-child::before {
@@ -360,15 +360,16 @@
 
   .process-number {
     @apply w-12 h-12 rounded-full bg-primary text-primary-foreground
-           flex items-center justify-center font-bold text-lg flex-shrink-0
-           shadow-md;
+           flex items-center justify-center font-semibold text-lg flex-shrink-0
+           shadow-none;
   }
 
   /* Pro card */
   .pro-card {
-    @apply bg-card border border-border/50 rounded-xl p-6
-           transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
+    @apply bg-card rounded-[28px] p-6 border-0 shadow-none
+           transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary/60;
   }
+
 
   /* Shimmer animation */
   @keyframes shimmer {
