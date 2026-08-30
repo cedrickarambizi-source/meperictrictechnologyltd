@@ -6,71 +6,92 @@
 
 @layer base {
   :root {
-    /* 2026 Dark Premium Palette */
-    --background: 0 0% 100%;
-    --foreground: 230 25% 8%;
+    /* Apple-inspired pale canvas system */
+    --background: 0 0% 100%;              /* Paper #ffffff */
+    --foreground: 240 3% 12%;             /* Primary Ink #1d1d1f */
 
     --card: 0 0% 100%;
-    --card-foreground: 230 25% 8%;
+    --card-foreground: 240 3% 12%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 230 25% 8%;
+    --popover: 240 20% 99%;               /* Faded Surface #fafafc */
+    --popover-foreground: 240 3% 12%;
 
-    /* Deep Electric Blue - Primary Brand */
-    --primary: 216 62% 27%;
+    /* Single interactive accent — Apple blue #0071e3 */
+    --primary: 210 100% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 25% 95%;
-    --secondary-foreground: 216 62% 27%;
+    --secondary: 240 12% 92%;             /* Cool Wash #e8e8ed */
+    --secondary-foreground: 240 3% 12%;
 
-    --muted: 210 20% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 240 11% 96%;                 /* Canvas #f5f5f7 */
+    --muted-foreground: 0 0% 44%;         /* Mid Gray #707070 */
 
-    --accent: 216 62% 27%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 240 12% 92%;
+    --accent-foreground: 240 3% 12%;
 
-    --destructive: 24 100% 50%;
+    --destructive: 22 100% 36%;           /* Ember #b64400 */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 216 62% 27%;
-    --radius: 0.75rem;
+    --border: 0 0% 84%;                   /* Hairline #d6d6d6 */
+    --input: 0 0% 84%;
+    --ring: 210 100% 45%;
+    --radius: 1.75rem;                    /* 28px */
 
-    /* MEP 2026 Colors */
+    /* Neutrals */
+    --ink: 240 3% 12%;
+    --ink-deep-gray: 0 0% 28%;            /* #474747 */
+    --ink-mid-gray: 0 0% 44%;             /* #707070 */
+    --quiet-dot: 240 1% 47%;              /* #777779 */
+    --hairline: 0 0% 84%;
+    --cool-wash: 240 12% 92%;
+    --canvas: 240 11% 96%;
+    --faded-surface: 240 20% 99%;
+    --paper: 0 0% 100%;
+
+    /* Product finish swatches */
+    --finish-sky: 200 22% 83%;
+    --finish-citrus: 59 52% 71%;
+    --finish-starlight: 33 51% 88%;
+    --finish-silver: 210 3% 89%;
+    --finish-blush: 0 33% 86%;
+    --finish-indigo: 220 18% 42%;
+    --finish-midnight: 217 18% 22%;
+
+    /* MEP brand (retained for dark hero / dark bands) */
     --mep-blue-dark: 216 62% 27%;
     --mep-blue-deep: 220 72% 17%;
     --mep-blue-light: 210 60% 50%;
-    --mep-orange: 24 100% 50%;
-    --mep-orange-hover: 24 100% 42%;
-    --mep-gray: 220 13% 40%;
-    --mep-gray-light: 220 14% 96%;
+    --mep-orange: 22 100% 36%;
+    --mep-orange-hover: 22 100% 30%;
+    --mep-gray: 0 0% 44%;
+    --mep-gray-light: 240 11% 96%;
     --mep-navy-overlay: 220 72% 17%;
 
-    /* 2026 Dark Sections */
+    /* Dark sections */
     --dark-bg: 240 20% 4%;
     --dark-navy: 220 60% 15%;
     --dark-card: 220 40% 10%;
     --dark-surface: 230 25% 8%;
 
     /* Sidebar */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 240 20% 99%;
+    --sidebar-foreground: 0 0% 28%;
+    --sidebar-primary: 240 3% 12%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 11% 96%;
+    --sidebar-accent-foreground: 240 3% 12%;
+    --sidebar-border: 0 0% 84%;
+    --sidebar-ring: 210 100% 45%;
 
     /* Team Page Colors */
-    --team-bg: 220 33% 97%;
-    --team-heading: 216 56% 9%;
-    --team-subtitle: 220 9% 46%;
-    --team-hero: 220 33% 97%;
+    --team-bg: 240 11% 96%;
+    --team-heading: 240 3% 12%;
+    --team-subtitle: 0 0% 44%;
+    --team-hero: 240 11% 96%;
 
-    --accent-blue: 227 100% 59%;
+    --accent-blue: 210 100% 45%;
   }
+
 
   .dark {
     --background: 240 20% 4%;
@@ -107,9 +128,10 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
     font-family: 'Inter', system-ui, sans-serif;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 400;
-    line-height: 1.65;
+    line-height: 1.47;
+    letter-spacing: -0.022em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -117,19 +139,40 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Inter', system-ui, sans-serif;
-    @apply tracking-tight;
   }
 
-  h1 { @apply font-extrabold; }
-  h2, h3 { @apply font-bold; }
-  h4, h5, h6 { @apply font-semibold; }
+  /* Apple display register: heavy weight, tight negative tracking */
+  h1 {
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.018em;
+  }
+
+  h2 {
+    font-weight: 700;
+    line-height: 1.07;
+    letter-spacing: -0.014em;
+  }
+
+  h3 {
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.008em;
+  }
+
+  h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.004em;
+  }
 
   button, .btn-primary, .btn-secondary, .btn-ghost {
     @apply font-semibold;
   }
 
-  nav a { @apply font-medium; }
+  nav a { @apply font-medium; letter-spacing: -0.01em; }
 }
+
 
 @layer components {
   /* Glassmorphism */
@@ -155,26 +198,76 @@
     );
   }
 
-  /* Section styles */
+  /* Section styles — a single blue thread, no heavy rules */
   .section-divider {
-    @apply w-16 h-1 bg-mep-orange mx-auto rounded-full;
+    @apply w-10 h-px bg-primary mx-auto;
   }
 
   .section-divider-left {
-    @apply w-16 h-1 bg-mep-orange rounded-full;
+    @apply w-10 h-px bg-primary;
   }
 
   .info-bar {
     background: hsl(var(--dark-bg));
   }
 
+  /* Whispered headline register */
   .section-heading {
-    @apply text-2xl md:text-3xl lg:text-4xl font-bold;
+    @apply text-3xl md:text-5xl lg:text-[3.5rem];
+    font-weight: 700;
+    line-height: 1.07;
+    letter-spacing: -0.005em;
+  }
+
+  .display-heading {
+    @apply text-4xl md:text-6xl lg:text-[6rem];
+    font-weight: 700;
+    line-height: 1.04;
+    letter-spacing: -0.015em;
   }
 
   .section-subheading {
-    @apply text-lg text-muted-foreground max-w-2xl mx-auto;
+    @apply text-xl md:text-[1.75rem] text-muted-foreground max-w-2xl mx-auto;
+    font-weight: 600;
+    line-height: 1.14;
+    letter-spacing: 0.007em;
   }
+
+  .eyebrow {
+    @apply text-primary text-xs font-semibold uppercase tracking-[0.18em];
+  }
+
+  /* Borderless, shadowless card on paper or canvas */
+  .apple-card {
+    @apply bg-card rounded-[28px] overflow-hidden border-0 shadow-none
+           transition-all duration-500;
+  }
+
+  .apple-card:hover {
+    @apply -translate-y-1 bg-secondary/60;
+  }
+
+  /* Alternating bands replace dividers */
+  .band-paper {
+    background: hsl(var(--paper));
+  }
+
+  .band-canvas {
+    background: hsl(var(--canvas));
+  }
+
+  .pill-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-primary
+           text-primary-foreground font-semibold px-7 py-3 shadow-none
+           transition-colors duration-300 hover:bg-primary/90;
+  }
+
+  .pill-quiet {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-secondary
+           text-foreground font-semibold px-7 py-3 shadow-none
+           transition-colors duration-300 hover:bg-secondary/70;
+  }
+
 
   /* Dark section backgrounds */
   .bg-dark {
@@ -193,35 +286,31 @@
     background: linear-gradient(180deg, #081F47 0%, hsl(var(--mep-blue-dark)) 100%);
   }
 
-  /* Card hover effects */
+  /* Card hover effects — borderless, shadowless */
   .card-hover {
-    @apply transition-all duration-500 hover:shadow-2xl hover:-translate-y-1;
+    @apply transition-all duration-500 hover:-translate-y-1;
   }
 
-  /* Orange glow effect */
-  .orange-glow {
-    box-shadow: 0 0 20px hsl(24 100% 50% / 0.3), 0 0 60px hsl(24 100% 50% / 0.1);
-  }
-
+  /* Legacy glow hooks kept inert (no decorative shadows) */
+  .orange-glow,
   .orange-glow-hover:hover {
-    box-shadow: 0 0 20px hsl(24 100% 50% / 0.4), 0 0 60px hsl(24 100% 50% / 0.15);
+    box-shadow: none;
   }
 
-  /* Buttons */
+  /* Buttons — pill shaped, no visible containers, no shadow */
   .btn-primary {
-    @apply bg-mep-orange text-white font-semibold px-8 py-4 rounded-xl
-           hover:bg-mep-orange-hover transition-all duration-300
-           shadow-lg hover:shadow-xl;
+    @apply bg-primary text-primary-foreground font-semibold px-8 py-3.5 rounded-full
+           hover:bg-primary/90 transition-colors duration-300 shadow-none;
   }
 
   .btn-secondary {
-    @apply border-2 border-white text-white font-semibold px-8 py-4 rounded-xl
-           hover:bg-white hover:text-primary transition-all duration-300;
+    @apply border border-white/60 text-white font-semibold px-8 py-3.5 rounded-full
+           hover:bg-white hover:text-foreground transition-colors duration-300;
   }
 
   .btn-ghost {
-    @apply text-white/90 font-semibold px-6 py-4 rounded-xl
-           hover:bg-white/10 transition-all duration-300;
+    @apply text-white/90 font-semibold px-6 py-3.5 rounded-full
+           hover:bg-white/10 transition-colors duration-300;
   }
 
   /* Nav link */
@@ -235,8 +324,9 @@
 
   .nav-link.active::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-full h-0.5 bg-mep-orange rounded-full;
+    @apply absolute bottom-0 left-0 w-full h-px bg-primary;
   }
+
 
   /* M.E.P Special Button Bounce */
   .mep-special-btn {
@@ -250,8 +340,8 @@
 
   /* Stat card */
   .stat-card {
-    @apply bg-primary text-primary-foreground p-8 rounded-xl text-center
-           transition-all duration-300 hover:shadow-xl hover:scale-[1.02];
+    @apply bg-secondary text-foreground p-8 rounded-[28px] text-center
+           transition-all duration-300 shadow-none;
   }
 
   /* Process step */
@@ -261,7 +351,7 @@
 
   .process-step::before {
     content: '';
-    @apply absolute left-6 top-14 w-0.5 h-full bg-border -translate-x-1/2;
+    @apply absolute left-6 top-14 w-px h-full bg-border -translate-x-1/2;
   }
 
   .process-step:last-child::before {
@@ -270,15 +360,16 @@
 
   .process-number {
     @apply w-12 h-12 rounded-full bg-primary text-primary-foreground
-           flex items-center justify-center font-bold text-lg flex-shrink-0
-           shadow-md;
+           flex items-center justify-center font-semibold text-lg flex-shrink-0
+           shadow-none;
   }
 
   /* Pro card */
   .pro-card {
-    @apply bg-card border border-border/50 rounded-xl p-6
-           transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
+    @apply bg-card rounded-[28px] p-6 border-0 shadow-none
+           transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary/60;
   }
+
 
   /* Shimmer animation */
   @keyframes shimmer {

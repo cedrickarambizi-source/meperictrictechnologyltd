@@ -83,7 +83,30 @@ export default {
         "team-subtitle": "hsl(var(--team-subtitle))",
         "team-hero": "hsl(var(--team-hero))",
         "accent-blue": "hsl(var(--accent-blue))",
+        // Apple-style neutrals
+        ink: {
+          DEFAULT: "hsl(var(--ink))",
+          deep: "hsl(var(--ink-deep-gray))",
+          mid: "hsl(var(--ink-mid-gray))",
+          quiet: "hsl(var(--quiet-dot))",
+        },
+        hairline: "hsl(var(--hairline))",
+        "cool-wash": "hsl(var(--cool-wash))",
+        canvas: "hsl(var(--canvas))",
+        "faded-surface": "hsl(var(--faded-surface))",
+        paper: "hsl(var(--paper))",
+        // Product finish swatches
+        finish: {
+          sky: "hsl(var(--finish-sky))",
+          citrus: "hsl(var(--finish-citrus))",
+          starlight: "hsl(var(--finish-starlight))",
+          silver: "hsl(var(--finish-silver))",
+          blush: "hsl(var(--finish-blush))",
+          indigo: "hsl(var(--finish-indigo))",
+          midnight: "hsl(var(--finish-midnight))",
+        },
       },
+
       boxShadow: {
         "team": "0 4px 20px -4px rgba(0, 0, 0, 0.3)",
         "team-hover": "0 20px 40px -8px rgba(0, 0, 0, 0.4), 0 0 30px -5px hsl(40 85% 55% / 0.2)",
