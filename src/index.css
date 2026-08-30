@@ -198,26 +198,76 @@
     );
   }
 
-  /* Section styles */
+  /* Section styles — a single blue thread, no heavy rules */
   .section-divider {
-    @apply w-16 h-1 bg-mep-orange mx-auto rounded-full;
+    @apply w-10 h-px bg-primary mx-auto;
   }
 
   .section-divider-left {
-    @apply w-16 h-1 bg-mep-orange rounded-full;
+    @apply w-10 h-px bg-primary;
   }
 
   .info-bar {
     background: hsl(var(--dark-bg));
   }
 
+  /* Whispered headline register */
   .section-heading {
-    @apply text-2xl md:text-3xl lg:text-4xl font-bold;
+    @apply text-3xl md:text-5xl lg:text-[3.5rem];
+    font-weight: 700;
+    line-height: 1.07;
+    letter-spacing: -0.005em;
+  }
+
+  .display-heading {
+    @apply text-4xl md:text-6xl lg:text-[6rem];
+    font-weight: 700;
+    line-height: 1.04;
+    letter-spacing: -0.015em;
   }
 
   .section-subheading {
-    @apply text-lg text-muted-foreground max-w-2xl mx-auto;
+    @apply text-xl md:text-[1.75rem] text-muted-foreground max-w-2xl mx-auto;
+    font-weight: 600;
+    line-height: 1.14;
+    letter-spacing: 0.007em;
   }
+
+  .eyebrow {
+    @apply text-primary text-xs font-semibold uppercase tracking-[0.18em];
+  }
+
+  /* Borderless, shadowless card on paper or canvas */
+  .apple-card {
+    @apply bg-card rounded-[28px] overflow-hidden border-0 shadow-none
+           transition-all duration-500;
+  }
+
+  .apple-card:hover {
+    @apply -translate-y-1 bg-secondary/60;
+  }
+
+  /* Alternating bands replace dividers */
+  .band-paper {
+    background: hsl(var(--paper));
+  }
+
+  .band-canvas {
+    background: hsl(var(--canvas));
+  }
+
+  .pill-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-primary
+           text-primary-foreground font-semibold px-7 py-3 shadow-none
+           transition-colors duration-300 hover:bg-primary/90;
+  }
+
+  .pill-quiet {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-secondary
+           text-foreground font-semibold px-7 py-3 shadow-none
+           transition-colors duration-300 hover:bg-secondary/70;
+  }
+
 
   /* Dark section backgrounds */
   .bg-dark {
