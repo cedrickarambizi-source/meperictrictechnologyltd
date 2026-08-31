@@ -21,7 +21,7 @@ import fidelleHirwa from "@/assets/team/fidelle-hirwa.png";
 
 const teamMembers = [
   {
-    name: "Nzabonimana Eric",
+    name: "MR. Nzabonimana Eric",
     role: "Founder & CEO",
     description: "Visionary leader with 15+ years in MEP engineering",
     photo: nzabonimamaEric,
@@ -30,8 +30,8 @@ const teamMembers = [
     email: "eric.nzabonimana@meperictrictech.com",
   },
   {
-    name: "Jean Paul Tuyambaze",
-    role: "Operations Manager",
+    name: "ENG. Jean Paul Tuyambaze",
+    role: "Chief Operation Officer ",
     description: "Expert in project delivery and operations excellence",
     photo: jeanPaulTuyambaze,
     category: "Operations",
@@ -41,7 +41,7 @@ const teamMembers = [
   },
   {
     name: "Karambizi Cedric",
-    role: "Marketing Director",
+    role: "Sales & Marketing Director",
     description: "Strategic marketing and business development leader",
     photo: KarambiziCedric,
     category: "Leadership",
