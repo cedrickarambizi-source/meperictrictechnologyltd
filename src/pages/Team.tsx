@@ -67,6 +67,15 @@ const teamMembers = [
     email: "callixte.ndayisenga@meperictrictech.com",
   },
   {
+    name: "Jimmy Bimenyimana",
+    role: "Senior Transmission Line Engineer",
+    description: "Specialist in high voltage transmission infrastructure",
+    photo: jimmyBimenyimana,
+    category: "Engineering",
+    phones: [],
+    email: "jimmy.bimenyimana@meperictrictech.com",
+  },
+  {
     name: "NGABONZIZA Benjamin",
     role: "Senior Plumbing Engineer",
     description: "Expert in plumbing systems and water infrastructure",
