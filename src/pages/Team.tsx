@@ -16,7 +16,7 @@ import umutoniwaseDivine from "@/assets/team/umutoniwase-divine.jpg";
 import fabriceTuyizere from "@/assets/team/fabrice-tuyizere.jpg";
 import ngabonzizaBenjamin from "@/assets/team/ngabonziza-benjamin-plumbing.jpg";
 import KarambiziCedric from "@/assets/team/cedric-karambizi.jpg";
-import isaacMuhoza from "@/assets/team/isaac-muhoza.jpg";
+
 import fidelleHirwa from "@/assets/team/fidelle-hirwa.png";
 
 const teamMembers = [
@@ -83,16 +83,6 @@ const teamMembers = [
     category: "Engineering",
     phones: [],
     email: "benjamin.ngabonziza@meperictrictech.com",
-  },
-  {
-    name: "Isaac Muhoza",
-    role: "MEP Design Engineer",
-    description: "Specialist in MEP systems design and coordination",
-    photo: isaacMuhoza,
-    category: "Engineering",
-    phones: ["+250 787 305 101"],
-    imagePosition: "center 20%",
-    email: "isaac.muhoza@meperictrictech.com",
   },
   {
     name: "Fabrice Izereyesu",
