@@ -12,7 +12,7 @@ const tabs = [
   {
     id: "elevator",
     eyebrow: "FUJIHD Elevator Partner",
-    title: "Trusted Elevator Solutions, Engineered Since 2019",
+    title: "Trusted Elevator Solutions, Engineered Since 2016",
     href: "/fujihd-elevator",
   },
   {
