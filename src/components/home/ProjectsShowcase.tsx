@@ -111,19 +111,16 @@ const ProjectsShowcase = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="py-24 lg:py-32 relative overflow-hidden bg-[#12356e]">
-      {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-mep-orange/3 rounded-full blur-3xl pointer-events-none" />
-
+    <section className="py-[75px] relative overflow-hidden bg-foreground">
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-flex items-center gap-2 bg-mep-orange/15 border border-mep-orange/30 rounded-full px-5 py-2 mb-6">
-            <span className="text-primary font-semibold uppercase tracking-widest text-xs">
+         <div className="text-center max-w-3xl mx-auto mb-[45px]">
+           <span className="inline-flex items-center gap-2 mb-[19px]">
+             <span className="text-white/55 font-bold uppercase font-mono text-xs">
               What We Have Done
             </span>
           </span>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-white mb-4">
+           <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-[11px]">
             Our Completed Projects
           </h2>
           <p className="text-white/50 text-lg leading-relaxed max-w-2xl mx-auto">
@@ -141,7 +138,7 @@ const ProjectsShowcase = () => {
                   key={index}
                   className="flex-[0_0_100%] min-w-0 md:flex-[0_0_50%] lg:flex-[0_0_33.333%] pl-4"
                 >
-                  <div className="bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 group h-full flex flex-col">
+                   <div className="bg-card rounded-[15px] overflow-hidden shadow-none transition-colors duration-300 group h-full flex flex-col">
                     {/* Image */}
                     <div className="relative aspect-[4/3] overflow-hidden">
                       <img
@@ -155,8 +152,8 @@ const ProjectsShowcase = () => {
                       <div className="absolute top-3 right-3">
                         <span className={`px-3 py-1 rounded-full text-xs font-bold ${
                           project.status === "Ongoing"
-                            ? "bg-mep-orange text-white"
-                            : "bg-[#0D1B4B] text-white"
+                             ? "bg-mep-orange text-white"
+                             : "bg-foreground text-white"
                         }`}>
                           {project.status}
                         </span>
@@ -172,7 +169,7 @@ const ProjectsShowcase = () => {
                     </div>
 
                     {/* Content */}
-                    <div className="p-5 flex-1 flex flex-col">
+                     <div className="p-[19px] flex-1 flex flex-col">
                       <h3 className="font-bold text-foreground mb-3 text-sm leading-tight">
                         {project.title}
                       </h3>
@@ -199,14 +196,14 @@ const ProjectsShowcase = () => {
           {/* Nav Arrows */}
           <button
             onClick={scrollPrev}
-            className="absolute -left-4 top-1/2 -translate-y-1/2 z-10 p-3 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white rounded-full shadow-lg transition-all border border-white/10"
+             className="absolute -left-4 top-1/2 -translate-y-1/2 z-10 p-3 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white rounded-full transition-colors border border-white/10"
             aria-label="Previous"
           >
             <ChevronLeft className="h-5 w-5" />
           </button>
           <button
             onClick={scrollNext}
-            className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 p-3 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white rounded-full shadow-lg transition-all border border-white/10"
+             className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 p-3 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white rounded-full transition-colors border border-white/10"
             aria-label="Next"
           >
             <ChevronRight className="h-5 w-5" />
@@ -231,7 +228,7 @@ const ProjectsShowcase = () => {
 
         {/* CTA */}
         <div className="text-center mt-12">
-          <Link to="/projects" className="inline-flex items-center gap-2 bg-mep-orange hover:bg-mep-orange-hover text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-[0_0_30px_hsl(24_100%_50%/0.3)] hover:shadow-[0_0_40px_hsl(24_100%_50%/0.5)] hover:gap-3">
+           <Link to="/projects" className="pill-primary">
             View All Projects <ArrowRight className="h-5 w-5" />
           </Link>
         </div>

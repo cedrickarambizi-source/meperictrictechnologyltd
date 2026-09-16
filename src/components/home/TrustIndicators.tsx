@@ -4,18 +4,13 @@ import { ArrowRight, Play, ShieldCheck, Award, Zap } from "lucide-react";
 
 const TrustIndicators = () => {
   return (
-    <section className="py-20 lg:py-28 relative overflow-hidden bg-gradient-to-br from-[#eaf1fb] via-white to-[#dbe7f7]">
-      <div className="pointer-events-none absolute -top-24 -left-24 w-96 h-96 rounded-full bg-mep-blue/10 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-[#ed6307]/10 blur-3xl" />
-
+    <section className="py-[75px] relative overflow-hidden bg-background">
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-[75px] items-center">
           {/* Video — Left */}
           <ScrollReveal className="lg:col-span-6">
             <div className="relative">
-              <div className="absolute -top-5 -left-5 w-full h-full rounded-2xl border-2 border-mep-blue/30 hidden md:block" />
-              <div className="absolute -bottom-5 -right-5 w-32 h-32 rounded-2xl bg-[#ed6307]/20 blur-2xl" />
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-mep-blue/10 aspect-video bg-black">
+               <div className="relative rounded-[15px] overflow-hidden shadow-none ring-1 ring-border aspect-video bg-foreground">
                 <video
                   autoPlay
                   loop
@@ -26,8 +21,8 @@ const TrustIndicators = () => {
                   src="/videos/hero-bg.mp4"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-black/60 via-black/10 to-transparent" />
-                <div className="absolute top-4 right-4 flex items-center gap-2 bg-white/90 backdrop-blur-sm text-mep-blue text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
-                  <span className="w-2 h-2 rounded-full bg-[#ed6307] animate-pulse" />
+                 <div className="absolute top-4 right-4 flex items-center gap-2 bg-background/90 backdrop-blur-sm text-foreground text-xs font-bold px-3 py-1.5 rounded-full">
+                   <span className="w-2 h-2 rounded-full bg-foreground animate-pulse" />
                   LIVE TOUR
                 </div>
                 <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-3">
@@ -39,12 +34,12 @@ const TrustIndicators = () => {
                       MEP Erictric Technology
                     </div>
                   </div>
-                  <div className="w-11 h-11 rounded-full bg-white/95 flex items-center justify-center shadow-xl">
+                   <div className="w-11 h-11 rounded-full bg-background/95 flex items-center justify-center">
                     <Play className="h-5 w-5 text-mep-blue fill-mep-blue ml-0.5" />
                   </div>
                 </div>
               </div>
-              <div className="hidden md:flex absolute -bottom-16 -left-12 bg-white rounded-xl shadow-2xl px-5 py-4 items-center gap-3 ring-1 ring-mep-blue/10">
+               <div className="hidden md:flex absolute -bottom-16 -left-12 bg-background rounded-[15px] px-[19px] py-4 items-center gap-[11px] ring-1 ring-border">
                 <div className="w-11 h-11 rounded-lg bg-mep-blue/10 flex items-center justify-center">
                   <Award className="h-5 w-5 text-mep-blue" />
                 </div>
@@ -58,38 +53,34 @@ const TrustIndicators = () => {
 
           {/* Text — Right */}
           <ScrollReveal className="lg:col-span-6">
-            <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 bg-mep-blue/10 text-mep-blue text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#ed6307]" />
+             <div className="space-y-[19px]">
+               <div className="inline-flex items-center gap-2 text-muted-foreground text-xs font-bold uppercase font-mono">
                 About MEP Erictric
               </div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-mep-blue leading-[1.1]">
+               <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-foreground">
                 Building a Sustainable Future with{" "}
-                <span className="relative inline-block">
-                  <span className="relative z-10">Precision</span>
-                  <span className="absolute bottom-1 left-0 w-full h-3 bg-[#ed6307]/30 -z-0" />
-                </span>{" "}
+                 <span>Precision</span>{" "}
                 in MEP Solutions
               </h2>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                 MEP Erictric Technology was established to transform MEP engineering
                 in Rwanda through seamless integration, sustainability, and
                 cost-effective solutions — founded by experienced engineers
                 passionate about innovation and efficiency.
               </p>
               <div className="grid sm:grid-cols-2 gap-3">
-                <div className="flex items-center gap-3 bg-white rounded-lg p-3 shadow-sm ring-1 ring-mep-blue/10">
+                 <div className="flex items-center gap-[11px] bg-muted rounded-[15px] p-[19px]">
                   <ShieldCheck className="h-5 w-5 text-mep-blue flex-shrink-0" />
                   <span className="text-sm font-semibold text-gray-800">Safety-First Engineering</span>
                 </div>
-                <div className="flex items-center gap-3 bg-white rounded-lg p-3 shadow-sm ring-1 ring-mep-blue/10">
+                 <div className="flex items-center gap-[11px] bg-muted rounded-[15px] p-[19px]">
                   <Zap className="h-5 w-5 text-primary flex-shrink-0" />
                   <span className="text-sm font-semibold text-gray-800">Sustainable Solutions</span>
                 </div>
               </div>
-              <div className="bg-mep-blue/5 border-l-4 border-mep-blue rounded-r-lg p-5">
+               <div className="bg-muted rounded-[15px] p-[19px]">
                 <h4 className="text-mep-blue font-bold mb-2">Our Mission</h4>
-                <p className="text-gray-700 italic leading-relaxed">
+                 <p className="text-muted-foreground leading-relaxed">
                   To provide high-quality, efficient, and sustainable MEP solutions,
                   ensuring seamless integration, cost-effectiveness, and long-term
                   client satisfaction.
@@ -98,13 +89,13 @@ const TrustIndicators = () => {
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <Link
                   to="/about-us"
-                  className="inline-flex items-center gap-2 bg-mep-blue text-white font-semibold px-6 py-3 rounded-lg hover:bg-mep-blue/90 transition-all duration-300 shadow-lg hover:shadow-xl"
+                   className="pill-primary"
                 >
                   Learn More <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
                   to="/projects"
-                  className="inline-flex items-center gap-2 text-mep-blue font-semibold px-2 py-3 border-b-2 border-transparent hover:border-mep-blue transition-all"
+                   className="inline-flex items-center gap-2 text-foreground font-bold px-2 py-3 border-b border-border hover:border-foreground transition-colors"
                 >
                   View Our Projects <ArrowRight className="h-4 w-4" />
                 </Link>
