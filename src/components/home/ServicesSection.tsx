@@ -49,30 +49,30 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="py-24 lg:py-32 bg-[#F5F5F5]">
+    <section className="py-[75px] bg-muted">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-flex items-center gap-2 bg-mep-orange/10 border border-mep-orange/20 rounded-full px-5 py-2 mb-6">
-            <span className="text-primary font-semibold uppercase tracking-widest text-xs">
+         <div className="text-center max-w-3xl mx-auto mb-[45px]">
+           <span className="inline-flex items-center gap-2 mb-[19px]">
+             <span className="text-muted-foreground font-bold uppercase font-mono text-xs">
               Our Services
             </span>
           </span>
-          <h2 className="section-heading text-foreground mb-4 text-3xl">
+           <h2 className="section-heading text-foreground mb-[11px]">
             Comprehensive MEP & Technology Solutions
           </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed">
+           <p className="section-subheading">
             From power infrastructure to smart building technology —
             we deliver excellence and innovation at every level.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[19px]">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 group hover:-translate-y-1 border border-transparent hover:border-mep-orange/20"
+               className="bg-card rounded-[15px] overflow-hidden shadow-none transition-colors duration-300 group border border-border/70 hover:border-foreground/20"
             >
               {/* Image */}
               <div className="aspect-[4/3] overflow-hidden">
@@ -86,8 +86,8 @@ const ServicesSection = () => {
               </div>
 
               {/* Content */}
-              <div className="p-6">
-                <h3 className="font-bold text-lg text-foreground mb-2">
+               <div className="p-[19px]">
+                 <h3 className="font-normal text-xl text-foreground mb-[11px]">
                   {service.title}
                 </h3>
                 <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
@@ -103,7 +103,7 @@ const ServicesSection = () => {
                 </ul>
                 <Link
                   to="/services"
-                  className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:gap-3 transition-all group/link"
+                   className="inline-flex items-center gap-2 text-foreground font-bold text-sm transition-colors group/link hover:text-muted-foreground"
                 >
                   Learn More <ArrowRight className="h-4 w-4 transition-transform group-hover/link:translate-x-0.5" />
                 </Link>
@@ -112,7 +112,7 @@ const ServicesSection = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+         <div className="text-center mt-[45px]">
           <Link to="/services" className="btn-primary inline-flex items-center gap-2 hover:gap-3 transition-all">
             View All Services <ArrowRight className="h-5 w-5" />
           </Link>

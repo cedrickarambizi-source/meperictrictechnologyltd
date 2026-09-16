@@ -20,7 +20,7 @@ const Layout = ({ children }: LayoutProps) => {
 
       {/* Fixed contact card + Company Profile button - bottom left */}
       <div className="fixed bottom-6 left-6 z-[90] flex flex-col gap-2">
-        <div className="bg-[#0A0A0F]/95 backdrop-blur-xl border border-white/10 text-white/80 text-xs rounded-xl p-3 shadow-lg max-w-[260px] hidden sm:flex flex-col gap-2">
+        <div className="bg-foreground/95 backdrop-blur-xl border border-white/10 text-white/80 text-xs rounded-[15px] p-[19px] shadow-[0_2px_0_hsl(var(--border)/0.2)] max-w-[260px] hidden sm:flex flex-col gap-[11px]">
           <a
             href="https://maps.app.goo.gl/UMiHCVPAyGDR3C9B6"
             target="_blank"
@@ -49,7 +49,7 @@ const Layout = ({ children }: LayoutProps) => {
           href="https://drive.google.com/file/d/1rSXmarbXMECfryBugomxR1DQU3jkHUec/view?usp=drive_link"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-primary border border-white/20 text-white font-medium px-4 py-3 rounded-xl text-sm hover:bg-primary/80 transition-all duration-300 shadow-lg w-fit"
+          className="inline-flex items-center gap-2 bg-mep-orange text-white font-bold px-5 py-3 rounded-full text-sm hover:bg-mep-orange-hover transition-colors duration-300 shadow-none w-fit"
         >
           <FileText className="h-4 w-4" />
           Company Profile

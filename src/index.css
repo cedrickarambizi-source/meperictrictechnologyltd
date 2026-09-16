@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
 @layer base {
   :root {
     /* Apple-inspired pale canvas system */
@@ -35,7 +33,15 @@
     --border: 0 0% 84%;                   /* Hairline #d6d6d6 */
     --input: 0 0% 84%;
     --ring: 210 100% 45%;
-    --radius: 1.75rem;                    /* 28px */
+    --radius: 0.9375rem;
+    --radius-small: 0.3125rem;
+    --radius-icon: 0.46875rem;
+    --radius-card: 0.9375rem;
+    --sunrise-coral: 14 97% 58%;
+    --sunrise-coral-hover: 14 89% 51%;
+    --mist: 240 7% 96%;
+    --zinc: 240 4% 40%;
+    --carbon: 240 20% 4%;
 
     /* Neutrals */
     --ink: 240 3% 12%;
@@ -61,8 +67,8 @@
     --mep-blue-dark: 216 62% 27%;
     --mep-blue-deep: 220 72% 17%;
     --mep-blue-light: 210 60% 50%;
-    --mep-orange: 22 100% 36%;
-    --mep-orange-hover: 22 100% 30%;
+    --mep-orange: var(--sunrise-coral);
+    --mep-orange-hover: var(--sunrise-coral-hover);
     --mep-gray: 0 0% 44%;
     --mep-gray-light: 240 11% 96%;
     --mep-navy-overlay: 220 72% 17%;
@@ -122,55 +128,60 @@
   }
 
   * {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: "NB International Pro", "Inter Tight Variable", "General Sans", "Switzer", sans-serif;
   }
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
-    font-size: 17px;
+    font-family: "NB International Pro", "Inter Tight Variable", "General Sans", "Switzer", sans-serif;
+    font-size: 15px;
     font-weight: 400;
     line-height: 1.47;
-    letter-spacing: -0.022em;
+    letter-spacing: -0.005em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: "NB International Pro", "Inter Tight Variable", "General Sans", "Switzer", sans-serif;
   }
 
-  /* Apple display register: heavy weight, tight negative tracking */
+  /* Compact editorial display register */
   h1 {
-    font-weight: 700;
-    line-height: 1.05;
-    letter-spacing: -0.018em;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.025em;
   }
 
   h2 {
-    font-weight: 700;
-    line-height: 1.07;
-    letter-spacing: -0.014em;
+    font-weight: 400;
+    line-height: 1.06;
+    letter-spacing: -0.022em;
   }
 
   h3 {
-    font-weight: 600;
+    font-weight: 400;
     line-height: 1.2;
-    letter-spacing: -0.008em;
+    letter-spacing: -0.016em;
   }
 
   h4, h5, h6 {
-    font-weight: 600;
-    line-height: 1.2;
-    letter-spacing: -0.004em;
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: -0.012em;
   }
 
   button, .btn-primary, .btn-secondary, .btn-ghost {
     @apply font-semibold;
   }
 
-  nav a { @apply font-medium; letter-spacing: -0.01em; }
+  nav a { @apply font-normal; letter-spacing: -0.006em; }
+
+  code, kbd, samp, .font-mono {
+    font-family: "NB International Mono Pro", "JetBrains Mono", "IBM Plex Mono", monospace;
+    letter-spacing: -0.006em;
+  }
 }
 
 
@@ -181,7 +192,7 @@
   }
 
   .glass-card {
-    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-[15px];
   }
 
   .glass-nav {
@@ -213,33 +224,34 @@
 
   /* Whispered headline register */
   .section-heading {
-    @apply text-3xl md:text-5xl lg:text-[3.5rem];
-    font-weight: 700;
-    line-height: 1.07;
-    letter-spacing: -0.005em;
+    @apply text-3xl md:text-4xl lg:text-5xl;
+    font-weight: 400;
+    line-height: 1.06;
+    letter-spacing: -0.022em;
   }
 
   .display-heading {
-    @apply text-4xl md:text-6xl lg:text-[6rem];
-    font-weight: 700;
-    line-height: 1.04;
-    letter-spacing: -0.015em;
+    @apply text-5xl md:text-6xl lg:text-8xl;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.025em;
   }
 
   .section-subheading {
-    @apply text-xl md:text-[1.75rem] text-muted-foreground max-w-2xl mx-auto;
-    font-weight: 600;
-    line-height: 1.14;
-    letter-spacing: 0.007em;
+    @apply text-lg text-muted-foreground max-w-2xl mx-auto;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
   }
 
   .eyebrow {
-    @apply text-primary text-xs font-semibold uppercase tracking-[0.18em];
+    @apply text-muted-foreground text-xs font-bold uppercase font-mono;
+    letter-spacing: -0.006em;
   }
 
   /* Borderless, shadowless card on paper or canvas */
   .apple-card {
-    @apply bg-card rounded-[28px] overflow-hidden border-0 shadow-none
+    @apply bg-card rounded-[15px] overflow-hidden border-0 shadow-none
            transition-all duration-500;
   }
 
@@ -257,9 +269,9 @@
   }
 
   .pill-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-primary
-           text-primary-foreground font-semibold px-7 py-3 shadow-none
-           transition-colors duration-300 hover:bg-primary/90;
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-mep-orange
+           text-primary-foreground font-bold px-7 py-3 shadow-none
+           transition-colors duration-300 hover:bg-mep-orange-hover;
   }
 
   .pill-quiet {
@@ -299,8 +311,8 @@
 
   /* Buttons — pill shaped, no visible containers, no shadow */
   .btn-primary {
-    @apply bg-primary text-primary-foreground font-semibold px-8 py-3.5 rounded-full
-           hover:bg-primary/90 transition-colors duration-300 shadow-none;
+    @apply bg-mep-orange text-primary-foreground font-bold px-8 py-3.5 rounded-full
+           hover:bg-mep-orange-hover transition-colors duration-300 shadow-none;
   }
 
   .btn-secondary {
@@ -340,7 +352,7 @@
 
   /* Stat card */
   .stat-card {
-    @apply bg-secondary text-foreground p-8 rounded-[28px] text-center
+    @apply bg-secondary text-foreground p-[19px] rounded-[15px] text-center
            transition-all duration-300 shadow-none;
   }
 
@@ -366,7 +378,7 @@
 
   /* Pro card */
   .pro-card {
-    @apply bg-card rounded-[28px] p-6 border-0 shadow-none
+    @apply bg-card rounded-[15px] p-[19px] border-0 shadow-none
            transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary/60;
   }
 

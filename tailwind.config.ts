@@ -9,15 +9,30 @@ export default {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1200px",
       },
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-        heading: ["Inter", "system-ui", "sans-serif"],
-        display: ["Inter", "system-ui", "sans-serif"],
-        mono: ["Inter", "monospace"],
+        sans: ["NB International Pro", "Inter Tight Variable", "General Sans", "Switzer", "sans-serif"],
+        heading: ["NB International Pro", "Inter Tight Variable", "General Sans", "Switzer", "sans-serif"],
+        display: ["NB International Pro", "Inter Tight Variable", "General Sans", "Switzer", "sans-serif"],
+        mono: ["NB International Mono Pro", "JetBrains Mono", "IBM Plex Mono", "monospace"],
+      },
+      fontSize: {
+        "2xs": ["0.6875rem", { lineHeight: "1.5", letterSpacing: "-0.005em" }],
+        xs: ["0.8125rem", { lineHeight: "1.5", letterSpacing: "-0.006em" }],
+        sm: ["0.9375rem", { lineHeight: "1.5", letterSpacing: "-0.007em" }],
+        base: ["1rem", { lineHeight: "1.5", letterSpacing: "-0.008em" }],
+        lg: ["1.1875rem", { lineHeight: "1.4", letterSpacing: "-0.01em" }],
+        xl: ["1.375rem", { lineHeight: "1.35", letterSpacing: "-0.012em" }],
+        "2xl": ["1.625rem", { lineHeight: "1.25", letterSpacing: "-0.014em" }],
+        "3xl": ["1.875rem", { lineHeight: "1.25", letterSpacing: "-0.016em" }],
+        "4xl": ["2.3125rem", { lineHeight: "1.2", letterSpacing: "-0.018em" }],
+        "5xl": ["2.8125rem", { lineHeight: "1.12", letterSpacing: "-0.02em" }],
+        "6xl": ["3.5rem", { lineHeight: "1.06", letterSpacing: "-0.022em" }],
+        "7xl": ["3.75rem", { lineHeight: "1.1", letterSpacing: "-0.023em" }],
+        "8xl": ["4.125rem", { lineHeight: "1", letterSpacing: "-0.025em" }],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -112,9 +127,11 @@ export default {
         "team-hover": "0 20px 40px -8px rgba(0, 0, 0, 0.4), 0 0 30px -5px hsl(40 85% 55% / 0.2)",
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        "2xl": "var(--radius-card)",
+        xl: "var(--radius-card)",
+        lg: "var(--radius-icon)",
+        md: "var(--radius-small)",
+        sm: "var(--radius-small)",
       },
       keyframes: {
         "accordion-down": {
