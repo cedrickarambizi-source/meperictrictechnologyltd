@@ -47,10 +47,10 @@ const HeroSlider = () => {
       {/* Content */}
       <div className="absolute inset-0 z-20 flex flex-col justify-center">
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="max-w-4xl space-y-8 animate-fade-in">
+          <div className="max-w-[900px] space-y-[19px] animate-fade-in">
             {/* Eyebrow */}
             <div key={`eb-${current.id}`} className="animate-fade-in">
-              <span className="text-white/70 text-[11px] tracking-[0.25em] uppercase font-medium">
+              <span className="text-white/70 text-[11px] uppercase font-mono font-normal">
                 {current.eyebrow}
               </span>
             </div>
@@ -58,7 +58,7 @@ const HeroSlider = () => {
             {/* Huge light-weight headline */}
             <h1
               key={`t-${current.id}`}
-              className="font-display text-white font-light leading-[1.05] tracking-tight animate-slide-up text-4xl md:text-6xl lg:text-7xl xl:text-[80px]"
+              className="font-display text-white font-normal leading-none tracking-[-0.025em] animate-slide-up text-5xl md:text-6xl lg:text-8xl"
             >
               {current.title}
             </h1>
@@ -67,7 +67,7 @@ const HeroSlider = () => {
             <div>
               <Link
                 to={current.href}
-                className="group inline-flex items-center gap-3 text-white text-sm tracking-[0.2em] uppercase font-medium border-b border-white/30 hover:border-mep-orange pb-2 transition-colors"
+                className="group inline-flex items-center gap-3 rounded-full bg-mep-orange px-6 py-3 text-white text-sm font-bold transition-colors hover:bg-mep-orange-hover"
               >
                 Read More
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -96,7 +96,7 @@ const HeroSlider = () => {
                       isActive ? "w-full" : "w-0"
                     }`}
                   />
-                  <span className="text-[11px] md:text-[13px] tracking-wide font-normal">
+                   <span className="text-[11px] md:text-[13px] font-mono font-normal">
                     {t.eyebrow}
                   </span>
                 </button>
