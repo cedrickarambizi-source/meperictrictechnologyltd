@@ -13,6 +13,8 @@ import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
 import CaseStudy from "./pages/CaseStudy";
 import FujihdElevator from "./pages/FujihdElevator";
+import ServiceLandingPage from "./pages/ServiceLandingPage";
+import { serviceLandings } from "./data/serviceLandings";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
