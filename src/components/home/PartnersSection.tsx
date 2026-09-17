@@ -56,7 +56,7 @@ const PartnersSection = () => {
               partners.map((partner, index) => (
                 <div
                   key={`${setIndex}-${index}`}
-                  className="flex-shrink-0 mx-8 lg:mx-10 w-44 h-28 flex items-center justify-center bg-[#F5F5F5] rounded-2xl border border-border/30 hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
+                  className="flex-shrink-0 mx-8 lg:mx-10 w-44 h-28 flex items-center justify-center bg-[hsl(var(--mist))] rounded-[15px] shadow-none transition-all duration-300 hover:-translate-y-1 cursor-pointer"
                 >
                   <img
                     src={partner.logo}
