@@ -10,26 +10,25 @@ const stats = [
 
 const StatsTickerBar = () => {
   return (
-    <section className="relative border-t border-white/5 bg-[#12356e]">
-      <div className="absolute left-0 top-0 bottom-0 w-1 bg-mep-orange" />
+    <section className="relative bg-[hsl(var(--carbon))]">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
           {stats.map((stat, index) => (
             <div
               key={stat.label}
-              className={`flex items-center gap-4 py-8 px-6 bg-[#12356e] ${
+              className={`flex items-center gap-[11px] py-[19px] px-6 ${
                 index < stats.length - 1 ? "md:border-r border-white/5" : ""
               }`}
             >
-              <stat.icon className="h-6 w-6 text-primary flex-shrink-0" />
+              <stat.icon className="h-5 w-5 text-white/50 flex-shrink-0" />
               <div>
                 <AnimatedCounter
                   end={stat.number}
                   suffix={stat.suffix}
                   duration={2000}
-                  className="text-2xl md:text-3xl font-black text-white shimmer-text"
+                  className="text-2xl md:text-3xl font-normal tracking-[-0.02em] text-white"
                 />
-                <p className="text-white/40 text-xs font-medium tracking-wide uppercase mt-1">
+                <p className="text-white/50 text-2xs font-bold uppercase font-mono mt-1">
                   {stat.label}
                 </p>
               </div>

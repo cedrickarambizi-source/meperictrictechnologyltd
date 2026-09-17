@@ -28,13 +28,13 @@ const PartnersSection = () => {
   const [isPaused, setIsPaused] = useState(false);
 
   return (
-    <section className="py-20 lg:py-28 bg-white overflow-hidden">
-      <div className="container mx-auto px-4 mb-12">
+    <section className="py-[75px] bg-background overflow-hidden">
+      <div className="container mx-auto px-4 mb-[45px]">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="section-heading text-foreground mb-4 text-3xl">
+          <h2 className="section-heading text-foreground mb-[11px]">
             Our Valued Clients & Partners
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="section-subheading">
             Trusted by leading organizations across East Africa.
           </p>
         </div>

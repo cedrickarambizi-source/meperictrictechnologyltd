@@ -25,35 +25,30 @@ const commitments = [
 
 const SafetyCompliance = () => {
   return (
-    <section className="py-20 lg:py-28 text-white bg-[#4f5c72]">
+    <section className="py-[75px] text-white bg-[hsl(var(--carbon))]">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div className="space-y-6">
-            <div className="flex items-center gap-3">
-              <span className="w-12 h-0.5 bg-mep-orange rounded-full" />
-              <span className="text-primary font-semibold uppercase tracking-widest text-xs">
-                Safety & Quality
-              </span>
-            </div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-black leading-tight">
+          <div className="space-y-[11px]">
+            <span className="eyebrow block text-white/60">Safety & Quality</span>
+            <h2 className="section-heading">
               Committed to Safety, Precision, and Reliability
             </h2>
-            <p className="text-white/50 text-lg leading-relaxed">
+            <p className="text-white/60 text-lg leading-relaxed pt-[11px]">
               Engineering excellence requires unwavering commitment to safety standards
               and quality procedures. Every system we install is designed, tested, and
               documented to meet the highest industry standards.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="grid sm:grid-cols-2 gap-[11px]">
             {commitments.map((item, index) => (
               <div
                 key={index}
-                className="glass-card p-6 transition-all duration-500 hover:-translate-y-1 hover:border-mep-orange/20"
+                className="rounded-[15px] bg-white/5 p-[19px] shadow-none transition-all duration-500 hover:-translate-y-1 hover:bg-white/10"
               >
-                <item.icon className="h-8 w-8 text-primary mb-4" />
+                <item.icon className="h-7 w-7 text-white/70 mb-[11px]" />
                 <h3 className="font-bold text-lg mb-2">{item.title}</h3>
-                <p className="text-white/40 text-sm leading-relaxed">
+                <p className="text-white/50 text-sm leading-relaxed">
                   {item.description}
                 </p>
               </div>
