@@ -321,6 +321,23 @@ const Services = () => {
             ))}
           </div>
 
+          {/* Dedicated service pages */}
+          <div className="mt-20 border-t border-border pt-10">
+            <h2 className="text-xl font-bold mb-4">Dedicated service pages</h2>
+            <ul className="flex flex-wrap gap-3">
+              {serviceLandings.map((item) => (
+                <li key={item.slug}>
+                  <Link
+                    to={`/services/${item.slug}`}
+                    className="inline-block text-sm font-bold rounded-full bg-[hsl(var(--mist))] px-5 py-2 text-foreground hover:bg-secondary transition-colors"
+                  >
+                    {item.navLabel}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Related internal links */}
           <div className="mt-20 border-t border-border pt-10">
             <h2 className="text-xl font-bold mb-4">Explore related pages</h2>
