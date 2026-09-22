@@ -8,6 +8,7 @@ import { ArrowRight, CheckCircle, ChevronDown } from "lucide-react";
 import SEOHead from "@/components/seo/SEOHead";
 import StructuredData, { buildBreadcrumbSchema, faqSchema } from "@/components/seo/StructuredData";
 import FAQSection from "@/components/services/FAQSection";
+import { serviceLandings } from "@/data/serviceLandings";
 
 // Service images
 import transmissionLine from "@/assets/services/transmission-line.jpg";
@@ -319,6 +320,23 @@ const Services = () => {
             {services.map((service, index) => (
               <ServiceCard key={service.title} service={service} index={index} />
             ))}
+          </div>
+
+          {/* Dedicated service pages */}
+          <div className="mt-20 border-t border-border pt-10">
+            <h2 className="text-xl font-bold mb-4">Dedicated service pages</h2>
+            <ul className="flex flex-wrap gap-3">
+              {serviceLandings.map((item) => (
+                <li key={item.slug}>
+                  <Link
+                    to={`/services/${item.slug}`}
+                    className="inline-block text-sm font-bold rounded-full bg-[hsl(var(--mist))] px-5 py-2 text-foreground hover:bg-secondary transition-colors"
+                  >
+                    {item.navLabel}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Related internal links */}

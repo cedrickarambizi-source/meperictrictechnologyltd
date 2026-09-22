@@ -37,6 +37,13 @@ const App = () => (
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/case-study/:slug" element={<CaseStudy />} />
           <Route path="/fujihd-elevator" element={<FujihdElevator />} />
+          {serviceLandings.map((service) => (
+            <Route
+              key={service.slug}
+              path={`/services/${service.slug}`}
+              element={<ServiceLandingPage service={service} />}
+            />
+          ))}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
