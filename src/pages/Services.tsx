@@ -8,6 +8,7 @@ import { ArrowRight, CheckCircle, ChevronDown } from "lucide-react";
 import SEOHead from "@/components/seo/SEOHead";
 import StructuredData, { buildBreadcrumbSchema, faqSchema } from "@/components/seo/StructuredData";
 import FAQSection from "@/components/services/FAQSection";
+import { serviceLandings } from "@/data/serviceLandings";
 
 // Service images
 import transmissionLine from "@/assets/services/transmission-line.jpg";
