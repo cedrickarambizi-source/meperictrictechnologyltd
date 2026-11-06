@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import Layout from "@/components/layout/Layout";
 import HeroSlider from "@/components/home/HeroSlider";
-import StatsTickerBar from "@/components/home/StatsTickerBar";
 import TrustIndicators from "@/components/home/TrustIndicators";
 import EngineeringProcess from "@/components/home/EngineeringProcess";
 import ServicesSection from "@/components/home/ServicesSection";
@@ -9,6 +8,9 @@ import ProjectsShowcase from "@/components/home/ProjectsShowcase";
 import SafetyCompliance from "@/components/home/SafetyCompliance";
 import LeadershipMessage from "@/components/home/LeadershipMessage";
 import PartnersSection from "@/components/home/PartnersSection";
+import EditorialStats from "@/components/home/EditorialStats";
+import DivisionsNavigator from "@/components/home/DivisionsNavigator";
+import CompanyTimeline from "@/components/home/CompanyTimeline";
 import CTASection from "@/components/home/CTASection";
 import SEOHead from "@/components/seo/SEOHead";
 import StructuredData, {
@@ -102,12 +104,14 @@ const Index = () => {
 
       <div className="relative z-10">
         <HeroSlider />
-        <StatsTickerBar />
         <TrustIndicators />
+        <EditorialStats />
+        <DivisionsNavigator />
         <EngineeringProcess />
         <ServicesSection />
         <ProjectsShowcase />
         <SafetyCompliance />
+        <CompanyTimeline />
         <LeadershipMessage />
         <PartnersSection />
         <CTASection />
