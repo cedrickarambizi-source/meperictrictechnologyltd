@@ -11,6 +11,7 @@ import PartnersSection from "@/components/home/PartnersSection";
 import EditorialStats from "@/components/home/EditorialStats";
 import DivisionsNavigator from "@/components/home/DivisionsNavigator";
 import CompanyTimeline from "@/components/home/CompanyTimeline";
+import CertificationsRegister from "@/components/home/CertificationsRegister";
 import CTASection from "@/components/home/CTASection";
 import SEOHead from "@/components/seo/SEOHead";
 import StructuredData, {
@@ -112,6 +113,7 @@ const Index = () => {
         <ProjectsShowcase />
         <SafetyCompliance />
         <CompanyTimeline />
+        <CertificationsRegister />
         <LeadershipMessage />
         <PartnersSection />
         <CTASection />
