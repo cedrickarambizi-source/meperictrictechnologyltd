@@ -4,6 +4,8 @@
 
 @layer base {
   :root {
+    --font-body: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Inter Variable", "Inter", "Helvetica Neue", Arial, sans-serif;
+    --font-display: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Inter Variable", "Inter", "Helvetica Neue", Arial, sans-serif;
     /* Apple-inspired pale canvas system */
     --background: 0 0% 100%;              /* Paper #ffffff */
     --foreground: 240 3% 12%;             /* Primary Ink #1d1d1f */
@@ -128,59 +130,59 @@
   }
 
   * {
-    font-family: "NB International Pro", "Inter Tight Variable", "General Sans", "Switzer", sans-serif;
+    font-family: inherit;
   }
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: "NB International Pro", "Inter Tight Variable", "General Sans", "Switzer", sans-serif;
-    font-size: 15px;
+    font-family: var(--font-body);
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.47;
-    letter-spacing: -0.005em;
+    letter-spacing: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: "NB International Pro", "Inter Tight Variable", "General Sans", "Switzer", sans-serif;
+    font-family: var(--font-display);
   }
 
   /* Compact editorial display register */
   h1 {
-    font-weight: 400;
-    line-height: 1;
-    letter-spacing: -0.025em;
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: 0;
   }
 
   h2 {
-    font-weight: 400;
-    line-height: 1.06;
-    letter-spacing: -0.022em;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0;
   }
 
   h3 {
-    font-weight: 400;
-    line-height: 1.2;
-    letter-spacing: -0.016em;
+    font-weight: 600;
+    line-height: 1.17;
+    letter-spacing: 0;
   }
 
   h4, h5, h6 {
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.25;
-    letter-spacing: -0.012em;
+    letter-spacing: 0;
   }
 
   button, .btn-primary, .btn-secondary, .btn-ghost {
     @apply font-semibold;
   }
 
-  nav a { @apply font-normal; letter-spacing: -0.006em; }
+  nav a { @apply font-medium; letter-spacing: 0; }
 
   code, kbd, samp, .font-mono {
-    font-family: "NB International Mono Pro", "JetBrains Mono", "IBM Plex Mono", monospace;
-    letter-spacing: -0.006em;
+    font-family: var(--font-body);
+    letter-spacing: 0;
   }
 }
 
@@ -222,31 +224,33 @@
     background: hsl(var(--dark-bg));
   }
 
-  /* Whispered headline register */
+  /* Uploaded SF display register */
   .section-heading {
-    @apply text-3xl md:text-4xl lg:text-5xl;
-    font-weight: 400;
-    line-height: 1.06;
-    letter-spacing: -0.022em;
+    @apply text-3xl md:text-4xl;
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0;
   }
 
   .display-heading {
     @apply text-5xl md:text-6xl lg:text-8xl;
-    font-weight: 400;
-    line-height: 1;
-    letter-spacing: -0.025em;
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: 0;
   }
 
   .section-subheading {
-    @apply text-lg text-muted-foreground max-w-2xl mx-auto;
+    @apply text-base text-muted-foreground max-w-2xl mx-auto;
     font-weight: 400;
-    line-height: 1.4;
-    letter-spacing: -0.01em;
+    line-height: 1.47;
+    letter-spacing: 0;
   }
 
   .eyebrow {
     @apply text-muted-foreground text-xs font-bold uppercase font-mono;
-    letter-spacing: -0.006em;
+    letter-spacing: 0;
   }
 
   /* Borderless, shadowless card on paper or canvas */
@@ -417,6 +421,19 @@
 }
 
 @layer utilities {
+  /* Keep legacy page classes on the shared type system. */
+  h1[class], h2[class], h3[class], h4[class], h5[class], h6[class] {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+
+  input[type="search"] {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.2;
+  }
+
   .text-balance {
     text-wrap: balance;
   }
