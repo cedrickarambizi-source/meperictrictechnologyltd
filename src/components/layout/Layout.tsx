@@ -49,7 +49,7 @@ const Layout = ({ children }: LayoutProps) => {
           href="https://drive.google.com/file/d/1rSXmarbXMECfryBugomxR1DQU3jkHUec/view?usp=drive_link"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-mep-orange text-white font-bold px-5 py-3 rounded-full text-sm hover:bg-mep-orange-hover transition-colors duration-300 shadow-none w-fit"
+          className="inline-flex items-center gap-2 bg-[hsl(var(--carbon))] border border-white/20 text-white font-bold px-5 py-3 rounded-full text-sm hover:bg-black transition-colors duration-300 shadow-none w-fit"
         >
           <FileText className="h-4 w-4" />
           Company Profile
