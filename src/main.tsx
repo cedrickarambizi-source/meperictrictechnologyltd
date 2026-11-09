@@ -1,7 +1,7 @@
 import { createRoot } from "react-dom/client";
-import "@fontsource-variable/inter-tight";
-import "@fontsource/jetbrains-mono/400.css";
+import "@fontsource-variable/inter";
 import App from "./App.tsx";
 import "./index.css";
 
-createRoot(document.getElementById("root")!).render(<App />);
+const root = document.getElementById("root");
+if (root) createRoot(root).render(<App />);
