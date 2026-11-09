@@ -67,7 +67,7 @@ const HeroSlider = () => {
             <div>
               <Link
                 to={current.href}
-                className="group inline-flex items-center gap-3 rounded-full bg-mep-orange px-6 py-3 text-white text-sm font-bold transition-colors hover:bg-mep-orange-hover"
+                className="group inline-flex items-center gap-3 rounded-full bg-[hsl(var(--carbon))] border border-white/20 px-6 py-3 text-white text-sm font-bold transition-colors hover:bg-black"
               >
                 Read More
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
