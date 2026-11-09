@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import Layout from "@/components/layout/Layout";
 import HeroSlider from "@/components/home/HeroSlider";
+import ValueCounters from "@/components/home/ValueCounters";
 import TrustIndicators from "@/components/home/TrustIndicators";
 import EngineeringProcess from "@/components/home/EngineeringProcess";
 import ServicesSection from "@/components/home/ServicesSection";
@@ -105,6 +106,7 @@ const Index = () => {
 
       <div className="relative z-10">
         <HeroSlider />
+        <ValueCounters />
         <TrustIndicators />
         <EditorialStats />
         <DivisionsNavigator />

@@ -46,8 +46,8 @@ const HeroSlider = () => {
 
       {/* Content */}
       <div className="absolute inset-0 z-20 flex flex-col justify-center">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="max-w-[900px] space-y-[19px] animate-fade-in">
+        <div className="w-full">
+          <div className="max-w-[640px] bg-black/70 backdrop-blur-[2px] px-6 md:px-14 py-12 md:py-16 space-y-[19px] animate-fade-in">
             {/* Eyebrow */}
             <div key={`eb-${current.id}`} className="animate-fade-in">
               <span className="text-white/70 text-[11px] uppercase font-mono font-normal">
@@ -58,7 +58,7 @@ const HeroSlider = () => {
             {/* Huge light-weight headline */}
             <h1
               key={`t-${current.id}`}
-              className="font-display text-white font-normal leading-none tracking-[-0.025em] animate-slide-up text-5xl md:text-6xl lg:text-8xl"
+              className="font-display text-white font-normal leading-[1.6] tracking-[-0.01em] animate-slide-up text-2xl md:text-[28px] lg:text-[30px] max-w-[420px]"
             >
               {current.title}
             </h1>
