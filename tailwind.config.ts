@@ -116,6 +116,11 @@ export default {
         canvas: "hsl(var(--canvas))",
         "faded-surface": "hsl(var(--faded-surface))",
         paper: "hsl(var(--paper))",
+        welcome: {
+          DEFAULT: "hsl(var(--welcome-surface))",
+          foreground: "hsl(var(--welcome-foreground))",
+          muted: "hsl(var(--welcome-muted))",
+        },
         // Product finish swatches
         finish: {
           sky: "hsl(var(--finish-sky))",
@@ -129,6 +134,7 @@ export default {
       },
 
       boxShadow: {
+        welcome: "var(--welcome-shadow)",
         "team": "0 4px 20px -4px rgba(0, 0, 0, 0.3)",
         "team-hover": "0 20px 40px -8px rgba(0, 0, 0, 0.4), 0 0 30px -5px hsl(40 85% 55% / 0.2)",
       },

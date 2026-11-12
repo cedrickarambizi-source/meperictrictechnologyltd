@@ -44,6 +44,10 @@
     --mist: 240 7% 96%;
     --zinc: 240 4% 40%;
     --carbon: 240 20% 4%;
+    --welcome-surface: 0 0% 0%;
+    --welcome-foreground: 0 0% 96%;
+    --welcome-muted: 0 0% 65%;
+    --welcome-shadow: 0 24px 80px hsl(0 0% 0% / 0.45);
 
     /* Neutrals */
     --ink: 240 3% 12%;
