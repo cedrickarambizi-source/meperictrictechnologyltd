@@ -37,13 +37,13 @@ const WelcomePopup = () => {
             onClick={() => setIsVisible(false)}
           />
           <motion.div
-            className="relative w-full max-w-md bg-background rounded-2xl shadow-2xl border overflow-hidden"
+            className="relative w-full max-w-md bg-[hsl(var(--carbon))] rounded-2xl shadow-2xl border border-white/10 overflow-hidden"
             initial={{ scale: 0.9, y: 30 }}
             animate={{ scale: 1, y: 0 }}
             exit={{ scale: 0.9, y: 30, opacity: 0 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
           >
-            <div className="bg-primary p-5 text-primary-foreground">
+            <div className="bg-black p-5 text-white border-b border-white/10">
               <button
                 onClick={() => setIsVisible(false)}
                 className="absolute top-3 right-3 p-1 rounded-full bg-white/20 hover:bg-white/30 transition-colors"
@@ -64,14 +64,14 @@ const WelcomePopup = () => {
             </div>
 
             <div className="p-5">
-              <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+              <p className="text-sm text-white/70 leading-relaxed mb-5">
                 We specialize in elevator installation, electrical systems, generator installation, MV cable infrastructure, and modern building engineering services.
               </p>
               <div className="flex flex-col sm:flex-row gap-2">
                 <Button asChild className="flex-1" onClick={() => setIsVisible(false)}>
                   <Link to="/projects">View Our Projects</Link>
                 </Button>
-                <Button asChild variant="outline" className="flex-1" onClick={() => setIsVisible(false)}>
+                <Button asChild variant="outline" className="flex-1 border-white/25 bg-transparent text-white hover:bg-white/10 hover:text-white" onClick={() => setIsVisible(false)}>
                   <Link to="/contact">Contact Us</Link>
                 </Button>
               </div>
